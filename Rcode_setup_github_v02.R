@@ -40,5 +40,5 @@ library(usethis)
 #
 usethis::use_git_config(user.name = "MONIS4567", user.email = "steen.knudsen@niva-dk.dk")#
 
-usethis::edit_r_environ()
+#usethis::edit_r_environ()
 #
