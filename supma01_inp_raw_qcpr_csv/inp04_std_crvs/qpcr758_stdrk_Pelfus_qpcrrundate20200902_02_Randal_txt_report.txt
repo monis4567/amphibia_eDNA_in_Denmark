@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A4	09_Randal_065_10_1E05_3uL_RandalCBL_0546,RandalC	Standard	9	1.0573	24.53	3.00e+005	0.992	-3.653	
+A5	09_Randal_065_10_1E05_3uL_RandalCBL_0546,RandalC	Standard	9	1.0573	24.90	3.00e+005	0.992	-3.653	
+A6	09_Randal_065_10_1E05_3uL_RandalCBL_0546,RandalC	Standard	9	1.0573	25.30	3.00e+005	0.992	-3.653	
+B4	10_Randal_065_10_1E04_3uL_RandalCBL_0546,RandalC	Standard	10	1.0573	29.43	3.00e+004	0.992	-3.653	
+B5	10_Randal_065_10_1E04_3uL_RandalCBL_0546,RandalC	Standard	10	1.0573	28.92	3.00e+004	0.992	-3.653	
+B6	10_Randal_065_10_1E04_3uL_RandalCBL_0546,RandalC	Standard	10	1.0573	27.94	3.00e+004	0.992	-3.653	
+C4	11_Randal_065_10_1E03_3uL_RandalCBL_0546,RandalC	Standard	11	1.0573	31.77	3.00e+003	0.992	-3.653	
+C5	11_Randal_065_10_1E03_3uL_RandalCBL_0546,RandalC	Standard	11	1.0573	31.33	3.00e+003	0.992	-3.653	
+C6	11_Randal_065_10_1E03_3uL_RandalCBL_0546,RandalC	Standard	11	1.0573	32.74	3.00e+003	0.992	-3.653	
+D4	12_Randal_065_10_1E02_3uL_RandalCBL_0546,RandalC	Standard	12	1.0573	35.69	3.00e+002	0.992	-3.653	
+D5	12_Randal_065_10_1E02_3uL_RandalCBL_0546,RandalC	Standard	12	1.0573	35.76	3.00e+002	0.992	-3.653	
+D6	12_Randal_065_10_1E02_3uL_RandalCBL_0546,RandalC	Standard	12	1.0573	35.65	3.00e+002	0.992	-3.653	
+E4	13_Randal_065_10_1E01_3uL_RandalCBL_0546,RandalC	Standard	13	1.0573	39.54	3.00e+001	0.992	-3.653	
+E5	13_Randal_065_10_1E01_3uL_RandalCBL_0546,RandalC	Standard	13	1.0573	39.63	3.00e+001	0.992	-3.653	
+E6	13_Randal_065_10_1E01_3uL_RandalCBL_0546,RandalC	Standard	13	1.0573	39.94	3.00e+001	0.992	-3.653	
+F4	14_Randal_065_10_1E00_3uL_RandalCBL_0546,RandalC	Standard	14	1.0573	No Ct	No Ct	0.992	-3.653	
+F5	14_Randal_065_10_1E00_3uL_RandalCBL_0546,RandalC	Standard	14	1.0573	No Ct	No Ct	0.992	-3.653	
+F6	14_Randal_065_10_1E00_3uL_RandalCBL_0546,RandalC	Standard	14	1.0573	No Ct	No Ct	0.992	-3.653	
+G4	15_Randal_065_10_1E0NTC_3uL_RandalCBL_0546,Randa	NTC	15	1.0573	No Ct	No Ct	0.992	-3.653	
+G5	15_Randal_065_10_1E0NTC_3uL_RandalCBL_0546,Randa	NTC	15	1.0573	No Ct	No Ct	0.992	-3.653	
+G6	15_Randal_065_10_1E0NTC_3uL_RandalCBL_0546,Randa	NTC	15	1.0573	No Ct	No Ct	0.992	-3.653	
+H4	16_Randal_1E0tiss_3uL_RandalCBL_0546,RandalCBR_0	Unknown	16	1.0573	28.21	3.715e+004	0.992	-3.653	
+H5	16_Randal_1E0tiss_3uL_RandalCBL_0546,RandalCBR_0	Unknown	16	1.0573	28.16	3.842e+004	0.992	-3.653	
+H6	16_Randal_1E0tiss_3uL_RandalCBL_0546,RandalCBR_0	Unknown	16	1.0573	28.15	3.867e+004	0.992	-3.653	

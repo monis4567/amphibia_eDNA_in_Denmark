@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A4	09_Ranarv_1E05_3uL_F04R05P04  Qty or ID	Standard	9	0.0122	23.92	3.00e+005	0.729	-7.076	
+A5	09_Ranarv_1E05_3uL_F04R05P04  Qty or ID	Standard	9	0.0122	22.98	3.00e+005	0.729	-7.076	
+A6	09_Ranarv_1E05_3uL_F04R05P04  Qty or ID	Standard	9	0.0122	23.02	3.00e+005	0.729	-7.076	
+B4	10_Ranarv_1E04_3uL_F04R05P04  Qty or ID	Standard	10	0.0122	No Ct	No Ct	0.729	-7.076	
+B5	10_Ranarv_1E04_3uL_F04R05P04  Qty or ID	Standard	10	0.0122	No Ct	No Ct	0.729	-7.076	
+B6	10_Ranarv_1E04_3uL_F04R05P04  Qty or ID	Standard	10	0.0122	45.81	3.00e+004	0.729	-7.076	
+C4	11_Ranarv_1E03_3uL_F04R05P04  Qty or ID	Standard	11	0.0122	No Ct	No Ct	0.729	-7.076	
+C5	11_Ranarv_1E03_3uL_F04R05P04  Qty or ID	Standard	11	0.0122	No Ct	No Ct	0.729	-7.076	
+C6	11_Ranarv_1E03_3uL_F04R05P04  Qty or ID	Standard	11	0.0122	46.64	3.00e+003	0.729	-7.076	
+D4	12_Ranarv_1E02_3uL_F04R05P04  Qty or ID	Standard	12	0.0122	No Ct	No Ct	0.729	-7.076	
+D5	12_Ranarv_1E02_3uL_F04R05P04  Qty or ID	Standard	12	0.0122	No Ct	No Ct	0.729	-7.076	
+D6	12_Ranarv_1E02_3uL_F04R05P04  Qty or ID	Standard	12	0.0122	No Ct	No Ct	0.729	-7.076	
+E4	13_Ranarv_1E01_3uL_F04R05P04  Qty or ID	Standard	13	0.0122	49.82	3.00e+001	0.729	-7.076	
+E5	13_Ranarv_1E01_3uL_F04R05P04  Qty or ID	Standard	13	0.0122	No Ct	No Ct	0.729	-7.076	
+E6	13_Ranarv_1E01_3uL_F04R05P04  Qty or ID	Standard	13	0.0122	No Ct	No Ct	0.729	-7.076	
+F4	14_Ranarv_1E00_3uL_F04R05P04  Qty or ID	Standard	14	0.0122	No Ct	No Ct	0.729	-7.076	
+F5	14_Ranarv_1E00_3uL_F04R05P04  Qty or ID	Standard	14	0.0122	No Ct	No Ct	0.729	-7.076	
+F6	14_Ranarv_1E00_3uL_F04R05P04  Qty or ID	Standard	14	0.0122	No Ct	No Ct	0.729	-7.076	
+G4	15_Ranarv_NTC_3uL_F04R05P04  Qty or ID	NTC	15	0.0122	No Ct	No Ct	0.729	-7.076	
+G5	15_Ranarv_NTC_3uL_F04R05P04  Qty or ID	NTC	15	0.0122	No Ct	No Ct	0.729	-7.076	
+G6	15_Ranarv_NTC_3uL_F04R05P04  Qty or ID	NTC	15	0.0122	No Ct	No Ct	0.729	-7.076	
+H4	15_Ranarv_1E6posk142-21_3uL_F04R05P04  Qty or ID	Unknown	16	0.0122	18.98	4.230e+006	0.729	-7.076	
+H5	15_Ranarv_1E6posk142-21_3uL_F04R05P04  Qty or ID	Unknown	16	0.0122	18.65	4.710e+006	0.729	-7.076	
+H6	15_Ranarv_1E6posk142-21_3uL_F04R05P04  Qty or ID	Unknown	16	0.0122	18.69	4.650e+006	0.729	-7.076	

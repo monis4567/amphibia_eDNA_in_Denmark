@@ -1,0 +1,85 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	01_Aborre_+K_	NPC	0.1000	29.49	
+A2	02_Aborre_+K_	NPC	0.1000	28.32	
+A3	03_Brasen_+K_	NPC	0.1000	24.39	
+A4	04_EuropæiskÅl_+K_	NPC	0.1000	29.74	
+A5	05_EuropæiskÅl_+K_	NPC	0.1000	29.88	
+A6	06_Gedde_+K_	NPC	0.1000	22.94	
+A7	07_Gedde_+K_	NPC	0.1000	23.36	
+A8	08_Karpe_+K_	NPC	0.1000	No Ct	
+A9	09_Karusse_+K_	NPC	0.1000	28.64	
+A10	10_Karusse_+K_	NPC	0.1000	28.63	
+A11	11_Skalle_+K_	NPC	0.1000	30.10	
+A12	12_Skalle_+K_	NPC	0.1000	24.96	
+B1	01_Aborre_-K_	NTC	0.1000	No Ct	
+B2	02_Aborre_-K_	NTC	0.1000	45.75	
+B3	03_Brasen_-K_	NTC	0.1000	No Ct	
+B4	04_EuropæiskÅl_-K_	NTC	0.1000	No Ct	
+B5	05_EuropæiskÅl_-K_	NTC	0.1000	No Ct	
+B6	06_Gedde_-K_	NTC	0.1000	No Ct	
+B7	07_Gedde_-K_	NTC	0.1000	No Ct	
+B8	08_Karpe_-K_	NTC	0.1000	No Ct	
+B9	09_Karusse_-K_	NTC	0.1000	No Ct	
+B10	10_Karusse_-K_	NTC	0.1000	No Ct	
+B11	11_Skalle_-K_	NTC	0.1000	No Ct	
+B12	12_Skalle_eDNA_	Unknown	0.1000	34.41	
+C1	01_Aborre_eDNA_	Unknown	0.1000	34.00	
+C2	02_Aborre_eDNA_	Unknown	0.1000	36.80	
+C3	03_Brasen_eDNA_	Unknown	0.1000	No Ct	
+C4	04_EuropæiskÅl_eDNA_	Unknown	0.1000	35.33	
+C5	05_EuropæiskÅl_eDNA_	Unknown	0.1000	35.75	
+C6	06_Gedde_eDNA_	Unknown	0.1000	34.75	
+C7	07_Gedde_eDNA_	Unknown	0.1000	34.64	
+C8	08_Karpe_eDNA_	Unknown	0.1000	No Ct	
+C9	09_Karusse_eDNA_	Unknown	0.1000	35.94	
+C10	10_Karusse_eDNA_	Unknown	0.1000	35.47	
+C11	11_Skalle_eDNA_	Unknown	0.1000	32.52	
+C12	12_Skalle_-K_	NTC	0.1000	No Ct	
+E1	13_TrepiggetHundestejle_+K_	NPC	0.1000	No Ct	
+E2	14_Flodkrebs_+K_	NPC	0.1000	31.49	
+E3	15_Signalkrebs_+K_	NPC	0.1000	No Ct	
+E4	16_Klokkefrø_+K_	NPC	0.1000	30.73	
+E5	17_Løgfrø_+K_	NPC	0.1000	No Ct	
+E6	18_Løvfrø_+K_	NPC	0.1000	29.92	
+E7	19_GrønbrogetTudse_+K_	NPC	0.1000	30.48	
+E8	20_Strandtudse_+K_5_	NPC	0.1000	23.64	
+E9	21_Spidssnudet frø_+K_4_	NPC	0.1000	30.94	
+E10	22_Spidssnudet frø_+K_	NPC	0.1000	27.71	
+E11	23_Springfrø_+K_	NPC	0.1000	34.21	
+E12	24_Springfrø_+K_	NPC	0.1000	32.99	
+F1	13_TrepiggetHundestejle_-K_	NTC	0.1000	No Ct	
+F2	14_Flodkrebs_-K_	NTC	0.1000	No Ct	
+F3	15_Signalkrebs_-K_	NTC	0.1000	No Ct	
+F4	16_Klokkefrø_-K_	NTC	0.1000	No Ct	
+F5	17_Løgfrø_-K_	NTC	0.1000	No Ct	
+F6	18_Løvfrø_-K_	NTC	0.1000	No Ct	
+F7	19_GrønbrogetTudse_-K_	NTC	0.1000	No Ct	
+F8	20_Strandtudse_-K_	NTC	0.1000	No Ct	
+F9	21_Spidssnudet frø_-K_	NTC	0.1000	No Ct	
+F10	22_Spidssnudet frø_-K_	NTC	0.1000	No Ct	
+F11	23_Springfrø_-K_	NTC	0.1000	No Ct	
+F12	24_Springfrø_-K_	NTC	0.1000	No Ct	
+G1	13_TrepiggetHundestejle_eDNA_	Unknown	0.1000	No Ct	
+G2	14_Flodkrebs_eDNA_	Unknown	0.1000	No Ct	
+G3	15_Signalkrebs_eDNA_	Unknown	0.1000	No Ct	
+G4	16_Klokkefrø_eDNA_	Unknown	0.1000	No Ct	
+G5	17_Løgfrø_eDNA_	Unknown	0.1000	30.18	
+G6	18_Løvfrø_eDNA_	Unknown	0.1000	No Ct	
+G7	19_GrønbrogetTudse_eDNA_	Unknown	0.1000	No Ct	
+G8	20_Strandtudse_eDNA_	Unknown	0.1000	No Ct	
+G9	21_Spidssnudet frø_eDNA_	Unknown	0.1000	No Ct	
+G10	22_Spidssnudet frø_eDNA_	Unknown	0.1000	No Ct	
+G11	23_Springfrø_eDNA_	Unknown	0.1000	No Ct	
+G12	24_Springfrø_eDNA_	Unknown	0.1000	No Ct	
+H1	25_LilleVandsalamander_+K_	NPC	0.1000	25.70	
+H2	25_LilleVandsalamander_-K_	NTC	0.1000	No Ct	
+H3	25_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+H4	26_LilleVandsalamander_+K_	NPC	0.1000	22.65	
+H5	26_LilleVandsalamander_-K_	NTC	0.1000	No Ct	
+H6	26_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+H7	27_StorVandsalamander_+K_	NPC	0.1000	35.74	
+H8	27_StorVandsalamander_-K_	NTC	0.1000	No Ct	
+H9	27_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+H10	28_StorVandsalamander_+K_	NPC	0.1000	35.57	
+H11	28_StorVandsalamander_-K_	NTC	0.1000	No Ct	
+H12	28_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	

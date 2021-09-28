@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A10	25_Tricri_144_06_1E05_3uL_TricriCB-L,PFT-TricriC	Standard	25	0.6887	24.79	3.00e+005	0.850	-3.328	
+A11	25_Tricri_144_06_1E05_3uL_TricriCB-L,PFT-TricriC	Standard	25	0.6887	24.36	3.00e+005	0.850	-3.328	
+A12	25_Tricri_144_06_1E05_3uL_TricriCB-L,PFT-TricriC	Standard	25	0.6887	24.58	3.00e+005	0.850	-3.328	
+B10	26_Tricri_144_06_1E04_3uL_TricriCB-L,PFT-TricriC	Standard	26	0.6887	27.70	3.00e+004	0.850	-3.328	
+B11	26_Tricri_144_06_1E04_3uL_TricriCB-L,PFT-TricriC	Standard	26	0.6887	31.92	3.00e+004	0.850	-3.328	
+B12	26_Tricri_144_06_1E04_3uL_TricriCB-L,PFT-TricriC	Standard	26	0.6887	33.02	3.00e+004	0.850	-3.328	
+C10	27_Tricri_144_06_1E03_3uL_TricriCB-L,PFT-TricriC	Standard	27	0.6887	32.09	3.00e+003	0.850	-3.328	
+C11	27_Tricri_144_06_1E03_3uL_TricriCB-L,PFT-TricriC	Standard	27	0.6887	32.93	3.00e+003	0.850	-3.328	
+C12	27_Tricri_144_06_1E03_3uL_TricriCB-L,PFT-TricriC	Standard	27	0.6887	31.29	3.00e+003	0.850	-3.328	
+D10	28_Tricri_144_06_1E02_3uL_TricriCB-L,PFT-TricriC	Standard	28	0.6887	35.57	3.00e+002	0.850	-3.328	
+D11	28_Tricri_144_06_1E02_3uL_TricriCB-L,PFT-TricriC	Standard	28	0.6887	33.60	3.00e+002	0.850	-3.328	
+D12	28_Tricri_144_06_1E02_3uL_TricriCB-L,PFT-TricriC	Standard	28	0.6887	38.14	3.00e+002	0.850	-3.328	
+E10	29_Tricri_144_06_1E01_3uL_TricriCB-L,PFT-TricriC	Standard	29	0.6887	41.14	3.00e+001	0.850	-3.328	
+E11	29_Tricri_144_06_1E01_3uL_TricriCB-L,PFT-TricriC	Standard	29	0.6887	35.54	3.00e+001	0.850	-3.328	
+E12	29_Tricri_144_06_1E01_3uL_TricriCB-L,PFT-TricriC	Standard	29	0.6887	39.63	3.00e+001	0.850	-3.328	
+F10	30_Tricri_144_06_1E00_3uL_TricriCB-L,PFT-TricriC	Standard	30	0.6887	No Ct	No Ct	0.850	-3.328	
+F11	30_Tricri_144_06_1E00_3uL_TricriCB-L,PFT-TricriC	Standard	30	0.6887	No Ct	No Ct	0.850	-3.328	
+F12	30_Tricri_144_06_1E00_3uL_TricriCB-L,PFT-TricriC	Standard	30	0.6887	No Ct	No Ct	0.850	-3.328	
+G10	31_Tricri_144_06_1E0NTC_3uL_TricriCB-L,PFT-Tricr	NTC	31	0.6887	No Ct	No Ct	0.850	-3.328	
+G11	31_Tricri_144_06_1E0NTC_3uL_TricriCB-L,PFT-Tricr	NTC	31	0.6887	No Ct	No Ct	0.850	-3.328	
+G12	31_Tricri_144_06_1E0NTC_3uL_TricriCB-L,PFT-Tricr	NTC	31	0.6887	No Ct	No Ct	0.850	-3.328	
+H10	32_Tricri_1E0tiss_3uL_TricriCB-L,PFT-TricriCBR,P	Unknown	32	0.6887	21.79	4.691e+006	0.850	-3.328	
+H11	32_Tricri_1E0tiss_3uL_TricriCB-L,PFT-TricriCBR,P	Unknown	32	0.6887	21.83	4.583e+006	0.850	-3.328	
+H12	32_Tricri_1E0tiss_3uL_TricriCB-L,PFT-TricriCBR,P	Unknown	32	0.6887	21.72	4.946e+006	0.850	-3.328	

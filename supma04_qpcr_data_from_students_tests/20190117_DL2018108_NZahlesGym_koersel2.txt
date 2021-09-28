@@ -1,0 +1,33 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	
+A1	25_Loegfroe_PosK_	NTC	1	0.1000	No Ct	
+B1	25_Loegfroe_NegK_	NPC	2	0.1000	34.69	
+C1	25_Loegfroe_eDNA_	Unknown	3	0.1000	No Ct	
+D1	25_Loegfroe_eDNA_	Unknown	3	0.1000	No Ct	
+A2	26_StorVandsalamander_PosK_	NPC	4	0.1000	No Ct	
+B2	26_StorVandsalamander_NegK_	NTC	5	0.1000	36.98	
+C2	26_StorVandsalamander_eDNA_	Unknown	6	0.1000	36.14	
+D2	26_StorVandsalamander_eDNA_	Unknown	6	0.1000	No Ct	
+A3	27_Strandtudse_PosK_	NPC	7	0.1000	No Ct	
+B3	27_Strandtudse_NegK_	NTC	8	0.1000	No Ct	
+C3	27_Strandtudse_eDNA_	Unknown	9	0.1000	No Ct	
+D3	27_Strandtudse_eDNA_	Unknown	9	0.1000	No Ct	
+A4	28_GroenbrogetTudse_PosK_	NPC	10	0.1000	No Ct	
+B4	28_GroenbrogetTudse_NegK_	NTC	11	0.1000	No Ct	
+C4	28_GroenbrogetTudse_eDNA_	Unknown	12	0.1000	No Ct	
+D4	28_GroenbrogetTudse_eDNA_	Unknown	12	0.1000	No Ct	
+A5	29_Loevfroe_PosK_	NPC	13	0.1000	29.24	
+B5	29_Loevfroe_NegK_	NTC	14	0.1000	No Ct	
+C5	29_Loevfroe_eDNA_	Unknown	15	0.1000	No Ct	
+D5	29_Loevfroe_eDNA_	Unknown	15	0.1000	No Ct	
+A6	30_Klokkefroe_PosK_	NPC	16	0.1000	No Ct	
+B6	30_Klokkefroe_NegK_	NTC	17	0.1000	No Ct	
+C6	30_Klokkefroe_eDNA_	Unknown	18	0.1000	No Ct	
+D6	30_Klokkefroe_eDNA_	Unknown	18	0.1000	No Ct	
+A7	31_Bjergsalamander_PosK_	NPC	19	0.1000	No Ct	
+B7	31_Bjergsalamander_NegK_	NTC	20	0.1000	No Ct	
+C7	31_Bjergsalamander_eDNA_	Unknown	21	0.1000	No Ct	
+D7	31_Bjergsalamander_eDNA_	Unknown	21	0.1000	No Ct	
+A8	32_Latterfroe_PosK_	NPC	22	0.1000	No Ct	
+B8	32_Latterfroe_NegK_	NTC	23	0.1000	No Ct	
+C8	32_Latterfroe_eDNA_	Unknown	24	0.1000	No Ct	
+D8	32_Latterfroe_eDNA_	Unknown	24	0.1000	No Ct	

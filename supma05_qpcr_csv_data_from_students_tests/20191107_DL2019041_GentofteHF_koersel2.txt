@@ -1,0 +1,29 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	25_Loegfroe_PosK_	NPC	0.1000	No Ct	
+B1	25_Loegfroe_NegK_	NTC	0.1000	No Ct	
+C1	25_Loegfroe_eDNA_	Unknown	0.1000	No Ct	
+D1	25_Loegfroe_eDNA_	Unknown	0.1000	No Ct	
+A2	26_StorVandsalamander_PosK_	NPC	0.1000	32.31	
+B2	26_StorVandsalamander_NegK_	NTC	0.1000	No Ct	
+C2	26_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+D2	26_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+A3	27_Strandtudse_PosK_	NPC	0.1000	35.76	
+B3	27_Strandtudse_NegK_	NTC	0.1000	No Ct	
+C3	27_Strandtudse_eDNA_	Unknown	0.1000	No Ct	
+D3	27_Strandtudse_eDNA_	Unknown	0.1000	No Ct	
+A6	30_Klokkefroe_PosK_	NPC	0.1000	No Ct	
+B6	30_Klokkefroe_NegK_	NTC	0.1000	No Ct	
+C6	30_Klokkefroe_eDNA_	Unknown	0.1000	No Ct	
+D6	30_Klokkefroe_eDNA_	Unknown	0.1000	No Ct	
+A8	32_Latterfroe_PosK_	NPC	0.1000	26.83	
+B8	32_Latterfroe_NegK_	NTC	0.1000	No Ct	
+C8	32_Latterfroe_eDNA_	Unknown	0.1000	No Ct	
+D8	32_Latterfroe_eDNA_	Unknown	0.1000	No Ct	
+A9	33_KortbenetGroenFroe_PosK_	NPC	0.1000	No Ct	
+B9	33_KortbenetGroenFroe_NegK_	NTC	0.1000	No Ct	
+C9	33_KortbenetGroenFroe_eDNA_	Unknown	0.1000	No Ct	
+D9	33_KortbenetGroenFroe_eDNA_	Unknown	0.1000	No Ct	
+A10	34_Soelvkarusse_PosK_	NPC	0.1000	No Ct	
+B10	34_Soelvkarusse_NegK_	NTC	0.1000	No Ct	
+C10	34_Soelvkarusse_eDNA_	Unknown	0.1000	No Ct	
+D10	34_Soelvkarusse_eDNA_	Unknown	0.1000	No Ct	

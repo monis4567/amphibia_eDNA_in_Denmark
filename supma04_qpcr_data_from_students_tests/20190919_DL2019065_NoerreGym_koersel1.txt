@@ -1,0 +1,97 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	
+A1	01_Loegfroe_PosK_	NPC	1	0.3978	27.04	
+B1	01_Loegfroe_NegK_	NTC	2	0.3978	No Ct	
+C1	01_Loegfroe_eDNA_	Unknown	3	0.3978	No Ct	
+D1	01_Loegfroe_eDNA_	Unknown	3	0.3978	No Ct	
+A2	02_StorVandsalamander_PosK_	NPC	4	0.3978	36.77	
+B2	02_StorVandsalamander_NegK_	NTC	5	0.3978	No Ct	
+C2	02_StorVandsalamander_eDNA_	Unknown	6	0.3978	No Ct	
+D2	02_StorVandsalamander_eDNA_	Unknown	6	0.3978	No Ct	
+A3	03_Strandtudse_PosK_	NPC	7	0.3978	33.57	
+B3	03_Strandtudse_NegK_	NTC	8	0.3978	No Ct	
+C3	03_Strandtudse_eDNA_	Unknown	9	0.3978	No Ct	
+D3	03_Strandtudse_eDNA_	Unknown	9	0.3978	No Ct	
+A4	04_GroenbrogetTudse_PosK_	NPC	10	0.3978	36.61	
+B4	04_GroenbrogetTudse_NegK_	NTC	11	0.3978	No Ct	
+C4	04_GroenbrogetTudse_eDNA_	Unknown	12	0.3978	No Ct	
+D4	04_GroenbrogetTudse_eDNA_	Unknown	12	0.3978	No Ct	
+A5	05_Loevfroe_PosK_	NPC	13	0.3978	32.86	
+B5	05_Loevfroe_NegK_	NTC	14	0.3978	No Ct	
+C5	05_Loevfroe_eDNA_	Unknown	15	0.3978	No Ct	
+D5	05_Loevfroe_eDNA_	Unknown	15	0.3978	No Ct	
+A6	06_Springfroe_PosK_	NPC	16	0.3978	31.99	
+B6	06_Springfroe_NegK_	NTC	17	0.3978	No Ct	
+C6	06_Springfroe_eDNA_	Unknown	18	0.3978	No Ct	
+D6	06_Springfroe_eDNA_	Unknown	18	0.3978	No Ct	
+A7	07_Springfroe_PosK_	NPC	19	0.3978	36.51	
+B7	07_Springfroe_NegK_	NTC	20	0.3978	No Ct	
+C7	07_Springfroe_eDNA_	Unknown	21	0.3978	No Ct	
+D7	07_Springfroe_eDNA_	Unknown	21	0.3978	No Ct	
+A8	08_Klokkefroe_PosK_	NPC	22	0.3978	No Ct	
+B8	08_Klokkefroe_NegK_	NTC	23	0.3978	No Ct	
+C8	08_Klokkefroe_eDNA_	Unknown	24	0.3978	No Ct	
+D8	08_Klokkefroe_eDNA_	Unknown	24	0.3978	No Ct	
+A9	09_Skrubtudse_PosK_	NPC	25	0.3978	No Ct	
+B9	09_Skrubtudse_NegK_	NTC	26	0.3978	No Ct	
+C9	09_Skrubtudse_eDNA_	Unknown	27	0.3978	No Ct	
+D9	09_Skrubtudse_eDNA_	Unknown	27	0.3978	No Ct	
+A10	10_Skrubtudse_PosK_	NPC	28	0.3978	26.71	
+B10	10_Skrubtudse_NegK_	NTC	29	0.3978	No Ct	
+C10	10_Skrubtudse_eDNA_	Unknown	30	0.3978	No Ct	
+D10	10_Skrubtudse_eDNA_	Unknown	30	0.3978	40.99	
+A11	11_Bjergsalamander_PosK_	NPC	31	0.3978	33.15	
+B11	11_Bjergsalamander_NegK_	NTC	32	0.3978	No Ct	
+C11	11_Bjergsalamander_eDNA_	Unknown	33	0.3978	No Ct	
+D11	11_Bjergsalamander_eDNA_	Unknown	33	0.3978	No Ct	
+A12	12_Latterfroe_PosK_	NPC	34	0.3978	32.60	
+B12	12_Latterfroe_NegK_	NTC	35	0.3978	No Ct	
+C12	12_Latterfroe_eDNA_	Unknown	36	0.3978	No Ct	
+D12	12_Latterfroe_eDNA_	Unknown	36	0.3978	No Ct	
+H1	13_Spidssnudetfroe_PosK_	NPC	37	0.3978	43.14	
+G1	13_Spidssnudetfroe_NegK_	NTC	38	0.3978	No Ct	
+E1	13_Spidssnudetfroe_eDNA_	Unknown	39	0.3978	No Ct	
+F1	13_Spidssnudetfroe_eDNA_	Unknown	39	0.3978	No Ct	
+H2	14_Spidssnudetfroe_PosK_	NPC	40	0.3978	26.39	
+G2	14_Spidssnudetfroe_NegK_	NTC	41	0.3978	No Ct	
+E2	14_Spidssnudetfroe_eDNA_	Unknown	42	0.3978	No Ct	
+F2	14_Spidssnudetfroe_eDNA_	Unknown	42	0.3978	No Ct	
+H3	15_KortbenetGroenFroe_PosK_	NPC	43	0.3978	No Ct	
+G3	15_KortbenetGroenFroe_NegK_	NTC	44	0.3978	No Ct	
+E3	15_KortbenetGroenFroe_eDNA_	Unknown	45	0.3978	No Ct	
+F3	15_KortbenetGroenFroe_eDNA_	Unknown	45	0.3978	No Ct	
+H4	16_ButsnudetFroe_PosK_	NPC	46	0.3978	31.35	
+G4	16_ButsnudetFroe_NegK_	NTC	47	0.3978	No Ct	
+E4	16_ButsnudetFroe_eDNA_	Unknown	48	0.3978	No Ct	
+F4	16_ButsnudetFroe_eDNA_	Unknown	48	0.3978	No Ct	
+H5	17_ButsnudetFroe_PosK_	NPC	49	0.3978	38.83	
+G5	17_ButsnudetFroe_NegK_	NTC	50	0.3978	No Ct	
+E5	17_ButsnudetFroe_eDNA_	Unknown	51	0.3978	No Ct	
+F5	17_ButsnudetFroe_eDNA_	Unknown	51	0.3978	No Ct	
+H6	18_LilleVandsalamander_PosK_	NPC	52	0.3978	30.06	
+G6	18_LilleVandsalamander_NegK_	NTC	53	0.3978	No Ct	
+E6	18_LilleVandsalamander_eDNA_	Unknown	54	0.3978	No Ct	
+F6	18_LilleVandsalamander_eDNA_	Unknown	54	0.3978	No Ct	
+H7	19_LilleVandsalamander_PosK_	NPC	55	0.3978	30.37	
+G7	19_LilleVandsalamander_NegK_	NTC	56	0.3978	No Ct	
+E7	19_LilleVandsalamander_eDNA_	Unknown	57	0.3978	No Ct	
+F7	19_LilleVandsalamander_eDNA_	Unknown	57	0.3978	No Ct	
+H8	20_Skalle_PosK_	NPC	58	0.3978	32.32	
+G8	20_Skalle_NegK_	NTC	59	0.3978	No Ct	
+E8	20_Skalle_eDNA_	Unknown	60	0.3978	39.87	
+F8	20_Skalle_eDNA_	Unknown	60	0.3978	38.89	
+H9	21_Skalle_PosK_	NPC	61	0.3978	31.17	
+G9	21_Skalle_NegK_	NTC	62	0.3978	No Ct	
+E9	21_Skalle_eDNA_	Unknown	63	0.3978	39.50	
+F9	21_Skalle_eDNA_	Unknown	63	0.3978	40.99	
+H10	22_Karusse_PosK_	NPC	64	0.3978	31.22	
+G10	22_Karusse_NegK_	NTC	65	0.3978	No Ct	
+E10	22_Karusse_eDNA_	Unknown	66	0.3978	32.76	
+F10	22_Karusse_eDNA_	Unknown	66	0.3978	32.86	
+H11	23_Karusse_PosK_	NPC	67	0.3978	No Ct	
+G11	23_Karusse_NegK_	NTC	68	0.3978	No Ct	
+E11	23_Karusse_eDNA_	Unknown	69	0.3978	No Ct	
+F11	23_Karusse_eDNA_	Unknown	69	0.3978	No Ct	
+H12	24_Soelvkarusse_PosK_	NPC	70	0.3978	No Ct	
+G12	24_Soelvkarusse_NegK_	NTC	71	0.3978	No Ct	
+E12	24_Soelvkarusse_eDNA_	Unknown	72	0.3978	No Ct	
+F12	24_Soelvkarusse_eDNA_	Unknown	72	0.3978	No Ct	

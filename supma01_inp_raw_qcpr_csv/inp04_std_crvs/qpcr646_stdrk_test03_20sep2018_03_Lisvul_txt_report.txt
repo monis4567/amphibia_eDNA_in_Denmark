@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A7	17_Lisvul_1E05_3uL_F01R01P01  Qty or ID	Standard	17	0.1057	25.76	3.00e+005	0.802	-3.905	
+A8	17_Lisvul_1E05_3uL_F01R01P01  Qty or ID	Standard	17	0.1057	26.50	3.00e+005	0.802	-3.905	
+A9	17_Lisvul_1E05_3uL_F01R01P01  Qty or ID	Standard	17	0.1057	25.61	3.00e+005	0.802	-3.905	
+B7	18_Lisvul_1E04_3uL_F01R01P01  Qty or ID	Standard	18	0.1057	29.13	3.00e+004	0.802	-3.905	
+B8	18_Lisvul_1E04_3uL_F01R01P01  Qty or ID	Standard	18	0.1057	29.49	3.00e+004	0.802	-3.905	
+B9	18_Lisvul_1E04_3uL_F01R01P01  Qty or ID	Standard	18	0.1057	32.07	3.00e+004	0.802	-3.905	
+C7	19_Lisvul_1E03_3uL_F01R01P01  Qty or ID	Standard	19	0.1057	No Ct	No Ct	0.802	-3.905	
+C8	19_Lisvul_1E03_3uL_F01R01P01  Qty or ID	Standard	19	0.1057	31.21	3.00e+003	0.802	-3.905	
+C9	19_Lisvul_1E03_3uL_F01R01P01  Qty or ID	Standard	19	0.1057	36.21	3.00e+003	0.802	-3.905	
+D7	20_Lisvul_1E02_3uL_F01R01P01  Qty or ID	Standard	20	0.1057	No Ct	No Ct	0.802	-3.905	
+D8	20_Lisvul_1E02_3uL_F01R01P01  Qty or ID	Standard	20	0.1057	No Ct	No Ct	0.802	-3.905	
+D9	20_Lisvul_1E02_3uL_F01R01P01  Qty or ID	Standard	20	0.1057	No Ct	No Ct	0.802	-3.905	
+E7	21_Lisvul_1E01_3uL_F01R01P01  Qty or ID	Standard	21	0.1057	No Ct	No Ct	0.802	-3.905	
+E8	21_Lisvul_1E01_3uL_F01R01P01  Qty or ID	Standard	21	0.1057	No Ct	No Ct	0.802	-3.905	
+E9	21_Lisvul_1E01_3uL_F01R01P01  Qty or ID	Standard	21	0.1057	No Ct	No Ct	0.802	-3.905	
+F7	22_Lisvul_1E00_3uL_F01R01P01  Qty or ID	Standard	22	0.1057	No Ct	No Ct	0.802	-3.905	
+F8	22_Lisvul_1E00_3uL_F01R01P01  Qty or ID	Standard	22	0.1057	No Ct	No Ct	0.802	-3.905	
+F9	22_Lisvul_1E00_3uL_F01R01P01  Qty or ID	Standard	22	0.1057	No Ct	No Ct	0.802	-3.905	
+G7	23_Lisvul_NTC_3uL_F01R01P01  Qty or ID	NTC	23	0.1057	No Ct	No Ct	0.802	-3.905	
+G8	23_Lisvul_NTC_3uL_F01R01P01  Qty or ID	NTC	23	0.1057	No Ct	No Ct	0.802	-3.905	
+G9	23_Lisvul_NTC_3uL_F01R01P01  Qty or ID	NTC	23	0.1057	No Ct	No Ct	0.802	-3.905	
+H7	24_Lisvul_1E6posk142-25_3uL_F01R01P01  Qty or ID	Unknown	24	0.1057	21.63	4.136e+006	0.802	-3.905	
+H8	24_Lisvul_1E6posk142-25_3uL_F01R01P01  Qty or ID	Unknown	24	0.1057	22.03	3.280e+006	0.802	-3.905	
+H9	24_Lisvul_1E6posk142-25_3uL_F01R01P01  Qty or ID	Unknown	24	0.1057	22.17	3.013e+006	0.802	-3.905	

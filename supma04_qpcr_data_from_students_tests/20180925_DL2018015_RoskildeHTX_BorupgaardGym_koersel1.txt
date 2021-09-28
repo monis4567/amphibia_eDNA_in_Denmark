@@ -1,0 +1,97 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	01_Loegfroe_PosK_	NPC	0.1000	30.12	
+B1	01_Loegfroe_NegK_	NTC	0.1000	No Ct	
+C1	01_Loegfroe_eDNA_	Unknown	0.1000	No Ct	
+D1	01_Loegfroe_eDNA	Unknown	0.1000	No Ct	
+A2	02_StorVandsalamander_PosK_	NPC	0.1000	27.87	
+B2	02_StorVandsalamander_NegK_	NTC	0.1000	No Ct	
+C2	02_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+D2	02_StorVandsalamander_eDNA	Unknown	0.1000	No Ct	
+A3	03_Strandtudse_PosK_	NPC	0.1000	25.00	
+B3	03_Strandtudse_NegK_	NTC	0.1000	No Ct	
+C3	03_Strandtudse_eDNA_	Unknown	0.1000	No Ct	
+D3	03_Strandtudse_eDNA	Unknown	0.1000	No Ct	
+A4	04_GroenbrogetTudse_PosK_	NPC	0.1000	34.41	
+B4	04_GroenbrogetTudse_NegK_	NTC	0.1000	No Ct	
+C4	04_GroenbrogetTudse_eDNA_	Unknown	0.1000	No Ct	
+D4	04_GroenbrogetTudse_eDNA	Unknown	0.1000	No Ct	
+A5	05_Loevfroe_PosK_	NPC	0.1000	28.08	
+B5	05_Loevfroe_NegK_	NTC	0.1000	No Ct	
+C5	05_Loevfroe_eDNA_	Unknown	0.1000	No Ct	
+D5	05_Loevfroe_eDNA	Unknown	0.1000	No Ct	
+A6	06_Springfroe_PosK_	NPC	0.1000	34.94	
+B6	06_Springfroe_NegK_	NTC	0.1000	No Ct	
+C6	06_Springfroe_eDNA_	Unknown	0.1000	No Ct	
+D6	06_Springfroe_eDNA	Unknown	0.1000	No Ct	
+A7	07_Springfroe_PosK_	NPC	0.1000	43.01	
+B7	07_Springfroe_NegK_	NTC	0.1000	No Ct	
+C7	07_Springfroe_eDNA_	Unknown	0.1000	No Ct	
+D7	07_Springfroe_eDNA	Unknown	0.1000	No Ct	
+A8	08_Klokkefroe_PosK_	NPC	0.1000	29.79	
+B8	08_Klokkefroe_NegK_	NTC	0.1000	No Ct	
+C8	08_Klokkefroe_eDNA_	Unknown	0.1000	No Ct	
+D8	08_Klokkefroe_eDNA	Unknown	0.1000	No Ct	
+A9	09_Skrubtudse_PosK_	NPC	0.1000	22.54	
+B9	09_Skrubtudse_NegK_	NTC	0.1000	No Ct	
+C9	09_Skrubtudse_eDNA_	Unknown	0.1000	No Ct	
+D9	09_Skrubtudse_eDNA	Unknown	0.1000	No Ct	
+A10	10_Skrubtudse_PosK_	NPC	0.1000	22.45	
+B10	10_Skrubtudse_NegK_	NTC	0.1000	No Ct	
+C10	10_Skrubtudse_eDNA_	Unknown	0.1000	No Ct	
+D10	10_Skrubtudse_eDNA	Unknown	0.1000	No Ct	
+A11	11_Bjergsalamander_PosK_	NPC	0.1000	23.25	
+B11	11_Bjergsalamander_NegK_	NTC	0.1000	No Ct	
+C11	11_Bjergsalamander_eDNA_	Unknown	0.1000	No Ct	
+D11	11_Bjergsalamander_eDNA	Unknown	0.1000	No Ct	
+A12	12_Latterfroe_PosK_	NPC	0.1000	No Ct	
+B12	12_Latterfroe_NegK_	NTC	0.1000	No Ct	
+C12	12_Latterfroe_eDNA_	Unknown	0.1000	No Ct	
+D12	12_Latterfroe_eDNA	Unknown	0.1000	No Ct	
+H1	13_Spidssnudetfroe_PosK_	NPC	0.1000	28.37	
+G1	13_Spidssnudetfroe_NegK_	NTC	0.1000	No Ct	
+E1	13_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+F1	13_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+H2	14_Spidssnudetfroe_PosK_	NPC	0.1000	27.82	
+G2	14_Spidssnudetfroe_NegK_	NTC	0.1000	No Ct	
+E2	14_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+F2	14_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+H3	15_KortbenetGroenFroe_PosK_	NPC	0.1000	31.05	
+G3	15_KortbenetGroenFroe_NegK_	NTC	0.1000	No Ct	
+E3	15_KortbenetGroenFroe_eDNA_	Unknown	0.1000	No Ct	
+F3	15_KortbenetGroenFroe_eDNA_	Unknown	0.1000	No Ct	
+H4	16_ButsnudetFroe_PosK_	NPC	0.1000	No Ct	
+G4	16_ButsnudetFroe_NegK_	NTC	0.1000	No Ct	
+E4	16_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+F4	16_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+H5	17_ButsnudetFroe_PosK_	NPC	0.1000	No Ct	
+G5	17_ButsnudetFroe_NegK_	NTC	0.1000	No Ct	
+E5	17_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+F5	17_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+H6	18_LilleVandsalamander_PosK_	NPC	0.1000	No Ct	
+G6	18_LilleVandsalamander_NegK_	NTC	0.1000	No Ct	
+E6	18_LilleVandsalamander_eDNA_	Unknown	0.1000	39.75	
+F6	18_LilleVandsalamander_eDNA_	Unknown	0.1000	40.09	
+G7	19_LilleVandsalamander_NegK_	NTC	0.1000	No Ct	
+H7	19_LilleVandsalamander_PosK_	NPC	0.1000	28.62	
+H8	20_Skalle_PosK_	NPC	0.1000	21.39	
+G8	20_Skalle_NegK_	NTC	0.1000	No Ct	
+E8	20_Skalle_eDNA_	Unknown	0.1000	No Ct	
+F8	20_Skalle_eDNA_	Unknown	0.1000	No Ct	
+H9	21_Skalle_PosK_	NPC	0.1000	No Ct	
+G9	21_Skalle_NegK_	NTC	0.1000	No Ct	
+E9	21_Skalle_eDNA_	Unknown	0.1000	No Ct	
+F9	21_Skalle_eDNA_	Unknown	0.1000	No Ct	
+H11	23_Karusse_PosK_	NPC	0.1000	No Ct	
+G11	23_Karusse_NegK_	NTC	0.1000	No Ct	
+E11	23_Karusse_eDNA_	Unknown	0.1000	No Ct	
+F11	23_Karusse_eDNA_	Unknown	0.1000	No Ct	
+H12	24_Soelvkarusse_PosK_	NPC	0.1000	No Ct	
+G12	24_Soelvkarusse_NegK_	NTC	0.1000	No Ct	
+E12	24_Soelvkarusse_eDNA_	Unknown	0.1000	No Ct	
+F12	24_Soelvkarusse_eDNA_	Unknown	0.1000	No Ct	
+E7	19_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+F7	19_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+H10	22_Karusse_PosK_	NPC	0.1000	30.75	
+G10	22_Karusse_NegK_	NTC	0.1000	No Ct	
+E10	22_Karusse_eDNA_	Unknown	0.1000	No Ct	
+F10	22_Karusse_eDNA_	Unknown	0.1000	No Ct	

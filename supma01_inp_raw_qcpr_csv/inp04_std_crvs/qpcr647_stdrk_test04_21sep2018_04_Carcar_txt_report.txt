@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A10	25_Carcar_1E05_3uL_CCCBb-Lrprobe  Qty or ID	Standard	25	0.2479	22.94	3.00e+005	0.974	-3.659	
+A11	25_Carcar_1E05_3uL_CCCBb-Lrprobe  Qty or ID	Standard	25	0.2479	23.06	3.00e+005	0.974	-3.659	
+A12	25_Carcar_1E05_3uL_CCCBb-Lrprobe  Qty or ID	Standard	25	0.2479	22.89	3.00e+005	0.974	-3.659	
+B10	26_Carcar_1E04_3uL_CCCBb-Lrprobe  Qty or ID	Standard	26	0.2479	26.67	3.00e+004	0.974	-3.659	
+B11	26_Carcar_1E04_3uL_CCCBb-Lrprobe  Qty or ID	Standard	26	0.2479	26.67	3.00e+004	0.974	-3.659	
+B12	26_Carcar_1E04_3uL_CCCBb-Lrprobe  Qty or ID	Standard	26	0.2479	26.75	3.00e+004	0.974	-3.659	
+C10	27_Carcar_1E03_3uL_CCCBb-Lrprobe  Qty or ID	Standard	27	0.2479	27.42	3.00e+003	0.974	-3.659	
+C11	27_Carcar_1E03_3uL_CCCBb-Lrprobe  Qty or ID	Standard	27	0.2479	30.52	3.00e+003	0.974	-3.659	
+C12	27_Carcar_1E03_3uL_CCCBb-Lrprobe  Qty or ID	Standard	27	0.2479	30.50	3.00e+003	0.974	-3.659	
+D10	28_Carcar_1E02_3uL_CCCBb-Lrprobe  Qty or ID	Standard	28	0.2479	36.04	3.00e+002	0.974	-3.659	
+D11	28_Carcar_1E02_3uL_CCCBb-Lrprobe  Qty or ID	Standard	28	0.2479	34.33	3.00e+002	0.974	-3.659	
+D12	28_Carcar_1E02_3uL_CCCBb-Lrprobe  Qty or ID	Standard	28	0.2479	35.34	3.00e+002	0.974	-3.659	
+E10	29_Carcar_1E01_3uL_CCCBb-Lrprobe  Qty or ID	Standard	29	0.2479	38.13	3.00e+001	0.974	-3.659	
+E11	29_Carcar_1E01_3uL_CCCBb-Lrprobe  Qty or ID	Standard	29	0.2479	37.60	3.00e+001	0.974	-3.659	
+E12	29_Carcar_1E01_3uL_CCCBb-Lrprobe  Qty or ID	Standard	29	0.2479	37.33	3.00e+001	0.974	-3.659	
+F10	30_Carcar_1E00_3uL_CCCBb-Lrprobe  Qty or ID	Standard	30	0.2479	40.84	3.00e+000	0.974	-3.659	
+F11	30_Carcar_1E00_3uL_CCCBb-Lrprobe  Qty or ID	Standard	30	0.2479	No Ct	No Ct	0.974	-3.659	
+F12	30_Carcar_1E00_3uL_CCCBb-Lrprobe  Qty or ID	Standard	30	0.2479	40.36	3.00e+000	0.974	-3.659	
+G10	31_Carcar_1E0NTC_3uL_CCCBb-Lrprobe  Qty or ID	NTC	31	0.2479	No Ct	No Ct	0.974	-3.659	
+G11	31_Carcar_1E0NTC_3uL_CCCBb-Lrprobe  Qty or ID	NTC	31	0.2479	No Ct	No Ct	0.974	-3.659	
+G12	31_Carcar_1E0NTC_3uL_CCCBb-Lrprobe  Qty or ID	NTC	31	0.2479	No Ct	No Ct	0.974	-3.659	
+H10	32_Carcar_1E0posk144-26_3uL_CCCBb-Lrprobe  Qty o	Unknown	32	0.2479	20.00	1.981e+006	0.974	-3.659	
+H11	32_Carcar_1E0_3uL_CCCBb-Lrprobe  Qty or ID	Unknown	32	0.2479	19.76	2.304e+006	0.974	-3.659	
+H12	32_Carcar_1E0_3uL_CCCBb-Lrprobe  Qty or ID	Unknown	32	0.2479	19.05	3.607e+006	0.974	-3.659	

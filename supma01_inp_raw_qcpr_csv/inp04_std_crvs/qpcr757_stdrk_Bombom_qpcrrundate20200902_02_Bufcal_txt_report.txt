@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A4	09_Bufcal1_02_1E05_3uL_BufcalCBL_0390,BufcalCBR_	Standard	9	0.1699	24.18	3.00e+005	0.964	-3.607	
+A5	09_Bufcal1_02_1E05_3uL_BufcalCBL_0390,BufcalCBR_	Standard	9	0.1699	25.13	3.00e+005	0.964	-3.607	
+A6	09_Bufcal1_02_1E05_3uL_BufcalCBL_0390,BufcalCBR_	Standard	9	0.1699	25.45	3.00e+005	0.964	-3.607	
+B4	10_Bufcal1_02_1E04_3uL_BufcalCBL_0390,BufcalCBR_	Standard	10	0.1699	26.61	3.00e+004	0.964	-3.607	
+B5	10_Bufcal1_02_1E04_3uL_BufcalCBL_0390,BufcalCBR_	Standard	10	0.1699	27.72	3.00e+004	0.964	-3.607	
+B6	10_Bufcal1_02_1E04_3uL_BufcalCBL_0390,BufcalCBR_	Standard	10	0.1699	28.26	3.00e+004	0.964	-3.607	
+C4	11_Bufcal1_02_1E03_3uL_BufcalCBL_0390,BufcalCBR_	Standard	11	0.1699	31.60	3.00e+003	0.964	-3.607	
+C5	11_Bufcal1_02_1E03_3uL_BufcalCBL_0390,BufcalCBR_	Standard	11	0.1699	32.39	3.00e+003	0.964	-3.607	
+C6	11_Bufcal1_02_1E03_3uL_BufcalCBL_0390,BufcalCBR_	Standard	11	0.1699	32.19	3.00e+003	0.964	-3.607	
+D4	12_Bufcal1_02_1E02_3uL_BufcalCBL_0390,BufcalCBR_	Standard	12	0.1699	35.92	3.00e+002	0.964	-3.607	
+D5	12_Bufcal1_02_1E02_3uL_BufcalCBL_0390,BufcalCBR_	Standard	12	0.1699	36.80	3.00e+002	0.964	-3.607	
+D6	12_Bufcal1_02_1E02_3uL_BufcalCBL_0390,BufcalCBR_	Standard	12	0.1699	32.80	3.00e+002	0.964	-3.607	
+E4	13_Bufcal1_02_1E01_3uL_BufcalCBL_0390,BufcalCBR_	Standard	13	0.1699	38.49	3.00e+001	0.964	-3.607	
+E5	13_Bufcal1_02_1E01_3uL_BufcalCBL_0390,BufcalCBR_	Standard	13	0.1699	38.88	3.00e+001	0.964	-3.607	
+E6	13_Bufcal1_02_1E01_3uL_BufcalCBL_0390,BufcalCBR_	Standard	13	0.1699	40.03	3.00e+001	0.964	-3.607	
+F4	14_Bufcal1_02_1E00_3uL_BufcalCBL_0390,BufcalCBR_	Standard	14	0.1699	No Ct	No Ct	0.964	-3.607	
+F5	14_Bufcal1_02_1E00_3uL_BufcalCBL_0390,BufcalCBR_	Standard	14	0.1699	No Ct	No Ct	0.964	-3.607	
+F6	14_Bufcal1_02_1E00_3uL_BufcalCBL_0390,BufcalCBR_	Standard	14	0.1699	No Ct	No Ct	0.964	-3.607	
+G4	15_Bufcal1_02_1E0NTC_3uL_BufcalCBL_0390,BufcalCB	NTC	15	0.1699	No Ct	No Ct	0.964	-3.607	
+G5	15_Bufcal1_02_1E0NTC_3uL_BufcalCBL_0390,BufcalCB	NTC	15	0.1699	No Ct	No Ct	0.964	-3.607	
+G6	15_Bufcal1_02_1E0NTC_3uL_BufcalCBL_0390,BufcalCB	NTC	15	0.1699	No Ct	No Ct	0.964	-3.607	
+H4	16_Bufcal_1E0tiss_3uL_BufcalCBL_0390,BufcalCBR_0	Unknown	16	0.1699	24.94	2.333e+005	0.964	-3.607	
+H5	16_Bufcal_1E0tiss_3uL_BufcalCBL_0390,BufcalCBR_0	Unknown	16	0.1699	24.81	2.540e+005	0.964	-3.607	
+H6	16_Bufcal_1E0tiss_3uL_BufcalCBL_0390,BufcalCBR_0	Unknown	16	0.1699	24.84	2.491e+005	0.964	-3.607	

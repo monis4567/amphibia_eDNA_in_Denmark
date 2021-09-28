@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A1	01_Ranles_1E05_3uL_F01R01P01  Qty or ID	Standard	1	0.0476	22.52	3.00e+005	0.821	-2.684	
+A2	01_Ranles_1E05_3uL_F01R01P01  Qty or ID	Standard	1	0.0476	22.73	3.00e+005	0.821	-2.684	
+A3	01_Ranles_1E05_3uL_F01R01P01  Qty or ID	Standard	1	0.0476	23.40	3.00e+005	0.821	-2.684	
+B1	02_Ranles_1E04_3uL_F01R01P01  Qty or ID	Standard	2	0.0476	26.87	3.00e+004	0.821	-2.684	
+B2	02_Ranles_1E04_3uL_F01R01P01  Qty or ID	Standard	2	0.0476	26.83	3.00e+004	0.821	-2.684	
+B3	02_Ranles_1E04_3uL_F01R01P01  Qty or ID	Standard	2	0.0476	26.44	3.00e+004	0.821	-2.684	
+C1	03_Ranles_1E03_3uL_F01R01P01  Qty or ID	Standard	3	0.0476	31.81	3.00e+003	0.821	-2.684	
+C2	03_Ranles_1E03_3uL_F01R01P01  Qty or ID	Standard	3	0.0476	No Ct	No Ct	0.821	-2.684	
+C3	03_Ranles_1E03_3uL_F01R01P01  Qty or ID	Standard	3	0.0476	32.62	3.00e+003	0.821	-2.684	
+D1	04_Ranles_1E02_3uL_F01R01P01  Qty or ID	Standard	4	0.0476	34.99	3.00e+002	0.821	-2.684	
+D2	04_Ranles_1E02_3uL_F01R01P01  Qty or ID	Standard	4	0.0476	32.23	3.00e+002	0.821	-2.684	
+D3	04_Ranles_1E02_3uL_F01R01P01  Qty or ID	Standard	4	0.0476	33.38	3.00e+002	0.821	-2.684	
+E1	05_Ranles_1E02_3uL_F01R01P01  Qty or ID	Standard	5	0.0476	No Ct	No Ct	0.821	-2.684	
+E2	05_Ranles_1E02_3uL_F01R01P01  Qty or ID	Standard	5	0.0476	No Ct	No Ct	0.821	-2.684	
+E3	05_Ranles_1E02_3uL_F01R01P01  Qty or ID	Standard	5	0.0476	35.39	3.00e+001	0.821	-2.684	
+F1	06_Ranles_1E00_3uL_F01R01P01  Qty or ID	Standard	6	0.0476	No Ct	No Ct	0.821	-2.684	
+F2	06_Ranles_1E00_3uL_F01R01P01  Qty or ID	Standard	6	0.0476	33.22	3.00e+000	0.821	-2.684	
+F3	06_Ranles_1E00_3uL_F01R01P01  Qty or ID	Standard	6	0.0476	No Ct	No Ct	0.821	-2.684	
+G1	07_Ranles_NTC_3uL_F01R01P01  Qty or ID	NTC	7	0.0476	No Ct	No Ct	0.821	-2.684	
+G2	07_Ranles_NTC_3uL_F01R01P01  Qty or ID	NTC	7	0.0476	No Ct	No Ct	0.821	-2.684	
+G3	07_Ranles_NTC_3uL_F01R01P01  Qty or ID	NTC	7	0.0476	No Ct	No Ct	0.821	-2.684	
+H1	08_Ranles_1E6posk142-02_3uL_F01R01P01  Qty or ID	Unknown	8	0.0476	19.95	1.204e+007	0.821	-2.684	
+H2	08_Ranles_1E6posk142-02_3uL_F01R01P01  Qty or ID	Unknown	8	0.0476	19.95	1.206e+007	0.821	-2.684	
+H3	08_Ranles_1E6posk142-02_3uL_F01R01P01  Qty or ID	Unknown	8	0.0476	19.91	1.244e+007	0.821	-2.684	

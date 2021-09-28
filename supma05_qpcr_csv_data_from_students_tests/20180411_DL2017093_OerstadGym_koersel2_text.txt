@@ -1,0 +1,5 @@
+Well 	                    Well Name 	Well Type 	Replicate 	Threshold (dRn) 	Ct (dRn) 	
+  A8 	32_AmerikanskRibbegoble_PosK_ 	      NPC 	       22 	         0,0769 	   30,87 	
+  B8 	32_AmerikanskRibbegoble_NegK_ 	      NTC 	       23 	         0,0769 	   No Ct 	
+  C8 	32_AmerikanskRibbegoble_eDNA_ 	  Unknown 	       24 	         0,0769 	   40,12 	
+  D8 	 32_AmerikanskRibbegoble_eDNA 	  Unknown 	       24 	         0,0769 	   42,02 	

@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A7	17_Bufvir3_08_1E05_3uL_BufvirCBL_0653,BufvirCBR_	Standard	17	0.5115	23.78	3.00e+005	0.971	-3.401	
+A8	17_Bufvir3_08_1E05_3uL_BufvirCBL_0653,BufvirCBR_	Standard	17	0.5115	26.77	3.00e+005	0.971	-3.401	
+A9	17_Bufvir3_08_1E05_3uL_BufvirCBL_0653,BufvirCBR_	Standard	17	0.5115	27.15	3.00e+005	0.971	-3.401	
+B7	18_Bufvir3_08_1E04_3uL_BufvirCBL_0653,BufvirCBR_	Standard	18	0.5115	29.93	3.00e+004	0.971	-3.401	
+B8	18_Bufvir3_08_1E04_3uL_BufvirCBL_0653,BufvirCBR_	Standard	18	0.5115	29.79	3.00e+004	0.971	-3.401	
+B9	18_Bufvir3_08_1E04_3uL_BufvirCBL_0653,BufvirCBR_	Standard	18	0.5115	29.65	3.00e+004	0.971	-3.401	
+C7	19_Bufvir3_08_1E03_3uL_BufvirCBL_0653,BufvirCBR_	Standard	19	0.5115	33.74	3.00e+003	0.971	-3.401	
+C8	19_Bufvir3_08_1E03_3uL_BufvirCBL_0653,BufvirCBR_	Standard	19	0.5115	33.53	3.00e+003	0.971	-3.401	
+C9	19_Bufvir3_08_1E03_3uL_BufvirCBL_0653,BufvirCBR_	Standard	19	0.5115	33.80	3.00e+003	0.971	-3.401	
+D7	20_Bufvir3_08_1E02_3uL_BufvirCBL_0653,BufvirCBR_	Standard	20	0.5115	35.75	3.00e+002	0.971	-3.401	
+D8	20_Bufvir3_08_1E02_3uL_BufvirCBL_0653,BufvirCBR_	Standard	20	0.5115	37.36	3.00e+002	0.971	-3.401	
+D9	20_Bufvir3_08_1E02_3uL_BufvirCBL_0653,BufvirCBR_	Standard	20	0.5115	36.74	3.00e+002	0.971	-3.401	
+E7	21_Bufvir3_08_1E01_3uL_BufvirCBL_0653,BufvirCBR_	Standard	21	0.5115	39.36	3.00e+001	0.971	-3.401	
+E8	21_Bufvir3_08_1E01_3uL_BufvirCBL_0653,BufvirCBR_	Standard	21	0.5115	39.62	3.00e+001	0.971	-3.401	
+E9	21_Bufvir3_08_1E01_3uL_BufvirCBL_0653,BufvirCBR_	Standard	21	0.5115	39.51	3.00e+001	0.971	-3.401	
+F7	22_Bufvir3_08_1E00_3uL_BufvirCBL_0653,BufvirCBR_	Standard	22	0.5115	No Ct	No Ct	0.971	-3.401	
+F8	22_Bufvir3_08_1E00_3uL_BufvirCBL_0653,BufvirCBR_	Standard	22	0.5115	No Ct	No Ct	0.971	-3.401	
+F9	22_Bufvir3_08_1E00_3uL_BufvirCBL_0653,BufvirCBR_	Standard	22	0.5115	No Ct	No Ct	0.971	-3.401	
+G7	23_Bufvir3_08_1E0NTC_3uL_BufvirCBL_0653,BufvirCB	NTC	23	0.5115	No Ct	No Ct	0.971	-3.401	
+G8	23_Bufvir3_08_1E0NTC_3uL_BufvirCBL_0653,BufvirCB	NTC	23	0.5115	No Ct	No Ct	0.971	-3.401	
+G9	23_Bufvir3_08_1E0NTC_3uL_BufvirCBL_0653,BufvirCB	NTC	23	0.5115	No Ct	No Ct	0.971	-3.401	
+H7	24_Bufvir_1E0tiss_3uL_BufvirCBL_0653,BufvirCBR_0	Unknown	24	0.5115	9.47	2.666e+010	0.971	-3.401	
+H8	24_Bufvir_1E0tiss_3uL_BufvirCBL_0653,BufvirCBR_0	Unknown	24	0.5115	9.68	2.312e+010	0.971	-3.401	
+H9	24_Bufvir_1E0tiss_3uL_BufvirCBL_0653,BufvirCBR_0	Unknown	24	0.5115	10.38	1.432e+010	0.971	-3.401	

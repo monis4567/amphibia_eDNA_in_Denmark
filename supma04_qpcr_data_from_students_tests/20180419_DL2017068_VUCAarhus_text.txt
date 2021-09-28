@@ -1,0 +1,73 @@
+                         Well Name 	Well Type 	Replicate 	Threshold (dRn) 	Ct (dRn) 	
+                    01_Aborre_PosK 	      NPC 	        1 	         0.0345 	   No Ct 	
+                    01_Aborre_NegK 	      NTC 	        2 	         0.0345 	   No Ct 	
+                    01_Aborre_eDNA 	  Unknown 	        3 	         0.0345 	   No Ct 	
+             02_EuropaeiskAal_PosK 	      NPC 	        4 	         0.0345 	   32.47 	
+             02_EuropaeiskAal_NegK 	      NTC 	        5 	         0.0345 	   No Ct 	
+             02_EuropaeiskAal_eDNA 	  Unknown 	        6 	         0.0345 	   40.00 	
+             03_EuropaeiskAal_PosK 	      NPC 	        7 	         0.0345 	   45.39 	
+             03_EuropaeiskAal_NegK 	      NTC 	        8 	         0.0345 	   No Ct 	
+             03_EuropaeiskAal_eDNA 	  Unknown 	        9 	         0.0345 	   40.63 	
+                   04_Skrubbe_PosK 	      NPC 	       10 	         0.0345 	   21.33 	
+                   04_Skrubbe_NegK 	      NTC 	       11 	         0.0345 	   No Ct 	
+                   04_Skrubbe_eDNA 	  Unknown 	       12 	         0.0345 	   No Ct 	
+                     05_Torsk_PosK 	      NPC 	       13 	         0.0345 	   38.53 	
+                     05_Torsk_NegK 	      NTC 	       14 	         0.0345 	   No Ct 	
+                     05_Torsk_eDNA 	  Unknown 	       15 	         0.0345 	   No Ct 	
+                     06_Torsk_PosK 	      NPC 	       16 	         0.0345 	   46.79 	
+                     06_Torsk_NegK 	      NTC 	       17 	         0.0345 	   No Ct 	
+                     06_Torsk_eDNA 	  Unknown 	       18 	         0.0345 	   No Ct 	
+               07_Roedspaette_PosK 	      NPC 	       19 	         0.0345 	   27.24 	
+               07_Roedspaette_NegK 	      NTC 	       20 	         0.0345 	   No Ct 	
+               07_Roedspaette_eDNA 	  Unknown 	       21 	         0.0345 	   No Ct 	
+                    08_Makrel_PosK 	      NPC 	       22 	         0.0345 	   22.54 	
+                    08_Makrel_NegK 	      NTC 	       23 	         0.0345 	   No Ct 	
+                    08_Makrel_eDNA 	  Unknown 	       24 	         0.0345 	   No Ct 	
+                      09_Sild_PosK 	      NPC 	       25 	         0.0345 	   28.58 	
+                      09_Sild_NegK 	      NTC 	       26 	         0.0345 	   No Ct 	
+                      09_Sild_eDNA 	  Unknown 	       27 	         0.0345 	   No Ct 	
+                      10_Sild_PosK 	      NPC 	       28 	         0.0345 	   29.03 	
+                      10_Sild_NegK 	      NTC 	       29 	         0.0345 	   No Ct 	
+                      10_Sild_eDNA 	  Unknown 	       30 	         0.0345 	   No Ct 	
+                11_Pukkellaks_PosK 	      NPC 	       31 	         0.0345 	   36.63 	
+                11_Pukkellaks_NegK 	      NTC 	       32 	         0.0345 	   No Ct 	
+                11_Pukkellaks_eDNA 	  Unknown 	       33 	         0.0345 	   No Ct 	
+                12_Pukkellaks_PosK 	      NPC 	       34 	         0.0345 	   No Ct 	
+                12_Pukkellaks_NegK 	      NTC 	       35 	         0.0345 	   No Ct 	
+                12_Pukkellaks_eDNA 	  Unknown 	       36 	         0.0345 	   No Ct 	
+         13_Stillehavsoesters_PosK 	      NPC 	       37 	         0.0345 	   25.68 	
+         13_Stillehavsoesters_NegK 	      NTC 	       38 	         0.0345 	   No Ct 	
+         13_Stillehavsoesters_eDNA 	  Unknown 	       39 	         0.0345 	   No Ct 	
+         14_Stillehavsoesters_PosK 	      NPC 	       40 	         0.0345 	   26.43 	
+         14_Stillehavsoesters_NegK 	      NTC 	       41 	         0.0345 	   No Ct 	
+         14_Stillehavsoesters_eDNA 	  Unknown 	       42 	         0.0345 	   No Ct 	
+               15_Sandmusling_PosK 	      NPC 	       43 	         0.0345 	   26.47 	
+               15_Sandmusling_NegK 	      NTC 	       44 	         0.0345 	   No Ct 	
+               15_Sandmusling_eDNA 	  Unknown 	       45 	         0.0345 	   No Ct 	
+               16_Sandmusling_PosK 	      NPC 	       46 	         0.0345 	   26.14 	
+               16_Sandmusling_NegK 	      NTC 	       47 	         0.0345 	   No Ct 	
+               16_Sandmusling_eDNA 	  Unknown 	       48 	         0.0345 	   No Ct 	
+17_NordamerikanskMudderkrabbe_PosK 	      NPC 	       49 	         0.0345 	   27.03 	
+17_NordamerikanskMudderkrabbe_NegK 	      NTC 	       50 	         0.0345 	   No Ct 	
+17_NordamerikanskMudderkrabbe_eDNA 	  Unknown 	       51 	         0.0345 	   No Ct 	
+18_NordamerikanskMudderkrabbe_PosK 	      NPC 	       52 	         0.0345 	   26.91 	
+18_NordamerikanskMudderkrabbe_NegK 	      NTC 	       53 	         0.0345 	   No Ct 	
+18_NordamerikanskMudderkrabbe_eDNA 	  Unknown 	       54 	         0.0345 	   No Ct 	
+      19_AmerikanskRibbegoble_PosK 	      NPC 	       55 	         0.0345 	   28.03 	
+      19_AmerikanskRibbegoble_NegK 	      NTC 	       56 	         0.0345 	   No Ct 	
+      19_AmerikanskRibbegoble_eDNA 	  Unknown 	       57 	         0.0345 	   40.04 	
+      20_AmerikanskRibbegoble_PosK 	      NPC 	       58 	         0.0345 	   28.92 	
+      20_AmerikanskRibbegoble_NegK 	      NTC 	       59 	         0.0345 	   No Ct 	
+      20_AmerikanskRibbegoble_eDNA 	  Unknown 	       60 	         0.0345 	   40.78 	
+          21_AmerikanskHummer_PosK 	      NPC 	       61 	         0.0345 	   26.22 	
+          21_AmerikanskHummer_NegK 	      NTC 	       62 	         0.0345 	   No Ct 	
+          21_AmerikanskHummer_eDNA 	  Unknown 	       63 	         0.0345 	   No Ct 	
+            22_Kamjatkakrabbe_PosK 	      NPC 	       64 	         0.0345 	   No Ct 	
+            22_Kamjatkakrabbe_NegK 	      NTC 	       65 	         0.0345 	   No Ct 	
+            22_Kamjatkakrabbe_eDNA 	  Unknown 	       66 	         0.0345 	   49.97 	
+   23_KinesiskUldhaandskrabbe_PosK 	      NPC 	       67 	         0.0345 	   25.98 	
+   23_KinesiskUldhaandskrabbe_NegK 	      NTC 	       68 	         0.0345 	   No Ct 	
+   23_KinesiskUldhaandskrabbe_eDNA 	  Unknown 	       69 	         0.0345 	   No Ct 	
+             24_EuropaeiskAal_PosK 	      NPC 	       70 	         0.0345 	   33.94 	
+             24_EuropaeiskAal_NegK 	      NTC 	       71 	         0.0345 	   No Ct 	
+             24_EuropaeiskAal_eDNA 	  Unknown 	       72 	         0.0345 	   45.54 	

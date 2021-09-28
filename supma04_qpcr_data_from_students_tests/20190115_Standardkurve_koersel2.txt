@@ -1,0 +1,64 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	9_GroenbrogetTudse_NegK_	NTC	0.1000	No Ct	
+B1	9_GroenbrogetTudse_10E1_	Unknown	0.1000	36.96	
+C1	9_GroenbrogetTudse_10E2_	Unknown	0.1000	36.01	
+D1	9_GroenbrogetTudse_10E3_	Unknown	0.1000	33.38	
+A2	10_Skalle_NegK_	NTC	0.1000	34.98	
+B2	10_Skalle_10E1_	Unknown	0.1000	33.30	
+C2	10_Skalle_10E2_	Unknown	0.1000	32.57	
+D2	10_Skalle_10E3_	Unknown	0.1000	28.99	
+A3	11_Loegfroe_NegK_	NTC	0.1000	No Ct	
+B3	11_Loegfroe_10E1_	Unknown	0.1000	36.00	
+C3	11_Loegfroe_10E2_	Unknown	0.1000	31.61	
+D3	11_Loegfroe_10E3_	Unknown	0.1000	27.67	
+A4	12_StorVandsalamander_NegK_	NTC	0.1000	No Ct	
+B4	12_StorVandsalamander_10E1_	Unknown	0.1000	35.53	
+C4	12_StorVandsalamander_10E2_	Unknown	0.1000	37.28	
+D4	12_StorVandsalamander_10E3_	Unknown	0.1000	35.64	
+A5	13_Latterfroe_NegK_	NTC	0.1000	No Ct	
+B5	13_Latterfroe_10E1_	Unknown	0.1000	No Ct	
+C5	13_Latterfroe_10E2_	Unknown	0.1000	No Ct	
+D5	13_Latterfroe_10E3_	Unknown	0.1000	34.28	
+A6	14_Karusse_NegK_	NTC	0.1000	No Ct	
+B6	14_Karusse_10E1_	Unknown	0.1000	31.88	
+C6	14_Karusse_10E2_	Unknown	0.1000	32.62	
+D6	14_Karusse_10E3_	Unknown	0.1000	28.86	
+A7	15_Springfroe_NegK_	NTC	0.1000	No Ct	
+B7	15_Springfroe_10E1_	Unknown	0.1000	33.40	
+C7	15_Springfroe_10E2_	Unknown	0.1000	34.49	
+D7	15_Springfroe_10E3_	Unknown	0.1000	32.51	
+A8	16_Strandtudse_NegK_	NTC	0.1000	No Ct	
+B8	16_Strandtudse_10E1_	Unknown	0.1000	30.33	
+C8	16_Strandtudse_10E2_	Unknown	0.1000	28.63	
+D8	16_Strandtudse_10E3_	Unknown	0.1000	34.45	
+A9	17_Loevfroe_NegK_	NTC	0.1000	No Ct	
+B9	17_Loevfroe_10E1_	Unknown	0.1000	32.81	
+C9	17_Loevfroe_10E2_	Unknown	0.1000	31.02	
+D9	17_Loevfroe_10E3_	Unknown	0.1000	28.44	
+G1	9_GroenbrogetTudse_10E6_	Unknown	0.1000	22.21	
+E1	9_GroenbrogetTudse_10E4_	Unknown	0.1000	28.97	
+F1	9_GroenbrogetTudse_10E5_	Unknown	0.1000	26.37	
+G2	10_Skalle_10E6_	Unknown	0.1000	29.88	
+E2	10_Skalle_10E4_	Unknown	0.1000	25.62	
+F2	10_Skalle_10E5_	Unknown	0.1000	21.12	
+G3	11_Loegfroe_10E6_	Unknown	0.1000	17.86	
+E3	11_Loegfroe_10E4_	Unknown	0.1000	25.38	
+F3	11_Loegfroe_10E5_	Unknown	0.1000	20.66	
+G4	12_StorVandsalamander_10E6_	Unknown	0.1000	19.49	
+E4	12_StorVandsalamander_10E4_	Unknown	0.1000	28.75	
+F4	12_StorVandsalamander_10E5_	Unknown	0.1000	24.74	
+G5	13_Latterfroe_10E6_	Unknown	0.1000	24.66	
+E5	13_Latterfroe_10E4_	Unknown	0.1000	No Ct	
+F5	13_Latterfroe_10E5_	Unknown	0.1000	33.10	
+G6	14_Karusse_10E6_	Unknown	0.1000	17.74	
+E6	14_Karusse_10E4_	Unknown	0.1000	24.84	
+F6	14_Karusse_10E5_	Unknown	0.1000	21.64	
+G7	15_Springfroe_10E6_	Unknown	0.1000	18.91	
+E7	15_Springfroe_10E4_	Unknown	0.1000	25.77	
+F7	15_Springfroe_10E5_	Unknown	0.1000	22.79	
+G8	16_Strandtudse_10E6_	Unknown	0.1000	16.07	
+E8	16_Strandtudse_10E4_	Unknown	0.1000	22.55	
+F8	16_Strandtudse_10E5_	Unknown	0.1000	19.49	
+G9	17_Loevfroe_10E6_	Unknown	0.1000	18.28	
+E9	17_Loevfroe_10E4_	Unknown	0.1000	24.66	
+F9	17_Loevfroe_10E5_	Unknown	0.1000	21.56	

@@ -1,0 +1,65 @@
+Well 	                       Well Name 	Well Type 	Replicate 	Threshold (dRn) 	 Ct (dRn) 	
+  A1 	                 25_Aborre_PosK_ 	      NPC 	        1 	      Reference 	Reference 	
+  A1 	                 25_Aborre_PosK_ 	      NPC 	        1 	         0.2148 	    31.21 	
+  B1 	                 25_Aborre_NegK_ 	      NTC 	        2 	      Reference 	Reference 	
+  B1 	                 25_Aborre_NegK_ 	      NTC 	        2 	         0.2148 	    No Ct 	
+  C1 	                 25_Aborre_eDNA_ 	  Unknown 	        3 	      Reference 	Reference 	
+  C1 	                 25_Aborre_eDNA_ 	  Unknown 	        3 	         0.2148 	    No Ct 	
+  D1 	                  25_Aborre_eDNA 	  Unknown 	        3 	      Reference 	Reference 	
+  D1 	                  25_Aborre_eDNA 	  Unknown 	        3 	         0.2148 	    No Ct 	
+  A2 	                26_Skrubbe_PosK_ 	      NPC 	        4 	      Reference 	Reference 	
+  A2 	                26_Skrubbe_PosK_ 	      NPC 	        4 	         0.2148 	    No Ct 	
+  B2 	                26_Skrubbe_NegK_ 	      NTC 	        5 	      Reference 	Reference 	
+  B2 	                26_Skrubbe_NegK_ 	      NTC 	        5 	         0.2148 	    No Ct 	
+  C2 	                26_Skrubbe_eDNA_ 	  Unknown 	        6 	      Reference 	Reference 	
+  C2 	                26_Skrubbe_eDNA_ 	  Unknown 	        6 	         0.2148 	    No Ct 	
+  D2 	                 26_Skrubbe_eDNA 	  Unknown 	        6 	      Reference 	Reference 	
+  D2 	                 26_Skrubbe_eDNA 	  Unknown 	        6 	         0.2148 	    No Ct 	
+  A3 	            27_Roedspaette_PosK_ 	      NPC 	        7 	      Reference 	Reference 	
+  A3 	            27_Roedspaette_PosK_ 	      NPC 	        7 	         0.2148 	    No Ct 	
+  B3 	            27_Roedspaette_NegK_ 	      NTC 	        8 	      Reference 	Reference 	
+  B3 	            27_Roedspaette_NegK_ 	      NTC 	        8 	         0.2148 	    No Ct 	
+  C3 	            27_Roedspaette_eDNA_ 	  Unknown 	        9 	      Reference 	Reference 	
+  C3 	            27_Roedspaette_eDNA_ 	  Unknown 	        9 	         0.2148 	    No Ct 	
+  D3 	             27_Roedspaette_eDNA 	  Unknown 	        9 	      Reference 	Reference 	
+  D3 	             27_Roedspaette_eDNA 	  Unknown 	        9 	         0.2148 	    No Ct 	
+  A4 	                 28_Makrel_PosK_ 	      NPC 	       10 	      Reference 	Reference 	
+  A4 	                 28_Makrel_PosK_ 	      NPC 	       10 	         0.2148 	    24.89 	
+  B4 	                 28_Makrel_NegK_ 	      NTC 	       11 	      Reference 	Reference 	
+  B4 	                 28_Makrel_NegK_ 	      NTC 	       11 	         0.2148 	    No Ct 	
+  C4 	                 28_Makrel_eDNA_ 	  Unknown 	       12 	      Reference 	Reference 	
+  C4 	                 28_Makrel_eDNA_ 	  Unknown 	       12 	         0.2148 	    No Ct 	
+  D4 	                  28_Makrel_eDNA 	  Unknown 	       12 	      Reference 	Reference 	
+  D4 	                  28_Makrel_eDNA 	  Unknown 	       12 	         0.2148 	    No Ct 	
+  A5 	       29_AmerikanskHummer_PosK_ 	      NPC 	       13 	      Reference 	Reference 	
+  A5 	       29_AmerikanskHummer_PosK_ 	      NPC 	       13 	         0.2148 	    27.84 	
+  B5 	       29_AmerikanskHummer_NegK_ 	      NTC 	       14 	      Reference 	Reference 	
+  B5 	       29_AmerikanskHummer_NegK_ 	      NTC 	       14 	         0.2148 	    32.96 	
+  C5 	       29_AmerikanskHummer_eDNA_ 	  Unknown 	       15 	      Reference 	Reference 	
+  C5 	       29_AmerikanskHummer_eDNA_ 	  Unknown 	       15 	         0.2148 	    34.02 	
+  D5 	        29_AmerikanskHummer_eDNA 	  Unknown 	       15 	      Reference 	Reference 	
+  D5 	        29_AmerikanskHummer_eDNA 	  Unknown 	       15 	         0.2148 	    No Ct 	
+  A6 	         30_Kamjatkakrabbe_PosK_ 	      NPC 	       16 	      Reference 	Reference 	
+  A6 	         30_Kamjatkakrabbe_PosK_ 	      NPC 	       16 	         0.2148 	    29.37 	
+  B6 	         30_Kamjatkakrabbe_NegK_ 	      NTC 	       17 	      Reference 	Reference 	
+  B6 	         30_Kamjatkakrabbe_NegK_ 	      NTC 	       17 	         0.2148 	    No Ct 	
+  C6 	         30_Kamjatkakrabbe_eDNA_ 	  Unknown 	       18 	      Reference 	Reference 	
+  C6 	         30_Kamjatkakrabbe_eDNA_ 	  Unknown 	       18 	         0.2148 	    No Ct 	
+  D6 	          30_Kamjatkakrabbe_eDNA 	  Unknown 	       18 	      Reference 	Reference 	
+  D6 	          30_Kamjatkakrabbe_eDNA 	  Unknown 	       18 	         0.2148 	    No Ct 	
+  A7 	31_KinesiskUldhaandskrabbe_PosK_ 	      NPC 	       19 	      Reference 	Reference 	
+  A7 	31_KinesiskUldhaandskrabbe_PosK_ 	      NPC 	       19 	         0.2148 	    29.07 	
+  B7 	31_KinesiskUldhaandskrabbe_NegK_ 	      NTC 	       20 	      Reference 	Reference 	
+  B7 	31_KinesiskUldhaandskrabbe_NegK_ 	      NTC 	       20 	         0.2148 	    No Ct 	
+  C7 	31_KinesiskUldhaandskrabbe_eDNA_ 	  Unknown 	       21 	      Reference 	Reference 	
+  C7 	31_KinesiskUldhaandskrabbe_eDNA_ 	  Unknown 	       21 	         0.2148 	    No Ct 	
+  D7 	 31_KinesiskUldhaandskrabbe_eDNA 	  Unknown 	       21 	      Reference 	Reference 	
+  D7 	 31_KinesiskUldhaandskrabbe_eDNA 	  Unknown 	       21 	         0.2148 	    No Ct 	
+  A8 	   32_AmerikanskRibbegoble_PosK_ 	      NPC 	       22 	      Reference 	Reference 	
+  A8 	   32_AmerikanskRibbegoble_PosK_ 	      NPC 	       22 	         0.2148 	    No Ct 	
+  B8 	   32_AmerikanskRibbegoble_NegK_ 	      NTC 	       23 	      Reference 	Reference 	
+  B8 	   32_AmerikanskRibbegoble_NegK_ 	      NTC 	       23 	         0.2148 	    No Ct 	
+  C8 	   32_AmerikanskRibbegoble_eDNA_ 	  Unknown 	       24 	      Reference 	Reference 	
+  C8 	   32_AmerikanskRibbegoble_eDNA_ 	  Unknown 	       24 	         0.2148 	    No Ct 	
+  D8 	    32_AmerikanskRibbegoble_eDNA 	  Unknown 	       24 	      Reference 	Reference 	
+  D8 	    32_AmerikanskRibbegoble_eDNA 	  Unknown 	       24 	         0.2148 	    No Ct 	

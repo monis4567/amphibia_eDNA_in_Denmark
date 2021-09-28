@@ -1,0 +1,33 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	25_Torsk_PosK_	NPC	0.1000	33.54	
+B1	25_Torsk_NegK_	NTC	0.1000	No Ct	
+C1	25_Torsk_eDNA_	Unknown	0.1000	No Ct	
+D1	25_Torsk_eDNA_	Unknown	0.1000	No Ct	
+A2	26_AlmindeligMakrel_PosK_	NPC	0.1000	22.63	
+B2	26_AlmindeligMakrel_NegK_	NTC	0.1000	No Ct	
+C2	26_AlmindeligMakrel_eDNA_	Unknown	0.1000	No Ct	
+D2	26_AlmindeligMakrel_eDNA_	Unknown	0.1000	No Ct	
+A3	27_AtlantiskSild_PosK_	NPC	0.1000	37.45	
+B3	27_AtlantiskSild_NegK_	NTC	0.1000	No Ct	
+C3	27_AtlantiskSild_eDNA_	Unknown	0.1000	No Ct	
+D3	27_AtlantiskSild_eDNA_	Unknown	0.1000	No Ct	
+A4	28_Pukkellaks_PosK_	NPC	0.1000	24.85	
+B4	28_Pukkellaks_NegK_	NTC	0.1000	No Ct	
+C4	28_Pukkellaks_eDNA_	Unknown	0.1000	No Ct	
+D4	28_Pukkellaks_eDNA_	Unknown	0.1000	No Ct	
+A5	29_Stillehavsoesters_PosK_	NPC	0.1000	37.87	
+B5	29_Stillehavsoesters_NegK_	NTC	0.1000	No Ct	
+C5	29_Stillehavsoesters_eDNA_	Unknown	0.1000	No Ct	
+D5	29_Stillehavsoesters_eDNA_	Unknown	0.1000	No Ct	
+A6	30_Sandmusling_PosK_	NPC	0.1000	No Ct	
+B6	30_Sandmusling_NegK_	NTC	0.1000	No Ct	
+C6	30_Sandmusling_eDNA_	Unknown	0.1000	37.90	
+D6	30_Sandmusling_eDNA_	Unknown	0.1000	No Ct	
+A7	31_NordamerikanskMudderkrabbe_PosK_	NPC	0.1000	No Ct	
+B7	31_NordamerikanskMudderkrabbe_NegK_	NTC	0.1000	No Ct	
+C7	31_NordamerikanskMudderkrabbe_eDNA_	Unknown	0.1000	No Ct	
+D7	31_NordamerikanskMudderkrabbe_eDNA_	Unknown	0.1000	No Ct	
+A8	32_AmerikanskRibbegople_PosK_	NPC	0.1000	39.28	
+B8	32_AmerikanskRibbegople_NegK_	NTC	0.1000	No Ct	
+C8	32_AmerikanskRibbegople_eDNA_	Unknown	0.1000	43.47	
+D8	32_AmerikanskRibbegople_eDNA_	Unknown	0.1000	43.61	

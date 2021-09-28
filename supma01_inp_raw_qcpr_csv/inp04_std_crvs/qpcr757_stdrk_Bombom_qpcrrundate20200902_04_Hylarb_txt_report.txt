@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A10	25_Hylarb2_08_1E05_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	25	0.6339	23.93	3.00e+005	0.956	-3.980	
+A11	25_Hylarb2_08_1E05_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	25	0.6339	19.29	3.00e+005	0.956	-3.980	
+A12	25_Hylarb2_08_1E05_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	25	0.6339	24.34	3.00e+005	0.956	-3.980	
+B10	26_Hylarb2_08_1E04_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	26	0.6339	28.21	3.00e+004	0.956	-3.980	
+B11	26_Hylarb2_08_1E04_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	26	0.6339	27.99	3.00e+004	0.956	-3.980	
+B12	26_Hylarb2_08_1E04_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	26	0.6339	27.73	3.00e+004	0.956	-3.980	
+C10	27_Hylarb2_08_1E03_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	27	0.6339	31.54	3.00e+003	0.956	-3.980	
+C11	27_Hylarb2_08_1E03_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	27	0.6339	31.49	3.00e+003	0.956	-3.980	
+C12	27_Hylarb2_08_1E03_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	27	0.6339	31.41	3.00e+003	0.956	-3.980	
+D10	28_Hylarb2_08_1E02_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	28	0.6339	35.04	3.00e+002	0.956	-3.980	
+D11	28_Hylarb2_08_1E02_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	28	0.6339	34.87	3.00e+002	0.956	-3.980	
+D12	28_Hylarb2_08_1E02_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	28	0.6339	34.52	3.00e+002	0.956	-3.980	
+E10	29_Hylarb2_08_1E01_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	29	0.6339	37.86	3.00e+001	0.956	-3.980	
+E11	29_Hylarb2_08_1E01_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	29	0.6339	39.51	3.00e+001	0.956	-3.980	
+E12	29_Hylarb2_08_1E01_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	29	0.6339	39.63	3.00e+001	0.956	-3.980	
+F10	30_Hylarb2_08_1E00_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	30	0.6339	No Ct	No Ct	0.956	-3.980	
+F11	30_Hylarb2_08_1E00_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	30	0.6339	No Ct	No Ct	0.956	-3.980	
+F12	30_Hylarb2_08_1E00_3uL_HylarbCBL,HylarbCBR,Hylar	Standard	30	0.6339	No Ct	No Ct	0.956	-3.980	
+G10	31_Hylarb2_08_1E0NTC_3uL_HylarbCBL,HylarbCBR,Hyl	NTC	31	0.6339	No Ct	No Ct	0.956	-3.980	
+G11	31_Hylarb2_08_1E0NTC_3uL_HylarbCBL,HylarbCBR,Hyl	NTC	31	0.6339	No Ct	No Ct	0.956	-3.980	
+G12	31_Hylarb2_08_1E0NTC_3uL_HylarbCBL,HylarbCBR,Hyl	NTC	31	0.6339	No Ct	No Ct	0.956	-3.980	
+H10	32_Hylarb_1E0tiss_3uL_HylarbCBL,HylarbCBR,Hylarb	Unknown	32	0.6339	32.56	1.336e+003	0.956	-3.980	
+H11	32_Hylarb_1E0tiss_3uL_HylarbCBL,HylarbCBR,Hylarb	Unknown	32	0.6339	32.17	1.672e+003	0.956	-3.980	
+H12	32_Hylarb_1E0tiss_3uL_HylarbCBL,HylarbCBR,Hylarb	Unknown	32	0.6339	32.24	1.604e+003	0.956	-3.980	

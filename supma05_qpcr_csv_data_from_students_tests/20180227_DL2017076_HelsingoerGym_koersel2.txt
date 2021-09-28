@@ -1,0 +1,13 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+E5	18_Stillehavsoesters_PosK_	NPC	0.1000	36.89	
+F5	18_Stillehavsoesters_NegK_	NTC	0.1000	No Ct	
+G5	18_Stillehavsoesters_eDNA_	Unknown	0.1000	No Ct	
+H5	18_Stillehavsoesters_eDNA_	Unknown	0.1000	No Ct	
+E7	21_Sandmusling_PosK_	NPC	0.1000	38.34	
+F7	21_Sandmusling_NegK_	NTC	0.1000	No Ct	
+G7	21_Sandmusling_eDNA_	Unknown	0.1000	No Ct	
+H7	21_Sandmusling_eDNA_	Unknown	0.1000	No Ct	
+E9	24_NordamerikanskMudderkrabbe_PosK_	NPC	0.1000	No Ct	
+F9	24_NordamerikanskMudderkrabbe_NegK_	NTC	0.1000	No Ct	
+G9	24_NordamerikanskMudderkrabbe_eDNA_	Unknown	0.1000	No Ct	
+H9	24_NordamerikanskMudderkrabbe_eDNA_	Unknown	0.1000	No Ct	

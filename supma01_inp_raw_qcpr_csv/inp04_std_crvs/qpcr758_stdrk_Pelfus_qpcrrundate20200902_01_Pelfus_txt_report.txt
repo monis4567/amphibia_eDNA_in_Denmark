@@ -1,0 +1,25 @@
+Well	Well Name	Well Type	Replicate	Threshold (dRn)	Ct (dRn)	Quantity (copies)	RSq (dRn)	Slope (dRn)	
+A1	01_Pelfus_1E05_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	1	1.0889	24.24	3.00e+005	0.997	-3.256	
+A2	01_Pelfus_1E05_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	1	1.0889	24.29	3.00e+005	0.997	-3.256	
+A3	01_Pelfus_1E05_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	1	1.0889	24.14	3.00e+005	0.997	-3.256	
+B1	02_Pelfus_1E04_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	2	1.0889	27.54	3.00e+004	0.997	-3.256	
+B2	02_Pelfus_1E04_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	2	1.0889	27.57	3.00e+004	0.997	-3.256	
+B3	02_Pelfus_1E04_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	2	1.0889	27.85	3.00e+004	0.997	-3.256	
+C1	03_Pelfus_1E03_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	3	1.0889	30.99	3.00e+003	0.997	-3.256	
+C2	03_Pelfus_1E03_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	3	1.0889	31.23	3.00e+003	0.997	-3.256	
+C3	03_Pelfus_1E03_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	3	1.0889	30.74	3.00e+003	0.997	-3.256	
+D1	04_Pelfus_1E02_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	4	1.0889	34.60	3.00e+002	0.997	-3.256	
+D2	04_Pelfus_1E02_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	4	1.0889	34.30	3.00e+002	0.997	-3.256	
+D3	04_Pelfus_1E02_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	4	1.0889	33.78	3.00e+002	0.997	-3.256	
+E1	05_Pelfus_1E01_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	5	1.0889	37.49	3.00e+001	0.997	-3.256	
+E2	05_Pelfus_1E01_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	5	1.0889	36.97	3.00e+001	0.997	-3.256	
+E3	05_Pelfus_1E01_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	5	1.0889	37.28	3.00e+001	0.997	-3.256	
+F1	06_Pelfus_1E00_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	6	1.0889	40.87	3.00e+000	0.997	-3.256	
+F2	06_Pelfus_1E00_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	6	1.0889	41.14	3.00e+000	0.997	-3.256	
+F3	06_Pelfus_1E00_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Standard	6	1.0889	39.81	3.00e+000	0.997	-3.256	
+G1	07_Pelfus_NTC_3uL_PFT-PelfusCBL,PFT-PelfusCBR,PF	NTC	7	1.0889	No Ct	No Ct	0.997	-3.256	
+G2	07_Pelfus_NTC_3uL_PFT-PelfusCBL,PFT-PelfusCBR,PF	NTC	7	1.0889	No Ct	No Ct	0.997	-3.256	
+G3	07_Pelfus_NTC_3uL_PFT-PelfusCBL,PFT-PelfusCBR,PF	NTC	7	1.0889	No Ct	No Ct	0.997	-3.256	
+H1	08_Pelfus_tiss_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Unknown	8	1.0889	31.08	2.568e+003	0.997	-3.256	
+H2	08_Pelfus_tiss_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Unknown	8	1.0889	30.86	3.012e+003	0.997	-3.256	
+H3	08_Pelfus_tiss_3uL_PFT-PelfusCBL,PFT-PelfusCBR,P	Unknown	8	1.0889	30.82	3.098e+003	0.997	-3.256	

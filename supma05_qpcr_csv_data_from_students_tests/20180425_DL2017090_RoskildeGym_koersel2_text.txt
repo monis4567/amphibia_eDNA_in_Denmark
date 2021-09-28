@@ -1,0 +1,89 @@
+Well 	                      Well Name 	Dye 	 Well Type 	Replicate 	Threshold (dRn) 	    Ct (dRn) 	
+ --- 	                 25_Aborre_PosK 	FAM 	       NPC 	        1 	         0.0447 	       26.90 	
+ --- 	                 25_Aborre_NegK 	FAM 	       NTC 	        2 	         0.0447 	       46.98 	
+ --- 	                 25_Aborre_eDNA 	FAM 	   Unknown 	        3 	         0.0447 	       No Ct 	
+ --- 	                26_Skrubbe_PosK 	FAM 	       NPC 	        4 	         0.0447 	       25.45 	
+ --- 	                26_Skrubbe_NegK 	FAM 	       NTC 	        5 	         0.0447 	       34.96 	
+ --- 	                26_Skrubbe_eDNA 	FAM 	   Unknown 	        6 	         0.0447 	       36.03 	
+ --- 	            27_Roedspaette_PosK 	FAM 	       NPC 	        7 	         0.0447 	       26.60 	
+ --- 	            27_Roedspaette_NegK 	FAM 	       NTC 	        8 	         0.0447 	       No Ct 	
+ --- 	            27_Roedspaette_eDNA 	FAM 	   Unknown 	        9 	         0.0447 	       No Ct 	
+ --- 	                 28_Makrel_PosK 	FAM 	       NPC 	       10 	         0.0447 	       23.32 	
+ --- 	                 28_Makrel_NegK 	FAM 	       NTC 	       11 	         0.0447 	       No Ct 	
+ --- 	                 28_Makrel_eDNA 	FAM 	   Unknown 	       12 	         0.0447 	       38.17 	
+ --- 	       29_AmerikanskHummer_PosK 	FAM 	       NPC 	       13 	         0.0447 	       26.14 	
+ --- 	       29_AmerikanskHummer_NegK 	FAM 	       NTC 	       14 	         0.0447 	       No Ct 	
+ --- 	       29_AmerikanskHummer_eDNA 	FAM 	   Unknown 	       15 	         0.0447 	       No Ct 	
+ --- 	         30_Kamjatkakrabbe_PosK 	FAM 	       NPC 	       16 	         0.0447 	       31.43 	
+ --- 	         30_Kamjatkakrabbe_NegK 	FAM 	       NTC 	       17 	         0.0447 	       No Ct 	
+ --- 	         30_Kamjatkakrabbe_eDNA 	FAM 	   Unknown 	       18 	         0.0447 	       No Ct 	
+ --- 	31_KinesiskUldhaandskrabbe_PosK 	FAM 	       NPC 	       19 	         0.0447 	       29.79 	
+ --- 	31_KinesiskUldhaandskrabbe_NegK 	FAM 	       NTC 	       20 	         0.0447 	       No Ct 	
+ --- 	31_KinesiskUldhaandskrabbe_eDNA 	FAM 	   Unknown 	       21 	         0.0447 	       No Ct 	
+ --- 	          32_SibiriskStoer_PosK 	FAM 	       NPC 	       22 	         0.0447 	       25.80 	
+ --- 	          32_SibiriskStoer_NegK 	FAM 	       NTC 	       23 	         0.0447 	       No Ct 	
+ --- 	          32_SibiriskStoer_eDNA 	FAM 	   Unknown 	       24 	         0.0447 	       No Ct 	
+  A9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ A10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ A11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ A12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  B9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ B10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ B11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ B12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  C9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ C10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ C11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ C12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  D9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ D10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ D11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ D12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E1 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E2 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E3 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E4 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E5 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E6 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E7 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E8 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  E9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ E10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ E11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ E12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F1 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F2 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F3 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F4 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F5 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F6 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F7 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F8 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  F9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ F10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ F11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ F12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G1 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G2 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G3 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G4 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G5 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G6 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G7 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G8 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  G9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ G10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ G11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ G12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H1 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H2 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H3 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H4 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H5 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H6 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H7 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H8 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+  H9 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ H10 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ H11 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	
+ H12 	                            --- 	FAM 	Not in Use 	      --- 	   No Reference 	No Reference 	

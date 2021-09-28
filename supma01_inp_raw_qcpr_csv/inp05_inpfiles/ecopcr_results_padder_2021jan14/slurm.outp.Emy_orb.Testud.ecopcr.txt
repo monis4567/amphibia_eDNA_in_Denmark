@@ -1,0 +1,15 @@
+### /groups/hologenomics/software/xsbatch -c 1 --mem-per-cpu 8192 -t 24:00:00 -o slurm.outp.Emy_orb.Testud.ecopcr.txt -e slurm-%j.err -- ecoPCR -d /shared/volume/hologenomics/data/evaes/embl_inv.vrt.rod.mam_r130_convert/embl_last -e 5 -l 51 -L 87 -r 1788 ATGAATCGGAGGACAACCAG CCCTGCGATAGGTATGAGGA
+#@ecopcr-v2
+#
+# ecoPCR version 0.8.0
+# direct  strand oligo1 : ATGAATCGGAGGACAACCAG             ; oligo2c :             TCCTCATACCTATCGCAGGG
+# reverse strand oligo2 : CCCTGCGATAGGTATGAGGA             ; oligo1c :             CTGGTTGTCCTCCGATTCAT
+# max error count by oligonucleotide : 5
+# optimal Tm for primers 1 : 56.34
+# optimal Tm for primers 2 : 57.11
+# database : /shared/volume/hologenomics/data/evaes/embl_inv.vrt.rod.mam_r130_convert/embl_last
+# amplifiat length between [51,87] bp
+# output in superkingdom mode
+# DB sequences are considered as linear
+#
+==> Job 19558488 finished (0)

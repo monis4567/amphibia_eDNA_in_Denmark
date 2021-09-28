@@ -1,0 +1,33 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	25_Aborre_PosK_	NPC	0.1000	No Ct	
+B1	25_Aborre_NegK_	NTC	0.1000	No Ct	
+C1	25_Aborre_eDNA_	Unknown	0.1000	No Ct	
+D1	25_Aborre_eDNA_	Unknown	0.1000	No Ct	
+A2	26_Skrubbe_PosK_	NPC	0.1000	26.55	
+B2	26_Skrubbe_NegK_	NTC	0.1000	No Ct	
+C2	26_Skrubbe_eDNA_	Unknown	0.1000	38.79	
+D2	26_Skrubbe_eDNA_	Unknown	0.1000	No Ct	
+A3	27_Torsk_PosK_	NPC	0.1000	36.24	
+B3	27_Torsk_NegK_	NTC	0.1000	No Ct	
+C3	27_Torsk_eDNA_	Unknown	0.1000	37.59	
+D3	27_Torsk_eDNA_	Unknown	0.1000	No Ct	
+A4	28_Roedspaette_PosK_	NPC	0.1000	No Ct	
+B4	28_Roedspaette_NegK_	NTC	0.1000	No Ct	
+C4	28_Roedspaette_eDNA_	Unknown	0.1000	No Ct	
+D4	28_Roedspaette_eDNA_	Unknown	0.1000	29.93	
+A5	29_AlmindeligMakrel_PosK_	NPC	0.1000	25.27	
+B5	29_AlmindeligMakrel_NegK_	NTC	0.1000	No Ct	
+C5	29_AlmindeligMakrel_eDNA_	Unknown	0.1000	No Ct	
+D5	29_AlmindeligMakrel_eDNA_	Unknown	0.1000	No Ct	
+A6	30_AtlantiskSild_PosK_	NPC	0.1000	No Ct	
+B6	30_AtlantiskSild_NegK_	NTC	0.1000	No Ct	
+C6	30_AtlantiskSild_eDNA_	Unknown	0.1000	No Ct	
+D6	30_AtlantiskSild_eDNA_	Unknown	0.1000	No Ct	
+A7	31_AmerikanskHummer_PosK_	NPC	0.1000	No Ct	
+B7	31_AmerikanskHummer_NegK_	NTC	0.1000	No Ct	
+C7	31_AmerikanskHummer_eDNA_	Unknown	0.1000	No Ct	
+D7	31_AmerikanskHummer_eDNA_	Unknown	0.1000	No Ct	
+A8	32_Kamjatkakrabbe_PosK_	NPC	0.1000	31.66	
+B8	32_Kamjatkakrabbe_NegK_	NTC	0.1000	No Ct	
+C8	32_Kamjatkakrabbe_eDNA_	Unknown	0.1000	No Ct	
+D8	32_Kamjatkakrabbe_eDNA_	Unknown	0.1000	No Ct	

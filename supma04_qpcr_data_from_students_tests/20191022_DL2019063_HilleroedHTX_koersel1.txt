@@ -1,0 +1,49 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+C1	01_Loegfroe_eDNA_	Unknown	0.1000	No Ct	
+D1	01_Loegfroe_eDNA_	Unknown	0.1000	No Ct	
+C2	02_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+D2	02_StorVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+C3	03_Strandtudse_eDNA_	Unknown	0.1000	No Ct	
+D3	03_Strandtudse_eDNA_	Unknown	0.1000	No Ct	
+C4	04_GroenbrogetTudse_eDNA_	Unknown	0.1000	No Ct	
+D4	04_GroenbrogetTudse_eDNA_	Unknown	0.1000	No Ct	
+C5	05_Loevfroe_eDNA_	Unknown	0.1000	No Ct	
+D5	05_Loevfroe_eDNA_	Unknown	0.1000	No Ct	
+C6	06_Springfroe_eDNA_	Unknown	0.1000	No Ct	
+D6	06_Springfroe_eDNA_	Unknown	0.1000	No Ct	
+C7	07_Springfroe_eDNA_	Unknown	0.1000	No Ct	
+D7	07_Springfroe_eDNA_	Unknown	0.1000	No Ct	
+C8	08_Klokkefroe_eDNA_	Unknown	0.1000	No Ct	
+D8	08_Klokkefroe_eDNA_	Unknown	0.1000	No Ct	
+C9	09_Skrubtudse_eDNA_	Unknown	0.1000	No Ct	
+D9	09_Skrubtudse_eDNA_	Unknown	0.1000	No Ct	
+C10	10_Skrubtudse_eDNA_	Unknown	0.1000	No Ct	
+D10	10_Skrubtudse_eDNA_	Unknown	0.1000	No Ct	
+C11	11_Bjergsalamander_eDNA_	Unknown	0.1000	No Ct	
+D11	11_Bjergsalamander_eDNA_	Unknown	0.1000	No Ct	
+C12	12_Latterfroe_eDNA_	Unknown	0.1000	No Ct	
+D12	12_Latterfroe_eDNA_	Unknown	0.1000	No Ct	
+E1	13_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+F1	13_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+E2	14_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+F2	14_Spidssnudetfroe_eDNA_	Unknown	0.1000	No Ct	
+E3	15_KortbenetGroenFroe_eDNA_	Unknown	0.1000	No Ct	
+F3	15_KortbenetGroenFroe_eDNA_	Unknown	0.1000	No Ct	
+E4	16_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+F4	16_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+E5	17_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+F5	17_ButsnudetFroe_eDNA_	Unknown	0.1000	No Ct	
+E6	18_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+F6	18_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+E7	19_LilleVandsalamander_eDNA_	Unknown	0.1000	14.25	
+F7	19_LilleVandsalamander_eDNA_	Unknown	0.1000	No Ct	
+E8	20_Skalle_eDNA_	Unknown	0.1000	No Ct	
+F8	20_Skalle_eDNA_	Unknown	0.1000	No Ct	
+E9	21_Skalle_eDNA_	Unknown	0.1000	31.94	
+F9	21_Skalle_eDNA_	Unknown	0.1000	31.41	
+E10	22_Karusse_eDNA_	Unknown	0.1000	No Ct	
+F10	22_Karusse_eDNA_	Unknown	0.1000	No Ct	
+E11	23_Karusse_eDNA_	Unknown	0.1000	No Ct	
+F11	23_Karusse_eDNA_	Unknown	0.1000	No Ct	
+E12	24_Soelvkarusse_eDNA_	Unknown	0.1000	No Ct	
+F12	24_Soelvkarusse_eDNA_	Unknown	0.1000	No Ct	
