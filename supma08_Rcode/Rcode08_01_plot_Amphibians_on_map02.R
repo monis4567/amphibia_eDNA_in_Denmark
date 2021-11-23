@@ -371,7 +371,7 @@
 
 #____________________________________________________________________________#
 #remove everything in the working environment, without a warning!!
-rm(list=ls())
+#rm(list=ls())
 
 ## install the package 'scales', which will allow you to make points on your plot more transparent
 #install.packages("scales")
@@ -468,11 +468,14 @@ if(!require(mapplots)){
 library(mapplots)
 
 #remove everything in the working environment, without a warning!!
-#rm(list=ls())
+rm(list=ls())
 
 # set working directory
 #wd00 <- "/home/hal9000/MS_amphibia_eDNA"
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/MS_suppm_amphibia_eDNA"
+rpath = "."
+wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
+#wd00 <- rpath
 setwd (wd00)
 getwd()
 #define an output directory
@@ -563,7 +566,6 @@ lokal10 <- gsub('Å','aa',lokal09)
 lokal11 <- gsub('Ø','oe',lokal10)
 lokal12 <- gsub('-','',lokal11)
 lokal13 <- gsub('////','',lokal12)
-
 Area_wt_coll_loc <- lokal13
 
 #Make a dataframe from the selected vectors
@@ -880,9 +882,12 @@ ct.cutoff=41
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot single capture locations - start
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#orig_latspecnm <- latspecnm
+
+#latspecnm<- orig_latspecnm
 #remove NAs from vector
 latspecnm <- latspecnm[!is.na(latspecnm)]
-
+#latspecnm <- latspecnm[1]
 #latspecnm <- "Gadus_morhua"
 #latspecnm <- "Anguilla_anguilla"
 #latspecnm <- "Scomber_scombrus"
@@ -916,24 +921,21 @@ latspecnm <- latspecnm[!is.na(latspecnm)]
 # loop over all species names in the unique list of species, and make plots. 
 #Notice that the curly bracket ends after the pdf file is closed
 for (spec.lat in latspecnm){
-  #print(spec.lat)
+  print(spec.lat)
   #}
   
   #get the Danish commom name
   sbs.dk.nm <- dkspecs_to_latspecs$Species_DK[match(spec.lat, dkspecs_to_latspecs$Species_Latin)]
   #subset based on variable values, subset by species name
   sbs.spl3 <- spl3[ which(spl3$latspc==spec.lat), ]
-  
   #count using the plyr-package - see: https://www.miskatonic.org/2012/09/24/counting-and-aggregating-r/
   sbs.tot_smpl <- count(sbs.spl3, c("DLsamplno","dec_lon", "dec_lat"))
-  
   #subset based on variable values - see: https://stackoverflow.com/questions/4935479/how-to-combine-multiple-conditions-to-subset-a-data-frame-using-or
   # subset by when NTC is equal to NoCt and NPC is below ct.cut.off, and or NTC is equal to zero
   sbs.spl3.ntc_npc_approv <- sbs.spl3[ which(sbs.spl3$NTC.CtdRn=='NoCt' & sbs.spl3$NPC.CtdRn<=ct.cutoff
   ), ]
   #count using the plyr-package
   sbs.approvK_smpl <- count(sbs.spl3.ntc_npc_approv, c("DLsamplno"))
-  
   #subset based on variable values
   # subset among the NPC and NTC approved replicate sets
   #subset by when repl1 is below ct.cut.off and/or  when repl2 is below ct.cut.off
@@ -943,14 +945,12 @@ for (spec.lat in latspecnm){
                                                     & !sbs.spl3.ntc_npc_approv$unkn2.CtdRn==0), ]
   #count using the plyr-package
   sbs.1or2pos.smpl <- count(sbs.spl3.1or2pf, c("DLsamplno"))
-  
   # subset among the NPC and NTC approved replicate sets with either 1 or 2 positive replicates
   #subset by when both repl1 is below ct.cut.off and when repl2 is below ct.cut.off
   sbs.spl3.2pf <- sbs.spl3.1or2pf[ which(sbs.spl3.1or2pf$unkn1.CtdRn<=ct.cutoff 
                                          & sbs.spl3.1or2pf$unkn2.CtdRn<=ct.cutoff), ]
   #count using the plyr-package
   sbs.2pos.smpl <- count(sbs.spl3.2pf, c("DLsamplno"))
-  
   #Rename the frequency column
   sbs.tot_smpl$totsmpl <- sbs.tot_smpl$freq
   
@@ -995,72 +995,75 @@ for (spec.lat in latspecnm){
   #when posK is pos and negK is neg
   sbs.tot_smpl$repl1pos <- as.numeric(as.character(sbs.tot_smpl$repl1or2-sbs.tot_smpl$repl2pos))
   
-  #add an empty column with just NAs to fil with evaluations
-  sbs.tot_smpl[,"eval01"] <- NA
-  sbs.tot_smpl$eval01[   sbs.tot_smpl$truezerodetect >= 1] <- "truezerodetect" #0  
-  sbs.tot_smpl$eval01[   sbs.tot_smpl$nonapprovK >= 1] <- "nonapprovK" #0  
-  sbs.tot_smpl$eval01[   sbs.tot_smpl$repl1or2 >= 1] <- "repl1or2" #0  
-  sbs.tot_smpl$eval01[   sbs.tot_smpl$repl2pos >= 1] <- "repl2pos" #0  
-  sbs.tot_smpl[,"eval02"] <- NA
-  sbs.tot_smpl$eval02[   sbs.tot_smpl$truezerodetect >= 1] <- "blue" #0  
-  sbs.tot_smpl$eval02[   sbs.tot_smpl$nonapprovK >= 1] <- "red" #0  
-  sbs.tot_smpl$eval02[   sbs.tot_smpl$repl1or2 >= 1] <- "green" #0  
-  sbs.tot_smpl$eval02[   sbs.tot_smpl$repl2pos >= 1] <- "darkgreen" #0
-  
-  #XXXXX______begin plot w pie charts on map ________XXXX
-  #______________________________________________________________________________________
-  # set to save plot as pdf file with dimensions 8.26 to 2.9
-  # 8.26 inches and 2.9 inhes equals 210 mm and 74.25 mm
-  # and 210 mm and 74.25 mm matches 1/4 of a A4 page
-  pdf(c(paste("plot_pies_edna_gymnasieundervisning.singl_pts_",spec.lat,"_wct",ct.cutoff,".pdf",  sep = ""))
-      ,width=(1.6*8.2677),height=(1.6*2.9232*2))
-  
-  
-  #factors to multiply radius on each pie
-  fct1 <- 1.000 
-  fct2 <- 0.08
-  
-  #plot map #http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/
-  library(rworldmap)
-  newmap <- getMap(resolution = "high")
-  plot(newmap, xlim = c(8, 16), ylim = c(54, 58), asp = 1)
-  
-  #plot land on map
-  map('worldHires', add=TRUE, fill=TRUE, 
-      xlim = c(8, 16), ylim = c(54, 58), 
-      #col="#11263D",
-      col="grey",
-      bg=transp_col,
-      las=1)
-  
-  #add points to map, color by variable
-  points(sbs.tot_smpl$dec_lon, sbs.tot_smpl$dec_lat.j, pch=21, bg = c(alpha(c(sbs.tot_smpl$eval02),0.6)), cex = 1.8)
-  
-  #add text labels to points  
-  text(sbs.tot_smpl$dec_lon, 
-       sbs.tot_smpl$dec_lat.j, 
-       #labels=c(paste(sbs.tot_smpl$gymnasiumnm1,", n=",sbs.tot_smpl$totsmpl,  sep = "")) #use paste and \n to get text-label on a new line, and use sep="", to get no spaces
-       labels=c(paste("n=",sbs.tot_smpl$totsmpl,  sep = "")) #use paste and \n to get text-label on a new line, and use sep="", to get no spaces
-       , cex= 1.0, pos=4) #Pos-Values of 1, 2, 3 and 4, respectively indicate positions below, to the left of, above and to the right of the specified (x,y) coordinates.
-  
-  title(main = paste("samplesets (2 unkn and 1NTC and 1NPC) per single location for \n",spec.lat," (",sbs.dk.nm,") with Ct<",ct.cutoff, sep = "")
-        , cex=0.8)
-  
-  # add legend
-  legend("topright", "(x,y)", 
-         bg="white",
-         c("nonapprovK", "truezerodetect", "repl1pos", "repl2pos"),
-         ncol=1,
-         pch = c(21, 21, 21, 21), pt.bg=c(alpha(c("red","blue", "green", "darkgreen"), 0.6)), 
-         pt.lwd=c(1.2, 1.2, 1.2, 1.2),      
-         cex=1.0,
-         inset = 0.05)
-  #XXXXX______ end plot w pie charts on map ________XXXX
-  # end the pdf-file to save as 
-  dev.off()
+  if (!empty(sbs.tot_smpl)){
+    #add an empty column with just NAs to fil with evaluations
+    sbs.tot_smpl[,"eval01"] <- NA
+    sbs.tot_smpl$eval01[   sbs.tot_smpl$truezerodetect >= 1] <- "truezerodetect" #0  
+    sbs.tot_smpl$eval01[   sbs.tot_smpl$nonapprovK >= 1] <- "nonapprovK" #0  
+    sbs.tot_smpl$eval01[   sbs.tot_smpl$repl1or2 >= 1] <- "repl1or2" #0  
+    sbs.tot_smpl$eval01[   sbs.tot_smpl$repl2pos >= 1] <- "repl2pos" #0  
+    sbs.tot_smpl[,"eval02"] <- NA
+    sbs.tot_smpl$eval02[   sbs.tot_smpl$truezerodetect >= 1] <- "blue" #0  
+    sbs.tot_smpl$eval02[   sbs.tot_smpl$nonapprovK >= 1] <- "red" #0  
+    sbs.tot_smpl$eval02[   sbs.tot_smpl$repl1or2 >= 1] <- "green" #0  
+    sbs.tot_smpl$eval02[   sbs.tot_smpl$repl2pos >= 1] <- "darkgreen" #0
+    
+    #XXXXX______begin plot w pie charts on map ________XXXX
+    #______________________________________________________________________________________
+    # set to save plot as pdf file with dimensions 8.26 to 2.9
+    # 8.26 inches and 2.9 inhes equals 210 mm and 74.25 mm
+    # and 210 mm and 74.25 mm matches 1/4 of a A4 page
+    pdf(c(paste("plot_pies_edna_gymnasieundervisning.singl_pts_",spec.lat,"_wct",ct.cutoff,".pdf",  sep = ""))
+        ,width=(1.6*8.2677),height=(1.6*2.9232*2))
+    
+    
+    #factors to multiply radius on each pie
+    fct1 <- 1.000 
+    fct2 <- 0.08
+    
+    #plot map #http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/
+    library(rworldmap)
+    newmap <- getMap(resolution = "high")
+    plot(newmap, xlim = c(8, 16), ylim = c(54, 58), asp = 1)
+    
+    #plot land on map
+    map('worldHires', add=TRUE, fill=TRUE, 
+        xlim = c(8, 16), ylim = c(54, 58), 
+        #col="#11263D",
+        col="grey",
+        bg=transp_col,
+        las=1)
+    
+    #add points to map, color by variable
+    points(sbs.tot_smpl$dec_lon, sbs.tot_smpl$dec_lat.j, pch=21, bg = c(alpha(c(sbs.tot_smpl$eval02),0.6)), cex = 1.8)
+    
+    #add text labels to points  
+    text(sbs.tot_smpl$dec_lon, 
+         sbs.tot_smpl$dec_lat.j, 
+         #labels=c(paste(sbs.tot_smpl$gymnasiumnm1,", n=",sbs.tot_smpl$totsmpl,  sep = "")) #use paste and \n to get text-label on a new line, and use sep="", to get no spaces
+         labels=c(paste("n=",sbs.tot_smpl$totsmpl,  sep = "")) #use paste and \n to get text-label on a new line, and use sep="", to get no spaces
+         , cex= 1.0, pos=4) #Pos-Values of 1, 2, 3 and 4, respectively indicate positions below, to the left of, above and to the right of the specified (x,y) coordinates.
+    
+    title(main = paste("samplesets (2 unkn and 1NTC and 1NPC) per single location for \n",spec.lat," (",sbs.dk.nm,") with Ct<",ct.cutoff, sep = "")
+          , cex=0.8)
+    
+    # add legend
+    legend("topright", "(x,y)", 
+           bg="white",
+           c("nonapprovK", "truezerodetect", "repl1pos", "repl2pos"),
+           ncol=1,
+           pch = c(21, 21, 21, 21), pt.bg=c(alpha(c("red","blue", "green", "darkgreen"), 0.6)), 
+           pt.lwd=c(1.2, 1.2, 1.2, 1.2),      
+           cex=1.0,
+           inset = 0.05)
+    #XXXXX______ end plot w pie charts on map ________XXXX
+    
+    # end the pdf-file to save as 
+    dev.off()
+    # end if not empty
+  }
   #below is the end of the loop initiated above
 }
-
 
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot single capture locations - end
@@ -1304,7 +1307,11 @@ library("rnaturalearthdata")
 library("rnaturalearthhires")
 # # Get a map, use a high number for 'scale' for a coarse resolution
 # use a low number for scale for a high resolution
+# if the map 'world' does not exist, then download it
+if (!exists("world"))
+{  
 world <- ne_countries(scale = 10, returnclass = "sf")
+}
 # class(world)
 # # example input data
 # (sites <- data.frame(longitude = c(5.5, 6.7), 
@@ -1344,6 +1351,13 @@ world <- ne_countries(scale = 10, returnclass = "sf")
 #head(amph_smpl02_df,3)
 #copy the data frame
 amph_smpl03_df <- amph_smpl02_df
+#subset the data frame based on two criteria 
+# and negate the criteria to exclude the
+# detection of 'Bufo calamita' in sample DL2018009
+# as this detection could not be reproduced in a second setup
+# with 8 replicates of the "DL2018009" and 4 replicates of the standard 
+# dilution series, as attempted in qPCR0903 and qPCR0904 
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
 #subset to exclude all NonApproved controls
 amph_smpl04_df <- amph_smpl03_df[amph_smpl03_df$nonapprovK==0, ]
 tot_smpl03_df <- tot_smpl[tot_smpl$nonapprovK==0, ]
@@ -1355,7 +1369,7 @@ tot_smpl04_df <- tot_smpl03_df[tot_smpl03_df$repl1or2>0, ]
 #amph_smpl03_df <- subset(amph_smpl03_df, eval01=="repl2pos")
 #make the column with numbers for symbols a factor column
 amph_smpl05_df$pchsymb <- as.factor(amph_smpl05_df$pchsymb)
-tot_smpl04_df$pchsymb <- as.factor(tot_smpl04_df$pchsymb)
+#tot_smpl04_df$pchsymb <- as.factor(tot_smpl04_df$pchsymb)
 # set a value for jittering the points in the plots
 jitlvl <- 0.07
 jitlvl <- 0.18
