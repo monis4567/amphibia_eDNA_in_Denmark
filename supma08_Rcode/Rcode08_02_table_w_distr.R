@@ -1,13 +1,18 @@
+#!/usr/bin/env Rscript
+# -*- coding: utf-8 -*-
 
-wd00 <- "/Users/steenknudsen/Documents/Documents/MS_amphibian_eDNA_assays"
-
+#wd00 <- "/Users/steenknudsen/Documents/Documents/MS_amphibian_eDNA_assays"
+wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
+setwd(wd00)
 inpf01 <- "lst_distrib_DK_amphibians.csv"
 inpf02 <- "lst_distrib_areas_amphibians.csv"
 wd02 <- "MS_suppm_amphibia_eDNA/supma09_plots_from_R_analysis"
+wd01 <- "supma01_inp_raw_qcpr_csv"
+wd07 <- "inp07_distrib_lsts"
 
-wd00_wd02 <- paste(wd00,"/",wd02,sep="")
-wd00_inpf01 <- paste(wd00,"/",inpf01,sep="")
-wd00_inpf02 <- paste(wd00,"/",inpf02,sep="")
+wd00_wd01_wd07 <- paste(wd00,"/",wd01,"/",wd07,sep="")
+wd00_inpf01 <- paste(wd00_wd01_wd07,"/",inpf01,sep="")
+wd00_inpf02 <- paste(wd00_wd01_wd07,"/",inpf02,sep="")
 df_di01 <- read.csv(wd00_inpf01, sep="\t",header = F)
 df_ar01 <- read.csv(wd00_inpf02, sep="\t",header = T)
 

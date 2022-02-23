@@ -1,0 +1,693 @@
+DLsamplno,dec_lon,dec_lat,abbr.nm,specs,latspc,totsmpl,DLsamplno.abbrnm,approvK,repl1or2,repl2pos,gymnasiumnm1,dec_lat.j,nonapprovK,truezerodetect,repl1pos,eval01,eval02,pchsymb,pchcol,latspc2,latspc3,llatspc3
+DL2018009,12.534798,55.74716,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018009.Ich.alp,2,0,0,AurehoejSktAnnaeGym,55.72273,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018088,12.506443,55.71739,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018088.Ich.alp,2,0,0,FrederiksvaerkSktAnnaeGym,55.67718,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018133,12.476133,55.67702,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018133.Ich.alp,2,0,0,FrederiksborgSktAnnaeGym,55.73938,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018042,12.313641,55.92368,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018042.Ich.alp,2,0,0,HTXHilleroed,55.87346,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018071,10.473298,56.29135,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,1,DL2018071.Ich.alp,1,0,0,HTXHilleroed,56.21915,0,1,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018015,12.057277,55.61496,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018015.Ich.alp,2,0,0,RoskildeHTXBorupgaardGym,55.61836,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018056,11.871638,55.96750,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,1,DL2018056.Ich.alp,1,0,0,FrederiksvaerkGymBorupgaardGym,56.00393,0,1,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018048,12.380000,55.74000,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018048.Ich.alp,2,0,0,BorupgaardGym,55.69617,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018110, 9.507090,55.71026,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018110.Ich.alp,2,0,0,HorsensGym,55.75453,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018122,11.538370,55.55417,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,1,DL2018122.Ich.alp,1,0,0,HimmelevGym,55.55549,0,1,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018112,12.280072,55.94860,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018112.Ich.alp,2,0,0,VUCNordsjaelland,56.00837,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018036,12.574407,55.73882,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018036.Ich.alp,2,0,0,GlHellerupGym,55.68129,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018023, 9.852886,57.13772,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018023.Ich.alp,2,0,0,NoerresundbyGym,57.09022,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018035,12.522894,55.99423,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018035.Ich.alp,2,0,0,HimmelevGym,56.05060,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018080, 8.970000,56.15000,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018080.Ich.alp,2,0,0,MunkensdamGym,56.16440,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018062, 9.946757,56.02339,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018062.Ich.alp,2,0,0,SkanderborgGym,55.97882,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018098,12.354039,55.82554,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018098.Ich.alp,2,0,0,OeregaardGym,55.88308,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2018092, 8.833501,55.03088,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2018092.Ich.alp,2,0,0,VUCAarhus,54.98271,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019029,12.314189,55.92355,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019029.Ich.alp,2,0,0,HTXHilleroed,55.86702,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019037,10.272052,57.16855,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,1,DL2019037.Ich.alp,1,0,0,SolroedGym,57.24459,0,1,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019042,10.273259,57.16032,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019042.Ich.alp,2,0,0,NoerreGym,57.21311,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019044,10.273592,57.16053,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019044.Ich.alp,2,0,0,OrdrupGym,57.18714,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019009, 9.899299,57.53746,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019009.Ich.alp,2,0,0,MidtsjaellandsGym,57.51514,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019011, 8.303745,56.53997,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019011.Ich.alp,2,0,0,HilleroedHTX,56.50197,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019067,10.479156,57.41674,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019067.Ich.alp,2,0,0,FrederikshavnGym,57.44860,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019061,12.057168,55.61527,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019061.Ich.alp,2,0,0,RoskildeHTX,55.57838,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019007,11.809837,55.29133,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019007.Ich.alp,2,0,0,MiddelfartGym,55.27936,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2019023,10.077818,56.42459,Ich.alp,Bjergsalamander,Ichthyosaurus alpestris,2,DL2019023.Ich.alp,2,0,0,PaderupGym,56.50066,0,2,0,truezerodetect,blue,0,#A020F0,Ichthyosaurus alpestris,F)   Ichthyosaurus alpestris,F
+DL2017044,12.381006,55.73802,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2017044.Ran.tem,2,0,0,BorupgaardGym,55.67570,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018021,10.165626,55.57885,Ran.tem,ButsnudetFroe,Rana temporaria,3,DL2018021.Ran.tem,3,2,1,NordfynGym,55.53870,0,1,1,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018133,12.476133,55.67702,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018133.Ran.tem,2,0,0,FrederiksborgSktAnnaeGym,55.64770,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018042,12.313641,55.92368,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018042.Ran.tem,2,0,0,HTXHilleroed,55.91655,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018083,12.383023,55.73673,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018083.Ran.tem,2,0,0,BorupgaardGym,55.81199,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018046,12.585000,55.65070,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018046.Ran.tem,2,2,2,ChristianshavnGym,55.64656,0,0,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018106,10.265800,54.92390,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018106.Ran.tem,2,0,0,ZahlesGym,54.92722,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018036,12.574407,55.73882,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018036.Ran.tem,2,0,0,GlHellerupGym,55.76563,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018035,12.522894,55.99423,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018035.Ran.tem,2,2,2,HimmelevGym,55.99510,0,0,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018098,12.354039,55.82554,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018098.Ran.tem,2,0,0,OeregaardGym,55.82274,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2018128,11.568102,55.38039,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2018128.Ran.tem,2,0,0,FrederiksborgGym,55.30734,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019039,10.269853,57.16786,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019039.Ran.tem,2,0,0,ChristianshavnsGym,57.12134,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019044,10.273592,57.16053,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019044.Ran.tem,2,2,2,OrdrupGym,57.21346,0,0,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019065,12.474679,55.70511,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019065.Ran.tem,2,0,0,NoerreGym,55.64716,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019050, 9.449431,56.88134,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019050.Ran.tem,2,2,2,AlleroedGym,56.88919,0,0,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019052, 8.973381,56.15156,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019052.Ran.tem,2,0,0,AlleroedGym,56.20136,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019009, 9.899299,57.53746,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019009.Ran.tem,2,1,1,MidtsjaellandsGym,57.61678,0,1,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019011, 8.303745,56.53997,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019011.Ran.tem,2,0,0,HilleroedHTX,56.58267,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019067,10.479156,57.41674,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019067.Ran.tem,2,0,0,FrederikshavnGym,57.42849,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019046,10.429668,55.40704,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019046.Ran.tem,2,0,0,MidtfynsGym,55.41788,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019005, 8.302653,56.54158,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019005.Ran.tem,2,0,0,HelsingoerGym,56.54668,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019059, 9.261640,56.79622,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019059.Ran.tem,2,0,0,AabenraaStatsskole,56.85732,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019041,10.271033,57.16625,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019041.Ran.tem,2,0,0,GentofteHF,57.19164,0,2,0,truezerodetect,blue,0,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019003,12.477318,55.67916,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019003.Ran.tem,2,2,2,GentofteHF,55.60093,0,0,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019019, 9.609253,56.88063,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019019.Ran.tem,2,2,2,GentofteHF,56.89000,0,0,0,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2019035, 9.461000,56.16170,Ran.tem,ButsnudetFroe,Rana temporaria,2,DL2019035.Ran.tem,2,2,1,ViborgGym,56.20541,0,0,1,repl2pos,darkgreen,21,#6E16D0,Rana temporaria,M)   Rana temporaria,M
+DL2017012,12.263687,55.65421,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2017012.Buf.vir,2,1,0,HojeTaastrupGym,55.57482,0,1,1,repl1or2,green,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017048,12.523397,55.64426,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2017048.Buf.vir,2,0,0,DNGsktAnnae,55.59738,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017046,10.077220,56.22384,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017046.Buf.vir,1,0,0,LangkaerGym,56.22932,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017025,12.313890,55.92370,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017025.Buf.vir,1,0,0,HTXHilleroed,55.92931,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017041,12.534806,55.74774,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017041.Buf.vir,1,0,0,OrdrupGym,55.80340,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017037, 8.922423,55.76841,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017037.Buf.vir,1,0,0,GrindstedVordingborgGym,55.75897,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017014,12.563403,55.82611,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017014.Buf.vir,1,0,0,GladsaxeGym,55.88798,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017053,12.412939,55.76764,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017053.Buf.vir,1,0,0,GladsaxeGym,55.70252,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017051,12.415944,55.76744,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017051.Buf.vir,1,0,0,GladsaxeGym,55.70090,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017066, 9.648432,56.20228,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017066.Buf.vir,1,0,0,SilkeborgGym,56.17175,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017026,11.669096,55.62754,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017026.Buf.vir,1,0,0,BirkeroedGym,55.67562,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017019,11.789475,55.29894,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017019.Buf.vir,1,0,0,FrederiksborgGym,55.34389,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017022,12.534656,55.74776,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017022.Buf.vir,1,0,0,GentofteHF,55.72914,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017010, 8.902032,55.75791,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017010.Buf.vir,1,0,0,Projekt,55.83079,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017035,12.313907,55.92478,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017035.Buf.vir,1,0,0,FrederiksborgGym,55.98576,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017044,12.381006,55.73802,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2017044.Buf.vir,1,0,0,BorupgaardGym,55.67468,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018021,10.165626,55.57885,Buf.vir,Groenbrogettudse,Bufo viridis,3,DL2018021.Buf.vir,3,0,0,NordfynGym,55.63754,0,3,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018009,12.534798,55.74716,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018009.Buf.vir,2,0,0,AurehoejSktAnnaeGym,55.73505,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018088,12.506443,55.71739,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018088.Buf.vir,2,0,0,FrederiksvaerkSktAnnaeGym,55.66239,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018133,12.476133,55.67702,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018133.Buf.vir,2,0,0,FrederiksborgSktAnnaeGym,55.62612,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018060,12.444982,55.78641,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018060.Buf.vir,2,0,0,FrederiksborgOrdrup,55.85230,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018071,10.473298,56.29135,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2018071.Buf.vir,1,0,0,HTXHilleroed,56.29244,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018015,12.057277,55.61496,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018015.Buf.vir,2,0,0,RoskildeHTXBorupgaardGym,55.65310,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018005,11.876954,54.77456,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018005.Buf.vir,2,0,0,OrdrupGym,54.81392,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018056,11.871638,55.96750,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2018056.Buf.vir,1,0,0,FrederiksvaerkGymBorupgaardGym,55.96399,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018091,12.381347,55.73806,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2018091.Buf.vir,1,0,0,BorupgaardGym,55.70323,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018044,11.968922,55.99206,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018044.Buf.vir,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,56.03795,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018025,10.142400,56.16920,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018025.Buf.vir,2,0,0,AarhusStatsGym,56.23871,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018046,12.585000,55.65070,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018046.Buf.vir,2,0,0,ChristianshavnGym,55.70201,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018011,12.535347,55.74703,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018011.Buf.vir,2,0,0,EUCNord,55.78917,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018027, 8.885876,55.75814,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018027.Buf.vir,2,0,0,EUCNord,55.74567,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018097,12.404692,55.81555,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018097.Buf.vir,2,0,0,MarieKruseSkole,55.83408,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018039, 9.707759,55.50046,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018039.Buf.vir,2,0,0,AalborgKatedralskole,55.52575,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018040,12.531896,55.99988,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018040.Buf.vir,2,0,0,AlssundGym,56.03720,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018076,10.891185,56.39646,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018076.Buf.vir,2,0,0,BorupgaardGym,56.33398,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018078,12.564849,55.99886,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018078.Buf.vir,2,0,0,HelsingoerGym,55.92117,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018067,12.476593,55.89702,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018067.Buf.vir,2,0,0,RysensteenGym,55.85391,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018110, 9.507090,55.71026,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018110.Buf.vir,2,0,0,HorsensGym,55.71051,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018122,11.538370,55.55417,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2018122.Buf.vir,1,0,0,HimmelevGym,55.60470,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018112,12.280072,55.94860,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018112.Buf.vir,2,0,0,VUCNordsjaelland,55.95362,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018036,12.574407,55.73882,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018036.Buf.vir,2,0,0,GlHellerupGym,55.80239,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018023, 9.852886,57.13772,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018023.Buf.vir,2,0,0,NoerresundbyGym,57.10745,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018035,12.522894,55.99423,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018035.Buf.vir,2,0,0,HimmelevGym,55.92216,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018080, 8.970000,56.15000,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018080.Buf.vir,2,0,0,MunkensdamGym,56.07281,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018062, 9.946757,56.02339,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018062.Buf.vir,2,0,0,SkanderborgGym,56.05147,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018098,12.354039,55.82554,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018098.Buf.vir,2,0,0,OeregaardGym,55.87936,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018092, 8.833501,55.03088,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018092.Buf.vir,2,0,0,VUCAarhus,55.05898,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018118,11.966330,55.00989,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018118.Buf.vir,2,0,0,HjoerringGymOgHF,55.05019,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2018128,11.568102,55.38039,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2018128.Buf.vir,2,0,0,FrederiksborgGym,55.41598,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019013,10.856494,56.41465,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2019013.Buf.vir,1,0,0,DetFrieGym,56.35857,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019029,12.314189,55.92355,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019029.Buf.vir,2,0,0,HTXHilleroed,55.90792,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019039,10.269853,57.16786,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019039.Buf.vir,2,0,0,ChristianshavnsGym,57.11674,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019044,10.273592,57.16053,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2019044.Buf.vir,1,0,0,OrdrupGym,57.11295,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019048,10.429000,55.40700,Buf.vir,Groenbrogettudse,Bufo viridis,4,DL2019048.Buf.vir,4,0,0,HimmelevGym,55.39189,0,4,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019052, 8.973381,56.15156,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019052.Buf.vir,2,0,0,AlleroedGym,56.08573,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019009, 9.899299,57.53746,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019009.Buf.vir,2,0,0,MidtsjaellandsGym,57.50812,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019011, 8.303745,56.53997,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019011.Buf.vir,2,0,0,HilleroedHTX,56.60349,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019046,10.429668,55.40704,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019046.Buf.vir,2,0,0,MidtfynsGym,55.41260,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019059, 9.261640,56.79622,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019059.Buf.vir,2,0,0,AabenraaStatsskole,56.86310,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019061,12.057168,55.61527,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019061.Buf.vir,2,0,0,RoskildeHTX,55.64532,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019007,11.809837,55.29133,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019007.Buf.vir,2,0,0,MiddelfartGym,55.35964,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019041,10.271033,57.16625,Buf.vir,Groenbrogettudse,Bufo viridis,1,DL2019041.Buf.vir,1,0,0,GentofteHF,57.21204,0,1,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019003,12.477318,55.67916,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019003.Buf.vir,2,0,0,GentofteHF,55.62242,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2019035, 9.461000,56.16170,Buf.vir,Groenbrogettudse,Bufo viridis,2,DL2019035.Buf.vir,2,0,0,ViborgGym,56.19485,0,2,0,truezerodetect,blue,0,#3D0CB1,Bufo viridis,D)   Bufo viridis,D
+DL2017046,10.077220,56.22384,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017046.Bom.bom,1,0,0,LangkaerGym,56.21395,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017020,12.476252,55.67711,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017020.Bom.bom,1,0,0,RoedovreGym,55.72027,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017025,12.313890,55.92370,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017025.Bom.bom,1,0,0,HTXHilleroed,55.94459,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017041,12.534806,55.74774,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017041.Bom.bom,1,0,0,OrdrupGym,55.71678,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017037, 8.922423,55.76841,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017037.Bom.bom,1,0,0,GrindstedVordingborgGym,55.84054,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017053,12.412939,55.76764,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017053.Bom.bom,1,0,0,GladsaxeGym,55.74694,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017018,12.027915,55.76656,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017018.Bom.bom,1,0,0,KalundborgGym,55.68992,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017051,12.415944,55.76744,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017051.Bom.bom,1,0,0,GladsaxeGym,55.70025,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017066, 9.648432,56.20228,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017066.Bom.bom,1,0,0,SilkeborgGym,56.25155,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017026,11.669096,55.62754,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017026.Bom.bom,1,0,0,BirkeroedGym,55.61603,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017019,11.789475,55.29894,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017019.Bom.bom,1,0,0,FrederiksborgGym,55.36603,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017021, 8.491281,55.46282,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017021.Bom.bom,1,0,0,FrederiksbergGym,55.51104,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017022,12.534656,55.74776,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017022.Bom.bom,1,0,0,GentofteHF,55.78597,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017010, 8.902032,55.75791,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017010.Bom.bom,1,0,0,Projekt,55.75167,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017035,12.313907,55.92478,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017035.Bom.bom,1,0,0,FrederiksborgGym,55.87627,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2017044,12.381006,55.73802,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2017044.Bom.bom,1,0,0,BorupgaardGym,55.81465,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018007,15.187970,55.32029,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018007.Bom.bom,2,0,0,AlleroedGym,55.24514,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018021,10.165626,55.57885,Bom.bom,KlokkeFroe,Bombina bombina,3,DL2018021.Bom.bom,3,0,0,NordfynGym,55.51767,0,3,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018009,12.534798,55.74716,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018009.Bom.bom,2,0,0,AurehoejSktAnnaeGym,55.79251,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018133,12.476133,55.67702,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018133.Bom.bom,2,0,0,FrederiksborgSktAnnaeGym,55.61573,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018060,12.444982,55.78641,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018060.Bom.bom,2,0,0,FrederiksborgOrdrup,55.71639,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018042,12.313641,55.92368,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018042.Bom.bom,2,0,0,HTXHilleroed,55.94765,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018015,12.057277,55.61496,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018015.Bom.bom,2,0,0,RoskildeHTXBorupgaardGym,55.68158,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018056,11.871638,55.96750,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2018056.Bom.bom,1,0,0,FrederiksvaerkGymBorupgaardGym,55.93684,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018091,12.381347,55.73806,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2018091.Bom.bom,1,0,0,BorupgaardGym,55.80511,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018044,11.968922,55.99206,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018044.Bom.bom,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,56.05246,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018017, 9.700589,55.50250,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2018017.Bom.bom,1,0,0,AlleroedGym,55.51273,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018084,12.381062,55.73808,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2018084.Bom.bom,1,0,0,BorupgaardGym,55.77448,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018054,12.535143,55.74782,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2018054.Bom.bom,1,0,0,GentofteHF,55.76011,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018020, 9.816611,56.63589,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2018020.Bom.bom,1,0,0,GentofteHFAkademiskStudenterkursus,56.66826,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018011,12.535347,55.74703,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018011.Bom.bom,2,0,0,EUCNord,55.66739,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018097,12.404692,55.81555,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018097.Bom.bom,2,0,0,MarieKruseSkole,55.74185,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018040,12.531896,55.99988,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018040.Bom.bom,2,0,0,AlssundGym,55.92623,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018076,10.891185,56.39646,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018076.Bom.bom,2,0,0,BorupgaardGym,56.33253,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018064,12.165090,55.48110,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018064.Bom.bom,2,0,0,RysensteenGym,55.46863,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018078,12.564849,55.99886,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018078.Bom.bom,2,0,0,HelsingoerGym,55.99620,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018067,12.476593,55.89702,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018067.Bom.bom,2,0,0,RysensteenGym,55.96246,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018013,12.051621,55.62879,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018013.Bom.bom,2,0,0,OerstadGym,55.67482,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018106,10.265800,54.92390,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2018106.Bom.bom,2,0,0,ZahlesGym,54.97177,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019057,12.284727,55.98119,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2019057.Bom.bom,1,0,0,FrederiksborgGym,56.02901,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019013,10.856494,56.41465,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2019013.Bom.bom,1,0,0,DetFrieGym,56.41833,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019015,14.729692,55.10200,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2019015.Bom.bom,1,0,0,DetFrieGymChristianshavnsGym,55.10059,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019017, 9.527786,56.79541,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2019017.Bom.bom,1,0,0,BorupgaardGym,56.87515,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019005, 8.302653,56.54158,Bom.bom,KlokkeFroe,Bombina bombina,3,DL2019005.Bom.bom,3,0,0,HelsingoerGym,56.48840,0,3,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019029,12.314189,55.92355,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019029.Bom.bom,2,0,0,HTXHilleroed,55.87059,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019037,10.272052,57.16855,Bom.bom,KlokkeFroe,Bombina bombina,1,DL2019037.Bom.bom,1,0,0,SolroedGym,57.10084,0,1,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019039,10.269853,57.16786,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019039.Bom.bom,2,0,0,ChristianshavnsGym,57.20863,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019050, 9.449431,56.88134,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019050.Bom.bom,2,0,0,AlleroedGym,56.81163,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019052, 8.973381,56.15156,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019052.Bom.bom,2,0,0,AlleroedGym,56.21610,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019009, 9.899299,57.53746,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019009.Bom.bom,2,0,0,MidtsjaellandsGym,57.56278,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019011, 8.303745,56.53997,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019011.Bom.bom,2,0,0,HilleroedHTX,56.55081,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019067,10.479156,57.41674,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019067.Bom.bom,2,0,0,FrederikshavnGym,57.41228,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2019046,10.429668,55.40704,Bom.bom,KlokkeFroe,Bombina bombina,2,DL2019046.Bom.bom,2,0,0,MidtfynsGym,55.45258,0,2,0,truezerodetect,blue,0,#0C0292,Bombina bombina,A)   Bombina bombina,A
+DL2018009,12.534798,55.74716,Ran.les,KortbenetGroenFroe,Rana lessonae,2,DL2018009.Ran.les,2,0,0,AurehoejSktAnnaeGym,55.79878,0,2,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018060,12.444982,55.78641,Ran.les,KortbenetGroenFroe,Rana lessonae,2,DL2018060.Ran.les,2,0,0,FrederiksborgOrdrup,55.71015,0,2,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018042,12.313641,55.92368,Ran.les,KortbenetGroenFroe,Rana lessonae,2,DL2018042.Ran.les,2,0,0,HTXHilleroed,55.97802,0,2,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018071,10.473298,56.29135,Ran.les,KortbenetGroenFroe,Rana lessonae,1,DL2018071.Ran.les,1,0,0,HTXHilleroed,56.30997,0,1,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018015,12.057277,55.61496,Ran.les,KortbenetGroenFroe,Rana lessonae,2,DL2018015.Ran.les,2,0,0,RoskildeHTXBorupgaardGym,55.55939,0,2,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018056,11.871638,55.96750,Ran.les,KortbenetGroenFroe,Rana lessonae,1,DL2018056.Ran.les,1,0,0,FrederiksvaerkGymBorupgaardGym,55.93784,0,1,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018044,11.968922,55.99206,Ran.les,KortbenetGroenFroe,Rana lessonae,2,DL2018044.Ran.les,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,55.91672,0,2,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018084,12.381062,55.73808,Ran.les,KortbenetGroenFroe,Rana lessonae,1,DL2018084.Ran.les,1,0,0,BorupgaardGym,55.80729,0,1,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018069, 8.901389,55.75833,Ran.les,KortbenetGroenFroe,Rana lessonae,2,DL2018069.Ran.les,2,0,0,EUCSjaelland,55.70613,0,2,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018128,11.568102,55.38039,Ran.les,KortbenetGroenFroe,Rana lessonae,1,DL2018128.Ran.les,1,1,0,FrederiksborgGym,55.38529,0,0,1,repl1or2,green,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2019013,10.856494,56.41465,Ran.les,KortbenetGroenFroe,Rana lessonae,1,DL2019013.Ran.les,1,0,0,DetFrieGym,56.49306,0,1,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2019015,14.729692,55.10200,Ran.les,KortbenetGroenFroe,Rana lessonae,1,DL2019015.Ran.les,1,0,0,DetFrieGymChristianshavnsGym,55.14860,0,1,0,truezerodetect,blue,0,#00176A,Pelophylax kl. esculenta,I)   Pelophylax kl. esculenta,I
+DL2018007,15.187970,55.32029,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018007.Pel.rid,2,0,0,AlleroedGym,55.35424,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018009,12.534798,55.74716,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018009.Pel.rid,2,1,0,AurehoejSktAnnaeGym,55.67441,0,1,1,repl1or2,green,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018088,12.506443,55.71739,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018088.Pel.rid,2,0,0,FrederiksvaerkSktAnnaeGym,55.68019,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018133,12.476133,55.67702,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018133.Pel.rid,2,0,0,FrederiksborgSktAnnaeGym,55.73045,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018060,12.444982,55.78641,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2018060.Pel.rid,1,0,0,FrederiksborgOrdrup,55.83245,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018042,12.313641,55.92368,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018042.Pel.rid,2,0,0,HTXHilleroed,55.99391,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018071,10.473298,56.29135,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2018071.Pel.rid,1,0,0,HTXHilleroed,56.35544,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018083,12.383023,55.73673,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2018083.Pel.rid,1,0,0,BorupgaardGym,55.67856,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018084,12.381062,55.73808,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2018084.Pel.rid,1,0,0,BorupgaardGym,55.80907,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018052,12.535143,55.74782,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2018052.Pel.rid,1,0,0,GentofteHF,55.71486,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018025,10.142400,56.16920,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018025.Pel.rid,2,0,0,AarhusStatsGym,56.19181,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018046,12.585000,55.65070,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018046.Pel.rid,2,0,0,ChristianshavnGym,55.68023,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018064,12.165090,55.48110,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018064.Pel.rid,2,0,0,RysensteenGym,55.46322,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018067,12.476593,55.89702,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018067.Pel.rid,2,0,0,RysensteenGym,55.95806,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018036,12.574407,55.73882,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018036.Pel.rid,2,0,0,GlHellerupGym,55.80496,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018023, 9.852886,57.13772,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018023.Pel.rid,2,0,0,NoerresundbyGym,57.07620,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018035,12.522894,55.99423,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018035.Pel.rid,2,0,0,HimmelevGym,55.99088,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018098,12.354039,55.82554,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018098.Pel.rid,2,0,0,OeregaardGym,55.77950,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018092, 8.833501,55.03088,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018092.Pel.rid,2,0,0,VUCAarhus,55.04590,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018118,11.966330,55.00989,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018118.Pel.rid,2,0,0,HjoerringGymOgHF,55.00103,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018069, 8.901389,55.75833,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018069.Pel.rid,2,0,0,EUCSjaelland,55.68503,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2018094, 8.779618,55.52909,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2018094.Pel.rid,2,0,0,FrederiksborgGym,55.50770,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019037,10.272052,57.16855,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2019037.Pel.rid,1,0,0,SolroedGym,57.16626,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019039,10.269853,57.16786,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019039.Pel.rid,2,0,0,ChristianshavnsGym,57.13883,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019009, 9.899299,57.53746,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019009.Pel.rid,2,0,0,MidtsjaellandsGym,57.47972,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019011, 8.303745,56.53997,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019011.Pel.rid,2,0,0,HilleroedHTX,56.59192,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019067,10.479156,57.41674,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019067.Pel.rid,2,0,0,FrederikshavnGym,57.45494,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019046,10.429668,55.40704,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019046.Pel.rid,2,0,0,MidtfynsGym,55.40332,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019059, 9.261640,56.79622,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019059.Pel.rid,2,0,0,AabenraaStatsskole,56.76527,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019061,12.057168,55.61527,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019061.Pel.rid,2,0,0,RoskildeHTX,55.60719,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019007,11.809837,55.29133,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019007.Pel.rid,2,0,0,MiddelfartGym,55.36364,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019003,12.477318,55.67916,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019003.Pel.rid,2,0,0,GentofteHF,55.60532,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019035, 9.461000,56.16170,Pel.rid,LatterFroe,Pelophylax ridibundus,1,DL2019035.Pel.rid,1,0,0,ViborgGym,56.18299,0,1,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019023,10.077818,56.42459,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019023.Pel.rid,2,0,0,PaderupGym,56.49699,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2019021, 8.922321,55.76843,Pel.rid,LatterFroe,Pelophylax ridibundus,2,DL2019021.Pel.rid,2,0,0,GrindstedGymEGG,55.76928,0,2,0,truezerodetect,blue,0,#003540,Pelophylax ridibundus,J)   Pelophylax ridibundus,J
+DL2017006, 9.538007,55.70420,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017006.Lis.vul,2,2,0,RoedkildeGym,55.64908,0,0,2,repl1or2,green,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017003,12.205167,55.64177,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017003.Lis.vul,2,2,1,HoejeTaastrupGym,55.57128,0,0,1,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017011,12.556815,55.67744,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,1,DL2017011.Lis.vul,1,1,1,VUFvoksen,55.66455,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017015,12.313475,55.92471,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017015.Lis.vul,2,0,0,FrederiksborgGym,55.91807,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017008,12.284096,55.98061,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017008.Lis.vul,2,2,2,FrederiksborgGym,55.92072,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017048,12.523397,55.64426,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017048.Lis.vul,2,0,0,DNGsktAnnae,55.64111,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017059,15.187916,55.32034,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017059.Lis.vul,2,2,2,FrederiksborgGym,55.28946,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017046,10.077220,56.22384,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017046.Lis.vul,2,2,2,LangkaerGym,56.20464,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017025,12.313890,55.92370,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017025.Lis.vul,2,2,2,HTXHilleroed,55.92448,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017041,12.534806,55.74774,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017041.Lis.vul,2,0,0,OrdrupGym,55.78601,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017037, 8.922423,55.76841,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017037.Lis.vul,2,1,1,GrindstedVordingborgGym,55.72565,0,1,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017014,12.563403,55.82611,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017014.Lis.vul,2,2,2,GladsaxeGym,55.77267,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017018,12.027915,55.76656,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017018.Lis.vul,2,0,0,KalundborgGym,55.84683,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017066, 9.648432,56.20228,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017066.Lis.vul,2,1,1,SilkeborgGym,56.23538,0,1,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017026,11.669096,55.62754,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017026.Lis.vul,2,0,0,BirkeroedGym,55.67607,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017019,11.789475,55.29894,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017019.Lis.vul,2,2,2,FrederiksborgGym,55.31166,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017022,12.534656,55.74776,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017022.Lis.vul,2,1,1,GentofteHF,55.82086,0,1,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017010, 8.902032,55.75791,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017010.Lis.vul,2,0,0,Projekt,55.67734,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017035,12.313907,55.92478,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017035.Lis.vul,2,0,0,FrederiksborgGym,55.94070,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017044,12.381006,55.73802,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2017044.Lis.vul,2,0,0,BorupgaardGym,55.67494,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018007,15.187970,55.32029,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018007.Lis.vul,2,1,0,AlleroedGym,55.32239,0,1,1,repl1or2,green,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018088,12.506443,55.71739,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018088.Lis.vul,2,1,0,FrederiksvaerkSktAnnaeGym,55.74587,0,1,1,repl1or2,green,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018058, 8.536297,55.90500,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,3,DL2018058.Lis.vul,3,3,3,EgedalGym,55.85987,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018083,12.383023,55.73673,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018083.Lis.vul,2,2,1,BorupgaardGym,55.74337,0,0,1,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018084,12.381062,55.73808,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018084.Lis.vul,2,0,0,BorupgaardGym,55.75002,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018025,10.142400,56.16920,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018025.Lis.vul,2,1,0,AarhusStatsGym,56.20076,0,1,1,repl1or2,green,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018046,12.585000,55.65070,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018046.Lis.vul,2,1,1,ChristianshavnGym,55.69417,0,1,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018097,12.404692,55.81555,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018097.Lis.vul,2,2,2,MarieKruseSkole,55.87345,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018039, 9.707759,55.50046,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018039.Lis.vul,2,2,2,AalborgKatedralskole,55.53125,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018040,12.531896,55.99988,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018040.Lis.vul,2,1,1,AlssundGym,55.95116,0,1,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018050,12.028700,55.96060,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018050.Lis.vul,2,0,0,GlHellerupGym,55.88072,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018064,12.165090,55.48110,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018064.Lis.vul,2,0,0,RysensteenGym,55.47009,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018078,12.564849,55.99886,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018078.Lis.vul,2,2,2,HelsingoerGym,55.95017,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018067,12.476593,55.89702,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018067.Lis.vul,2,0,0,RysensteenGym,55.91962,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018013,12.051621,55.62879,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018013.Lis.vul,2,0,0,OerstadGym,55.61376,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018106,10.265800,54.92390,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018106.Lis.vul,2,2,1,ZahlesGym,54.93781,0,0,1,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018031,11.878958,54.77459,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018031.Lis.vul,2,2,1,RysensteenGym,54.70291,0,0,1,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018048,12.380000,55.74000,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018048.Lis.vul,2,2,2,BorupgaardGym,55.82014,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018122,11.538370,55.55417,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018122.Lis.vul,2,0,0,HimmelevGym,55.59421,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018036,12.574407,55.73882,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018036.Lis.vul,2,2,2,GlHellerupGym,55.76538,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018023, 9.852886,57.13772,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018023.Lis.vul,2,1,1,NoerresundbyGym,57.20080,0,1,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018035,12.522894,55.99423,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018035.Lis.vul,2,2,2,HimmelevGym,56.04249,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018080, 8.970000,56.15000,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018080.Lis.vul,2,0,0,MunkensdamGym,56.12406,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018062, 9.946757,56.02339,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018062.Lis.vul,2,0,0,SkanderborgGym,56.02240,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018092, 8.833501,55.03088,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018092.Lis.vul,2,0,0,VUCAarhus,55.00301,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018118,11.966330,55.00989,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018118.Lis.vul,2,0,0,HjoerringGymOgHF,54.93564,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018069, 8.901389,55.75833,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018069.Lis.vul,2,0,0,EUCSjaelland,55.71417,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018094, 8.779618,55.52909,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018094.Lis.vul,2,0,0,FrederiksborgGym,55.53374,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2018128,11.568102,55.38039,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2018128.Lis.vul,2,2,2,FrederiksborgGym,55.45208,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019044,10.273592,57.16053,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019044.Lis.vul,2,2,2,OrdrupGym,57.23415,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019065,12.474679,55.70511,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019065.Lis.vul,2,0,0,NoerreGym,55.62558,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019052, 8.973381,56.15156,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019052.Lis.vul,2,0,0,AlleroedGym,56.14221,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019046,10.429668,55.40704,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019046.Lis.vul,2,0,0,MidtfynsGym,55.46943,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019005, 8.302653,56.54158,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019005.Lis.vul,2,2,1,HelsingoerGym,56.47707,0,0,1,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019059, 9.261640,56.79622,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019059.Lis.vul,2,0,0,AabenraaStatsskole,56.77783,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019061,12.057168,55.61527,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019061.Lis.vul,2,2,0,RoskildeHTX,55.56170,0,0,2,repl1or2,green,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019003,12.477318,55.67916,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019003.Lis.vul,2,2,2,GentofteHF,55.61397,0,0,0,repl2pos,darkgreen,21,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019023,10.077818,56.42459,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019023.Lis.vul,2,0,0,PaderupGym,56.44223,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2019021, 8.922321,55.76843,Lis.vul,LilleVandsalamander,Lissotriton vulgaris,2,DL2019021.Lis.vul,2,0,0,GrindstedGymEGG,55.78490,0,2,0,truezerodetect,blue,0,#005415,Lissotriton vulgaris,G)   Lissotriton vulgaris,G
+DL2017006, 9.538007,55.70420,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017006.Pel.fus,1,1,0,RoedkildeGym,55.71829,0,0,1,repl1or2,green,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017012,12.263687,55.65421,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2017012.Pel.fus,2,2,0,HojeTaastrupGym,55.63266,0,0,2,repl1or2,green,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017015,12.313475,55.92471,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017015.Pel.fus,1,0,0,FrederiksborgGym,55.91178,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017007,12.284736,55.98135,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017007.Pel.fus,1,0,0,FrederiksborgGym,56.05260,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017008,12.284096,55.98061,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017008.Pel.fus,1,0,0,FrederiksborgGym,55.96324,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017020,12.476252,55.67711,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017020.Pel.fus,1,0,0,RoedovreGym,55.73320,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017027,12.133734,55.65229,Pel.fus,LoegFroe,Pelobates fuscus,3,DL2017027.Pel.fus,3,0,0,HimmelevGym,55.66166,0,3,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017025,12.313890,55.92370,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017025.Pel.fus,1,0,0,HTXHilleroed,55.84653,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017014,12.563403,55.82611,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017014.Pel.fus,1,0,0,GladsaxeGym,55.81100,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017053,12.412939,55.76764,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2017053.Pel.fus,2,0,0,GladsaxeGym,55.70102,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017018,12.027915,55.76656,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017018.Pel.fus,1,0,0,KalundborgGym,55.79133,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017051,12.415944,55.76744,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2017051.Pel.fus,2,0,0,GladsaxeGym,55.73855,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017066, 9.648432,56.20228,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017066.Pel.fus,1,0,0,SilkeborgGym,56.12746,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017026,11.669096,55.62754,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017026.Pel.fus,1,0,0,BirkeroedGym,55.59163,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017019,11.789475,55.29894,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017019.Pel.fus,1,0,0,FrederiksborgGym,55.34778,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017021, 8.491281,55.46282,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017021.Pel.fus,1,1,1,FrederiksbergGym,55.52558,0,0,0,repl2pos,darkgreen,21,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017022,12.534656,55.74776,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2017022.Pel.fus,2,0,0,GentofteHF,55.76776,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017010, 8.902032,55.75791,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017010.Pel.fus,1,0,0,Projekt,55.83603,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017044,12.381006,55.73802,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2017044.Pel.fus,1,0,0,BorupgaardGym,55.75841,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018007,15.187970,55.32029,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018007.Pel.fus,2,0,0,AlleroedGym,55.29348,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018009,12.534798,55.74716,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018009.Pel.fus,2,0,0,AurehoejSktAnnaeGym,55.74436,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018060,12.444982,55.78641,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018060.Pel.fus,2,0,0,FrederiksborgOrdrup,55.84518,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018042,12.313641,55.92368,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018042.Pel.fus,2,0,0,HTXHilleroed,55.99233,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018058, 8.536297,55.90500,Pel.fus,LoegFroe,Pelobates fuscus,3,DL2018058.Pel.fus,3,0,0,EgedalGym,55.89927,0,3,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018071,10.473298,56.29135,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2018071.Pel.fus,1,0,0,HTXHilleroed,56.29389,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018015,12.057277,55.61496,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018015.Pel.fus,2,0,0,RoskildeHTXBorupgaardGym,55.62072,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018056,11.871638,55.96750,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2018056.Pel.fus,1,0,0,FrederiksvaerkGymBorupgaardGym,55.91430,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018091,12.381347,55.73806,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2018091.Pel.fus,1,0,0,BorupgaardGym,55.66439,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018044,11.968922,55.99206,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018044.Pel.fus,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,56.06125,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018083,12.383023,55.73673,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2018083.Pel.fus,1,0,0,BorupgaardGym,55.73227,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018017, 9.700589,55.50250,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2018017.Pel.fus,1,0,0,AlleroedGym,55.52921,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018025,10.142400,56.16920,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018025.Pel.fus,2,0,0,AarhusStatsGym,56.16692,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018011,12.535347,55.74703,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018011.Pel.fus,2,0,0,EUCNord,55.70575,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018027, 8.885876,55.75814,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018027.Pel.fus,2,0,0,EUCNord,55.72278,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018097,12.404692,55.81555,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018097.Pel.fus,2,0,0,MarieKruseSkole,55.82434,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018039, 9.707759,55.50046,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018039.Pel.fus,2,0,0,AalborgKatedralskole,55.51398,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018064,12.165090,55.48110,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018064.Pel.fus,2,0,0,RysensteenGym,55.50472,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018078,12.564849,55.99886,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018078.Pel.fus,2,0,0,HelsingoerGym,56.02257,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018013,12.051621,55.62879,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018013.Pel.fus,2,0,0,OerstadGym,55.56361,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018086, 9.986380,57.45000,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018086.Pel.fus,2,0,0,NielsSteensenGym,57.52679,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018108,12.089444,55.83278,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018108.Pel.fus,2,0,0,NZahlesGym,55.84379,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018048,12.380000,55.74000,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018048.Pel.fus,2,0,0,BorupgaardGym,55.79634,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018122,11.538370,55.55417,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2018122.Pel.fus,1,0,0,HimmelevGym,55.60557,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018023, 9.852886,57.13772,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018023.Pel.fus,2,2,2,NoerresundbyGym,57.17052,0,0,0,repl2pos,darkgreen,21,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018080, 8.970000,56.15000,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018080.Pel.fus,2,0,0,MunkensdamGym,56.12618,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018062, 9.946757,56.02339,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018062.Pel.fus,2,0,0,SkanderborgGym,56.03137,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018092, 8.833501,55.03088,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018092.Pel.fus,2,0,0,VUCAarhus,55.01323,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018118,11.966330,55.00989,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018118.Pel.fus,2,0,0,HjoerringGymOgHF,55.08953,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2018128,11.568102,55.38039,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2018128.Pel.fus,2,0,0,FrederiksborgGym,55.45648,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019057,12.284727,55.98119,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2019057.Pel.fus,1,0,0,FrederiksborgGym,55.95456,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019013,10.856494,56.41465,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2019013.Pel.fus,1,0,0,DetFrieGym,56.44155,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019015,14.729692,55.10200,Pel.fus,LoegFroe,Pelobates fuscus,1,DL2019015.Pel.fus,1,0,0,DetFrieGymChristianshavnsGym,55.08572,0,1,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019005, 8.302653,56.54158,Pel.fus,LoegFroe,Pelobates fuscus,4,DL2019005.Pel.fus,4,1,0,HelsingoerGym,56.46177,0,3,1,repl1or2,green,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019039,10.269853,57.16786,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019039.Pel.fus,2,1,0,ChristianshavnsGym,57.23572,0,1,1,repl1or2,green,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019065,12.474679,55.70511,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019065.Pel.fus,2,0,0,NoerreGym,55.67150,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019050, 9.449431,56.88134,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019050.Pel.fus,2,0,0,AlleroedGym,56.95852,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019052, 8.973381,56.15156,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019052.Pel.fus,2,0,0,AlleroedGym,56.12553,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019011, 8.303745,56.53997,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019011.Pel.fus,2,0,0,HilleroedHTX,56.58939,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019067,10.479156,57.41674,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019067.Pel.fus,2,0,0,FrederikshavnGym,57.38135,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019046,10.429668,55.40704,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019046.Pel.fus,2,0,0,MidtfynsGym,55.40767,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019061,12.057168,55.61527,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019061.Pel.fus,2,0,0,RoskildeHTX,55.60740,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019007,11.809837,55.29133,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019007.Pel.fus,2,0,0,MiddelfartGym,55.31705,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019035, 9.461000,56.16170,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019035.Pel.fus,2,0,0,ViborgGym,56.14078,0,2,0,truezerodetect,blue,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2019023,10.077818,56.42459,Pel.fus,LoegFroe,Pelobates fuscus,2,DL2019023.Pel.fus,2,1,0,PaderupGym,56.42060,0,1,1,repl1or2,green,0,#007B00,Pelobates fuscus,H)   Pelobates fuscus,H
+DL2017006, 9.538007,55.70420,Hyl.arb,LoevFroe,Hyla arborea,2,DL2017006.Hyl.arb,2,1,0,RoedkildeGym,55.73033,0,1,1,repl1or2,green,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017013,11.791324,55.29933,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017013.Hyl.arb,1,0,0,KoegeGym,55.33728,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017029,12.315135,55.92341,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017029.Hyl.arb,1,0,0,FrederiksborgGym,55.95287,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017020,12.476252,55.67711,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017020.Hyl.arb,1,0,0,RoedovreGym,55.69729,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017025,12.313890,55.92370,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017025.Hyl.arb,1,0,0,HTXHilleroed,55.84989,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017041,12.534806,55.74774,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017041.Hyl.arb,1,0,0,OrdrupGym,55.69123,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017037, 8.922423,55.76841,Hyl.arb,LoevFroe,Hyla arborea,2,DL2017037.Hyl.arb,2,0,0,GrindstedVordingborgGym,55.70185,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017014,12.563403,55.82611,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017014.Hyl.arb,1,0,0,GladsaxeGym,55.85995,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017053,12.412939,55.76764,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017053.Hyl.arb,1,0,0,GladsaxeGym,55.77859,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017018,12.027915,55.76656,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017018.Hyl.arb,1,0,0,KalundborgGym,55.77507,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017051,12.415944,55.76744,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017051.Hyl.arb,1,0,0,GladsaxeGym,55.73993,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017066, 9.648432,56.20228,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017066.Hyl.arb,1,0,0,SilkeborgGym,56.20950,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017026,11.669096,55.62754,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017026.Hyl.arb,1,0,0,BirkeroedGym,55.70485,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017021, 8.491281,55.46282,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017021.Hyl.arb,1,0,0,FrederiksbergGym,55.46466,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017022,12.534656,55.74776,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017022.Hyl.arb,1,0,0,GentofteHF,55.74796,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017010, 8.902032,55.75791,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017010.Hyl.arb,1,0,0,Projekt,55.77528,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2017044,12.381006,55.73802,Hyl.arb,LoevFroe,Hyla arborea,1,DL2017044.Hyl.arb,1,0,0,BorupgaardGym,55.77512,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018007,15.187970,55.32029,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018007.Hyl.arb,2,0,0,AlleroedGym,55.33114,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018009,12.534798,55.74716,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018009.Hyl.arb,2,0,0,AurehoejSktAnnaeGym,55.72308,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018088,12.506443,55.71739,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018088.Hyl.arb,2,0,0,FrederiksvaerkSktAnnaeGym,55.70441,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018060,12.444982,55.78641,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018060.Hyl.arb,2,0,0,FrederiksborgOrdrup,55.75331,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018042,12.313641,55.92368,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018042.Hyl.arb,2,0,0,HTXHilleroed,55.97839,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018071,10.473298,56.29135,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018071.Hyl.arb,1,0,0,HTXHilleroed,56.36116,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018015,12.057277,55.61496,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018015.Hyl.arb,2,0,0,RoskildeHTXBorupgaardGym,55.63541,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018005,11.876954,54.77456,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018005.Hyl.arb,2,0,0,OrdrupGym,54.82945,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018056,11.871638,55.96750,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018056.Hyl.arb,1,0,0,FrederiksvaerkGymBorupgaardGym,56.00372,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018091,12.381347,55.73806,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018091.Hyl.arb,1,0,0,BorupgaardGym,55.67189,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018044,11.968922,55.99206,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018044.Hyl.arb,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,55.95147,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018083,12.383023,55.73673,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018083.Hyl.arb,1,0,0,BorupgaardGym,55.76560,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018084,12.381062,55.73808,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018084.Hyl.arb,1,0,0,BorupgaardGym,55.75302,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018020, 9.816611,56.63589,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018020.Hyl.arb,1,0,0,GentofteHFAkademiskStudenterkursus,56.68209,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018052,12.535143,55.74782,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018052.Hyl.arb,1,0,0,GentofteHF,55.70291,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018025,10.142400,56.16920,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018025.Hyl.arb,2,0,0,AarhusStatsGym,56.11595,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018046,12.585000,55.65070,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018046.Hyl.arb,2,0,0,ChristianshavnGym,55.68641,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018011,12.535347,55.74703,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018011.Hyl.arb,2,0,0,EUCNord,55.78833,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018097,12.404692,55.81555,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018097.Hyl.arb,2,0,0,MarieKruseSkole,55.73566,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018039, 9.707759,55.50046,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018039.Hyl.arb,2,0,0,AalborgKatedralskole,55.54907,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018040,12.531896,55.99988,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018040.Hyl.arb,2,0,0,AlssundGym,56.03182,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018076,10.891185,56.39646,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018076.Hyl.arb,2,0,0,BorupgaardGym,56.38555,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018050,12.028700,55.96060,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018050.Hyl.arb,2,0,0,GlHellerupGym,55.98960,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018064,12.165090,55.48110,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018064.Hyl.arb,2,0,0,RysensteenGym,55.51740,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018078,12.564849,55.99886,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018078.Hyl.arb,2,0,0,HelsingoerGym,56.01918,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018067,12.476593,55.89702,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018067.Hyl.arb,2,0,0,RysensteenGym,55.90936,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018013,12.051621,55.62879,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018013.Hyl.arb,2,0,0,OerstadGym,55.64068,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018073,11.769689,55.21091,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018073.Hyl.arb,2,0,0,VUCNordsj,55.17979,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018048,12.380000,55.74000,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018048.Hyl.arb,2,0,0,BorupgaardGym,55.79412,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018110, 9.507090,55.71026,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018110.Hyl.arb,2,0,0,HorsensGym,55.66521,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018122,11.538370,55.55417,Hyl.arb,LoevFroe,Hyla arborea,1,DL2018122.Hyl.arb,1,0,0,HimmelevGym,55.54654,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018036,12.574407,55.73882,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018036.Hyl.arb,2,0,0,GlHellerupGym,55.72721,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018035,12.522894,55.99423,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018035.Hyl.arb,2,0,0,HimmelevGym,55.98803,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018080, 8.970000,56.15000,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018080.Hyl.arb,2,0,0,MunkensdamGym,56.07668,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018098,12.354039,55.82554,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018098.Hyl.arb,2,0,0,OeregaardGym,55.80970,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018092, 8.833501,55.03088,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018092.Hyl.arb,2,0,0,VUCAarhus,55.05257,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018118,11.966330,55.00989,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018118.Hyl.arb,2,0,0,HjoerringGymOgHF,55.02315,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018128,11.568102,55.38039,Hyl.arb,LoevFroe,Hyla arborea,2,DL2018128.Hyl.arb,2,0,0,FrederiksborgGym,55.45861,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019057,12.284727,55.98119,Hyl.arb,LoevFroe,Hyla arborea,1,DL2019057.Hyl.arb,1,0,0,FrederiksborgGym,55.95835,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019013,10.856494,56.41465,Hyl.arb,LoevFroe,Hyla arborea,1,DL2019013.Hyl.arb,1,0,0,DetFrieGym,56.33907,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019015,14.729692,55.10200,Hyl.arb,LoevFroe,Hyla arborea,1,DL2019015.Hyl.arb,1,0,0,DetFrieGymChristianshavnsGym,55.05752,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019017, 9.527786,56.79541,Hyl.arb,LoevFroe,Hyla arborea,1,DL2019017.Hyl.arb,1,0,0,BorupgaardGym,56.87075,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019029,12.314189,55.92355,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019029.Hyl.arb,2,0,0,HTXHilleroed,55.88809,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019037,10.272052,57.16855,Hyl.arb,LoevFroe,Hyla arborea,1,DL2019037.Hyl.arb,1,0,0,SolroedGym,57.11590,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019044,10.273592,57.16053,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019044.Hyl.arb,2,0,0,OrdrupGym,57.19414,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019065,12.474679,55.70511,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019065.Hyl.arb,2,0,0,NoerreGym,55.63653,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019050, 9.449431,56.88134,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019050.Hyl.arb,2,0,0,AlleroedGym,56.93470,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019009, 9.899299,57.53746,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019009.Hyl.arb,2,0,0,MidtsjaellandsGym,57.53453,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019061,12.057168,55.61527,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019061.Hyl.arb,2,0,0,RoskildeHTX,55.66227,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019007,11.809837,55.29133,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019007.Hyl.arb,2,0,0,MiddelfartGym,55.21287,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019041,10.271033,57.16625,Hyl.arb,LoevFroe,Hyla arborea,1,DL2019041.Hyl.arb,1,0,0,GentofteHF,57.24377,0,1,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019003,12.477318,55.67916,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019003.Hyl.arb,2,0,0,GentofteHF,55.67815,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019035, 9.461000,56.16170,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019035.Hyl.arb,2,0,0,ViborgGym,56.13509,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2019023,10.077818,56.42459,Hyl.arb,LoevFroe,Hyla arborea,2,DL2019023.Hyl.arb,2,0,0,PaderupGym,56.38564,0,2,0,truezerodetect,blue,0,#00AB00,Hyla arborea,E)   Hyla arborea,E
+DL2018007,15.187970,55.32029,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018007.Buf.buf,2,2,2,AlleroedGym,55.33924,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018009,12.534798,55.74716,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018009.Buf.buf,2,0,0,AurehoejSktAnnaeGym,55.72041,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018088,12.506443,55.71739,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018088.Buf.buf,2,1,0,FrederiksvaerkSktAnnaeGym,55.79746,0,1,1,repl1or2,green,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018133,12.476133,55.67702,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018133.Buf.buf,2,0,0,FrederiksborgSktAnnaeGym,55.70839,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018060,12.444982,55.78641,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018060.Buf.buf,2,0,0,FrederiksborgOrdrup,55.74066,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018042,12.313641,55.92368,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018042.Buf.buf,2,2,0,HTXHilleroed,55.85735,0,0,2,repl1or2,green,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018058, 8.536297,55.90500,Buf.buf,Skrubtudse,Bufo bufo,3,DL2018058.Buf.buf,3,1,0,EgedalGym,55.92427,0,2,1,repl1or2,green,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018071,10.473298,56.29135,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018071.Buf.buf,2,2,2,HTXHilleroed,56.28112,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018015,12.057277,55.61496,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018015.Buf.buf,2,0,0,RoskildeHTXBorupgaardGym,55.62124,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018005,11.876954,54.77456,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018005.Buf.buf,2,0,0,OrdrupGym,54.70529,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018083,12.383023,55.73673,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018083.Buf.buf,2,2,2,BorupgaardGym,55.68590,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018084,12.381062,55.73808,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018084.Buf.buf,2,0,0,BorupgaardGym,55.77098,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018025,10.142400,56.16920,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018025.Buf.buf,2,0,0,AarhusStatsGym,56.11990,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018046,12.585000,55.65070,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018046.Buf.buf,2,2,2,ChristianshavnGym,55.66329,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018027, 8.885876,55.75814,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018027.Buf.buf,2,2,2,EUCNord,55.75541,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018097,12.404692,55.81555,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018097.Buf.buf,2,0,0,MarieKruseSkole,55.74458,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018048,12.380000,55.74000,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018048.Buf.buf,2,2,1,BorupgaardGym,55.81303,0,0,1,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018110, 9.507090,55.71026,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018110.Buf.buf,2,2,1,HorsensGym,55.77575,0,0,1,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2018112,12.280072,55.94860,Buf.buf,Skrubtudse,Bufo bufo,2,DL2018112.Buf.buf,2,2,2,VUCNordsjaelland,55.90495,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019013,10.856494,56.41465,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019013.Buf.buf,2,2,1,DetFrieGym,56.40264,0,0,1,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019015,14.729692,55.10200,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019015.Buf.buf,2,0,0,DetFrieGymChristianshavnsGym,55.14326,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019017, 9.527786,56.79541,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019017.Buf.buf,2,2,1,BorupgaardGym,56.87548,0,0,1,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019029,12.314189,55.92355,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019029.Buf.buf,2,1,0,HTXHilleroed,55.88122,0,1,1,repl1or2,green,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019044,10.273592,57.16053,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019044.Buf.buf,2,0,0,OrdrupGym,57.15854,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019009, 9.899299,57.53746,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019009.Buf.buf,2,2,1,MidtsjaellandsGym,57.56689,0,0,1,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019011, 8.303745,56.53997,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019011.Buf.buf,2,1,1,HilleroedHTX,56.48301,0,1,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019067,10.479156,57.41674,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019067.Buf.buf,2,2,2,FrederikshavnGym,57.37671,0,0,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019046,10.429668,55.40704,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019046.Buf.buf,2,1,0,MidtfynsGym,55.47125,0,1,1,repl1or2,green,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019005, 8.302653,56.54158,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019005.Buf.buf,2,0,0,HelsingoerGym,56.57639,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019059, 9.261640,56.79622,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019059.Buf.buf,2,1,1,AabenraaStatsskole,56.87228,0,1,0,repl2pos,darkgreen,21,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2019035, 9.461000,56.16170,Buf.buf,Skrubtudse,Bufo bufo,2,DL2019035.Buf.buf,2,0,0,ViborgGym,56.16275,0,2,0,truezerodetect,blue,0,#00DB00,Bufo bufo,B)   Bufo bufo,B
+DL2017006, 9.538007,55.70420,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017006.Ran.arv,2,1,0,RoedkildeGym,55.63509,0,1,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017003,12.205167,55.64177,Ran.arv,SpidssnudetFroe,Rana arvalis,1,DL2017003.Ran.arv,1,1,0,HoejeTaastrupGym,55.71261,0,0,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017011,12.556815,55.67744,Ran.arv,SpidssnudetFroe,Rana arvalis,1,DL2017011.Ran.arv,1,1,0,VUFvoksen,55.64497,0,0,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017012,12.263687,55.65421,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017012.Ran.arv,2,2,0,HojeTaastrupGym,55.63750,0,0,2,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017013,11.791324,55.29933,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017013.Ran.arv,2,0,0,KoegeGym,55.31881,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017016,12.319070,55.92374,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017016.Ran.arv,2,0,0,FrederiksborgGym,55.99370,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017007,12.284736,55.98135,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017007.Ran.arv,2,0,0,FrederiksborgGym,55.90547,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017048,12.523397,55.64426,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017048.Ran.arv,2,0,0,DNGsktAnnae,55.69354,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017032,12.564640,55.76481,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017032.Ran.arv,2,0,0,OrdrupGym,55.70170,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017029,12.315135,55.92341,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017029.Ran.arv,2,0,0,FrederiksborgGym,55.89517,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017041,12.534806,55.74774,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017041.Ran.arv,2,0,0,OrdrupGym,55.77620,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017053,12.412939,55.76764,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017053.Ran.arv,2,0,0,GladsaxeGym,55.68764,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017018,12.027915,55.76656,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017018.Ran.arv,2,0,0,KalundborgGym,55.77858,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017051,12.415944,55.76744,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017051.Ran.arv,2,0,0,GladsaxeGym,55.82778,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017026,11.669096,55.62754,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017026.Ran.arv,2,0,0,BirkeroedGym,55.59494,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017021, 8.491281,55.46282,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2017021.Ran.arv,2,0,0,FrederiksbergGym,55.44744,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017022,12.534656,55.74776,Ran.arv,SpidssnudetFroe,Rana arvalis,1,DL2017022.Ran.arv,1,0,0,GentofteHF,55.67606,0,1,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018009,12.534798,55.74716,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018009.Ran.arv,2,0,0,AurehoejSktAnnaeGym,55.76842,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018133,12.476133,55.67702,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018133.Ran.arv,2,0,0,FrederiksborgSktAnnaeGym,55.63292,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018015,12.057277,55.61496,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018015.Ran.arv,2,0,0,RoskildeHTXBorupgaardGym,55.55279,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018044,11.968922,55.99206,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018044.Ran.arv,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,56.04780,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018046,12.585000,55.65070,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018046.Ran.arv,2,2,1,ChristianshavnGym,55.59669,0,0,1,repl2pos,darkgreen,21,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018027, 8.885876,55.75814,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018027.Ran.arv,2,0,0,EUCNord,55.79955,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018097,12.404692,55.81555,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018097.Ran.arv,2,0,0,MarieKruseSkole,55.77477,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018039, 9.707759,55.50046,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018039.Ran.arv,2,0,0,AalborgKatedralskole,55.56999,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018040,12.531896,55.99988,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018040.Ran.arv,2,0,0,AlssundGym,56.00145,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018064,12.165090,55.48110,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018064.Ran.arv,2,0,0,RysensteenGym,55.53991,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018078,12.564849,55.99886,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018078.Ran.arv,2,0,0,HelsingoerGym,55.98216,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2018106,10.265800,54.92390,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2018106.Ran.arv,2,0,0,ZahlesGym,54.98481,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019057,12.284727,55.98119,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019057.Ran.arv,2,2,2,FrederiksborgGym,56.04852,0,0,0,repl2pos,darkgreen,21,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019015,14.729692,55.10200,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019015.Ran.arv,2,0,0,DetFrieGymChristianshavnsGym,55.07916,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019037,10.272052,57.16855,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019037.Ran.arv,2,0,0,SolroedGym,57.24376,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019039,10.269853,57.16786,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019039.Ran.arv,2,0,0,ChristianshavnsGym,57.15970,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019044,10.273592,57.16053,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019044.Ran.arv,2,0,0,OrdrupGym,57.18288,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019009, 9.899299,57.53746,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019009.Ran.arv,2,1,0,MidtsjaellandsGym,57.47759,0,1,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019011, 8.303745,56.53997,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019011.Ran.arv,2,1,0,HilleroedHTX,56.51468,0,1,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019067,10.479156,57.41674,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019067.Ran.arv,2,0,0,FrederikshavnGym,57.37761,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019046,10.429668,55.40704,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019046.Ran.arv,2,1,0,MidtfynsGym,55.42083,0,1,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019059, 9.261640,56.79622,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019059.Ran.arv,2,1,0,AabenraaStatsskole,56.75106,0,1,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019041,10.271033,57.16625,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019041.Ran.arv,2,1,0,GentofteHF,57.21248,0,1,1,repl1or2,green,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019035, 9.461000,56.16170,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019035.Ran.arv,2,0,0,ViborgGym,56.23885,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019023,10.077818,56.42459,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019023.Ran.arv,2,2,1,PaderupGym,56.49801,0,0,1,repl2pos,darkgreen,21,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2019021, 8.922321,55.76843,Ran.arv,SpidssnudetFroe,Rana arvalis,2,DL2019021.Ran.arv,2,0,0,GrindstedGymEGG,55.82540,0,2,0,truezerodetect,blue,0,#13FF00,Rana arvalis,K)   Rana arvalis,K
+DL2017003,12.205167,55.64177,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017003.Ran.dal,1,1,0,HoejeTaastrupGym,55.68384,0,0,1,repl1or2,green,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017011,12.556815,55.67744,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017011.Ran.dal,1,0,0,VUFvoksen,55.71194,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017012,12.263687,55.65421,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017012.Ran.dal,2,0,0,HojeTaastrupGym,55.60097,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017007,12.284736,55.98135,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017007.Ran.dal,2,0,0,FrederiksborgGym,55.98267,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017032,12.564640,55.76481,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017032.Ran.dal,2,0,0,OrdrupGym,55.74951,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017046,10.077220,56.22384,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017046.Ran.dal,1,0,0,LangkaerGym,56.23882,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017020,12.476252,55.67711,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017020.Ran.dal,1,0,0,RoedovreGym,55.68084,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017041,12.534806,55.74774,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017041.Ran.dal,2,0,0,OrdrupGym,55.77155,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017037, 8.922423,55.76841,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017037.Ran.dal,1,0,0,GrindstedVordingborgGym,55.80123,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017014,12.563403,55.82611,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017014.Ran.dal,2,0,0,GladsaxeGym,55.75056,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017018,12.027915,55.76656,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017018.Ran.dal,1,0,0,KalundborgGym,55.69177,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017066, 9.648432,56.20228,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017066.Ran.dal,1,0,0,SilkeborgGym,56.22440,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017026,11.669096,55.62754,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017026.Ran.dal,1,0,0,BirkeroedGym,55.64662,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017019,11.789475,55.29894,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017019.Ran.dal,2,0,0,FrederiksborgGym,55.28402,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017010, 8.902032,55.75791,Ran.dal,SpringFroe,Rana dalmatina,1,DL2017010.Ran.dal,1,0,0,Projekt,55.74755,0,1,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017035,12.313907,55.92478,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017035.Ran.dal,2,0,0,FrederiksborgGym,55.84981,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017044,12.381006,55.73802,Ran.dal,SpringFroe,Rana dalmatina,2,DL2017044.Ran.dal,2,0,0,BorupgaardGym,55.72740,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018007,15.187970,55.32029,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018007.Ran.dal,2,0,0,AlleroedGym,55.39177,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018021,10.165626,55.57885,Ran.dal,SpringFroe,Rana dalmatina,3,DL2018021.Ran.dal,3,0,0,NordfynGym,55.50638,0,3,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018009,12.534798,55.74716,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018009.Ran.dal,2,0,0,AurehoejSktAnnaeGym,55.67483,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018088,12.506443,55.71739,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018088.Ran.dal,2,0,0,FrederiksvaerkSktAnnaeGym,55.70440,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018133,12.476133,55.67702,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018133.Ran.dal,2,0,0,FrederiksborgSktAnnaeGym,55.65924,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018042,12.313641,55.92368,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018042.Ran.dal,2,0,0,HTXHilleroed,55.90961,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018058, 8.536297,55.90500,Ran.dal,SpringFroe,Rana dalmatina,3,DL2018058.Ran.dal,3,0,0,EgedalGym,55.91912,0,3,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018071,10.473298,56.29135,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018071.Ran.dal,2,0,0,HTXHilleroed,56.23762,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018056,11.871638,55.96750,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018056.Ran.dal,2,0,0,FrederiksvaerkGymBorupgaardGym,55.95733,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018091,12.381347,55.73806,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018091.Ran.dal,2,0,0,BorupgaardGym,55.67452,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018083,12.383023,55.73673,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018083.Ran.dal,2,0,0,BorupgaardGym,55.75765,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018084,12.381062,55.73808,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018084.Ran.dal,2,0,0,BorupgaardGym,55.76899,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018046,12.585000,55.65070,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018046.Ran.dal,2,0,0,ChristianshavnGym,55.71961,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018011,12.535347,55.74703,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018011.Ran.dal,2,0,0,EUCNord,55.67597,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018027, 8.885876,55.75814,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018027.Ran.dal,2,0,0,EUCNord,55.79939,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018097,12.404692,55.81555,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018097.Ran.dal,2,0,0,MarieKruseSkole,55.75096,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018039, 9.707759,55.50046,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018039.Ran.dal,2,0,0,AalborgKatedralskole,55.49018,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018040,12.531896,55.99988,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018040.Ran.dal,2,1,0,AlssundGym,56.07906,0,1,1,repl1or2,green,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018076,10.891185,56.39646,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018076.Ran.dal,2,0,0,BorupgaardGym,56.33141,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018050,12.028700,55.96060,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018050.Ran.dal,2,0,0,GlHellerupGym,55.91587,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018064,12.165090,55.48110,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018064.Ran.dal,2,0,0,RysensteenGym,55.50902,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018073,11.769689,55.21091,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018073.Ran.dal,2,0,0,VUCNordsj,55.27655,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018102,10.268100,54.92260,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018102.Ran.dal,2,0,0,KalundborgGymOgHF,54.87837,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018031,11.878958,54.77459,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018031.Ran.dal,2,0,0,RysensteenGym,54.83137,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018086, 9.986380,57.45000,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018086.Ran.dal,2,0,0,NielsSteensenGym,57.42761,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018108,12.089444,55.83278,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018108.Ran.dal,2,0,0,NZahlesGym,55.80302,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018048,12.380000,55.74000,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018048.Ran.dal,2,0,0,BorupgaardGym,55.69355,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018110, 9.507090,55.71026,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018110.Ran.dal,2,0,0,HorsensGym,55.67690,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018122,11.538370,55.55417,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018122.Ran.dal,2,0,0,HimmelevGym,55.58774,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018112,12.280072,55.94860,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018112.Ran.dal,2,0,0,VUCNordsjaelland,55.91124,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018036,12.574407,55.73882,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018036.Ran.dal,2,0,0,GlHellerupGym,55.74070,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018023, 9.852886,57.13772,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018023.Ran.dal,2,0,0,NoerresundbyGym,57.09792,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018035,12.522894,55.99423,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018035.Ran.dal,2,0,0,HimmelevGym,56.01144,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018080, 8.970000,56.15000,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018080.Ran.dal,2,0,0,MunkensdamGym,56.11431,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018062, 9.946757,56.02339,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018062.Ran.dal,2,0,0,SkanderborgGym,56.04820,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018098,12.354039,55.82554,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018098.Ran.dal,2,0,0,OeregaardGym,55.89022,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018092, 8.833501,55.03088,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018092.Ran.dal,2,0,0,VUCAarhus,55.08660,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2018094, 8.779618,55.52909,Ran.dal,SpringFroe,Rana dalmatina,2,DL2018094.Ran.dal,2,0,0,FrederiksborgGym,55.52328,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019057,12.284727,55.98119,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019057.Ran.dal,2,0,0,FrederiksborgGym,56.01205,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019013,10.856494,56.41465,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019013.Ran.dal,2,0,0,DetFrieGym,56.36810,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019017, 9.527786,56.79541,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019017.Ran.dal,2,1,1,BorupgaardGym,56.73955,0,1,0,repl2pos,darkgreen,21,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019029,12.314189,55.92355,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019029.Ran.dal,2,0,0,HTXHilleroed,55.96484,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019037,10.272052,57.16855,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019037.Ran.dal,2,0,0,SolroedGym,57.24108,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019039,10.269853,57.16786,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019039.Ran.dal,2,0,0,ChristianshavnsGym,57.20111,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019042,10.273259,57.16032,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019042.Ran.dal,2,0,0,NoerreGym,57.22151,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019044,10.273592,57.16053,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019044.Ran.dal,2,0,0,OrdrupGym,57.18739,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019065,12.474679,55.70511,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019065.Ran.dal,2,0,0,NoerreGym,55.70055,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019050, 9.449431,56.88134,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019050.Ran.dal,2,1,0,AlleroedGym,56.85620,0,1,1,repl1or2,green,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019009, 9.899299,57.53746,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019009.Ran.dal,2,0,0,MidtsjaellandsGym,57.57231,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019067,10.479156,57.41674,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019067.Ran.dal,2,0,0,FrederikshavnGym,57.34030,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019005, 8.302653,56.54158,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019005.Ran.dal,2,0,0,HelsingoerGym,56.48778,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019059, 9.261640,56.79622,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019059.Ran.dal,2,0,0,AabenraaStatsskole,56.76360,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019061,12.057168,55.61527,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019061.Ran.dal,2,0,0,RoskildeHTX,55.62470,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019007,11.809837,55.29133,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019007.Ran.dal,2,0,0,MiddelfartGym,55.26061,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019003,12.477318,55.67916,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019003.Ran.dal,2,0,0,GentofteHF,55.72276,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019019, 9.609253,56.88063,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019019.Ran.dal,2,0,0,GentofteHF,56.95496,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019023,10.077818,56.42459,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019023.Ran.dal,2,0,0,PaderupGym,56.45235,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2019021, 8.922321,55.76843,Ran.dal,SpringFroe,Rana dalmatina,2,DL2019021.Ran.dal,2,0,0,GrindstedGymEGG,55.80246,0,2,0,truezerodetect,blue,0,#62FF00,Rana dalmatina,L)   Rana dalmatina,L
+DL2017003,12.205167,55.64177,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017003.Tri.cri,2,1,0,HoejeTaastrupGym,55.66893,0,1,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017011,12.556815,55.67744,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2017011.Tri.cri,1,1,0,VUFvoksen,55.65639,0,0,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017012,12.263687,55.65421,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017012.Tri.cri,2,1,0,HojeTaastrupGym,55.63142,0,1,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017013,11.791324,55.29933,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017013.Tri.cri,2,1,1,KoegeGym,55.26061,0,1,0,repl2pos,darkgreen,21,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017015,12.313475,55.92471,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017015.Tri.cri,2,0,0,FrederiksborgGym,55.92133,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017016,12.319070,55.92374,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017016.Tri.cri,2,0,0,FrederiksborgGym,55.94664,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017007,12.284736,55.98135,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017007.Tri.cri,2,1,1,FrederiksborgGym,55.91513,0,1,0,repl2pos,darkgreen,21,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017048,12.523397,55.64426,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2017048.Tri.cri,1,0,0,DNGsktAnnae,55.58700,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017059,15.187916,55.32034,Tri.cri,StorVandsalamander,Triturus cristatus,3,DL2017059.Tri.cri,3,0,0,FrederiksborgGym,55.30568,0,3,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017032,12.564640,55.76481,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2017032.Tri.cri,1,0,0,OrdrupGym,55.82782,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017046,10.077220,56.22384,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017046.Tri.cri,2,0,0,LangkaerGym,56.28080,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017020,12.476252,55.67711,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2017020.Tri.cri,1,0,0,RoedovreGym,55.65483,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017025,12.313890,55.92370,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017025.Tri.cri,2,0,0,HTXHilleroed,55.91986,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017041,12.534806,55.74774,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017041.Tri.cri,2,0,0,OrdrupGym,55.80597,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017037, 8.922423,55.76841,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017037.Tri.cri,2,0,0,GrindstedVordingborgGym,55.69124,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017014,12.563403,55.82611,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017014.Tri.cri,2,0,0,GladsaxeGym,55.85152,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017066, 9.648432,56.20228,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017066.Tri.cri,2,0,0,SilkeborgGym,56.28116,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017026,11.669096,55.62754,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017026.Tri.cri,2,0,0,BirkeroedGym,55.55105,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017019,11.789475,55.29894,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017019.Tri.cri,2,0,0,FrederiksborgGym,55.31396,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017010, 8.902032,55.75791,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2017010.Tri.cri,1,0,0,Projekt,55.83139,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017035,12.313907,55.92478,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017035.Tri.cri,2,0,0,FrederiksborgGym,55.95715,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017044,12.381006,55.73802,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2017044.Tri.cri,2,0,0,BorupgaardGym,55.81807,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018071,10.473298,56.29135,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018071.Tri.cri,1,1,1,HTXHilleroed,56.27982,0,0,0,repl2pos,darkgreen,21,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018015,12.057277,55.61496,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018015.Tri.cri,2,0,0,RoskildeHTXBorupgaardGym,55.61770,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018005,11.876954,54.77456,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018005.Tri.cri,2,0,0,OrdrupGym,54.77581,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018056,11.871638,55.96750,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018056.Tri.cri,1,0,0,FrederiksvaerkGymBorupgaardGym,56.02511,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018091,12.381347,55.73806,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018091.Tri.cri,1,0,0,BorupgaardGym,55.80143,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018083,12.383023,55.73673,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018083.Tri.cri,1,0,0,BorupgaardGym,55.65968,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018084,12.381062,55.73808,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018084.Tri.cri,1,0,0,BorupgaardGym,55.78990,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018020, 9.816611,56.63589,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018020.Tri.cri,1,1,0,GentofteHFAkademiskStudenterkursus,56.64144,0,0,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018052,12.535143,55.74782,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018052.Tri.cri,1,0,0,GentofteHF,55.75888,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018025,10.142400,56.16920,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018025.Tri.cri,2,0,0,AarhusStatsGym,56.22415,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018011,12.535347,55.74703,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018011.Tri.cri,2,0,0,EUCNord,55.75240,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018027, 8.885876,55.75814,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018027.Tri.cri,2,0,0,EUCNord,55.73186,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018039, 9.707759,55.50046,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018039.Tri.cri,2,0,0,AalborgKatedralskole,55.43374,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018050,12.028700,55.96060,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018050.Tri.cri,2,1,0,GlHellerupGym,55.89004,0,1,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018064,12.165090,55.48110,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018064.Tri.cri,2,0,0,RysensteenGym,55.41758,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018078,12.564849,55.99886,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018078.Tri.cri,2,0,0,HelsingoerGym,55.92628,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018067,12.476593,55.89702,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018067.Tri.cri,2,0,0,RysensteenGym,55.90620,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018106,10.265800,54.92390,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018106.Tri.cri,2,0,0,ZahlesGym,54.92105,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018031,11.878958,54.77459,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018031.Tri.cri,2,0,0,RysensteenGym,54.71227,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018048,12.380000,55.74000,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018048.Tri.cri,2,0,0,BorupgaardGym,55.78720,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018110, 9.507090,55.71026,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018110.Tri.cri,2,0,0,HorsensGym,55.66153,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018122,11.538370,55.55417,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2018122.Tri.cri,1,0,0,HimmelevGym,55.51565,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018112,12.280072,55.94860,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018112.Tri.cri,2,0,0,VUCNordsjaelland,55.94859,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018035,12.522894,55.99423,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018035.Tri.cri,2,0,0,HimmelevGym,56.05831,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018080, 8.970000,56.15000,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018080.Tri.cri,2,1,0,MunkensdamGym,56.17182,0,1,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018062, 9.946757,56.02339,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018062.Tri.cri,2,0,0,SkanderborgGym,55.94944,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018098,12.354039,55.82554,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018098.Tri.cri,2,2,2,OeregaardGym,55.85280,0,0,0,repl2pos,darkgreen,21,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018069, 8.901389,55.75833,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018069.Tri.cri,2,0,0,EUCSjaelland,55.71028,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2018128,11.568102,55.38039,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2018128.Tri.cri,2,0,0,FrederiksborgGym,55.31870,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019057,12.284727,55.98119,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2019057.Tri.cri,1,0,0,FrederiksborgGym,56.03468,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019013,10.856494,56.41465,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2019013.Tri.cri,1,0,0,DetFrieGym,56.39229,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019015,14.729692,55.10200,Tri.cri,StorVandsalamander,Triturus cristatus,1,DL2019015.Tri.cri,1,0,0,DetFrieGymChristianshavnsGym,55.13850,0,1,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019029,12.314189,55.92355,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019029.Tri.cri,2,0,0,HTXHilleroed,55.84670,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019039,10.269853,57.16786,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019039.Tri.cri,2,1,0,ChristianshavnsGym,57.08806,0,1,1,repl1or2,green,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019042,10.273259,57.16032,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019042.Tri.cri,2,0,0,NoerreGym,57.22777,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019065,12.474679,55.70511,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019065.Tri.cri,2,0,0,NoerreGym,55.65259,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019050, 9.449431,56.88134,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019050.Tri.cri,2,0,0,AlleroedGym,56.94585,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019052, 8.973381,56.15156,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019052.Tri.cri,2,0,0,AlleroedGym,56.21244,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019011, 8.303745,56.53997,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019011.Tri.cri,2,0,0,HilleroedHTX,56.46995,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019067,10.479156,57.41674,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019067.Tri.cri,2,0,0,FrederikshavnGym,57.38624,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019007,11.809837,55.29133,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019007.Tri.cri,2,0,0,MiddelfartGym,55.30346,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019041,10.271033,57.16625,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019041.Tri.cri,2,0,0,GentofteHF,57.23569,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2019021, 8.922321,55.76843,Tri.cri,StorVandsalamander,Triturus cristatus,2,DL2019021.Tri.cri,2,0,0,GrindstedGymEGG,55.84012,0,2,0,truezerodetect,blue,0,#B0FF00,Triturus cristatus,N)   Triturus cristatus,N
+DL2017059,15.187916,55.32034,Buf.cal,Strandtudse,Bufo calamita,2,DL2017059.Buf.cal,2,0,0,FrederiksborgGym,55.31457,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017046,10.077220,56.22384,Buf.cal,Strandtudse,Bufo calamita,1,DL2017046.Buf.cal,1,0,0,LangkaerGym,56.23680,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017025,12.313890,55.92370,Buf.cal,Strandtudse,Bufo calamita,1,DL2017025.Buf.cal,1,0,0,HTXHilleroed,55.92852,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017027,12.133734,55.65229,Buf.cal,Strandtudse,Bufo calamita,1,DL2017027.Buf.cal,1,0,0,HimmelevGym,55.60160,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017041,12.534806,55.74774,Buf.cal,Strandtudse,Bufo calamita,1,DL2017041.Buf.cal,1,0,0,OrdrupGym,55.81268,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017037, 8.922423,55.76841,Buf.cal,Strandtudse,Bufo calamita,1,DL2017037.Buf.cal,1,0,0,GrindstedVordingborgGym,55.79960,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017014,12.563403,55.82611,Buf.cal,Strandtudse,Bufo calamita,1,DL2017014.Buf.cal,1,0,0,GladsaxeGym,55.74933,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017053,12.412939,55.76764,Buf.cal,Strandtudse,Bufo calamita,1,DL2017053.Buf.cal,1,0,0,GladsaxeGym,55.78652,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017018,12.027915,55.76656,Buf.cal,Strandtudse,Bufo calamita,1,DL2017018.Buf.cal,1,0,0,KalundborgGym,55.78518,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017051,12.415944,55.76744,Buf.cal,Strandtudse,Bufo calamita,1,DL2017051.Buf.cal,1,0,0,GladsaxeGym,55.70616,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017066, 9.648432,56.20228,Buf.cal,Strandtudse,Bufo calamita,1,DL2017066.Buf.cal,1,0,0,SilkeborgGym,56.17996,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017026,11.669096,55.62754,Buf.cal,Strandtudse,Bufo calamita,1,DL2017026.Buf.cal,1,0,0,BirkeroedGym,55.60014,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017019,11.789475,55.29894,Buf.cal,Strandtudse,Bufo calamita,1,DL2017019.Buf.cal,1,0,0,FrederiksborgGym,55.31512,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017022,12.534656,55.74776,Buf.cal,Strandtudse,Bufo calamita,1,DL2017022.Buf.cal,1,0,0,GentofteHF,55.74326,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2017035,12.313907,55.92478,Buf.cal,Strandtudse,Bufo calamita,1,DL2017035.Buf.cal,1,0,0,FrederiksborgGym,55.99359,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018007,15.187970,55.32029,Buf.cal,Strandtudse,Bufo calamita,2,DL2018007.Buf.cal,2,0,0,AlleroedGym,55.24305,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018133,12.476133,55.67702,Buf.cal,Strandtudse,Bufo calamita,2,DL2018133.Buf.cal,2,0,0,FrederiksborgSktAnnaeGym,55.70554,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018042,12.313641,55.92368,Buf.cal,Strandtudse,Bufo calamita,2,DL2018042.Buf.cal,2,0,0,HTXHilleroed,55.92514,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018071,10.473298,56.29135,Buf.cal,Strandtudse,Bufo calamita,1,DL2018071.Buf.cal,1,0,0,HTXHilleroed,56.32035,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018015,12.057277,55.61496,Buf.cal,Strandtudse,Bufo calamita,2,DL2018015.Buf.cal,2,0,0,RoskildeHTXBorupgaardGym,55.57894,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018056,11.871638,55.96750,Buf.cal,Strandtudse,Bufo calamita,1,DL2018056.Buf.cal,1,0,0,FrederiksvaerkGymBorupgaardGym,55.95603,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018091,12.381347,55.73806,Buf.cal,Strandtudse,Bufo calamita,1,DL2018091.Buf.cal,1,0,0,BorupgaardGym,55.77557,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018044,11.968922,55.99206,Buf.cal,Strandtudse,Bufo calamita,2,DL2018044.Buf.cal,2,0,0,GladsaxeGymSvendborgGymFrederiksvaerkGym,55.94428,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018083,12.383023,55.73673,Buf.cal,Strandtudse,Bufo calamita,1,DL2018083.Buf.cal,1,0,0,BorupgaardGym,55.77314,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018054,12.535143,55.74782,Buf.cal,Strandtudse,Bufo calamita,1,DL2018054.Buf.cal,1,0,0,GentofteHF,55.72471,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018052,12.535143,55.74782,Buf.cal,Strandtudse,Bufo calamita,1,DL2018052.Buf.cal,1,0,0,GentofteHF,55.76861,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018025,10.142400,56.16920,Buf.cal,Strandtudse,Bufo calamita,2,DL2018025.Buf.cal,2,0,0,AarhusStatsGym,56.13503,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018046,12.585000,55.65070,Buf.cal,Strandtudse,Bufo calamita,2,DL2018046.Buf.cal,2,0,0,ChristianshavnGym,55.68120,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018011,12.535347,55.74703,Buf.cal,Strandtudse,Bufo calamita,2,DL2018011.Buf.cal,2,0,0,EUCNord,55.68526,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018027, 8.885876,55.75814,Buf.cal,Strandtudse,Bufo calamita,2,DL2018027.Buf.cal,2,0,0,EUCNord,55.69365,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018097,12.404692,55.81555,Buf.cal,Strandtudse,Bufo calamita,2,DL2018097.Buf.cal,2,0,0,MarieKruseSkole,55.83918,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018039, 9.707759,55.50046,Buf.cal,Strandtudse,Bufo calamita,2,DL2018039.Buf.cal,2,0,0,AalborgKatedralskole,55.53750,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018040,12.531896,55.99988,Buf.cal,Strandtudse,Bufo calamita,2,DL2018040.Buf.cal,2,0,0,AlssundGym,56.07747,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018078,12.564849,55.99886,Buf.cal,Strandtudse,Bufo calamita,2,DL2018078.Buf.cal,2,0,0,HelsingoerGym,56.04546,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018013,12.051621,55.62879,Buf.cal,Strandtudse,Bufo calamita,2,DL2018013.Buf.cal,2,0,0,OerstadGym,55.60468,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018073,11.769689,55.21091,Buf.cal,Strandtudse,Bufo calamita,2,DL2018073.Buf.cal,2,0,0,VUCNordsj,55.13206,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018031,11.878958,54.77459,Buf.cal,Strandtudse,Bufo calamita,2,DL2018031.Buf.cal,2,0,0,RysensteenGym,54.76573,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018086, 9.986380,57.45000,Buf.cal,Strandtudse,Bufo calamita,2,DL2018086.Buf.cal,2,0,0,NielsSteensenGym,57.52042,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018048,12.380000,55.74000,Buf.cal,Strandtudse,Bufo calamita,2,DL2018048.Buf.cal,2,0,0,BorupgaardGym,55.67233,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018112,12.280072,55.94860,Buf.cal,Strandtudse,Bufo calamita,1,DL2018112.Buf.cal,1,0,0,VUCNordsjaelland,55.96063,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018035,12.522894,55.99423,Buf.cal,Strandtudse,Bufo calamita,2,DL2018035.Buf.cal,2,0,0,HimmelevGym,56.07218,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018080, 8.970000,56.15000,Buf.cal,Strandtudse,Bufo calamita,2,DL2018080.Buf.cal,2,0,0,MunkensdamGym,56.14527,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018062, 9.946757,56.02339,Buf.cal,Strandtudse,Bufo calamita,2,DL2018062.Buf.cal,2,0,0,SkanderborgGym,56.01075,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018098,12.354039,55.82554,Buf.cal,Strandtudse,Bufo calamita,2,DL2018098.Buf.cal,2,0,0,OeregaardGym,55.90004,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018092, 8.833501,55.03088,Buf.cal,Strandtudse,Bufo calamita,2,DL2018092.Buf.cal,2,0,0,VUCAarhus,54.98318,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018118,11.966330,55.00989,Buf.cal,Strandtudse,Bufo calamita,2,DL2018118.Buf.cal,2,0,0,HjoerringGymOgHF,55.04610,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2018094, 8.779618,55.52909,Buf.cal,Strandtudse,Bufo calamita,2,DL2018094.Buf.cal,2,0,0,FrederiksborgGym,55.53623,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019057,12.284727,55.98119,Buf.cal,Strandtudse,Bufo calamita,1,DL2019057.Buf.cal,1,0,0,FrederiksborgGym,55.97675,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019013,10.856494,56.41465,Buf.cal,Strandtudse,Bufo calamita,1,DL2019013.Buf.cal,1,0,0,DetFrieGym,56.39590,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019015,14.729692,55.10200,Buf.cal,Strandtudse,Bufo calamita,1,DL2019015.Buf.cal,1,0,0,DetFrieGymChristianshavnsGym,55.06461,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019017, 9.527786,56.79541,Buf.cal,Strandtudse,Bufo calamita,1,DL2019017.Buf.cal,1,0,0,BorupgaardGym,56.78506,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019029,12.314189,55.92355,Buf.cal,Strandtudse,Bufo calamita,2,DL2019029.Buf.cal,2,0,0,HTXHilleroed,55.92027,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019037,10.272052,57.16855,Buf.cal,Strandtudse,Bufo calamita,1,DL2019037.Buf.cal,1,0,0,SolroedGym,57.17147,0,1,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019039,10.269853,57.16786,Buf.cal,Strandtudse,Bufo calamita,2,DL2019039.Buf.cal,2,0,0,ChristianshavnsGym,57.21828,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019044,10.273592,57.16053,Buf.cal,Strandtudse,Bufo calamita,2,DL2019044.Buf.cal,2,0,0,OrdrupGym,57.21007,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019065,12.474679,55.70511,Buf.cal,Strandtudse,Bufo calamita,2,DL2019065.Buf.cal,2,0,0,NoerreGym,55.65049,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019050, 9.449431,56.88134,Buf.cal,Strandtudse,Bufo calamita,2,DL2019050.Buf.cal,2,0,0,AlleroedGym,56.94605,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019052, 8.973381,56.15156,Buf.cal,Strandtudse,Bufo calamita,2,DL2019052.Buf.cal,2,0,0,AlleroedGym,56.17228,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019009, 9.899299,57.53746,Buf.cal,Strandtudse,Bufo calamita,2,DL2019009.Buf.cal,2,0,0,MidtsjaellandsGym,57.50637,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019067,10.479156,57.41674,Buf.cal,Strandtudse,Bufo calamita,2,DL2019067.Buf.cal,2,0,0,FrederikshavnGym,57.40370,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019046,10.429668,55.40704,Buf.cal,Strandtudse,Bufo calamita,2,DL2019046.Buf.cal,2,0,0,MidtfynsGym,55.42740,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019059, 9.261640,56.79622,Buf.cal,Strandtudse,Bufo calamita,2,DL2019059.Buf.cal,2,0,0,AabenraaStatsskole,56.72538,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019041,10.271033,57.16625,Buf.cal,Strandtudse,Bufo calamita,2,DL2019041.Buf.cal,2,0,0,GentofteHF,57.14374,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019035, 9.461000,56.16170,Buf.cal,Strandtudse,Bufo calamita,2,DL2019035.Buf.cal,2,0,0,ViborgGym,56.15046,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019023,10.077818,56.42459,Buf.cal,Strandtudse,Bufo calamita,2,DL2019023.Buf.cal,2,0,0,PaderupGym,56.46324,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C
+DL2019021, 8.922321,55.76843,Buf.cal,Strandtudse,Bufo calamita,2,DL2019021.Buf.cal,2,0,0,GrindstedGymEGG,55.80869,0,2,0,truezerodetect,blue,0,#FFFF00,Bufo calamita,C)   Bufo calamita,C

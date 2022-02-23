@@ -752,7 +752,7 @@ smpls <- read.csv("outfile07_merged_csv_files_from_mxpro.csv", header = TRUE, se
 #z[1]
 
 #length (colnames(smpls))
-head (smpls)
+#head (smpls)
 #replace blank fields with 'koerselno1'
 #see how to on this website : https://stackoverflow.com/questions/21243588/replace-blank-cells-with-character
 smpls$koerselno <- sub("^$", "koerselno1", smpls$koerselno)
@@ -763,7 +763,7 @@ smpls$spec.repl.rund.DLno.koerselno <- paste(smpls$specs,smpls$replno,smpls$qpcr
 
 # set working directory
 setwd (wd00)
-getwd()
+#getwd()
 
 #paste together directory paths
 wd00_wd09 <- paste(wd00,wd09, sep="")
@@ -1114,7 +1114,7 @@ approvK_smpl$DLsamplno.abbrnm <- paste(approvK_smpl$DLsamplno,approvK_smpl$abbr.
 r1orr2pos.smpl$DLsamplno.abbrnm <- paste(r1orr2pos.smpl$DLsamplno,r1orr2pos.smpl$abbr.nm,sep=".")
 r2pos.smpl$DLsamplno.abbrnm <- paste(r2pos.smpl$DLsamplno,r2pos.smpl$abbr.nm,sep=".")
 spl3$DLsamplno.abbrnm <- paste(spl3$DLsamplno,spl3$abbr.nm,sep=".")
-head(approvK_smpl,4)
+#head(approvK_smpl,4)
 #match the DL_smpl_name and abbr.nm between the data frame 
 #w all samples and the data frame w approved controls
 tot_smpl$approvK <- approvK_smpl$freq[match(tot_smpl$DLsamplno.abbrnm,approvK_smpl$DLsamplno.abbrnm)]
@@ -1158,11 +1158,13 @@ tot_smpl$eval01[   tot_smpl$truezerodetect >= 1] <- "truezerodetect" #0
 tot_smpl$eval01[   tot_smpl$nonapprovK >= 1] <- "nonapprovK" #0  
 tot_smpl$eval01[   tot_smpl$repl1or2 >= 1] <- "repl1or2" #0  
 tot_smpl$eval01[   tot_smpl$repl2pos >= 1] <- "repl2pos" #0  
+tot_smpl$eval01[   tot_smpl$nonapprovK >= 1] <- "nonapprovK" #0  
 tot_smpl[,"eval02"] <- NA
 tot_smpl$eval02[   tot_smpl$truezerodetect >= 1] <- "blue" #0  
 tot_smpl$eval02[   tot_smpl$nonapprovK >= 1] <- "red" #0  
 tot_smpl$eval02[   tot_smpl$repl1or2 >= 1] <- "green" #0  
 tot_smpl$eval02[   tot_smpl$repl2pos >= 1] <- "darkgreen" #0
+tot_smpl$eval02[   tot_smpl$nonapprovK >= 1] <- "red" #0  
 
 #subset data frame to match only approved K
 #tot_smpl02_df<- subset(tot_smpl, nonapprovK==0)
@@ -1186,6 +1188,88 @@ amph_smpl02_df <- subset(tot_smpl02_df,
                            abbr.nm=="Tri.cri")
 
 
+#length(unique(amph_smpl02_df$DLsamplno))
+#unique(smpls$specs)
+#unique(spl3$specs)
+spl3$abbr.nm <- dkspecs_to_latspecs$abbr.nm[match(spl3$specs,dkspecs_to_latspecs$Species_DK)]
+
+# unique(tot_smpl$abbr.nm)
+# unique(amph_smpl02_df$abbr.nm)
+#length(unique(amph_smpl02_df$DLsamplno.abbrnm))
+#head(amph_smpl02_df,4)
+#nrow(amph_smpl02_df)
+amph_smpl03_df <- amph_smpl02_df
+#subset the data frame based on two criteria 
+# and negate the criteria to exclude the
+# detection of 'Bufo calamita' in sample DL2018009
+# as this detection could not be reproduced in a second setup
+# with 8 replicates of the "DL2018009" and 4 replicates of the standard 
+# dilution series, as attempted in qPCR0903 and qPCR0904 
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+#amph_smpl02_df %>% dplyr::group_by(eval01)
+
+#use dplyr to group by name, and count per evaluation
+tibl_as02 <- amph_smpl03_df %>% dplyr::group_by(abbr.nm) %>% dplyr::count(eval01)
+#make the tibble a data frame
+df_as03 <- as.data.frame(tibl_as02)
+# rearrange from long to wide
+df_as04 <- reshape(df_as03, direction = "wide",
+        idvar = "abbr.nm",
+        timevar = "eval01")
+#replace NAs with zero
+df_as04[is.na(df_as04)] <- 0
+#df_as04$abbr.nm
+df_as05 <- df_as04 %>% dplyr::mutate_if(is.character,as.numeric)
+#add back species abbreaviation
+df_as05$abbr.nm <- df_as04$abbr.nm
+#replace abbreviated species name with full latin species names
+df_as05$abbr.nm <- dkspecs_to_latspecs$Species_Latin[match(df_as05$abbr.nm,dkspecs_to_latspecs$abbr.nm)]
+
+#sum two columns with positive detections
+df_as05$nrepl.pos <- rowSums(df_as05[,4:5])
+
+#remove the columns no longer needed
+df_as05[ , c('n.repl1or2', 'n.repl2pos')] <- list(NULL)
+df_as05
+#sum up for each column
+clsu <- colSums(df_as05[,2:4])
+# bind this as a row below
+df_as05 <- rbind(df_as05,c("Total count",clsu))
+df_as05 <- df_as05 %>% dplyr::mutate_if(is.character,as.numeric)
+#add back species abbreaviation
+df_as05$abbr.nm <- c(df_as04$abbr.nm,"Total count")
+#replace abbreviated species name with full latin species names
+df_as05$abbr.nm <- dkspecs_to_latspecs$Species_Latin[match(df_as05$abbr.nm,dkspecs_to_latspecs$abbr.nm)]
+
+#sum up across all numeric columns and add this as a new column
+# that has the total conut
+df_as05$totalcnt<- rowSums(df_as05[,-1])
+
+#calculate percentages
+df_as05$n.nonapprovK.p <- paste0(round(df_as05$n.nonapprovK/df_as05$totalcnt*100,0),"%")
+df_as05$n.truezerodetect.p <- paste0(round(df_as05$n.truezerodetect/df_as05$totalcnt*100,0),"%")
+df_as05$nrepl.pos.p <- paste0(round(df_as05$nrepl.pos/df_as05$totalcnt*100,0),"%")
+#reorder columns by index numbering
+df_as05 <- df_as05[,c(1,2,6,3,7,4,8,5)]
+#df_as05%>%dplyr::group_by(abbr.nm)%>%dplyr::mutate(Percentage=paste0(round(n.nonapprovK/sum(totalcnt)*100,2),"%"))
+# finde number of rows
+nrd5 <- nrow(df_as05)
+
+#change column names
+colnames(df_as05) <- c("Species",
+"sets that are failed tests, Non-approved analyses",
+"sets that are failed tests, percentage",
+"Approved analyses sets, no eDNA detected",
+"Approved analyses sets, no eDNA detected, percentage",
+"Approved analyses sets, eDNA detected",
+"Approved analyses sets, eDNA detected, percentage",
+"Total number of attemped sets")
+
+# amph_smpl02_df %>% dplyr::group_by(abbr.nm) %>% 
+#   dplyr::count(approvK)
+#getwd()
+#write out the table
+write.csv(df_as05,file="Table02_out09_lst_spc_detect_v01.csv")
 #install packages needed
 # if(!require(colorRamp)){
 #   install.packages("colorRamp")
@@ -1308,10 +1392,10 @@ library("rnaturalearthhires")
 # # Get a map, use a high number for 'scale' for a coarse resolution
 # use a low number for scale for a high resolution
 # if the map 'world' does not exist, then download it
-if (!exists("world"))
-{  
+#if (!exists("world"))
+#{  
 world <- ne_countries(scale = 10, returnclass = "sf")
-}
+#}
 # class(world)
 # # example input data
 # (sites <- data.frame(longitude = c(5.5, 6.7), 
@@ -1391,6 +1475,9 @@ amph_smpl05_df <-
   amph_smpl05_df[ which( amph_smpl05_df$dec_lon < 16), ]
 
 
+#_______________________________________________________________________________
+
+#_______________________________________________________________________________
 #subset to get rid of data points with incorrect positions
 tot_smpl04_df <- 
   tot_smpl04_df[ which( tot_smpl04_df$dec_lon > 8 | tot_smpl04_df$dec_lon < 16) , ]
@@ -1411,11 +1498,11 @@ ch_undknm <- unique(amph_smpl05_df$specs)
 
 ch_unspnmt <- unique(tot_smpl04_df$abbr.nm)
 ch_undknmt <- unique(tot_smpl04_df$specs)
-class(ch_unspnm)
+#class(ch_unspnm)
 # #variables for legend - not used
-cl <- c(colfunc(length(unique(amph_smpl05_df$abbr.nm))))
+# cl <- c(colfunc(length(unique(amph_smpl05_df$abbr.nm))))
 clt <- c(colfunc(length(unique(tot_smpl04_df$abbr.nm))))
-
+#clt <- cl
 # plot all DL samples with true zero detect and at least 
 # 1 positive replicate on map
 # also see : https://github.com/tidyverse/ggplot2/issues/2037
@@ -1443,6 +1530,9 @@ p01 <- ggplot(data = world) +
 # see the plot
 p01
 
+#count number of unique species names in the data frame
+nspo <- length(unique(amph_smpl05_df$abbr.nm))
+
 
 #head(amph_smpl05_df)
 #http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/
@@ -1454,7 +1544,25 @@ cbbPalette <- c("#000000", "#E69F00", "#56B4E9",
 
 cl <- cbbPalette
 # #variables for legend - not used
-#cl <- c(colfunc(length(unique(amph_smpl05_df$abbr.nm))))
+cl <- c(colfunc(length(unique(amph_smpl05_df$abbr.nm))))
+# Information on colour blind colours
+#https://stackoverflow.com/questions/57153428/r-plot-color-combinations-that-are-colorblind-accessible
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+                             "#44AA99", "#999933", "#882255", "#661100", "#6699CC", "#888888")
+# using only 11 colours
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+                             "#44AA99", "#999933", "#882255", "#6699CC", "#888888")
+# using only 11 colours
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+                             "#44AA99", "#999933", "#882255", "black", "#888888")
+scbpl <- safe_colorblind_palette
+scales::show_col(safe_colorblind_palette)
+# see how to make a number of colurs along color range
+# https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
+#cl2 <- colorRampPalette(c(scbpl))( nspo) 
+cl2 <- scbpl
+cl <- cl2
+
 #plot with abbreviated species names
 p01 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3") +
@@ -1474,7 +1582,7 @@ p01 <- ggplot(data = world) +
   #set the color of the points
   #here it is black, and repeated the number of times
   #matching the number of species listed
-  scale_color_manual(values=c(rep("black",7))) +
+  scale_color_manual(values=c(rep("black",nspo))) +
   #set the color of the points
   #use alpha to scale the intensity of the color
   scale_fill_manual(values=alpha(
@@ -1494,8 +1602,16 @@ amph_smpl05_df$latspc <- gsub("_"," ",amph_smpl05_df$latspc)
 #unique(amph_smpl05_df$latspc)
 #unique(gsub("Rana lessonae","Pelophylax kl. esculenta",amph_smpl05_df$latspc))
 amph_smpl05_df$latspc2 <- gsub("Rana lessonae","Pelophylax kl. esculenta",amph_smpl05_df$latspc)
+
+ulsp <- unique(amph_smpl05_df$latspc2)[order(unique(amph_smpl05_df$latspc2))]
+nspo2<- length(ulsp)
+letsp <- LETTERS[1:nspo2]
+df_Lsp <- as.data.frame(cbind(letsp,ulsp))
+df_Lsp$Ls3 <- paste0(letsp,")   ",ulsp)
+amph_smpl05_df$latspc3 <- df_Lsp$Ls3[match(amph_smpl05_df$latspc2,df_Lsp$ulsp )]
+amph_smpl05_df$llatspc3 <- df_Lsp$letsp[match(amph_smpl05_df$latspc2,df_Lsp$ulsp )]
 #identify the rows in the data frame with Bufo calamita
-amph_smpl05_df[with(amph_smpl05_df, latspc2 %in% "Bufo calamita"),]
+#amph_smpl05_df[with(amph_smpl05_df, latspc2 %in% "Bufo calamita"),]
 
 #DL2019065
 #plot with long species names
@@ -1517,7 +1633,7 @@ p01 <- ggplot(data = world) +
   #set the color of the points
   #here it is black, and repeated the number of times
   #matching the number of species listed
-  scale_color_manual(values=c(rep("black",7))) +
+  scale_color_manual(values=c(rep("black",nspo))) +
   #set the color of the points
   #use alpha to scale the intensity of the color
   scale_fill_manual(values=alpha(
@@ -1708,6 +1824,7 @@ p <-  p01t +
 #make filename to save plot to
 figname02 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 figname05 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
+figname05A <- paste0("Fig01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
 
 if(bSaveFigures==T){
   ggsave(p,file=figname02,width=210,height=297,
@@ -1716,6 +1833,11 @@ if(bSaveFigures==T){
 
 if(bSaveFigures==T){
   ggsave(p,file=figname05,width=210,height=297,
+         units="mm",dpi=600)
+}
+
+if(bSaveFigures==T){
+  ggsave(p,file=figname05A,width=210,height=297,
          units="mm",dpi=600)
 }
 
@@ -1757,9 +1879,10 @@ cbbPalette <- c("#000000", "#E69F00", "#56B4E9",
                 #"#D55E00", 
                 "#CC79A7")
 
-cl <- cbbPalette
+#cl <- cbbPalette
 # #variables for legend - not used
-#cl <- c(colfunc(length(unique(amph_smpl05_df$abbr.nm))))
+cl4 <- c(colfunc(length(unique(tot_smpl04_df$abbr.nm))))
+ncl4 <- length(unique(tot_smpl04_df$abbr.nm))
 #plot with abbreviated species names
 p01 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3") +
@@ -1779,11 +1902,11 @@ p01 <- ggplot(data = world) +
   #set the color of the points
   #here it is black, and repeated the number of times
   #matching the number of species listed
-  scale_color_manual(values=c(rep("black",7))) +
+  scale_color_manual(values=c(rep("black",ncl4))) +
   #set the color of the points
   #use alpha to scale the intensity of the color
   scale_fill_manual(values=alpha(
-    c(clt),
+    c(cl4),
     c(0.7)
   ))+
   #define limits of the plot
@@ -1793,20 +1916,23 @@ p01 <- ggplot(data = world) +
 #see the plot
 p01
 
+tot_smpl03_df <- tot_smpl[tot_smpl$nonapprovK==0, ]
 #define input file
-inpf03 <- "DL_dk_specs_to_latspecs07.csv"
+inpf03 <- "DL_dk_specs_to_latspecs06.csv"
 #paste path and input file together
-inpf04 <- paste(wd00,"/",wd03,"/",inpf03,sep="")
+inpf04 <- paste(wd00,wd03,"/",inpf03,sep="")
 #Read in input file with names
-df_dk_to_latnms01 <- read.table(inpf04,sep = "\t")
+df_dk_to_latnms01 <- read.table(inpf04,sep = ",")
 #replace column names
-colnames(df_dk_to_latnms01)  <- c("DK_comm_nm","Lat_spc_mn","aq_hab")
+colnames(df_dk_to_latnms01)  <- c("DK_comm_nm","Lat_spc_mn")
 #match between data frames
 tot_smpl03_df$latspc <- df_dk_to_latnms01$Lat_spc_mn[match(tot_smpl03_df$specs,df_dk_to_latnms01$DK_comm_nm)]
-tot_smpl03_df$aq_hab <- df_dk_to_latnms01$aq_hab[match(tot_smpl03_df$specs,df_dk_to_latnms01$DK_comm_nm)]
+#tot_smpl03_df$aq_hab <- df_dk_to_latnms01$aq_hab[match(tot_smpl03_df$specs,df_dk_to_latnms01$DK_comm_nm)]
 #subest to only include marine species
-tot_smpl03_df <- tot_smpl03_df[(tot_smpl03_df$aq_hab=="marine"),]
+#tot_smpl03_df <- tot_smpl03_df[(tot_smpl03_df$aq_hab=="marine"),]
 #make a colour function
+cl
+clt <- cl2
 clt <- c(colfunc(length(unique(tot_smpl03_df$latspc))))
 #count the number of species
 noofspcsnms <- length(unique(tot_smpl03_df$latspc))
@@ -1910,6 +2036,7 @@ p02
 #amph_smpl03_df <- amph_smpl02_df
 #make a new set of colours for points
 cl03 <- c("yellow","springgreen1","springgreen4","white")
+cl03 <- c("springgreen1","springgreen4","white")
 # plot all sampled sites where both controls 
 # perform as expected - i.e. the true zero detect, and the 
 # 1 pos repl, and 2 pos repl , but also plot the 
@@ -2027,7 +2154,245 @@ if(bSaveFigures==T){
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot on map -end
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#install.packages("rcartocolor")
+# library(rcartocolor)
+# display_carto_all(colorblind_friendly = TRUE)
+# palette.colors(palette = "Okabe-Ito")
+# Information on colour blind colours
+#https://stackoverflow.com/questions/57153428/r-plot-color-combinations-that-are-colorblind-accessible
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+                             "#44AA99", "#999933", "#882255", "#661100", "#6699CC", "#888888")
+
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+                             "#44AA99", "#999933", "#882255", "#6699CC", "#888888")
+scbpl <- safe_colorblind_palette
+scales::show_col(safe_colorblind_palette)
+# see how to make a number of colurs along color range
+# https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
+cl2 <- colorRampPalette(c(scbpl))( nspo) 
+cl2 <- scbpl
+cl05 <- cl
+#_______________________________________________________________________________
+# Make plot on map with facet wrap - start
+#_______________________________________________________________________________
+#plot with long species names
+p04 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  #https://ggplot2.tidyverse.org/reference/position_jitter.html
+  # use 'geom_jitter' instead of 'geom_point' 
+  geom_jitter(data = amph_smpl05_df, 
+              aes(x = dec_lon, y = dec_lat,
+                  #amph_smpl05_df$abbr.nm
+                  shape=latspc2,
+                  color=latspc2,
+                  fill=latspc2),
+              width = jitlvl, #0.07, jitter width 
+              height = jitlvl, #0.07, # jitter height
+              size = 3.0) +
+  #manually set the pch shape of the points
+  scale_shape_manual(values=c(rep(21,nrow(amph_smpl05_df)))) +
+  #set the color of the points
+  #here it is black, and repeated the number of times
+  #matching the number of species listed
+  scale_color_manual(values=c(rep("black",nspo))) +
+  #set the color of the points
+  #use alpha to scale the intensity of the color
+  scale_fill_manual(values=alpha(
+    c(cl05),
+    c(0.7)
+  ))+
+  
+  #Arrange in facets
+  ggplot2::facet_wrap( ~ latspc2, 
+                       ncol = 3,
+                       labeller = label_bquote(col = italic(.(latspc2)))) +
+  
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#see the plot
+p04
+#
+#change axis labels
+p04t <- p04 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p04t <- p04t + labs(color='species')
+p04t <- p04t + labs(fill='species')
+p04t <- p04t + labs(shape='species')
+
+#get the number of species
+noofspcsnms <- length(unique(amph_smpl05_df$latspc))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", noofspcsnms)
+filltxc[10] <- "red"
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+p04t <- p04t + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+#adjust tick marks on axis
+p04t <- p04t + scale_y_continuous(breaks=seq(54.5,58,1))
+p04t <- p04t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+p04t <- p04t + theme(strip.background =element_rect(fill=c("black")))
+p04t <- p04t + theme(strip.text = element_text(colour = 'white'))
+# see the plot
+p04t
+
+# #define file name to save plot to
+# figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
+# # save plot
+# if(bSaveFigures==T){
+#   ggsave(p04t,file=figname06A,width=210,height=297,
+#          units="mm",dpi=600)
+# }
+
+#
+#_______________________________________________________________________________
+# Make plot on map with facet wrap - end
+#_______________________________________________________________________________
+
+
+#_______________________________________________________________________________
+# Make plot on map with facet wrap - start
+#_______________________________________________________________________________
+#plot with long species names
+p05 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  #https://ggplot2.tidyverse.org/reference/position_jitter.html
+  # use 'geom_jitter' instead of 'geom_point' 
+  geom_jitter(data = amph_smpl05_df, 
+              aes(x = dec_lon, y = dec_lat,
+                  #amph_smpl05_df$abbr.nm
+                  shape=latspc2,
+                  color=latspc2,
+                  fill=latspc2),
+              width = jitlvl, #0.07, jitter width 
+              height = jitlvl, #0.07, # jitter height
+              size = 3.0) +
+  #manually set the pch shape of the points
+  scale_shape_manual(values=c(rep(21,nrow(amph_smpl05_df)))) +
+  #set the color of the points
+  #here it is black, and repeated the number of times
+  #matching the number of species listed
+  scale_color_manual(values=c(rep("black",nspo))) +
+  #set the color of the points
+  #use alpha to scale the intensity of the color
+  scale_fill_manual(values=alpha(
+    c(cl05),
+    c(0.7)
+  ))+
+  
+  #Arrange in facets
+  #ggplot2::facet_wrap( ~ latspc2,
+  ggplot2::facet_wrap(. ~ llatspc3 + latspc2,
+                      
+                      ncol = 3,
+                      labeller = label_bquote(cols = .(llatspc3) ~ .(" ") ~ italic(.(latspc2))) ) +
+  #labeller = label_bquote(col = italic(.(latspc2))) ) +
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#see the plot
+p05
+#
+#change axis labels
+p05t <- p05 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p05t <- p05t + labs(color='species')
+p05t <- p05t + labs(fill='species')
+p05t <- p05t + labs(shape='species')
+
+#get the number of species
+noofspcsnms <- length(unique(amph_smpl05_df$latspc))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", noofspcsnms)
+#filltxc[10] <- "red"
+#filltxc = rep("white", noofspcsnms)
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+p05t <- p05t + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+
+#adjust tick marks on axis
+p05t <- p05t + scale_y_continuous(breaks=seq(54.5,58,1))
+p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+# p05t <- p05t + theme(strip.background =element_rect(fill=c("black")))
+# p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
+#p05t <- p05t + theme(strip.text = element_blank())
+p05t <- p05t + theme(strip.background = element_blank())
+# see the plot
+p05t
+
+#define file name to save plot to
+figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=figname06A,width=210,height=297,
+         units="mm",dpi=600)
+}
+
+#
+#_______________________________________________________________________________
+# Make plot on map with facet wrap - end
+#_______________________________________________________________________________
 
 
 
 
+
+#copy the data frame
+df_as03 <- amph_smpl02_df
+#subset the data frame based on two criteria 
+# and negate the criteria to exclude the
+# detection of 'Bufo calamita' in sample DL2018009
+# as this detection could not be reproduced in a second setup
+# with 8 replicates of the "DL2018009" and 4 replicates of the standard 
+# dilution series, as attempted in qPCR0903 and qPCR0904 
+df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2018009" & df_as03$latspc=="Bufo_calamita"),]
+#subset to exclude all NonApproved controls
+df_as04 <- df_as03[df_as03$nonapprovK==0, ]
+#copy the data frame
+df_as05 <- df_as04
+#make the column with numbers for symbols a factor column
+df_as05$pchsymb <- as.factor(df_as05$pchsymb)
+#subset to get rid of data points with incorrect positions
+df_as05 <- 
+  df_as05[ which( df_as05$dec_lon > 8 | df_as05$dec_lon < 16) , ]
+df_as05 <- 
+  df_as05[ which( df_as05$dec_lon > 8), ]
+df_as05 <- 
+  df_as05[ which( df_as05$dec_lon < 16), ]
+#count number of unique species names in the data frame
+nspo <- length(unique(df_as05$abbr.nm))
+#replace underscores with a space
+df_as05$latspc <- gsub("_"," ",df_as05$latspc)
+#
+#unique(df_as05$latspc)
+#unique(gsub("Rana lessonae","Pelophylax kl. esculenta",df_as05$latspc))
+df_as05$latspc2 <- gsub("Rana lessonae","Pelophylax kl. esculenta",df_as05$latspc)
+
+ulsp <- unique(df_as05$latspc2)[order(unique(df_as05$latspc2))]
+nspo2<- length(ulsp)
+letsp <- LETTERS[1:nspo2]
+df_Lsp <- as.data.frame(cbind(letsp,ulsp))
+df_Lsp$Ls3 <- paste0(letsp,")   ",ulsp)
+df_as05$latspc3 <- df_Lsp$Ls3[match(df_as05$latspc2,df_Lsp$ulsp )]
+df_as05$llatspc3 <- df_Lsp$letsp[match(df_as05$latspc2,df_Lsp$ulsp )]
+
+#define an output file
+outfl1 = "out08_01b_DL_records_amphibia_Denmark.csv"
+# paste together path and input flie
+pthoutf01 <- paste0(wd00_wd09,"/",outfl1)
+#make sure all columns are characters
+#https://stackoverflow.com/questions/24829027/unimplemented-type-list-when-trying-to-write-table
+df_as06 <- apply(df_as05,2,as.character)
+# write a table
+write.table(df_as06, file=pthoutf01, sep=",",
+            row.names = F, # do not use row names
+            col.names = T, #  use columns names
+            quote = F) # do not use quotes
