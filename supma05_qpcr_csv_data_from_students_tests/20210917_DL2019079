@@ -1,0 +1,97 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	01_EuropeanFlounder_DK_PosK	NPC	0.1000	27.18	
+B1	01_EuropeanFlounder_DK_NegK	NTC	0.1000	No Ct	
+C1	01_EuropeanFlounder_DK_eDNA	Unknown	0.1000	33.84	
+D1	01_EuropeanFlounder_DK_eDNA	Unknown	0.1000	35.42	
+A2	02_EuropeanFlounder_GL_PosK	NPC	0.1000	27.88	
+B2	02_EuropeanFlounder_GL_NegK	NTC	0.1000	No Ct	
+C2	02_EuropeanFlounder_GL_eDNA	Unknown	0.1000	No Ct	
+D2	02_EuropeanFlounder_GL_eDNA	Unknown	0.1000	No Ct	
+A3	03_AtlanticCod_DK_PosK	NPC	0.1000	29.03	
+B3	03_AtlanticCod_DK_NegK	NTC	0.1000	No Ct	
+C3	03_AtlanticCod_DK_eDNA	Unknown	0.1000	No Ct	
+D3	03_AtlanticCod_DK_eDNA	Unknown	0.1000	No Ct	
+A4	04_AtlanticCod_GL_PosK	NPC	0.1000	28.58	
+B4	04_AtlanticCod_GL_NegK	NTC	0.1000	No Ct	
+C4	04_AtlanticCod_GL_eDNA	Unknown	0.1000	37.04	
+D4	04_AtlanticCod_GL_eDNA	Unknown	0.1000	37.51	
+A5	05_Herring_DK_PosK	NPC	0.1000	36.52	
+B5	05_Herring_DK_NegK	NTC	0.1000	42.95	
+C5	05_Herring_DK_eDNA	Unknown	0.1000	No Ct	
+D5	05_Herring_DK_eDNA	Unknown	0.1000	30.49	
+A6	06_Herring_GL_PosK	NPC	0.1000	24.32	
+B6	06_Herring_GL_NegK	NTC	0.1000	No Ct	
+C6	06_Herring_GL_eDNA	Unknown	0.1000	No Ct	
+D6	06_Herring_GL_eDNA	Unknown	0.1000	36.07	
+A7	07_SeaWalnut_DK_PosK	NPC	0.1000	35.34	
+B7	07_SeaWalnut_DK_NegK	NTC	0.1000	No Ct	
+C7	07_SeaWalnut_DK_eDNA	Unknown	0.1000	38.08	
+D7	07_SeaWalnut_DK_eDNA	Unknown	0.1000	39.41	
+A8	08_SeaWalnut_GL_PosK	NPC	0.1000	No Ct	
+B8	08_SeaWalnut_GL_NegK	NTC	0.1000	No Ct	
+C8	08_SeaWalnut_GL_eDNA	Unknown	0.1000	No Ct	
+D8	08_SeaWalnut_GL_eDNA	Unknown	0.1000	No Ct	
+A9	09_RedKingCrab_DK_PosK	NPC	0.1000	38.72	
+B9	09_RedKingCrab_DK_NegK	NTC	0.1000	No Ct	
+C9	09_RedKingCrab_DK_eDNA	Unknown	0.1000	No Ct	
+D9	09_RedKingCrab_DK_eDNA	Unknown	0.1000	No Ct	
+A10	10_RedKingCrab_GL_PosK	NPC	0.1000	39.96	
+B10	10_RedKingCrab_GL_NegK	NTC	0.1000	No Ct	
+C10	10_RedKingCrab_GL_eDNA	Unknown	0.1000	No Ct	
+D10	10_RedKingCrab_GL_eDNA	Unknown	0.1000	No Ct	
+A11	11_PacificOyster_DK_PosK	NPC	0.1000	32.80	
+B11	11_PacificOyster_DK_NegK	NTC	0.1000	No Ct	
+C11	11_PacificOyster_DK_eDNA	Unknown	0.1000	36.71	
+D11	11_PacificOyster_DK_eDNA	Unknown	0.1000	37.13	
+A12	12_PacificOyster_GL_PosK	NPC	0.1000	No Ct	
+B12	12_PacificOyster_GL_NegK	NTC	0.1000	No Ct	
+C12	12_PacificOyster_GL_eDNA	Unknown	0.1000	No Ct	
+D12	12_PacificOyster_GL_eDNA	Unknown	0.1000	32.12	
+H1	13_EuropeanFlounder_DK_PosK	NPC	0.1000	No Ct	
+G1	13_EuropeanFlounder_DK_NegK	NTC	0.1000	No Ct	
+E1	13_EuropeanFlounder_DK_eDNA	Unknown	0.1000	No Ct	
+F1	13_EuropeanFlounder_DK_eDNA	Unknown	0.1000	No Ct	
+H2	14_EuropeanFlounder_GL_PosK	NPC	0.1000	No Ct	
+G2	14_EuropeanFlounder_GL_NegK	NTC	0.1000	No Ct	
+E2	14_EuropeanFlounder_GL_eDNA	Unknown	0.1000	No Ct	
+F2	14_EuropeanFlounder_GL_eDNA	Unknown	0.1000	No Ct	
+H3	15_AtlanticCod_DK_PosK	NPC	0.1000	27.99	
+G3	15_AtlanticCod_DK_NegK	NTC	0.1000	No Ct	
+E3	15_AtlanticCod_DK_eDNA	Unknown	0.1000	No Ct	
+F3	15_AtlanticCod_DK_eDNA	Unknown	0.1000	No Ct	
+H4	16_AtlanticCod_GL_PosK	NPC	0.1000	28.57	
+G4	16_AtlanticCod_GL_NegK	NTC	0.1000	No Ct	
+E4	16_AtlanticCod_GL_eDNA	Unknown	0.1000	36.27	
+F4	16_AtlanticCod_GL_eDNA	Unknown	0.1000	35.15	
+H5	17_Herring_DK_PosK	NPC	0.1000	24.21	
+G5	17_Herring_DK_NegK	NTC	0.1000	No Ct	
+E5	17_Herring_DK_eDNA	Unknown	0.1000	No Ct	
+F5	17_Herring_DK_eDNA	Unknown	0.1000	41.77	
+H6	18_Herring_GL_PosK	NPC	0.1000	24.57	
+G6	18_Herring_GL_NegK	NTC	0.1000	No Ct	
+E6	18_Herring_GL_eDNA	Unknown	0.1000	38.11	
+F6	18_Herring_GL_eDNA	Unknown	0.1000	37.71	
+H7	19_SeaWalnut_DK_PosK	NPC	0.1000	35.90	
+G7	19_SeaWalnut_DK_NegK	NTC	0.1000	No Ct	
+E7	19_SeaWalnut_DK_eDNA	Unknown	0.1000	37.58	
+F7	19_SeaWalnut_DK_eDNA	Unknown	0.1000	38.28	
+H8	20_SeaWalnut_GL_PosK	NPC	0.1000	35.32	
+G8	20_SeaWalnut_GL_NegK	NTC	0.1000	No Ct	
+E8	20_SeaWalnut_GL_eDNA	Unknown	0.1000	No Ct	
+F8	20_SeaWalnut_GL_eDNA	Unknown	0.1000	No Ct	
+H9	21_RedKingCrab_DK_PosK	NPC	0.1000	35.05	
+G9	21_RedKingCrab_DK_NegK	NTC	0.1000	No Ct	
+E9	21_RedKingCrab_DK_eDNA	Unknown	0.1000	No Ct	
+F9	21_RedKingCrab_DK_eDNA	Unknown	0.1000	No Ct	
+H10	22_RedKingCrab_GL_PosK	NPC	0.1000	35.75	
+G10	22_RedKingCrab_GL_NegK	NTC	0.1000	No Ct	
+E10	22_RedKingCrab_GL_eDNA	Unknown	0.1000	No Ct	
+F10	22_RedKingCrab_GL_eDNA	Unknown	0.1000	No Ct	
+H11	23_PacificOyster_DK_PosK	NPC	0.1000	31.94	
+G11	23_PacificOyster_DK_NegK	NTC	0.1000	No Ct	
+E11	23_PacificOyster_DK_eDNA	Unknown	0.1000	37.59	
+F11	23_PacificOyster_DK_eDNA	Unknown	0.1000	36.20	
+H12	24_PacificOyster_GL_PosK	NPC	0.1000	32.89	
+G12	24_PacificOyster_GL_NegK	NTC	0.1000	No Ct	
+E12	24_PacificOyster_GL_eDNA	Unknown	0.1000	No Ct	
+F12	24_PacificOyster_GL_eDNA	Unknown	0.1000	No Ct	
