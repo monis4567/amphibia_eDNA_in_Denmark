@@ -10,6 +10,9 @@
 #
 # Authors: Steen Wilhelm Knudsen, 
 #
+#remove everything in the working environment, without a warning!!
+#rm(list=ls())
+
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
 #wd00 <- rpath
 setwd (wd00)
@@ -79,7 +82,11 @@ df_DL02 <- df_DL01[keep]
 # bind the two data frames together by appending as rows
 df_iNDL02 <- rbind(df_DL02,df_iN02)
 #change species names
+df_iNDL02$taxon.name <- gsub("Pelophylax kl.","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
 df_iNDL02$taxon.name <- gsub("Pelophylax esculentus","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
+df_iNDL02$taxon.name <- gsub("esculenta esculenta","esculenta",df_iNDL02$taxon.name)
+df_iNDL02$taxon.name <- gsub("kl. esculenta esculenta"," kl. esculenta",df_iNDL02$taxon.name)
+
 # add a column for evaluation categories
 df_iNDL02$pchs <- NA
 df_iNDL02$pchs[df_iNDL02$eval03=="eDNA_zero"] <- 3
@@ -281,7 +288,7 @@ p05 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p05
+#p05a <- p05
 
 p05t <- p05 +
   guides(
@@ -290,7 +297,7 @@ p05t <- p05 +
     shape = guide_legend("species")
   )
 
-p05t
+#p05t
 #
 #change axis labels
 p05t <- p05 + xlab("longitude") + ylab("latitude")
@@ -320,7 +327,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
 # see the plot
-p05t
+#p05t
 
 # define whether figures are to be saved or not
 bSaveFigures <- T
@@ -352,17 +359,17 @@ df_iNDL04 <- df_iNDL03
 #assign taxon name plus monitoring category
 df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
 # re order columns
-df_iNDL05 <- df_iNDL04
-#colnames(df_iNDL05)
-#unique(df_iNDL05$pchs)
+df_iNDL04 <- df_iNDL04
+#colnames(df_iNDL04)
+#unique(df_iNDL04$pchs)
 # for rows for species not present in the iNaturalist search
 # to avoid the facet plot ebds up being without plots needed for iNaturalist records
 # nrta <- c(1,1,"Bombina bombina","iNat_Res","iNat_Res",3,"A)   Bombina bombina","A","Bombina bombina.iNat_Res" )
-# df_iNDL05 <- rbind(df_iNDL05,nrta)
+# df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Bufo calamita","iNat_Res","iNat_Res",3,"C)   Bufo calamita","C","Bufo calamita.iNat_Res" )
-# df_iNDL05 <- rbind(df_iNDL05,nrta)
+# df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Ichthyosaurus alpestris","iNat_Res",3,"iNat_Res","F)   Ichthyosaurus alpestris","F","Ichthyosaurus alpestris.iNat_Res" )
-# df_iNDL05 <- rbind(df_iNDL05,nrta)
+# df_iNDL04 <- rbind(df_iNDL04,nrta)
 
 
 
@@ -370,18 +377,18 @@ misstxnm <- c("Bombina bombina.iNat_Res",
               "Bufo calamita.iNat_Res",
               "Ichthyosaurus alpestris.iNat_Res")
 txnm2<- c(unique(df_iNDL04$txnmc), misstxnm)
-df_iNDL05$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
+df_iNDL04$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
 
-df_iNDL05$pchs <- as.factor(df_iNDL05$pchs)
-#unique(df_iNDL05$pchs)
-#df_iNDL05$dec_lat
-nspo2 <- length(unique(df_iNDL05$txnmc))
+df_iNDL04$pchs <- as.factor(df_iNDL04$pchs)
+#unique(df_iNDL04$pchs)
+#df_iNDL04$dec_lat
+nspo2 <- length(unique(df_iNDL04$txnmc))
 cl2 <- colorRampPalette(c(scbpl))( nspo2) 
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
 length(cl06)
 #make plot
-p06 <- ggplot(data = world) +
+p05 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3") +
   #https://ggplot2.tidyverse.org/reference/position_jitter.html
   # use 'geom_jitter' instead of 'geom_point' 
@@ -417,7 +424,56 @@ p06 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p06
+#p05b  <- p05
+
+
+#p05t
+#
+#change axis labels
+p05t <- p05 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p05t <- p05t + labs(color='species')
+p05t <- p05t + labs(fill='species')
+p05t <- p05t + labs(shape='species')
+
+#get the number of species
+noofspcsnms <- length(unique(df_iNDL03$taxon.name))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", noofspcsnms)
+#filltxc[10] <- "red"
+#filltxc = rep("white", noofspcsnms)
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+p05t <- p05t + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+
+#adjust tick marks on axis
+p05t <- p05t + scale_y_continuous(breaks=seq(54.5,58,1))
+p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+# p05t <- p05t + theme(strip.background =element_rect(fill=c("black")))
+# p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
+#p05t <- p05t + theme(strip.text = element_blank())
+p05t <- p05t + theme(strip.background = element_blank())
+# see the plot
+#p05t
+
+# define whether figures are to be saved or not
+bSaveFigures <- T
+#substitute in file name
+infl1 <- gsub(".csv","",infl1)
+#define file name to save plot to
+fgnm <- paste0("Fig03_v02_",infl1,".pdf")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         #width=210,height=297, # as portrait
+         width=297,height=210, # as landscape
+         units="mm",dpi=600)
+}
 
 
 #_______________________________________________________________________________
@@ -428,17 +484,17 @@ df_iNDL04 <- df_iNDL03
 #assign taxon name plus monitoring category
 df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
 # re order columns
-df_iNDL05 <- df_iNDL04
-#colnames(df_iNDL05)
-#unique(df_iNDL05$pchs)
+df_iNDL04 <- df_iNDL04
+#colnames(df_iNDL04)
+#unique(df_iNDL04$pchs)
 # for rows for species not present in the iNaturalist search
 # to avoid the facet plot ebds up being without plots needed for iNaturalist records
 # nrta <- c(1,1,"Bombina bombina","iNat_Res","iNat_Res",3,"A)   Bombina bombina","A","Bombina bombina.iNat_Res" )
-# df_iNDL05 <- rbind(df_iNDL05,nrta)
+# df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Bufo calamita","iNat_Res","iNat_Res",3,"C)   Bufo calamita","C","Bufo calamita.iNat_Res" )
-# df_iNDL05 <- rbind(df_iNDL05,nrta)
+# df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Ichthyosaurus alpestris","iNat_Res",3,"iNat_Res","F)   Ichthyosaurus alpestris","F","Ichthyosaurus alpestris.iNat_Res" )
-# df_iNDL05 <- rbind(df_iNDL05,nrta)
+# df_iNDL04 <- rbind(df_iNDL04,nrta)
 
 
 
@@ -446,22 +502,22 @@ misstxnm <- c("Bombina bombina.iNat_Res",
               "Bufo calamita.iNat_Res",
               "Ichthyosaurus alpestris.iNat_Res")
 txnm2<- c(unique(df_iNDL04$txnmc), misstxnm)
-df_iNDL05$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
+df_iNDL04$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
 
-df_iNDL05$pchs <- as.factor(df_iNDL05$pchs)
-#unique(df_iNDL05$pchs)
-#df_iNDL05$dec_lat
-nspo2 <- length(unique(df_iNDL05$txnmc2))
+df_iNDL04$pchs <- as.factor(df_iNDL04$pchs)
+#unique(df_iNDL04$pchs)
+#df_iNDL04$dec_lat
+nspo2 <- length(unique(df_iNDL04$txnmc2))
 cl2 <- colorRampPalette(c(scbpl))( nspo2) 
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
 length(cl06)
 #make plot
-p07 <- ggplot(data = world) +
+p05 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3") +
   #https://ggplot2.tidyverse.org/reference/position_jitter.html
   # use 'geom_jitter' instead of 'geom_point' 
-  geom_jitter(data = df_iNDL05, 
+  geom_jitter(data = df_iNDL04, 
               aes(x = dec_lon, y = dec_lat,
                   shape=eval03,
                   color=eval03,
@@ -493,24 +549,324 @@ p07 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p07
+#p05b <- p05
 # 
-# p07t <- p07 +
-#   guides(
-#     fill = guide_legend("species"),
-#     #color  = guide_legend("species"),
-#     shape = guide_legend("species")
-#   )
-# 
-# p07t
+p05t <- p05 +
+  guides(
+    fill = guide_legend("species"),
+    #color  = guide_legend("species"),
+    shape = guide_legend("species")
+  )
 
+#p05t
+
+# define whether figures are to be saved or not
+bSaveFigures <- T
+#substitute in file name
+infl1 <- gsub(".csv","",infl1)
+#define file name to save plot to
+fgnm <- paste0("Fig03_v03_",infl1,".pdf")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         #width=210,height=297, # as portrait
+         width=297,height=210, # as landscape
+         units="mm",dpi=600)
+}
+
+#_______________________________________________________________________________
+
+#_______________________________________________________________________________
+
+#copy data frame
+df_iNDL04 <- df_iNDL03
+#assign taxon name plus monitoring category
+df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
+#
+misstxnm <- c("Bombina bombina.iNat_Res",
+              "Bufo calamita.iNat_Res",
+              "Ichthyosaurus alpestris.iNat_Res")
+txnm2<- c(unique(df_iNDL04$txnmc), misstxnm)
+df_iNDL04$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
+
+df_iNDL04$pchs <- as.factor(df_iNDL04$pchs)
+#unique(df_iNDL04$pchs)
+#df_iNDL04$dec_lat
+nspo2 <- length(unique(df_iNDL04$txnmc2))
+cl2 <- colorRampPalette(c(scbpl))( nspo2) 
+#cl2 <- colorRampPalette(c(scbpl))( nspo) 
+cl06 <- cl2
+length(cl06)
+cl06 <- c("red","white","green")
+nspo2 <- length(unique(df_iNDL04$eval03))
+#unique(df_iNDL04$lettx)
+# order the dataframe by a column
+df_iNDL04 <- df_iNDL04[order(df_iNDL04$lettx),]
+# make a datra frame to sort monitoring categories
+df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval03), c(2,3,1)))
+# change column names
+colnames(df_mcat) <- c("eval03","ordcat")
+# match back to main data frame
+df_iNDL04$ordcat <- df_mcat$ordcat[match(df_iNDL04$eval03,df_mcat$eval03)]
+#unique(df_iNDL04$lettx)
+ordcat1 <- unique(df_iNDL04$ordcat)
+# df_iNDL04 <- df_iNDL04 %>% dplyr::mutate(across(ordcat, factor , c(ordcat1)))
+# df_iNDL04$ordcat <- as.factor(df_iNDL04$ordcat)
+# df_iNDL04$eval03 <- as.factor(df_iNDL04$eval03)
+# df_iNDL04 <- df_iNDL04 %>% dplyr::arrange(taxon.name) %>% dplyr::arrange(ordcat)
+# 
+# 
+df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
+#make plot
+p05 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3", lwd=0.4) +
+  #https://ggplot2.tidyverse.org/reference/position_jitter.html
+  #https://stackoverflow.com/questions/15706281/controlling-the-order-of-points-in-ggplot2
+  # use 'geom_jitter' instead of 'geom_point' 
+  geom_jitter(data = df_iNDL04  %>%
+                dplyr::mutate(dplyr::across(ordcat, factor , c(ordcat1))),
+              #dplyr::arrange(taxon.name) %>% dplyr::arrange(ordcat),
+              
+              aes(x = dec_lon, y = dec_lat,
+                  shape=eval03,
+                  color=eval03,
+                  fill=eval03,
+                  size=eval03),
+              width = jitlvl, #0.07, jitter width 
+              height = jitlvl) + #, #0.07, # jitter height
+  #size = 2.0) +
+  
+  scale_size_manual(values=c(2.8,1.2,1.6)) +
+  #manually set the pch shape of the points
+  scale_shape_manual(values=c(21,3,22)) +
+  #set the color of the points
+  
+  
+  #here it is black, and repeated the number of times
+  #matching the number of species listed
+  scale_color_manual(values=alpha(
+    c(rep("black",nspo2)),
+    c(1.0 , 1.0 , 0.2) 
+  )) +
+  #set the color of the points
+  #use alpha to scale the intensity of the color
+  scale_fill_manual(values=alpha(
+    c(cl06),
+    c(0.8, 1.0, 0.4)
+  ))+
+  #
+  #df_iNDL04$lettx
+  #Arrange in facets
+  ggplot2::facet_wrap( ~ taxon.name,
+                       drop=FALSE,
+                       ncol = 3,
+                       labeller = label_bquote(cols = italic(.(as.character(taxon.name))))  )+
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#see the plot
+#p05
+
+#change axis labels
+p05t <- p05 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p05t <- p05t + labs(color='monitoring')
+p05t <- p05t + labs(fill='monitoring')
+p05t <- p05t + labs(shape='monitoring')
+p05t <- p05t + labs(size='monitoring')
+
+#get the number of species
+#ncat <- length(unique(df_iNDL03$taxon.name))
+ncat <- length(unique(df_iNDL04$eval03))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", ncat)
+#filltxc[10] <- "red"
+#filltxc = rep("white", noofspcsnms)
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+#p05t <- p05t + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+
+#adjust tick marks on axis
+p05t <- p05t + scale_y_continuous(breaks=seq(54.5,58,1))
+p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+# p05t <- p05t + theme(strip.background =element_rect(fill=c("black")))
+# p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
+#p05t <- p05t + theme(strip.text = element_blank())
+p05t <- p05t + theme(strip.background = element_blank())
+# see the plot
+#p05t
+
+# define whether figures are to be saved or not
+bSaveFigures <- T
+#substitute in file name
+infl1 <- gsub(".csv","",infl1)
+#define file name to save plot to
+fgnm <- paste0("Fig03_v04_",infl1,".pdf")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         width=210,height=297, # as portrait
+         #width=297,height=210, # as landscape
+         units="mm",dpi=600)
+}
+
+#________________________
 #_______________________________________________________________________________
 # end plot with iNaturalist and eDNA monitoring in plots side by side
 #_______________________________________________________________________________
 
 #
 
+#unique(df_iNDL04$eval03)
+#get second element among unique elements in column
+spspnm <- unique(df_iNDL04$taxon.name)[2]
+df5 <- df_iNDL04[!df_iNDL04$eval03=="eDNA_zero",]
+df5 <- df5[df5$taxon.name==spspnm, ]
+df5.ep <- df5[df5$eval03=="eDNA_present",]
+df5.iN <- df5[df5$eval03=="iNat_Res",]
+nrow(df5.iN)
+nrow(df5.ep)
 
+#df5.ep
+#https://stackoverflow.com/questions/31668163/geographic-geospatial-distance-between-2-lists-of-lat-lon-points-coordinates
+
+# https://stackoverflow.com/questions/45784094/geosphere-dplyr-create-matrix-of-distance-between-coordinates
+# https://geocompr.robinlovelace.net/spatial-operations.html
+# https://stackoverflow.com/questions/31668163/geographic-geospatial-distance-between-2-lists-of-lat-lon-points-coordinates
+
+
+#
+
+#unique(df_iNDL04$eval03)
+#get second element among unique elements in column
+spspnm <- unique(df_iNDL04$taxon.name)[2]
+df5 <- df_iNDL04[!df_iNDL04$eval03=="eDNA_zero",]
+df5 <- df5[df5$taxon.name==spspnm, ]
+df5.ep <- df5[df5$eval03=="eDNA_present",]
+df5.iN <- df5[df5$eval03=="iNat_Res",]
+nrow(df5.iN)
+nrow(df5.ep)
+
+#https://stackoverflow.com/questions/31668163/geographic-geospatial-distance-between-2-lists-of-lat-lon-points-coordinates
+
+list1 <- data.frame(longitude = c(80.15998, 72.89125, 77.65032, 77.60599, 
+                                  72.88120, 76.65460, 72.88232, 77.49186, 
+                                  72.82228, 72.88871), 
+                    latitude = c(12.90524, 19.08120, 12.97238, 12.90927, 
+                                 19.08225, 12.81447, 19.08241, 13.00984,
+                                 18.99347, 19.07990))
+list2 <- data.frame(longitude = c(72.89537, 77.65094, 73.95325, 72.96746, 
+                                  77.65058, 77.66715, 77.64214, 77.58415,
+                                  77.76180, 76.65460), 
+                    latitude = c(19.07726, 13.03902, 18.50330, 19.16764, 
+                                 12.90871, 13.01693, 13.00954, 12.92079,
+                                 13.02212, 12.81447), 
+                    locality = c("A", "A", "B", "B", "C", "C", "C", "D", "D", "E"))
+
+list1.1 <- list1
+list1.1$locality <- "l1"
+l3 <- rbind(list1.1,list2)
+p <- ggplot(data=l3) +
+  geom_point(aes(x=longitude,
+                 y=latitude,
+                 color=locality,
+                 shape=locality)) +
+  #manually set the pch shape of the points
+  scale_shape_manual(values=c(rep(21,length(unique(l3$locality))-1),3))
+
+p
+library(geosphere)
+
+# create distance matrix
+mat <- distm(list1[,c('longitude','latitude')], 
+             list2[,c('longitude','latitude')], 
+             fun=distVincentyEllipsoid)
+
+# assign the name to the point in list1 based on shortest distance in the matrix
+list1$locality <- list2$locality[max.col(-mat)]
+
+
+library(dplyr)
+list2a <- list2 %>% group_by(locality) %>% summarise_each(funs(mean)) %>% ungroup()
+mat2 <- distm(list1[,c('longitude','latitude')], list2a[,c('longitude','latitude')], fun=distVincentyEllipsoid)
+list1 <- list1 %>% mutate(locality2 = list2a$locality[max.col(-mat2)])
+
+
+library(data.table)
+list2a <- setDT(list2)[,lapply(.SD, mean), by=locality]
+mat2 <- distm(setDT(list1)[,.(longitude,latitude)], list2a[,.(longitude,latitude)], fun=distVincentyEllipsoid)
+list1[, locality2 := list2a$locality[max.col(-mat2)] ]
+
+
+list1$near_dist <- apply(mat2, 1, min)
+
+list1$near_dist <- mat2[matrix(c(1:10, max.col(-mat2)), ncol = 2)]
+
+# or using dplyr
+list1 <- list1 %>% mutate(near_dist = mat2[matrix(c(1:10, max.col(-mat2)), ncol = 2)])
+# or using data.table (if not already a data.table, convert it with 'setDT(list1)' )
+list1[, near_dist := mat2[matrix(c(1:10, max.col(-mat2)), ncol = 2)] ]
+
+
+
+p <- ggplot(data=list1) +
+  geom_point(aes(x=longitude,
+                 y=latitude,
+                 color=locality))
+list1
+p <- ggplot(data=list2) +
+  geom_point(aes(x=longitude,
+                 y=latitude,
+                 color=locality))
+p
+my_points <- matrix(c(77.65465, 91.54323,    # Create longitude/latitude matrix
+                      21.35444, 17.65465),
+                    nrow = 2)
+colnames(my_points) <- c("longitude", "latitude")
+rownames(my_points) <- c("pt_1", "pt_2")
+my_points  
+
+
+
+library(geosphere)
+distm(c(lon1, lat1), c(lon2, lat2), fun = distHaversine)
+
+
+
+# Load sample data and project to EPSG:5070.
+nc <- st_transform(crs = "+init=epsg:5070",
+                   st_read(system.file("shape/nc.shp", package = "sf"), quiet = TRUE))
+
+# Here's the full distance matrix. I don't want that.
+nc_dist_mat <- st_distance(nc, nc)
+
+# Define a function to calculate distances pairwise:
+pairwise_distance <- purrr::partial(purrr::map2_dbl, .f = sf::st_distance)
+
+# distance to self is always zero:
+pairwise_distance(st_geometry(nc), st_geometry(nc))  
+# distance to random county isn't always zero:
+pairwise_distance(st_geometry(nc), st_geometry(dplyr::sample_frac(nc)))  
+
+r
+sf
+
+set.seed(1)
+g1 = st_geometry(nc); g2= st_geometry(dplyr::sample_frac(nc)) 
+
+mapply(st_distance, g1, g2)
+# [1] 152687.52 390721.95 105485.92 363253.27 214961.38  66748.80 309538.72
+# [8]  11825.65 213627.60 273758.95 198366.26      0.00  66634.13 331566.88
+# [15] 251378.71  45416.83 602878.69  76128.17 361629.19 153484.84 240215.77
+#[etc, 100 elements]
 
 
 #

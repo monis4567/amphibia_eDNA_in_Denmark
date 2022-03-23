@@ -55,11 +55,13 @@
 #____________________________________________________________________________#
 
 #____________________________________________________________________________#
-# in Finder on Macintosh connect to
-# https://webfile.science.ku.dk/webdav
+# in browser connect to:
+
+# https://webfile.ku.dk/
 #
 #Locate MxPro files in:
-#I:\SCIENCE-SNM-ZMDISK\5. FORMIDLINGSAFDELING\DNA & LIV\Data\qPCR resultater\MxPro_tekstfiler
+
+# N:\SCI-SNM-Citizen_Science\DNA&liv projektdokumenter\DNA & LIV\Data\qPCR resultater\MxPro_tekstfiler
 
 #copy to your own computer
 # use the unix code named:
@@ -522,13 +524,13 @@ harbours <-as.data.frame(read.csv(wd00_wd03_inpf02,
 
 
 #paste path and file together
-wd00_wd03_inpf03 <- paste(wd00_wd03,"/DNAogLiv_Proever_1-9-2020.xls",sep="")
+wd00_wd03_inpf03 <- paste(wd00_wd03,"/DNAogLiv_Proever_14-3-2022.xls",sep="")
 # read in the excel file
 ha <- as.data.frame(read_excel(wd00_wd03_inpf03))
 #change column names
 colnames(ha) <- ha[1,]
 hb <- (ha[-1,])
-head(hb,4)
+#head(hb,4)
 DL_No <- hb$PrøveID
 LatGr <- floor(as.numeric(hb$Latitude))
 LatMin <- floor((as.numeric(hb$Latitude)-LatGr)*60)
@@ -1442,6 +1444,8 @@ amph_smpl03_df <- amph_smpl02_df
 # with 8 replicates of the "DL2018009" and 4 replicates of the standard 
 # dilution series, as attempted in qPCR0903 and qPCR0904 
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019065" & amph_smpl03_df$abbr.nm=="Buf.cal"),]
+
 #subset to exclude all NonApproved controls
 amph_smpl04_df <- amph_smpl03_df[amph_smpl03_df$nonapprovK==0, ]
 tot_smpl03_df <- tot_smpl[tot_smpl$nonapprovK==0, ]
@@ -1449,6 +1453,9 @@ tot_smpl03_df <- tot_smpl[tot_smpl$nonapprovK==0, ]
 #subset to only include positive detections
 amph_smpl05_df <- amph_smpl04_df[amph_smpl04_df$repl1or2>0, ]
 tot_smpl04_df <- tot_smpl03_df[tot_smpl03_df$repl1or2>0, ]
+
+
+tot_smpl04_df[tot_smpl04_df$abbr.nm=="Buf.cal",]
 #amph_smpl05_df
 #amph_smpl03_df <- subset(amph_smpl03_df, eval01=="repl2pos")
 #make the column with numbers for symbols a factor column
@@ -1550,10 +1557,10 @@ cl <- c(colfunc(length(unique(amph_smpl05_df$abbr.nm))))
 safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
                              "#44AA99", "#999933", "#882255", "#661100", "#6699CC", "#888888")
 # using only 11 colours
-safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499",
                              "#44AA99", "#999933", "#882255", "#6699CC", "#888888")
 # using only 11 colours
-safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499", 
+safe_colorblind_palette <- c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288", "#AA4499",
                              "#44AA99", "#999933", "#882255", "black", "#888888")
 scbpl <- safe_colorblind_palette
 scales::show_col(safe_colorblind_palette)
@@ -2343,7 +2350,9 @@ if(bSaveFigures==T){
 
 
 
-
+#Check following samples for presence of
+# DL2018009 - Bufo calamita
+# DL2019065 - Bufo calamita
 
 #copy the data frame
 df_as03 <- amph_smpl02_df
@@ -2383,16 +2392,117 @@ df_Lsp <- as.data.frame(cbind(letsp,ulsp))
 df_Lsp$Ls3 <- paste0(letsp,")   ",ulsp)
 df_as05$latspc3 <- df_Lsp$Ls3[match(df_as05$latspc2,df_Lsp$ulsp )]
 df_as05$llatspc3 <- df_Lsp$letsp[match(df_as05$latspc2,df_Lsp$ulsp )]
-
+df_as05.Buf.cal <-  df_as05[df_as05$abbr.nm=="Buf.cal",]
+df_as06 <- df_as05
+# check for positive detections of Bufo calamita
+#df_as05.Buf.cal[!df_as05.Buf.cal$repl1or2==0,]
+# exclude records of Bufo calamita from  sample DL2019065
+df_as06 <- subset(df_as05, !DLsamplno=="DL2019065" | abbr.nm!="Buf.cal")
 #define an output file
 outfl1 = "out08_01b_DL_records_amphibia_Denmark.csv"
 # paste together path and input flie
 pthoutf01 <- paste0(wd00_wd09,"/",outfl1)
 #make sure all columns are characters
 #https://stackoverflow.com/questions/24829027/unimplemented-type-list-when-trying-to-write-table
-df_as06 <- apply(df_as05,2,as.character)
+df_as06 <- apply(df_as06,2,as.character)
 # write a table
 write.table(df_as06, file=pthoutf01, sep=",",
             row.names = F, # do not use row names
             col.names = T, #  use columns names
             quote = F) # do not use quotes
+
+
+#_______________________________________________________________________________
+# Make separate plot for Pelobates fuscus
+#_______________________________________________________________________________
+# subset to get records of Pelobates fuscus
+df_Pf01 <- amph_smpl05_df[amph_smpl05_df$abbr.nm=="Pel.fus",]
+#plot with long species names
+p04 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  #https://ggplot2.tidyverse.org/reference/position_jitter.html
+  # use 'geom_jitter' instead of 'geom_point' 
+  geom_jitter(data = df_Pf01, 
+              aes(x = dec_lon, y = dec_lat,
+                  #amph_smpl05_df$abbr.nm
+                  shape=latspc2,
+                  color=latspc2,
+                  fill=latspc2),
+              width = jitlvl, #0.07, jitter width 
+              height = jitlvl, #0.07, # jitter height
+              size = 3.0) +
+  
+  geom_text(data= df_Pf01, 
+            aes(x = dec_lon, y = dec_lat),
+            label=c(df_Pf01$DLsamplno),
+            size=2.4,
+            colour="blue",
+            nudge_x = 0.25, nudge_y = 0.10, 
+            check_overlap = T
+  ) +
+  
+  geom_text(data= df_Pf01, 
+            aes(x = dec_lon, y = dec_lat),
+            label=c(df_Pf01$gymnasiumnm1),
+            size=2.4,
+            colour="red",
+            nudge_x = 0.25, nudge_y = -0.10, 
+            check_overlap = T
+  ) +
+  #manually set the pch shape of the points
+  # scale_shape_manual(values=c(rep(21,nrow(amph_smpl05_df)))) +
+  #set the color of the points
+  #here it is black, and repeated the number of times
+  #matching the number of species listed
+  # scale_color_manual(values=c(rep("black",nspo))) +
+  #set the color of the points
+  #use alpha to scale the intensity of the color
+  # scale_fill_manual(values=alpha(
+  #   c(cl05),
+  #   c(0.7)
+# ))+
+# 
+# #define limits of the plot
+ggplot2::coord_sf(xlim = c(8, 15.4),
+                  ylim = c(54.4, 58.0), 
+                  expand = FALSE)
+#see the plot
+#p04
+#
+#change axis labels
+p04t <- p04 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p04t <- p04t + labs(color='species')
+p04t <- p04t + labs(fill='species')
+p04t <- p04t + labs(shape='species')
+
+#get the number of species
+noofspcsnms <- length(unique(amph_smpl05_df$latspc))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", noofspcsnms)
+filltxc[10] <- "red"
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+p04t <- p04t + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+#adjust tick marks on axis
+p04t <- p04t + scale_y_continuous(breaks=seq(54.5,58,1))
+p04t <- p04t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+p04t <- p04t + theme(strip.background =element_rect(fill=c("black")))
+p04t <- p04t + theme(strip.text = element_text(colour = 'white'))
+# see the plot
+#p04t
+# get DL sampleNo for the odd sample
+df_Pf01$DLsamplno[df_Pf01$gymnasiumnm1=="HelsingoerGym"]
+spcNm <- unique(df_Pf01$specs)
+bSaveFigures=T
+#define file name to save plot to
+figname06A <- paste0("Fig03_06_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,".pdf")
+# save plot
+if(bSaveFigures==T){
+  ggsave(p04t,file=figname06A,width=210,height=297,
+         units="mm",dpi=600)
+}
+

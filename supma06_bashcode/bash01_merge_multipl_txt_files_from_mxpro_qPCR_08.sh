@@ -6,6 +6,7 @@ WD=$(pwd)
 # get base directory
 #WD00="/home/hal9000/MS_amphibia_eDNA/"
 WD00="/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/MS_suppm_amphibia_eDNA/"
+WD00="/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark/"
 #WD00="/Users/steenknudsen/Documents/Documents/MS_DNA_og_Liv_citizen_science/"
 #WD00=$(pwd)
 #get dir with the present bash code inside
@@ -165,6 +166,7 @@ do
 #	LC_ALL=C sed '/multiplex/d' | \ # delete lines with multiplex occuring
 	LC_ALL=C sed -E 's/R.*dsp.*tte/Roedspaette/g' | \
 	LC_ALL=C sed -E 's/r.*dsp.*tte/Roedspaette/g' | \
+	LC_ALL=C sed -E 's/Europ.*isk.*al/EuropaeiskAal/g' | \
 	LC_ALL=C sed -E 's/Europ.*isk.*l/EuropaeiskAal/g' | \
 	LC_ALL=C sed -E 's/KinesiskUldh.*ndskrabbe/KinesiskUldhaandskrabbe/g' | \
 	LC_ALL=C sed -E 's/Stillehavs.*sters/Stillehavsoesters/g' | \
@@ -173,10 +175,14 @@ do
 	LC_ALL=C sed -E 's/Latterfr.*_eDN/Latterfroe_eDN/g' | \
 	LC_ALL=C sed -E 's/Latterfr.*_Pos/Latterfroe_Pos/g' | \
 	LC_ALL=C sed -E 's/Latterfr.*_Neg/Latterfroe_Neg/g' | \
+	LC_ALL=C sed -E 's/SibiriskSt.*r/SibiriskStoer/g' | \
+	LC_ALL=C sed -E 's/SeaWalnut/AmerikanskRibbegoble/g' | \
+	LC_ALL=C sed -E 's/AtlanticCod/Torsk/g' | \
 
 	LC_ALL=C sed -E 's/BudsnudetFroe/ButsnudetFroe/g' | \
 	LC_ALL=C sed -E 's/Spidssnudetfroe/SpidssnudetFroe/g' | \
 	LC_ALL=C sed -E 's/Solvkarusse/Soelvkarusse/g' | \
+	LC_ALL=C sed -E 's/PacificOyster/Stillehavsoesters/g' | \
 	LC_ALL=C sed -E 's/S.*lvkarusse/Soelvkarusse/g' | \
 	LC_ALL=C sed -E 's/AmerikanskRibbegople/AmerikanskRibbegoble/g' | \
 	LC_ALL=C sed -E 's/AtlantiskSild/Sild/g' | \
@@ -186,6 +192,11 @@ do
 	LC_ALL=C sed -E 's/L.*vfr.*_/Loevfroe_/g' | \
 
 	LC_ALL=C sed -E 's/Klokkefr.*_/Klokkefroe_/g' | \
+	LC_ALL=C sed -E 's/EuropeanFlounder/Skrubbe/g' | \
+
+	LC_ALL=C sed -E 's/RedKingCrab/Kamjatkakrabbe/g' | \
+	LC_ALL=C sed -E 's/Herring/Sild/g' | \
+	
 
 	LC_ALL=C sed -E 's/brasen/Brasen/g' | \
 	LC_ALL=C sed -E 's/bredVandkalv/BredVandkalv/g' | \
@@ -220,6 +231,15 @@ do
 
 done
 
+for FILE in 20210917_KU2021005_DL2019079*
+do
+	#echo "$FILE"
+	NF=$(echo "$FILE" | awk 'BEGIN { FS = "_" } ; {print $1"_"$3}')
+	cat "$FILE" > "$NF"
+	rm "$FILE"
+done
+
+
 
 #Manipulate double DL files
 for FILE in *_DL*_DL*.csv
@@ -233,9 +253,12 @@ done
 #they contain data from MONIS3-5 species -  not relevant for Amphibians
 rm 20180412_DL2017082_GlHellerupGym* 
 rm 20180419_DL2017068_VUCAarhus*
+#rm 20170510_DL2017006*
 
 rm 20190114_Standardkurve_koersel1*
 rm 20190115_Standardkurve_koersel*
+
+rm 20190319_DL2018170*
 
 # remove the 20190319_DL2018170_EgedalGym* file as it has this line
 # ' ---	Unknown	0.1	27.82	20190319	DL2018170	EgedalGym'
@@ -261,6 +284,8 @@ do
 	echo ""
 done
 #'s/D1;---;Unknown;0.1000;27.82;/D1;NA;--;Unknown;0.1000;27.82;/g'
+
+#20170510_DL2017006
 
 #remove this file as it is difficult to align with all the other files
 # it might be possible to include if a substitution scheme can be developed

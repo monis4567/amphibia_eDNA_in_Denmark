@@ -337,6 +337,17 @@ i<- i+1
 }
 df_g03bs <- bind_rows(lst_tx_gobs, .id = "spc_no")
 df_g01obs <- df_g03bs
+
+# set_nelat= 59.5
+# set_nelng= 17
+# set_swlat= 53
+# set_swlng= 7
+#limit data frame
+# df_g01obs <- df_g01obs[(df_g01obs$dec_lon >= (set_swlng-2)),]
+# df_g01obs <- df_g01obs[(df_g01obs$dec_lon <= (set_nelng+2)),]
+# df_g01obs <- df_g01obs[(df_g01obs$dec_lat <= (set_nelat+2)),]
+# df_g01obs <- df_g01obs[(df_g01obs$dec_lat >= (set_swlat-2)),]
+
 #lst_tx_gobs
 # df_g01obs %>%
 #   ggplot(aes(x = observed_on_date)) +
@@ -476,7 +487,9 @@ df_g01obs$dec_lon <- as.numeric(df_loc$X2) # longitude - east- west position
 df_g01obs$taxon.name <- gsub("Lissotriton vulgaris vulgaris","Lissotriton vulgaris",df_g01obs$taxon.name)
 df_g01obs$taxon.name <- gsub("Bufotes viridis","Bufo viridis",df_g01obs$taxon.name)
 df_g01obs$taxon.name <- gsub("Pelophylax kurtmuelleri","Pelophylax ridibundus",df_g01obs$taxon.name)
+df_iNDL02$taxon.name <- gsub("Pelophylax kl.","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
 df_g01obs$taxon.name <- gsub("Pelophylax esculentus","Pelophylax kl. esculenta",df_g01obs$taxon.name)
+#change species names
 
 #also split column with tax names
 df_spc <- data.frame(do.call('rbind', strsplit(as.character(df_g01obs$taxon.name),' ',fixed=TRUE)))
@@ -489,6 +502,10 @@ df_g01obs$tax.species <- df_spc$X2 #add back species
 jitlvl <- 0.017
 
 
+df_g01obs <- df_g01obs[(df_g01obs$dec_lon >= (set_swlng-2)),]
+df_g01obs <- df_g01obs[(df_g01obs$dec_lon <= (set_nelng+2)),]
+df_g01obs <- df_g01obs[(df_g01obs$dec_lat <= (set_nelat+2)),]
+df_g01obs <- df_g01obs[(df_g01obs$dec_lat >= (set_swlat-2)),]
 
 #copy the data frame
 df_g02obs <- df_g01obs
@@ -533,6 +550,7 @@ mxla <- set_nelat
 mxlo <- set_nelng
 mila <- set_swlat
 milo <- set_swlng
+
 
 #______________________<________________________________________________________
 p03 <- 
