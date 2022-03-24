@@ -1,0 +1,13 @@
+Well;WellName;WellType;;ThresholddRn;CtdRn
+E5;18_Stillehavsoesters_PosK;NPC;0.1000;36.89;
+F5;18_Stillehavsoesters_NegK;NTC;0.1000;NoCt;
+G5;18_Stillehavsoesters_eDNA;Unknown;0.1000;NoCt;
+H5;18_Stillehavsoesters_eDNA;Unknown;0.1000;NoCt;
+E7;21_Sandmusling_PosK;NPC;0.1000;38.34;
+F7;21_Sandmusling_NegK;NTC;0.1000;NoCt;
+G7;21_Sandmusling_eDNA;Unknown;0.1000;NoCt;
+H7;21_Sandmusling_eDNA;Unknown;0.1000;NoCt;
+E9;24_NordamerikanskMudderkrabbe_PosK;NPC;0.1000;NoCt;
+F9;24_NordamerikanskMudderkrabbe_NegK;NTC;0.1000;NoCt;
+G9;24_NordamerikanskMudderkrabbe_eDNA;Unknown;0.1000;NoCt;
+H9;24_NordamerikanskMudderkrabbe_eDNA;Unknown;0.1000;NoCt;
