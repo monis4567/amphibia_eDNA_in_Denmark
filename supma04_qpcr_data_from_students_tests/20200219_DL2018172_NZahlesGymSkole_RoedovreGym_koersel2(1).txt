@@ -1,21 +1,21 @@
 Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
-A1	25_Aborre_PosK	NPC	0.1000	No Ct	
+A1	25_Aborre_PosK	NPC	0.1000	37.66	
 B1	25_Aborre_NegK	NTC	0.1000	No Ct	
-C1	25_Aborre_eDNA	Unknown	0.1000	No Ct	
-D1	25_Aborre_eDNA	Unknown	0.1000	No Ct	
-A2	26_Torsk_PosK	NPC	0.1000	35.02	
-B2	26_Torsk_NegK	NTC	0.1000	29.06	
+C1	25_Aborre_eDNA	Unknown	0.1000	38.84	
+D1	25_Aborre_eDNA	Unknown	0.1000	39.44	
+A2	26_Torsk_PosK	NPC	0.1000	No Ct	
+B2	26_Torsk_NegK	NTC	0.1000	No Ct	
 C2	26_Torsk_eDNA	Unknown	0.1000	No Ct	
-D2	26_Torsk_eDNA	Unknown	0.1000	35.19	
-A3	27_AlmindeligMakrel_PosK	NPC	0.1000	25.91	
+D2	26_Torsk_eDNA	Unknown	0.1000	No Ct	
+A3	27_AlmindeligMakrel_PosK	NPC	0.1000	25.44	
 B3	27_AlmindeligMakrel_NegK	NTC	0.1000	No Ct	
 C3	27_AlmindeligMakrel_eDNA	Unknown	0.1000	No Ct	
-D3	27_AlmindeligMakrel_eDNA	Unknown	0.1000	No Ct	
-A4	28_Pukkellaks_PosK	NPC	0.1000	33.52	
+D3	27_AlmindeligMakrel_eDNA	Unknown	0.1000	40.58	
+A4	28_Pukkellaks_PosK	NPC	0.1000	No Ct	
 B4	28_Pukkellaks_NegK	NTC	0.1000	No Ct	
 C4	28_Pukkellaks_eDNA	Unknown	0.1000	No Ct	
 D4	28_Pukkellaks_eDNA	Unknown	0.1000	No Ct	
-A5	29_Stillehavsoesters_PosK	NPC	0.1000	36.01	
+A5	29_Stillehavsoesters_PosK	NPC	0.1000	34.58	
 B5	29_Stillehavsoesters_NegK	NTC	0.1000	No Ct	
 C5	29_Stillehavsoesters_eDNA	Unknown	0.1000	No Ct	
 D5	29_Stillehavsoesters_eDNA	Unknown	0.1000	No Ct	
@@ -23,19 +23,19 @@ A6	30_NordamerikanskMudderkrabbe_PosK	NPC	0.1000	No Ct
 B6	30_NordamerikanskMudderkrabbe_NegK	NTC	0.1000	No Ct	
 C6	30_NordamerikanskMudderkrabbe_eDNA	Unknown	0.1000	No Ct	
 D6	30_NordamerikanskMudderkrabbe_eDNA	Unknown	0.1000	No Ct	
-A7	31_AmerikanskHummer_PosK	NPC	0.1000	34.38	
-B7	31_AmerikanskHummer_NegK	NTC	0.1000	40.86	
+A7	31_AmerikanskHummer_PosK	NPC	0.1000	35.79	
+B7	31_AmerikanskHummer_NegK	NTC	0.1000	No Ct	
 C7	31_AmerikanskHummer_eDNA	Unknown	0.1000	No Ct	
-D7	31_AmerikanskHummer_eDNA	Unknown	0.1000	39.52	
+D7	31_AmerikanskHummer_eDNA	Unknown	0.1000	No Ct	
 A8	32_Kamjatkakrabbe_PosK	NPC	0.1000	No Ct	
 B8	32_Kamjatkakrabbe_NegK	NTC	0.1000	No Ct	
 C8	32_Kamjatkakrabbe_eDNA	Unknown	0.1000	No Ct	
 D8	32_Kamjatkakrabbe_eDNA	Unknown	0.1000	No Ct	
-A9	33_KinesiskUldhaandskrabbe_PosK	NPC	0.1000	No Ct	
+A9	33_KinesiskUldhaandskrabbe_PosK	NPC	0.1000	30.59	
 B9	33_KinesiskUldhaandskrabbe_NegK	NTC	0.1000	No Ct	
 C9	33_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
 D9	33_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
-A10	34_SortmundetKutling_PosK	NPC	0.1000	No Ct	
+A10	34_SortmundetKutling_PosK	NPC	0.1000	25.49	
 B10	34_SortmundetKutling_NegK	NTC	0.1000	No Ct	
 C10	34_SortmundetKutling_eDNA	Unknown	0.1000	No Ct	
 D10	34_SortmundetKutling_eDNA	Unknown	0.1000	No Ct	
