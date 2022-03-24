@@ -1,0 +1,97 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	01_Skrubbe_PosK	NPC	0.1000	24.93	
+B1	01_Skrubbe_NegK	NTC	0.1000	No Ct	
+C1	01_Skrubbe_eDNA	Unknown	0.1000	No Ct	
+D1	01_Skrubbe_eDNA	Unknown	0.1000	No Ct	
+A2	02_Skrubbe_PosK	NPC	0.1000	27.27	
+B2	02_Skrubbe_NegK	NTC	0.1000	No Ct	
+C2	02_Skrubbe_eDNA	Unknown	0.1000	37.54	
+D2	02_Skrubbe_eDNA	Unknown	0.1000	No Ct	
+A3	03_Torsk_PosK	NPC	0.1000	28.77	
+B3	03_Torsk_NegK	NTC	0.1000	No Ct	
+C3	03_Torsk_eDNA	Unknown	0.1000	No Ct	
+D3	03_Torsk_eDNA	Unknown	0.1000	No Ct	
+A4	04_Torsk_PosK	NPC	0.1000	29.49	
+B4	04_Torsk_NegK	NTC	0.1000	No Ct	
+C4	04_Torsk_eDNA	Unknown	0.1000	No Ct	
+D4	04_Torsk_eDNA	Unknown	0.1000	No Ct	
+A5	05_Sandmusling_PosK	NPC	0.1000	32.73	
+B5	05_Sandmusling_NegK	NTC	0.1000	No Ct	
+C5	05_Sandmusling_eDNA	Unknown	0.1000	31.53	
+D5	05_Sandmusling_eDNA	Unknown	0.1000	31.57	
+A6	06_Sandmusling_PosK	NPC	0.1000	29.49	
+B6	06_Sandmusling_NegK	NTC	0.1000	No Ct	
+C6	06_Sandmusling_eDNA	Unknown	0.1000	31.73	
+D6	06_Sandmusling_eDNA	Unknown	0.1000	32.81	
+A7	07_AmerikanskRibbegople_PosK	NPC	0.1000	33.77	
+B7	07_AmerikanskRibbegople_NegK	NTC	0.1000	No Ct	
+C7	07_AmerikanskRibbegople_eDNA	Unknown	0.1000	28.86	
+D7	07_AmerikanskRibbegople_eDNA	Unknown	0.1000	28.42	
+A8	08_AmerikanskRibbegople_PosK	NPC	0.1000	No Ct	
+B8	08_AmerikanskRibbegople_NegK	NTC	0.1000	No Ct	
+C8	08_AmerikanskRibbegople_eDNA	Unknown	0.1000	30.40	
+D8	08_AmerikanskRibbegople_eDNA	Unknown	0.1000	29.70	
+A9	09_AmerikanskHummer_PosK	NPC	0.1000	31.75	
+B9	09_AmerikanskHummer_NegK	NTC	0.1000	No Ct	
+C9	09_AmerikanskHummer_eDNA	Unknown	0.1000	No Ct	
+D9	09_AmerikanskHummer_eDNA	Unknown	0.1000	No Ct	
+A10	10_AmerikanskHummer_PosK	NPC	0.1000	No Ct	
+B10	10_AmerikanskHummer_NegK	NTC	0.1000	No Ct	
+C10	10_AmerikanskHummer_eDNA	Unknown	0.1000	No Ct	
+D10	10_AmerikanskHummer_eDNA	Unknown	0.1000	No Ct	
+A11	11_Kamjatkakrabbe_PosK	NPC	0.1000	No Ct	
+B11	11_Kamjatkakrabbe_NegK	NTC	0.1000	No Ct	
+C11	11_Kamjatkakrabbe_eDNA	Unknown	0.1000	No Ct	
+D11	11_Kamjatkakrabbe_eDNA	Unknown	0.1000	No Ct	
+D12	12_Kamjatkakrabbe_PosK	NPC	0.1000	34.13	
+C12	12_Kamjatkakrabbe_NegK	NTC	0.1000	34.86	
+A12	12_Kamjatkakrabbe_eDNA	Unknown	0.1000	39.19	
+B12	12_Kamjatkakrabbe_eDNA	Unknown	0.1000	30.29	
+H1	13_KinesiskUldhaandskrabbe_PosK	NPC	0.1000	37.45	
+G1	13_KinesiskUldhaandskrabbe_NegK	NTC	0.1000	No Ct	
+E1	13_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+F1	13_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+H2	14_KinesiskUldhaandskrabbe_PosK	NPC	0.1000	33.00	
+G2	14_KinesiskUldhaandskrabbe_NegK	NTC	0.1000	No Ct	
+E2	14_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+F2	14_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+H3	15_NordamerikanskMudderkrabbe_PosK	NPC	0.1000	33.72	
+G3	15_NordamerikanskMudderkrabbe_NegK	NTC	0.1000	No Ct	
+E3	15_NordamerikanskMudderkrabbe_eDNA	Unknown	0.1000	No Ct	
+F3	15_NordamerikanskMudderkrabbe_eDNA	Unknown	0.1000	No Ct	
+H4	16_NordamerikanskMudderkrabbe_PosK	NPC	0.1000	No Ct	
+G4	16_NordamerikanskMudderkrabbe_NegK	NTC	0.1000	No Ct	
+E4	16_NordamerikanskMudderkrabbe_eDNA	Unknown	0.1000	No Ct	
+F4	16_NordamerikanskMudderkrabbe_eDNA	Unknown	0.1000	No Ct	
+H5	17_Pukkellaks_PosK	NPC	0.1000	31.07	
+G5	17_Pukkellaks_NegK	NTC	0.1000	No Ct	
+E5	17_Pukkellaks_eDNA	Unknown	0.1000	No Ct	
+F5	17_Pukkellaks_eDNA	Unknown	0.1000	No Ct	
+H6	18_Pukkellaks_PosK	NPC	0.1000	No Ct	
+G6	18_Pukkellaks_NegK	NTC	0.1000	No Ct	
+E6	18_Pukkellaks_eDNA	Unknown	0.1000	No Ct	
+F6	18_Pukkellaks_eDNA	Unknown	0.1000	No Ct	
+H7	19_BlaafinnetTun_PosK	NPC	0.1000	37.82	
+G7	19_BlaafinnetTun_NegK	NTC	0.1000	No Ct	
+E7	19_BlaafinnetTun_eDNA	Unknown	0.1000	39.85	
+F7	19_BlaafinnetTun_eDNA	Unknown	0.1000	39.54	
+H8	20_BlaafinnetTun_PosK	NPC	0.1000	24.50	
+G8	20_BlaafinnetTun_NegK	NTC	0.1000	No Ct	
+E8	20_BlaafinnetTun_eDNA	Unknown	0.1000	No Ct	
+F8	20_BlaafinnetTun_eDNA	Unknown	0.1000	40.96	
+H9	21_Stillehavsoesters_PosK	NPC	0.1000	29.68	
+G9	21_Stillehavsoesters_NegK	NTC	0.1000	No Ct	
+E9	21_Stillehavsoesters_eDNA	Unknown	0.1000	No Ct	
+F9	21_Stillehavsoesters_eDNA	Unknown	0.1000	No Ct	
+H10	22_Stillehavsoesters_PosK	NPC	0.1000	33.34	
+G10	22_Stillehavsoesters_NegK	NTC	0.1000	No Ct	
+E10	22_Stillehavsoesters_eDNA	Unknown	0.1000	No Ct	
+F10	22_Stillehavsoesters_eDNA	Unknown	0.1000	No Ct	
+H11	23_SortmundetKutling_PosK	NPC	0.1000	24.27	
+G11	23_SortmundetKutling_NegK	NTC	0.1000	No Ct	
+E11	23_SortmundetKutling_eDNA	Unknown	0.1000	No Ct	
+F11	23_SortmundetKutling_eDNA	Unknown	0.1000	No Ct	
+H12	24_SortmundetKutling_PosK	NPC	0.1000	26.01	
+G12	24_SortmundetKutling_NegK	NTC	0.1000	No Ct	
+E12	24_SortmundetKutling_eDNA	Unknown	0.1000	No Ct	
+F12	24_SortmundetKutling_eDNA	Unknown	0.1000	No Ct	
