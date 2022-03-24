@@ -1,0 +1,97 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	01_Aborre_PosK	NPC	0.1000	31.21	
+B1	01_Aborre_NegK	NTC	0.1000	No Ct	
+C1	01_Aborre_eDNA	Unknown	0.1000	38.48	
+D1	01_Aborre_eDNA	Unknown	0.1000	38.83	
+A2	02_Aborre_PosK	NPC	0.1000	33.86	
+B2	02_Aborre_NegK	NTC	0.1000	No Ct	
+C2	02_Aborre_eDNA	Unknown	0.1000	38.81	
+D2	02_Aborre_eDNA	Unknown	0.1000	39.44	
+A3	03_Skalle_PosK	NPC	0.1000	33.47	
+B3	03_Skalle_NegK	NTC	0.1000	No Ct	
+C3	03_Skalle_eDNA	Unknown	0.1000	31.34	
+D3	03_Skalle_eDNA	Unknown	0.1000	31.61	
+A4	04_Skalle_PosK	NPC	0.1000	28.03	
+B4	04_Skalle_NegK	NTC	0.1000	No Ct	
+C4	04_Skalle_eDNA	Unknown	0.1000	31.38	
+D4	04_Skalle_eDNA	Unknown	0.1000	31.41	
+A5	05_StorVandsalamander_PosK	NPC	0.1000	28.34	
+B5	05_StorVandsalamander_NegK	NTC	0.1000	No Ct	
+C5	05_StorVandsalamander_eDNA	Unknown	0.1000	No Ct	
+D5	05_StorVandsalamander_eDNA	Unknown	0.1000	No Ct	
+A6	06_StorVandsalamander_PosK	NPC	0.1000	28.39	
+B6	06_StorVandsalamander_NegK	NTC	0.1000	No Ct	
+C6	06_StorVandsalamander_eDNA	Unknown	0.1000	No Ct	
+D6	06_StorVandsalamander_eDNA	Unknown	0.1000	No Ct	
+A7	07_LilleVandsalamander_PosK	NPC	0.1000	38.89	
+B7	07_LilleVandsalamander_NegK	NTC	0.1000	No Ct	
+C7	07_LilleVandsalamander_eDNA	Unknown	0.1000	39.86	
+D7	07_LilleVandsalamander_eDNA	Unknown	0.1000	No Ct	
+A8	08_LilleVandsalamander_PosK	NPC	0.1000	29.84	
+B8	08_LilleVandsalamander_NegK	NTC	0.1000	40.49	
+C8	08_LilleVandsalamander_eDNA	Unknown	0.1000	No Ct	
+D8	08_LilleVandsalamander_eDNA	Unknown	0.1000	No Ct	
+A9	09_EuropaeiskSumpskildpadde_PosK	NPC	0.1000	36.38	
+B9	09_EuropaeiskSumpskildpadde_NegK	NTC	0.1000	No Ct	
+C9	09_EuropaeiskSumpskildpadde_eDNA	Unknown	0.1000	No Ct	
+D9	09_EuropaeiskSumpskildpadde_eDNA	Unknown	0.1000	No Ct	
+A10	10_EuropaeiskSumpskildpadde_PosK	NPC	0.1000	29.70	
+B10	10_EuropaeiskSumpskildpadde_NegK	NTC	0.1000	No Ct	
+C10	10_EuropaeiskSumpskildpadde_eDNA	Unknown	0.1000	No Ct	
+D10	10_EuropaeiskSumpskildpadde_eDNA	Unknown	0.1000	No Ct	
+A11	11_Flodkrebs_PosK	NPC	0.1000	29.83	
+B11	11_Flodkrebs_NegK	NTC	0.1000	No Ct	
+C11	11_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+D11	11_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+A12	12_Flodkrebs_PosK	NPC	0.1000	29.40	
+B12	12_Flodkrebs_NegK	NTC	0.1000	No Ct	
+C12	12_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+D12	12_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+H1	13_Signalkrebs_PosK	NPC	0.1000	30.70	
+G1	13_Signalkrebs_NegK	NTC	0.1000	No Ct	
+E1	13_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+F1	13_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+H2	14_Signalkrebs_PosK	NPC	0.1000	29.19	
+G2	14_Signalkrebs_NegK	NTC	0.1000	No Ct	
+E2	14_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+F2	14_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+H3	15_GaliziskSumpkrebs_PosK	NPC	0.1000	31.57	
+G3	15_GaliziskSumpkrebs_NegK	NTC	0.1000	No Ct	
+E3	15_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+F3	15_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+H4	16_GaliziskSumpkrebs_PosK	NPC	0.1000	30.33	
+G4	16_GaliziskSumpkrebs_NegK	NTC	0.1000	No Ct	
+E4	16_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+F4	16_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+H5	17_Karpe_PosK	NPC	0.1000	24.18	
+G5	17_Karpe_NegK	NTC	0.1000	No Ct	
+E5	17_Karpe_eDNA	Unknown	0.1000	43.76	
+F5	17_Karpe_eDNA	Unknown	0.1000	No Ct	
+H6	18_Karpe_PosK	NPC	0.1000	24.10	
+G6	18_Karpe_NegK	NTC	0.1000	39.83	
+E6	18_Karpe_eDNA	Unknown	0.1000	No Ct	
+F6	18_Karpe_eDNA	Unknown	0.1000	No Ct	
+H7	19_Karpe_PosK	NPC	0.1000	24.26	
+G7	19_Karpe_NegK	NTC	0.1000	No Ct	
+E7	19_Karpe_eDNA	Unknown	0.1000	No Ct	
+F7	19_Karpe_eDNA	Unknown	0.1000	No Ct	
+H8	20_Karpe_PosK	NPC	0.1000	24.22	
+G8	20_Karpe_NegK	NTC	0.1000	No Ct	
+E8	20_Karpe_eDNA	Unknown	0.1000	No Ct	
+F8	20_Karpe_eDNA	Unknown	0.1000	No Ct	
+H9	21_EuropaeiskAal_PosK	NPC	0.1000	No Ct	
+G9	21_EuropaeiskAal_NegK	NTC	0.1000	No Ct	
+E9	21_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+F9	21_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+H10	22_EuropaeiskAal_PosK	NPC	0.1000	No Ct	
+G10	22_EuropaeiskAal_NegK	NTC	0.1000	No Ct	
+E10	22_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+F10	22_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+H11	23_EuropaeiskAal_PosK	NPC	0.1000	25.22	
+G11	23_EuropaeiskAal_NegK	NTC	0.1000	No Ct	
+E11	23_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+F11	23_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+H12	24_EuropaeiskAal_PosK	NPC	0.1000	25.33	
+G12	24_EuropaeiskAal_NegK	NTC	0.1000	No Ct	
+E12	24_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+F12	24_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
