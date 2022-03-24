@@ -1,0 +1,17 @@
+Well;WellName;WellType;;ThresholddRn;CtdRn
+A1;25_Pukkellaks_PosK;NPC;0.1000;27.78;
+B1;25_Pukkellaks_NegK;NTC;0.1000;NoCt;
+C1;25_Pukkellaks_eDNA;Unknown;0.1000;NoCt;
+D1;25_Pukkellaks_eDNA;Unknown;0.1000;NoCt;
+A2;26_AmerikanskHummer_PosK;NPC;0.1000;29.43;
+B2;26_AmerikanskHummer_NegK;NTC;0.1000;NoCt;
+C2;26_AmerikanskHummer_eDNA;Unknown;0.1000;NoCt;
+D2;26_AmerikanskHummer_eDNA;Unknown;0.1000;NoCt;
+A3;27_Kamjatkakrabbe_PosK;NPC;0.1000;29.13;
+B3;27_Kamjatkakrabbe_NegK;NTC;0.1000;NoCt;
+C3;27_Kamjatkakrabbe_eDNA;Unknown;0.1000;NoCt;
+D3;27_Kamjatkakrabbe_eDNA;Unknown;0.1000;NoCt;
+A4;28_KinesiskUldhaandskrabbe_PosK;NPC;0.1000;28.47;
+B4;28_KinesiskUldhaandskrabbe_NegK;NTC;0.1000;NoCt;
+C4;28_KinesiskUldhaandskrabbe_eDNA;Unknown;0.1000;NoCt;
+D4;28_KinesiskUldhaandskrabbe_eDNA;Unknown;0.1000;NoCt;
