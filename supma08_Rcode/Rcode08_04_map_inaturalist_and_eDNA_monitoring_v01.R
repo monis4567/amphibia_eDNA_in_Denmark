@@ -21,6 +21,10 @@ getwd()
 wd09 <- "/supma09_plots_from_R_analysis"
 #paste together path
 wd00_wd09 <- paste(wd00,wd09,sep="")
+
+wd_ext02 <- "input_files_01_downloaded_from_web"
+wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
+wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
 #https://www.r-bloggers.com/2014/03/accessing-inaturalist-data/
 #https://www.eleanor-jackson.com/post/searching-for-spring/
     options(stringsAsFactors = F)
@@ -45,7 +49,7 @@ infl1 = "out08_03b_inaturalist_records_amphibia_Denmark.csv"
 #infl1 = "out08_03b_inaturalist_records_amphibia_Denmark_1200lines.csv"
 infl2 = "out08_01b_DL_records_amphibia_Denmark.csv"
 # paste together path and input flie
-pthinf01 <- paste0(wd00_wd09,"/",infl1)
+pthinf01 <- paste0(wd_ext01_02,"/",infl1)
 pthinf02 <- paste0(wd00_wd09,"/",infl2)
 # read in csv files prepared from two previous 
 df_iN01 <- read.table(pthinf01,sep=";",stringsAsFactors = F, header=F, fill=T)
@@ -330,7 +334,7 @@ p05t <- p05t + theme(strip.background = element_blank())
 #p05t
 
 # define whether figures are to be saved or not
-bSaveFigures <- T
+bSaveFigures <- F
 #substitute in file name
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
@@ -352,10 +356,8 @@ if(bSaveFigures==T){
 #_______________________________________________________________________________
 # start plot with iNaturalist and eDNA monitoring in plots side by side
 #_______________________________________________________________________________
-
 #copy data frame
 df_iNDL04 <- df_iNDL03
-
 #assign taxon name plus monitoring category
 df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
 # re order columns
@@ -370,9 +372,6 @@ df_iNDL04 <- df_iNDL04
 # df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Ichthyosaurus alpestris","iNat_Res",3,"iNat_Res","F)   Ichthyosaurus alpestris","F","Ichthyosaurus alpestris.iNat_Res" )
 # df_iNDL04 <- rbind(df_iNDL04,nrta)
-
-
-
 misstxnm <- c("Bombina bombina.iNat_Res",
               "Bufo calamita.iNat_Res",
               "Ichthyosaurus alpestris.iNat_Res")
@@ -460,7 +459,7 @@ p05t <- p05t + theme(strip.background = element_blank())
 #p05t
 
 # define whether figures are to be saved or not
-bSaveFigures <- T
+bSaveFigures <- F
 #substitute in file name
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
@@ -561,7 +560,7 @@ p05t <- p05 +
 #p05t
 
 # define whether figures are to be saved or not
-bSaveFigures <- T
+bSaveFigures <- F
 #substitute in file name
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to

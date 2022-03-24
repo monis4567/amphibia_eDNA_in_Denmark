@@ -3,16 +3,9 @@
 
 #____________________________________________________________________________#
 # R-code provided for the project:
-# 
-#
 # “Monitoring distribution of frogs and salamanders using 
 #  environmental DNA and citizen science”
-#
 # Authors: Steen Wilhelm Knudsen, 
-#
-
-
-
 rpath = "."
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
 #wd00 <- rpath
@@ -23,13 +16,18 @@ wd09 <- "/supma09_plots_from_R_analysis"
 #paste together path
 wd00_wd09 <- paste(wd00,wd09,sep="")
 
+wd_ext02 <- "input_files_01_downloaded_from_web"
+wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
+wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
+#Delete any previous versions of the output directory
+unlink(wd_ext01_02, recursive=TRUE)
+#Create a directory to put resulting output files in
+dir.create(wd_ext01_02)
 
 #https://www.r-bloggers.com/2014/03/accessing-inaturalist-data/
 
 #https://www.eleanor-jackson.com/post/searching-for-spring/
-
 options(stringsAsFactors = F)
-
 #get spocc package
 if(!require(spocc)){
   install.packages("spocc")
@@ -40,7 +38,6 @@ if(!require(spocc)){
 if(!require(rinat)){
   install.packages("rinat")
 }  
- 
 # iNaturalist is an online community where people can record and share observations. 
 #We have been using iNaturalist in our group for student projects. It’s proved a great 
 #way to teach how to collect and analyse data while the lab and field have
@@ -57,14 +54,11 @@ if(!require(rinat)){
 # 
 # I’m going to use functions from {httr} to query the API, and {jsonlite} 
 #to deal with the ugly json file that the API will return 
-
 library("tidyverse")
 library("httr")
 library("jsonlite")
-
 library("dplyr") 
 # to avoid : https://stackoverflow.com/questions/30248583/error-could-not-find-function
-
 #The API will only give us 200 records at a time, this is the max number of records per
 #page, so I’m writing a function that I can use to repeatedly hit the server.
 # The call I’m using includes filters to pull out the data I want to look at. 
@@ -75,17 +69,13 @@ library("dplyr")
 #Observation Fields can be created and added by anyone, whereas 
 #Annotations are maintained by iNaturalist administrators.
 #This means I will probably pull fewer observations, but they might be more reliable.
-
-
 # see this website : https://www.inaturalist.org/pages/search+urls
 #Usually you’d use the page parameter to cycle through each page and retreive 
 #all the results, however, if there are more than 10k results, iNaturalist 
 #recommends you sort by ascending ID order_by=id&order=asc, and use the 
 #id_above parameter set to the ID of the record in the last batch.
-
 get_obs <- function(max_id){
-  
-  # an API call that has "id_above =" at the end
+# an API call that has "id_above =" at the end
   call <- paste("https://api.inaturalist.org/v1/observations?",
                 #"iconic_taxa=Plantae&",
                 "iconic_taxa=Gadus&",
@@ -100,17 +90,14 @@ get_obs <- function(max_id){
                 "order=asc&",
                 "id_above=",
                 max_id, sep="")
-  
   # making the API call, parsing it to JSON and then flatten
   GET(url = call) %>%
     content(as = "text", encoding = "UTF-8") %>%
     fromJSON(flatten = TRUE) -> get_call_json
-  
   # this grabs just the data we want and makes it a data frame
   as.data.frame(get_call_json$results)
   
 }
-
 # try with a comb jelly  URL for Europe
 get_obs <- function(max_id){
   
@@ -130,15 +117,13 @@ get_obs <- function(max_id){
                 "order_by=id&",
                 "order=asc&",
                 "id_above=",max_id, sep="")
-  
-  # making the API call, parsing it to JSON and then flatten
+    # making the API call, parsing it to JSON and then flatten
   GET(url = call) %>%
     content(as = "text", encoding = "UTF-8") %>%
     fromJSON(flatten = TRUE) -> get_call_json
   
   # this grabs just the data we want and makes it a data frame
   as.data.frame(get_call_json$results)
-  
 }
 #try with a http for a request of kyphosus on a specific bounding box with 
 #boundaries for latitude and longitude
@@ -215,7 +200,7 @@ txnmbs <- c(
 #Bufo bufo
 #https://www.inaturalist.org/observations?nelat=63.2000710201517&nelng=89.02951503499085&place_id=any&subview=map&swlat=32.038085308818296&swlng=-38.58767246500915&taxon_id=326296
 #Bufo viridis
-#https://www.inaturalist.org/observations?nelat=63.2000710201517&nelng=89.02951503499085&place_id=any&subview=map&swlat=32.038085308818296&swlng=-38.58767246500915&taxon_id=135064
+#https://www.inaturalist.org/observations?nelat=63+++++.2000710201517&nelng=89.02951503499085&place_id=any&subview=map&swlat=32.038085308818296&swlng=-38.58767246500915&taxon_id=135064
 # Rana dalmatina
 #https://www.inaturalist.org/observations?nelat=63.2000710201517&nelng=89.02951503499085&place_id=any&subview=map&swlat=32.038085308818296&swlng=-38.58767246500915&taxon_id=25669
 # Rana arvalis
@@ -655,7 +640,7 @@ if(bSaveFigures==T){
 #define output flie name
 outfl1 = "out08_03b_inaturalist_records_amphibia_Denmark.csv"
 # paste together path and input flie
-pthoutf01 <- paste0(wd00_wd09,"/",outfl1)
+pthoutf01 <- paste0(wd_ext01_02,"/",outfl1)
 #make sure all columns are characters
 #https://stackoverflow.com/questions/24829027/unimplemented-type-list-when-trying-to-write-table
 df_g03obs <- apply(df_g02obs,2,as.character)
