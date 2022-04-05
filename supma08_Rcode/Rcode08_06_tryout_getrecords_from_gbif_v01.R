@@ -92,7 +92,7 @@ for (e in lsp)
   genus <- sub('\\_.*', '',e)
   species <- sub('.*\\_', '',e)
   #get gbif records
-  g <- gbif(genus, species, geo=TRUE, ext = exta, end=30000)
+  g <- gbif(genus, species, geo=TRUE, ext = exta, end=3000)
   if (!"datasetName" %in% colnames(g))
      {g$datasetName <- NA}
   g <- g[kee]

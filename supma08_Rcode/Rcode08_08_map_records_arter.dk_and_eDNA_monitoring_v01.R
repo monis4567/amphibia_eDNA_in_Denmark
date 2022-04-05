@@ -223,11 +223,8 @@ library("rnaturalearthhires")
 # # Get a map, use a high number for 'scale' for a coarse resolution
 # use a low number for scale for a high resolution
 # if the map 'world' does not exist, then download it
-if (!exists("world"))
-{  
-  world <- ne_countries(scale = 10, returnclass = "sf")
-}
 
+world <- ne_countries(scale = 10, returnclass = "sf")
 
 # get number of unique species names in column
 nspo <- length(unique(df_iNDL02$taxon.name))

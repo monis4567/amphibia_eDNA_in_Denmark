@@ -209,11 +209,8 @@ library("rnaturalearthhires")
 # # Get a map, use a high number for 'scale' for a coarse resolution
 # use a low number for scale for a high resolution
 # if the map 'world' does not exist, then download it
-if (!exists("world"))
-{  
-world <- ne_countries(scale = 10, returnclass = "sf")
-}
 
+world <- ne_countries(scale = 10, returnclass = "sf")
 #_______________________________________________________________________________
 # start plot with iNaturalist and eDNA monitoring in the same plot
 #_______________________________________________________________________________
@@ -240,6 +237,9 @@ cbbPalette <- c("#000000", "#E69F00", "#56B4E9",
                 "#CC79A7")
 
 cl <- cbbPalette
+
+#make a color ramp funciton
+colfunc <- grDevices::colorRampPalette(cbbPalette)
 # #variables for legend - not used
 cl <- c(colfunc(length(unique(df_iNDL02$taxon.name))))
 # Information on colour blind colours
@@ -509,7 +509,7 @@ df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
 # re order columns
 df_iNDL04 <- df_iNDL04
 
-df_iNDL04$txnmc
+#df_iNDL04$txnmc
 #colnames(df_iNDL04)
 #unique(df_iNDL04$pchs)
 # for rows for species not present in the iNaturalist search
@@ -536,7 +536,7 @@ nspo2 <- length(unique(df_iNDL04$txnmc2))
 cl2 <- colorRampPalette(c(scbpl))( nspo2) 
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
-length(cl06)
+#length(cl06)
 #make plot
 # p05 <- ggplot(data = world) +
 #   geom_sf(color = "black", fill = "azure3") +

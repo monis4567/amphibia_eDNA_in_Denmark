@@ -1026,7 +1026,9 @@ for (spec.lat in latspecnm){
     #plot map #http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/
     library(rworldmap)
     newmap <- getMap(resolution = "high")
-    plot(newmap, xlim = c(8, 16), ylim = c(54, 58), asp = 1)
+    plot(newmap, xlim = c(8, 16), ylim = c(54, 58), 
+    #      # use 'asp' to change the aspect ratio: https://statisticsglobe.com/asp-r-plot
+         asp=1.6)
     
     #plot land on map
     map('worldHires', add=TRUE, fill=TRUE, 
@@ -1444,7 +1446,7 @@ amph_smpl03_df <- amph_smpl02_df
 # with 8 replicates of the "DL2018009" and 4 replicates of the standard 
 # dilution series, as attempted in qPCR0903 and qPCR0904 
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
-amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019065" & amph_smpl03_df$abbr.nm=="Buf.cal"),]
+#amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019065" & amph_smpl03_df$abbr.nm=="Buf.cal"),]
 
 #subset to exclude all NonApproved controls
 amph_smpl04_df <- amph_smpl03_df[amph_smpl03_df$nonapprovK==0, ]
@@ -1566,8 +1568,8 @@ scbpl <- safe_colorblind_palette
 scales::show_col(safe_colorblind_palette)
 # see how to make a number of colurs along color range
 # https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
-#cl2 <- colorRampPalette(c(scbpl))( nspo) 
-cl2 <- scbpl
+cl2 <- colorRampPalette(c(scbpl))( nspo) 
+#cl2 <- scbpl
 cl <- cl2
 
 #plot with abbreviated species names
@@ -2177,8 +2179,9 @@ scales::show_col(safe_colorblind_palette)
 # see how to make a number of colurs along color range
 # https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r
 cl2 <- colorRampPalette(c(scbpl))( nspo) 
-cl2 <- scbpl
-cl05 <- cl
+#cl2 <- scbpl
+cl05 <- cl2
+length(cl2)
 #_______________________________________________________________________________
 # Make plot on map with facet wrap - start
 #_______________________________________________________________________________
@@ -2397,7 +2400,8 @@ df_as06 <- df_as05
 # check for positive detections of Bufo calamita
 #df_as05.Buf.cal[!df_as05.Buf.cal$repl1or2==0,]
 # exclude records of Bufo calamita from  sample DL2019065
-df_as06 <- subset(df_as05, !DLsamplno=="DL2019065" | abbr.nm!="Buf.cal")
+#df_as06 <- subset(df_as05, !DLsamplno=="DL2019065" | abbr.nm!="Buf.cal")
+
 #define an output file
 outfl1 = "out08_01b_DL_records_amphibia_Denmark.csv"
 # paste together path and input flie
@@ -2505,4 +2509,15 @@ if(bSaveFigures==T){
   ggsave(p04t,file=figname06A,width=210,height=297,
          units="mm",dpi=600)
 }
+#subset to only comprise "Rana dalmatina"
+df_Rd01 <- amph_smpl05_df[amph_smpl05_df$latspc=="Rana dalmatina",]
+#subset to only comprise northern records above 56.1 N
+df_Rd01 <- df_Rd01[df_Rd01$dec_lat>56.1,]
+# get DL sample number for the records of Rana dalmatina that are off
+DLsmpl_Rd_off <- unique(df_Rd01$DLsamplno)
 
+# DL2018009 -  check for Bufo calamita - already tested in 16 replicates. Not possible to replicate
+# DL2019065 -  check for  Bufo calamita
+# DL2019005 -  check for Pelobates fuscus - fetched
+# DL2019017 -  check for Rana dalmatina
+# DL2019050 -  check for Rana dalmatina

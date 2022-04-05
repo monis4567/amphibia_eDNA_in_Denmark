@@ -20,9 +20,9 @@ wd_ext02 <- "input_files_01_downloaded_from_web"
 wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
 wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
 #Delete any previous versions of the output directory
-unlink(wd_ext01_02, recursive=TRUE)
+#unlink(wd_ext01_02, recursive=TRUE)
 #Create a directory to put resulting output files in
-dir.create(wd_ext01_02)
+#dir.create(wd_ext01_02)
 
 #https://www.r-bloggers.com/2014/03/accessing-inaturalist-data/
 
