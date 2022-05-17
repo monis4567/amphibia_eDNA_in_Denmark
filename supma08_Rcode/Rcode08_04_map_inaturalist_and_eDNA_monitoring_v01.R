@@ -54,6 +54,7 @@ pthinf02 <- paste0(wd00_wd09,"/",infl2)
 # read in csv files prepared from two previous 
 df_iN01 <- read.table(pthinf01,sep=";",stringsAsFactors = F, header=F, fill=T)
 df_DL01 <- read.csv(pthinf02,sep=",",stringsAsFactors = F, header=T)
+no.unq_DLsmpls <- length(unique(df_DL01$DLsamplno))
 #change columns names
 colnames(df_iN01) <- df_iN01[1,]
 #remove first row

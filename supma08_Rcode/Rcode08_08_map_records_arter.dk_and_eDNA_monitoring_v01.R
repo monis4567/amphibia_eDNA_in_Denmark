@@ -304,7 +304,7 @@ nspo2 <- length(unique(df_iNDL04$eval04))
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$lettx),]
 # make a datra frame to sort monitoring categories
 # 3,4,2,1
-df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval04), c(2,3,1,4)))
+df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval04), c(1,3,2,4)))
 # change column names
 colnames(df_mcat) <- c("eval04","ordcat")
 # match back to main data frame
@@ -321,6 +321,10 @@ ordcat1 <- unique(df_iNDL04$ordcat)
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
 # 
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
+
+# substitute in Danish records from 'arter.dk', so it changes from
+# 'fund' to 'rec' for the Danish records
+#df_iNDL04$eval04 <- gsub("fund_","rec_",df_iNDL04$eval04)
 #make plot
 p05 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3", lwd=0.4) +

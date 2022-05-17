@@ -1210,6 +1210,13 @@ amph_smpl03_df <- amph_smpl02_df
 # with 8 replicates of the "DL2018009" and 4 replicates of the standard 
 # dilution series, as attempted in qPCR0903 and qPCR0904 
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019065" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019005" & amph_smpl03_df$latspc=="Pelobates_fuscus"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019017" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019050" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
+
 #amph_smpl02_df %>% dplyr::group_by(eval01)
 
 #use dplyr to group by name, and count per evaluation
@@ -1446,6 +1453,13 @@ amph_smpl03_df <- amph_smpl02_df
 # with 8 replicates of the "DL2018009" and 4 replicates of the standard 
 # dilution series, as attempted in qPCR0903 and qPCR0904 
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2018009" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019065" & amph_smpl03_df$latspc=="Bufo_calamita"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019005" & amph_smpl03_df$latspc=="Pelobates_fuscus"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019017" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
+amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019050" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
+
 #amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019065" & amph_smpl03_df$abbr.nm=="Buf.cal"),]
 
 #subset to exclude all NonApproved controls
@@ -2365,7 +2379,15 @@ df_as03 <- amph_smpl02_df
 # as this detection could not be reproduced in a second setup
 # with 8 replicates of the "DL2018009" and 4 replicates of the standard 
 # dilution series, as attempted in qPCR0903 and qPCR0904 
+# Remove all the positive detections that did not make any sens and which
+# I could not reproduce when I tested out 8 technical replicates together
+# with standard curves
 df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2018009" & df_as03$latspc=="Bufo_calamita"),]
+df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019065" & df_as03$latspc=="Bufo_calamita"),]
+df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019005" & df_as03$latspc=="Pelobates_fuscus"),]
+df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019017" & df_as03$latspc=="Rana_dalmatina"),]
+df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019050" & df_as03$latspc=="Rana_dalmatina"),]
+
 #subset to exclude all NonApproved controls
 df_as04 <- df_as03[df_as03$nonapprovK==0, ]
 #copy the data frame
@@ -2516,8 +2538,8 @@ df_Rd01 <- df_Rd01[df_Rd01$dec_lat>56.1,]
 # get DL sample number for the records of Rana dalmatina that are off
 DLsmpl_Rd_off <- unique(df_Rd01$DLsamplno)
 
-# DL2018009 -  check for Bufo calamita - already tested in 16 replicates. Not possible to replicate
-# DL2019065 -  check for  Bufo calamita
+# DL2018009 -  check for Bufo calamita - already tested in 16 replicates. Not possible to reproduce
+# DL2019065 -  check for  Bufo calamita - check in qPCR0938  -not possible to find again
 # DL2019005 -  check for Pelobates fuscus - fetched
-# DL2019017 -  check for Rana dalmatina
+# DL2019017 -  check for Rana dalmatina - check in qPCR0938 -not possible to find again
 # DL2019050 -  check for Rana dalmatina
