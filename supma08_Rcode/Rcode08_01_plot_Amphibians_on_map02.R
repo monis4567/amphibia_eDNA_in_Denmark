@@ -34,25 +34,6 @@
 #
 #
 # must be located in the same working directory
-#
-#This code is able to run in:
-# #
-# platform       x86_64-pc-linux-gnu         
-# arch           x86_64                      
-# os             linux-gnu                   
-# system         x86_64, linux-gnu           
-# status                                     
-# major          4                           
-# minor          0.2                         
-# year           2020                        
-# month          06                          
-# day            22                          
-# svn rev        78730                       
-# language       R                           
-# version.string R version 4.0.2 (2020-06-22)
-# nickname       Taking Off Again
-
-#____________________________________________________________________________#
 
 #____________________________________________________________________________#
 # in browser connect to:
@@ -373,7 +354,7 @@
 
 #____________________________________________________________________________#
 #remove everything in the working environment, without a warning!!
-#rm(list=ls())
+rm(list=ls())
 
 ## install the package 'scales', which will allow you to make points on your plot more transparent
 #install.packages("scales")
@@ -531,6 +512,9 @@ ha <- as.data.frame(read_excel(wd00_wd03_inpf03))
 colnames(ha) <- ha[1,]
 hb <- (ha[-1,])
 #head(hb,4)
+# # rename column with area
+ hb$Areal_m2 <- hb$`Areal (m^2)`
+ 
 DL_No <- hb$PrøveID
 LatGr <- floor(as.numeric(hb$Latitude))
 LatMin <- floor((as.numeric(hb$Latitude)-LatGr)*60)
@@ -544,7 +528,7 @@ dec_lat <- as.numeric(as.character(hb$Latitude))
 dec_lon <- as.numeric(as.character(hb$Longitude))
 
 DNAconcinwtsmpl_ng_uL <- as.numeric(hb$"DNA ng/µl")
-
+Areal_m2 <- as.numeric(hb$Areal_m2)
 elute01 <- sub(' µl EB','',hb$Elueringsvolumen)
 elute02 <- sub(' x ','*',elute01)
 elute03 <- sub(' µl H2O','',elute02)
@@ -570,6 +554,7 @@ lokal12 <- gsub('-','',lokal11)
 lokal13 <- gsub('////','',lokal12)
 Area_wt_coll_loc <- lokal13
 
+
 #Make a dataframe from the selected vectors
 hc <- t(data.frame(
   DL_No,
@@ -589,7 +574,8 @@ hc <- t(data.frame(
   tot_vol_elute,
   sampling_date,
   Filt.vol,
-  Area_wt_coll_loc
+  Area_wt_coll_loc,
+  Areal_m2
 ))
 hc <- as.data.frame(t(hc))
 #head(hc,5)
@@ -616,19 +602,30 @@ write.csv(hc4, file ="DL_unmatched_harbours.csv", row.names=FALSE)
 #change working directory
 setwd(wd00)
 #define harbours
-unmtch.harb03 <- c("Solbjerg/Stilling_Soe", "Boelle_Soe", "Pouls_Smeds_Mose", "Vejby_Overdrev_vandhul", "Krobaek_Tappernoeje", "Gentofte_Soe", "Tubaek_Praestoe", "Lille_privat_soe_oelsted", "Gymnasiesoeen_Alleroed", "Alleroed_Soe", "Hyrdehoej_Skov_soe", "Boendernes_Egehoved", "Horsekaer_Tisvilde_Hegn", "Beiths_Vaenge_Hjoerring", "Kong_oeres_Grav", "Arresoe_Kanal", "Kildevaeld_naer_Mordal_Mariager_Fjord", "Utterslev_Mose", "Farum_Overdrev_soe", "Soroe", "Skensved_aa", "Moellesoe_Gjorslev", "Lillesoe_Skanderborg", "?", "Alleroed_gymnasie_regnvandsbassin", "Alleroed/lilleroed", "aasenKoege", "Avnsoe", "Birkeroed", "Birkeroed_Soe", "Boellemosen_Skodsborg", "Boellesoe_Saerloese_overdrev_Hvalsoe", "Borupgaard_Gymnasium_lille_soe", "Boestrup_aa", "Bringe_Mose_Flyvestation_Vaerloese", "Bruunshaab_Moelleaa", "Dam_v_Helsingoer_Elforsyning", "Davinde_soe", "Digterparken_Ballerup", "Dumpedalen_vandhul", "Dumpedalen_Birkeroed", "Dybesoe", "Egebaeksvang", "Egebaeksvang_Soe", "Ejby_Mose", "Ellesoeen", "Ellesoeen_GlKoege_Gaard", "Emdrup_Soe", "Frederiksberg_Have", "Frederiksvaerk", "Fuglesangssoe", "Furesoe", "Furesoe_Soe", "Furesoeen", "Furesoeen_Frederiksdal_Fribad", "Gentofte_Soe_ved_badebro", "Grevinge_Soe", "Grindsted_aadal", "Grindsted_Engsoe", "Grindsted_Langsoe", "Gurre_Soe_Nordsjaelland", "Hakkemosen", "Hampen_soe", "Harrestrup_aa_v_Vigerslev_Allé", "Himmelev_Baek_opdaemmet_soe_ved_RUC", "Himmelev_Grusgrav", "Holtug_Kridtbrud", "Hornbaek_soe", "Hvidehusvej_Alleroed", "Ishoej_Soepark", "Karlstrup_Kalkgrav_Solroed", "Kastrupfortet", "Kobberdammen_Hellebaek", "Koege_aa", "Koege_aas", "Kragemosen_Samsoe_nord", "Kvaerkeby_Mose_karpesoe", "Kvaerkeby_Mose_store_soe", "Lille_Fuglsoe_oesteraadal", "Lustrup_faellesjord_1", "Lustrup_faellesjord_2", "Lustrup_faellesjord_3", "Lyngby_soe", "Maglesoe", "Maaloev", "Marielundssoeen_Kolding", "Mlm_Hakkemosemosevej_og_Lervangen", "Moelholm_Soe_Norholmsvej_55_Aalborg", "Moelleaaen_ved_Frederiksdal_Friluftsbad", "Moelleaaen_v_Sorgenfri_Slotspark", "Moellesoe_v_Virket", "Odense_aa", "Odense_aa_ved_Stryget_Munke_Mose", "oestermosen_Femoe", "oestre_Anlaeg", "oetoftegaardsvej_Taastrup", "Poul_Smedes_mose_Svendborg", "Poul_Smeds_Mose", "Raadvad_Dam_Moelleaaen", "Regnvandsbassinet", "Roededam_Gribskov", "Roermose_Alleroed", "Roermosen_Karlslunde", "Sankt_Joergens_Soe", "Schweizersoeen", "Sejlsbjerg_Mose", "Sjaelsoe_ved_skovhytten", "Skanderborg_Soe_Vestermoelle", "Smoerhullet_Kulsbjerg_Stensved", "Sneglehoej_soe", "Soe_i_Faelledparken", "Soe_vGreve_Gym", "Soe_vStenhus_gym_Busstoppested", "Soeen_v_Ringstedvej", "Soendervang_Vandhul", "Soeren_Hvidehusvej_Alleroed", "Soroe_Soe_baadbro_ved_Soero_akedemi", "Store_Gribsoe", "Store_Hoej_Soeen", "Store_Kattinge_soe_naer_fugletaarn_ved_Boserupvej", "Store_vejle_aa", "Svanemoellen_Havn", "Tingvej_Soe", "Tranemosen", "Tranemosen_Frederiksvaerk", "Troldsoe", "Uglebrovej_6_Helsinge", "Valleroed_Gadekaer", "Valleroed_gadekaer", "Vandet_Soe", "Vandhul_v_Baunebovej_1_Haarlev", "Vandhul_v_Kikhanerende", "Vandhul_aasen_Koege", "Vejle_aa", "Vestre_Kirkegaardssoe_Valby", "Vordingborg_Voldgrav", "Zahrtmannsvej_Soe_Roenne_Bornholm", "Alleroed_Soepark", "Botanisk_have_dam", "Botanisk_have_Soe", "Bregninge_vandhul", "Nyhaandsbaek_ved_Busemarke_mose_og_soe", "Boesoere_strand_feriepark", "Hammersoeen_Bornholm", "Herthadalen", "Hoejsagersred_Boesoere", "Mikkels_foraeldres_havebassin_Klintholm_Moen", "Kongshoej_Moellesoe_Kongshoej_aa", "Lovns_soe", "Poelsekedlen/Borgesoeen", "Ringsoeen", "Brassoe", "Stauvrebjerg_Soe_Moen", "Soendergaards_Alle_Soe", "Groennelyng_Soeer_i_Nordskoven", "Tystrup_soe", "oerslev_Kloster_Soe", "aaremyre", "Uglebjerg_Langoe_Fyn", "Tvaersted_Soe", "Sofieholm_soe_Brorfelde", "Vandhul_ved_Observator_Gyldenkernes_Vej_Brorfelde", "Store_Hareskov", "Vesterled_Soe", "Boelling_Soe", "Salten_Langsoe", "Kalgaard_Soe", "oernsoe", "Soroe_Soe", "Kongskilde_Moellesoe/Skaelskoer_soe", "Tystrup_Soe", "Soetorup_Soe", "Ulse_Soe", "Ejlemade_Soe", "Sjaelsoe", "Lillesoevej_1", "Rude_Soe", "Furesoe_1", "Furesoe_2", "Bagsvaerd_Soe", "Lyngby_Soe", "Lillesoevej_2", "Paddesoeen_Maaloev_Naturpark", "Botanisk_Have_Soe", "Bastrup_soe", "Soender_soe", "Degnemosen", "Langedam", "Soendersoe_Maribosoeerne", "Skallemose_Soe_Maaloev", "Haraldsted_soe", "Kongeaa_Vamdrup", "Sumpomraade_v_Barup_soe_nordfalster", "Vandhul_ved_Taagensegaard__Lolland", "Gundsoemagle_soe", "Farum_soe", "Guldbjerg_Mose", "Buresoe", "Vandhul_Spang_Vade", "Myremosen_Nivaa", "Svingelsoeen_Nakskov", "Esrum_Soe", "Vejstrup_aa_Svendborg", "Vandhul_Helsinge", "Draenaa_Helsinge", "Tryggevaelde_aa", "Sandskredssoeen_Gribskov", "Tvorup_Hul", "Brede_aa", "Vaserne_oest", "Vaserne_vest", "Vaserne_rende", "Hejrede_Soe", "Frederiksborg_Slotssoe", "Fegen_soe_Sverige", "Anholt", "Langoe_Fyn", "Moellevej_Jyderup", "Halleby_aa_udloeb_i_Tissoe", "Hejresoeen_Amager_Faelled", "Nihoeje_soe_Sydamager_naturreservat", "Hoejbjerghus_Soeen", "Paradis_Soeen", "NA", "BM", "Militaersoe_Vordingborg_Kaserne", "Nuuk_fjord", "Arresoe_Kanal_Frederiksvaerk", "Sortedam_Soe_i_Hilleroed", "Soendersoe", "Peblingesoe_Soe_i_Koebenhavn_N", "Moellesoeen", "Praestbjerg_Soe_Fuglkaer_aa", "Karlstrup_Kalkgrav_Soe_i_Karlslunde", "Tissoe_Soe", "Frederiksvaerk_kanal/Arresoe_kanal", "Soe_ved_Rosborg_Gymnasium", "Vandhul_ved_Skovsgaard", "Vandhul_bag_tennisbanerne", "Sortedams_Soe_Soe_i_Koebenhavn_oe", "Brobaek_Mose", "Vandhul_i_Hoerret_skov", "Vandhul_ved_Klintholm", "Lundby_Dam", "Brobaek_Mose_Mose_i_Gentofte", "Nykoebing_Katedralskoles_Vandhul", "Kastrup_Fortet", "Borupgaard_Gymnasium_Soe", "Kulsbjerg_oevelsesplads", "Lustrup_Faellesjord", "Gurre_Soe_Soe_i_Tikoeb", "Pistolsoeen", "Kvaerkeby_Fuglereservat", "Gaekkaer_Bakke_vandhul", "Sejlbjerg_Mose", "oestre_Anlaeg_naturareal_/_Park", "Sundby_Soe", "Toggerup_Enghave_oevre_dam", "Toggerup_Enghave_Nedre_dam", "Kokkedal_moellesoe", "Sct_Joergens_soe", "Branddam", "Holmegaards_Mose_naturareal_/_Mose", "Boellemosen_Soe_i_Naerum", "Brede_dam_Hilleroed", "Herregaardsvej_vandhul", "Skuldelev_grusgrav", "Paradissoeerne_oest", "Ulvshale", "Roneklint_Stevs", "Skovfogedmosen_Brorfelde_Observatorium", "Trekroner_Soe_Soe_i_Roskilde", "Kloevergaard_Soe", "Hulsoe_Eskildstrup", "Store_Hoej_soe", "Ellemosen_Park_i_Charlottenlund", "Tronsoe_Soe_i_Grindsted", "Registerstien_Soe", "Kvottrup_Skov", "Kvottrup_skov", "Valby_parken_soe_v_Tudsemindevej", "Valby_Parken_soe_vTudsemindevej", "Regnvandsbassin", "Lille_soe_i_Store_Hareskov", "Soe_i_Hareskoven", "Utterslev_Mose_vest", "Utterslev_mose_vest", "Arresoe_Soe_i_Frederiksvaerk", "Dam_ved_Store_Taarn_Christiansoe", "Skanderborg_Soe_Soe_i_Skanderborg", "Koege_havn", "Porskaer_ved_Gudenaaen", "aarhus_Havn_oestmolen", "Helsingoer_havn", "Beddingen_Aalborg", "Koebenhavns_Havn", "Hirsthals_Havn", "Nordhavn_skudehavn", "Aarhus_Havn_bassin_3", "AQUAFerskvands_Akvariet_Silkeborg", "Lyngby_Soe_Soe_i_Kongens_Lyngby", "Moellekaer_Skov_i_Aabenraa", "Moesgaard_Museum_Museum_i_Hoejbjerg", "Blidsoe_Soe_i_Skanderborg", "Refsvindinge_by_i_oerbaek", "Danmark", "Sjoerup_by_i_Viborg", "aarhus_aa_aabyhoej", "EGSoeen", "EGsoeen", "Skanderborg_soe", "Remasoe", "Kolding_lystbaadhavn_syd", "Kolding_lystbaadehavn_syd", "Nordhavn_Koebenhavn", "Attup_havn", "Attrup_Havn_Lystbaadehavn_i_Brovst", "Gjoel_Havn", "Noerresundby_Havn", "Lemvig_Havn", "Struer_Havn", "Svendborg_Lystbaadehavn", "Aarhus_Havn", "Svendborg_Havn", "Soe_vTornby__Raevskaer_strand", "Grenaa_Industrihavn", "Grenaa_Lystbaadehavn", "Nibe_Havn", "Skudehavnen", "Aalborg_Havn_Krydstogtkajen", "Aabenraa_Lystbaadehavn", "Aabenraa_Industrihavn", "Aabenraa_Havn", "aarhus_havn_DOKK1_Bassin_1", "aarhus_havn_DOKK1__bassin_1", "Bryggen_Koebenhavn", "Marselisborg_havn_Aarhus", "Skive_havn", "Skive_Havn", "Islands_Brygge", "Dokk_1", "Kalundborg_Havn")
-unmtch.harb04 <- c("NA", "NA", "NA", "NA", "NA", "NE_Sjaelland", "NA", "NA", "NE_Sjaelland", "NE_Sjaelland", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NE_Sjaelland", "NA", "Koege", "NA", "Skanderborg", "NA", "NE_Sjaelland", "NE_Sjaelland", "Koege", "NA", "NE_Sjaelland", "NE_Sjaelland", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "NE_Sjaelland", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koege", "Koege", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Fyn", "Fyn", "NA", "NA", "Koebenhavn", "Fyn", "Fyn", "NA", "NA", "NA", "NE_Sjaelland", "NA", "Koebenhavn", "NA", "NA", "NA", "Skanderborg", "NA", "NA", "Koebenhavn", "Koege", "NA", "NA", "NA", "NE_Sjaelland", "Soroe", "NA", "NA", "NA", "Vejle", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koege", "Vejle", "Koebenhavn", "Vordingborg", "Bornholm", "NE_Sjaelland", "Koebenhavn", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "Moen", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "Greenland", "NE_Sjaelland", "Hilleroed", "NA", "Koebenhavn", "NA", "NA", "Koege", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NE_Sjaelland", "Koebenhavn", "NA", "NA", "NA", "Hilleroed", "NA", "NE_Sjaelland", "NA", "Moen", "NA", "Holbaek", "Roskilde", "Esbjerg", "Falster", "NA", "NE_Sjaelland", "NA", "NA", "Aarhus", "Aarhus", "Koebenhavn", "Koebenhavn", "NA", "NE_Sjaelland", "NE_Sjaelland", "Koebenhavn", "Koebenhavn", "NE_Sjaelland", "Bornholm", "Skanderborg", "Koege", "Vejle", "Aarhus", "Helsingoer", "Aalborg", "Koebenhavn", "Hirtshals", "Koebenhavn", "Aarhus", "Silkeborg", "NE_Sjaelland", "Aabenraa", "Aarhus", "Skanderborg", "Fyn", "NA", "Viborg", "Aarhus", "NA", "NA", "Skanderborg", "NA", "Kolding", "Kolding", "Koebenhavn", "Nibe", "Nibe", "Aalborg", "Aalborg", "Lemvig", "Struer", "Fyn", "Aarhus", "Fyn", "NA", "Grenaa", "Grenaa", "Aalborg", "NA", "Aalborg", "Aabenraa", "Aabenraa", "Aabenraa", "Aarhus", "Aarhus", "Koebenhavn", "Aarhus", "Skive", "Skive", "NE_Sjaelland", "NA", "NW_Sjaelland")
-
-unmtch.harb05 <- t(data.frame(
-  unmtch.harb03,
-  unmtch.harb04
-))
-unmtch.harb05 <- as.data.frame(t(unmtch.harb05))
+# unmtch.harb03 <- c("Solbjerg_Stilling_Soe", "Boelle_Soe", "Pouls_Smeds_Mose", "Vejby_Overdrev_vandhul", "Krobaek_Tappernoeje", "Gentofte_Soe", "Tubaek_Praestoe", "Lille_privat_soe_oelsted", "Gymnasiesoeen_Alleroed", "Alleroed_Soe", "Hyrdehoej_Skov_soe",
+#                    "Boendernes_Egehoved", "Horsekaer_Tisvilde_Hegn", "Beiths_Vaenge_Hjoerring", "Kong_oeres_Grav", "Arresoe_Kanal", "Kildevaeld_naer_Mordal_Mariager_Fjord", "Utterslev_Mose",
+#                    "Farum_Overdrev_soe", "Soroe", "Skensved_aa", "Moellesoe_Gjorslev", "Lillesoe_Skanderborg", "?", "Alleroed_gymnasie_regnvandsbassin",
+#                    "Alleroed_lilleroed", "aasenKoege", "Avnsoe", "Birkeroed", "Birkeroed_Soe", "Boellemosen_Skodsborg", 
+#                    "Boellesoe_Saerloese_overdrev_Hvalsoe", "Borupgaard_Gymnasium_lille_soe", "Boestrup_aa", "Bringe_Mose_Flyvestation_Vaerloese",
+#                    "Bruunshaab_Moelleaa", "Dam_v_Helsingoer_Elforsyning", "Davinde_soe", "Digterparken_Ballerup", "Dumpedalen_vandhul", "Dumpedalen_Birkeroed", "Dybesoe", "Egebaeksvang", "Egebaeksvang_Soe", "Ejby_Mose",
+#                    "Ellesoeen", "Ellesoeen_GlKoege_Gaard", "Emdrup_Soe", "Frederiksberg_Have", "Frederiksvaerk", "Fuglesangssoe", "Furesoe", "Furesoe_Soe", "Furesoeen", "Furesoeen_Frederiksdal_Fribad", "Gentofte_Soe_ved_badebro", "Grevinge_Soe", "Grindsted_aadal", "Grindsted_Engsoe", "Grindsted_Langsoe", "Gurre_Soe_Nordsjaelland", "Hakkemosen", "Hampen_soe", "Harrestrup_aa_v_Vigerslev_Allé", "Himmelev_Baek_opdaemmet_soe_ved_RUC", "Himmelev_Grusgrav", "Holtug_Kridtbrud", "Hornbaek_soe",
+#                    "Hvidehusvej_Alleroed", "Ishoej_Soepark", "Karlstrup_Kalkgrav_Solroed", "Kastrupfortet", "Kobberdammen_Hellebaek", "Koege_aa", "Koege_aas", "Kragemosen_Samsoe_nord", "Kvaerkeby_Mose_karpesoe", "Kvaerkeby_Mose_store_soe", "Lille_Fuglsoe_oesteraadal", "Lustrup_faellesjord_1", "Lustrup_faellesjord_2", "Lustrup_faellesjord_3", "Lyngby_soe", "Maglesoe", "Maaloev",
+#                    "Marielundssoeen_Kolding", "Mlm_Hakkemosemosevej_og_Lervangen", "Moelholm_Soe_Norholmsvej_55_Aalborg", "Moelleaaen_ved_Frederiksdal_Friluftsbad", "Moelleaaen_v_Sorgenfri_Slotspark", "Moellesoe_v_Virket", "Odense_aa", "Odense_aa_ved_Stryget_Munke_Mose", "oestermosen_Femoe", "oestre_Anlaeg", "oetoftegaardsvej_Taastrup", "Poul_Smedes_mose_Svendborg", "Poul_Smeds_Mose", "Raadvad_Dam_Moelleaaen", "Regnvandsbassinet", "Roededam_Gribskov",
+#                    "Roermose_Alleroed", "Roermosen_Karlslunde", "Sankt_Joergens_Soe", "Schweizersoeen", "Sejlsbjerg_Mose", "Sjaelsoe_ved_skovhytten", "Skanderborg_Soe_Vestermoelle", "Smoerhullet_Kulsbjerg_Stensved", "Sneglehoej_soe", "Soe_i_Faelledparken", "Soe_vGreve_Gym", "Soe_vStenhus_gym_Busstoppested", "Soeen_v_Ringstedvej", 
+#                    "Soendervang_Vandhul", "Soeren_Hvidehusvej_Alleroed", "Soroe_Soe_baadbro_ved_Soero_akedemi", "Store_Gribsoe", "Store_Hoej_Soeen", "Store_Kattinge_soe_naer_fugletaarn_ved_Boserupvej", "Store_vejle_aa", "Svanemoellen_Havn", "Tingvej_Soe", "Tranemosen", "Tranemosen_Frederiksvaerk", "Troldsoe", "Uglebrovej_6_Helsinge",
+#                    "Valleroed_Gadekaer", "Valleroed_gadekaer", "Vandet_Soe", "Vandhul_v_Baunebovej_1_Haarlev", "Vandhul_v_Kikhanerende", "Vandhul_aasen_Koege", "Vejle_aa", "Vestre_Kirkegaardssoe_Valby", "Vordingborg_Voldgrav", "Zahrtmannsvej_Soe_Roenne_Bornholm", "Alleroed_Soepark", "Botanisk_have_dam", "Botanisk_have_Soe", "Bregninge_vandhul", "Nyhaandsbaek_ved_Busemarke_mose_og_soe", "Boesoere_strand_feriepark", "Hammersoeen_Bornholm", "Herthadalen", "Hoejsagersred_Boesoere", "Mikkels_foraeldres_havebassin_Klintholm_Moen", "Kongshoej_Moellesoe_Kongshoej_aa", "Lovns_soe", "Poelsekedlen/Borgesoeen", "Ringsoeen", "Brassoe", "Stauvrebjerg_Soe_Moen", "Soendergaards_Alle_Soe", "Groennelyng_Soeer_i_Nordskoven", "Tystrup_soe", "oerslev_Kloster_Soe", "aaremyre", "Uglebjerg_Langoe_Fyn", "Tvaersted_Soe", "Sofieholm_soe_Brorfelde", "Vandhul_ved_Observator_Gyldenkernes_Vej_Brorfelde", "Store_Hareskov", "Vesterled_Soe", "Boelling_Soe", "Salten_Langsoe", "Kalgaard_Soe", "oernsoe", "Soroe_Soe", "Kongskilde_Moellesoe/Skaelskoer_soe", "Tystrup_Soe", "Soetorup_Soe", "Ulse_Soe", "Ejlemade_Soe", "Sjaelsoe", "Lillesoevej_1", "Rude_Soe", "Furesoe_1", "Furesoe_2", "Bagsvaerd_Soe", "Lyngby_Soe", "Lillesoevej_2", "Paddesoeen_Maaloev_Naturpark", "Botanisk_Have_Soe", "Bastrup_soe", "Soender_soe", "Degnemosen", "Langedam", "Soendersoe_Maribosoeerne", "Skallemose_Soe_Maaloev", "Haraldsted_soe", "Kongeaa_Vamdrup", "Sumpomraade_v_Barup_soe_nordfalster", "Vandhul_ved_Taagensegaard__Lolland", "Gundsoemagle_soe", "Farum_soe", "Guldbjerg_Mose", "Buresoe", "Vandhul_Spang_Vade", "Myremosen_Nivaa", "Svingelsoeen_Nakskov", "Esrum_Soe", "Vejstrup_aa_Svendborg", "Vandhul_Helsinge", "Draenaa_Helsinge", "Tryggevaelde_aa", "Sandskredssoeen_Gribskov", "Tvorup_Hul", "Brede_aa", "Vaserne_oest", "Vaserne_vest", "Vaserne_rende", "Hejrede_Soe", "Frederiksborg_Slotssoe", "Fegen_soe_Sverige", "Anholt", "Langoe_Fyn", "Moellevej_Jyderup", "Halleby_aa_udloeb_i_Tissoe", "Hejresoeen_Amager_Faelled", "Nihoeje_soe_Sydamager_naturreservat", "Hoejbjerghus_Soeen", "Paradis_Soeen", "NA", "BM", "Militaersoe_Vordingborg_Kaserne", "Nuuk_fjord", "Arresoe_Kanal_Frederiksvaerk", "Sortedam_Soe_i_Hilleroed", "Soendersoe", "Peblingesoe_Soe_i_Koebenhavn_N", "Moellesoeen", "Praestbjerg_Soe_Fuglkaer_aa", "Karlstrup_Kalkgrav_Soe_i_Karlslunde", "Tissoe_Soe", "Frederiksvaerk_kanal/Arresoe_kanal", "Soe_ved_Rosborg_Gymnasium", "Vandhul_ved_Skovsgaard", "Vandhul_bag_tennisbanerne", "Sortedams_Soe_Soe_i_Koebenhavn_oe", "Brobaek_Mose", "Vandhul_i_Hoerret_skov", "Vandhul_ved_Klintholm", "Lundby_Dam", "Brobaek_Mose_Mose_i_Gentofte", "Nykoebing_Katedralskoles_Vandhul", "Kastrup_Fortet", "Borupgaard_Gymnasium_Soe", "Kulsbjerg_oevelsesplads", "Lustrup_Faellesjord", "Gurre_Soe_Soe_i_Tikoeb", "Pistolsoeen", "Kvaerkeby_Fuglereservat", "Gaekkaer_Bakke_vandhul", "Sejlbjerg_Mose", "oestre_Anlaeg_naturareal_/_Park", "Sundby_Soe", "Toggerup_Enghave_oevre_dam", "Toggerup_Enghave_Nedre_dam", "Kokkedal_moellesoe", "Sct_Joergens_soe", "Branddam", "Holmegaards_Mose_naturareal_/_Mose", "Boellemosen_Soe_i_Naerum", "Brede_dam_Hilleroed", "Herregaardsvej_vandhul", "Skuldelev_grusgrav", "Paradissoeerne_oest", "Ulvshale", "Roneklint_Stevs", "Skovfogedmosen_Brorfelde_Observatorium", "Trekroner_Soe_Soe_i_Roskilde", "Kloevergaard_Soe", "Hulsoe_Eskildstrup", "Store_Hoej_soe", "Ellemosen_Park_i_Charlottenlund", "Tronsoe_Soe_i_Grindsted", "Registerstien_Soe", "Kvottrup_Skov", "Kvottrup_skov", "Valby_parken_soe_v_Tudsemindevej", "Valby_Parken_soe_vTudsemindevej", "Regnvandsbassin", "Lille_soe_i_Store_Hareskov", "Soe_i_Hareskoven", "Utterslev_Mose_vest", "Utterslev_mose_vest", "Arresoe_Soe_i_Frederiksvaerk", "Dam_ved_Store_Taarn_Christiansoe", "Skanderborg_Soe_Soe_i_Skanderborg", "Koege_havn", "Porskaer_ved_Gudenaaen", "aarhus_Havn_oestmolen", "Helsingoer_havn", "Beddingen_Aalborg", "Koebenhavns_Havn", "Hirsthals_Havn", "Nordhavn_skudehavn", "Aarhus_Havn_bassin_3", "AQUAFerskvands_Akvariet_Silkeborg", "Lyngby_Soe_Soe_i_Kongens_Lyngby", "Moellekaer_Skov_i_Aabenraa", "Moesgaard_Museum_Museum_i_Hoejbjerg", "Blidsoe_Soe_i_Skanderborg", "Refsvindinge_by_i_oerbaek", "Danmark", "Sjoerup_by_i_Viborg", "aarhus_aa_aabyhoej", "EGSoeen", "EGsoeen", "Skanderborg_soe", "Remasoe", "Kolding_lystbaadhavn_syd", "Kolding_lystbaadehavn_syd", "Nordhavn_Koebenhavn", "Attup_havn", "Attrup_Havn_Lystbaadehavn_i_Brovst", "Gjoel_Havn", "Noerresundby_Havn", "Lemvig_Havn", "Struer_Havn", "Svendborg_Lystbaadehavn", "Aarhus_Havn", "Svendborg_Havn", "Soe_vTornby__Raevskaer_strand", "Grenaa_Industrihavn", "Grenaa_Lystbaadehavn", "Nibe_Havn", "Skudehavnen", "Aalborg_Havn_Krydstogtkajen", "Aabenraa_Lystbaadehavn", "Aabenraa_Industrihavn", "Aabenraa_Havn", "aarhus_havn_DOKK1_Bassin_1", "aarhus_havn_DOKK1__bassin_1", "Bryggen_Koebenhavn", "Marselisborg_havn_Aarhus", "Skive_havn", "Skive_Havn", "Islands_Brygge", "Dokk_1", "Kalundborg_havn")
+# unmtch.harb04 <- c("NA", "NA", "NA", "NA", "NA", "NE_Sjaelland", "NA", "NA", "NE_Sjaelland", "NE_Sjaelland", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NE_Sjaelland", "NA", "Koege", "NA", "Skanderborg", "NA", "NE_Sjaelland", "NE_Sjaelland", "Koege", "NA", "NE_Sjaelland", "NE_Sjaelland", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "NE_Sjaelland", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koege", "Koege", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Fyn", "Fyn", "NA", "NA", "Koebenhavn", "Fyn", "Fyn", "NA", "NA", "NA", "NE_Sjaelland", "NA", "Koebenhavn", "NA", "NA", "NA", "Skanderborg", "NA", "NA", "Koebenhavn", "Koege", "NA", "NA", "NA", "NE_Sjaelland", "Soroe", "NA", "NA", "NA", "Vejle", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koege", "Vejle", "Koebenhavn", "Vordingborg", "Bornholm", "NE_Sjaelland", "Koebenhavn", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "Moen", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "Greenland", "NE_Sjaelland", "Hilleroed", "NA", "Koebenhavn", "NA", "NA", "Koege", "NA", "NA", "NA", "NA", "NA", "Koebenhavn", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NE_Sjaelland", "Koebenhavn", "NA", "NA", "NA", "Hilleroed", "NA", "NE_Sjaelland", "NA", "Moen", "NA", "Holbaek", "Roskilde", "Esbjerg", "Falster", "NA", "NE_Sjaelland", "NA", "NA", "Aarhus", "Aarhus", "Koebenhavn", "Koebenhavn", "NA", "NE_Sjaelland", "NE_Sjaelland", "Koebenhavn", "Koebenhavn", "NE_Sjaelland", "Bornholm", "Skanderborg", "Koege", "Vejle", "Aarhus", "Helsingoer", "Aalborg", "Koebenhavn", "Hirtshals", "Koebenhavn", "Aarhus", "Silkeborg", "NE_Sjaelland", "Aabenraa", "Aarhus", "Skanderborg", "Fyn", "NA", "Viborg", "Aarhus", "NA", "NA", "Skanderborg", "NA", "Kolding", "Kolding", "Koebenhavn", "Nibe", "Nibe", "Aalborg", "Aalborg", "Lemvig", "Struer", "Fyn", "Aarhus", "Fyn", "NA", "Grenaa", "Grenaa", "Aalborg", "NA", "Aalborg", "Aabenraa", "Aabenraa", "Aabenraa", "Aarhus", "Aarhus", "Koebenhavn", "Aarhus", "Skive", "Skive", "NE_Sjaelland", "NA", "NW_Sjaelland")
+# 
+# unmtch.harb05 <- t(data.frame(
+#   unmtch.harb03,
+#   unmtch.harb04
+# ))
+# unmtch.harb05 <- as.data.frame(t(unmtch.harb05))
 
 
 #see the matched locations
 hc3 <- hc[ which(!is.na(hc$Harbour2)), ]
-unique(hc3[,"Area_wt_coll_loc"])
+#unique(hc3[,"Area_wt_coll_loc"])
 
 #make another dataframe to use for unmatched regions
 Harbour3 <- c("Aarhus_havn", "Gedser_havn", "Koebenhavn_havn", "Koege_havn", "Helsingoer_havn", "Aalborg_havn", "Frederikshavn_havn", "Hirtshals_havn", "Nyborg", "NykoebingF", "Bornholm", "Gentofte", "Roskilde", "Middelfart", "Hobro", "Bogense", "Aalborg", "Aarhus", "Billund", "Ballerup", "Espergaerde", "Hellerup", "Hilleroed", "Hundested", "Koebenhavn", "Frederiksvaerk", "Hvidesande", "Lyngby", "Koege", "Helsingoer", "Naestved", "Djursland", "Herning", "Soeen_bag_Folkeparken", "Vadehavet", "Esbjerg", "Aeroe_S_for_Fyn", "Frederikssund", "Vejle", "Vordingborg", "Ringsted", "NV_Sjaelland", "Svendborg", "Assens", "Slagelse", "Birkeroed", "Hirtshals")
@@ -645,7 +642,7 @@ hc[,"reg01"] <- NA
 
 #match regions back to dataframe
 hc$reg01 <- unmtch.harb06$rg.wtsmplloc[match(hc$Harbour2,unmtch.harb06$Harbour3)]
-
+#View(hc)
 #change decimal degrees to numeric values
 d.lon <- as.numeric(as.character(hc$dec_lon))
 d.lat <- as.numeric(as.character(hc$dec_lat))
@@ -695,7 +692,7 @@ hc$reg01[   d.lon >= 10
 
 #see the unmatched locations
 hc5 <- hc[ which(is.na(hc$reg01)), ]
-unique(hc5[,"Area_wt_coll_loc"])
+#unique(hc5[,"Area_wt_coll_loc"])
 
 #make an extra data frame for regions
 dec_lat_region <- c(55.25778245, 54.774563, 55.320289, 55.628791, 57.597536, 56.0233946, 55.758139, 55.904997)
@@ -733,7 +730,7 @@ dkspecs_to_latspecs$abbr.nm <- ls.abbr.spcnm
 # set working directory
 #setwd ("/Users/steenknudsen/Documents/Documents/Post doc KU/DNA_og_liv_post_doc_KU_2017_2018/out01a_merged_csv_files_from_mxpro/")
 setwd (wd00_wd07)
-getwd()
+#getwd()
 
 #read csv with all merged mxpro results
 #outfile02_merged_csv_files_from_mxpro.csv
@@ -771,7 +768,7 @@ setwd (wd00)
 wd00_wd09 <- paste(wd00,wd09, sep="")
 # set working directory
 setwd (wd00_wd09)
-getwd()
+#getwd()
 
 # filter for unique combination of columns from a dataframe
 spl1 <- unique(smpls[,c('specs','replno','qpcrrundate','DLsamplno','koerselno','spec.repl.rund.DLno.koerselno')])
@@ -783,8 +780,8 @@ spl1_gymnnm <- unique(smpls[,c('qpcrrundate','DLsamplno','gymnasiumnm1')])
 spl2 <- spl1[ order(spl1$specs, spl1$qpcrrundate, spl1$replno, spl1$koerselno), ]
 
 #see the column names
-names(spl2)
-names(smpls)
+# names(spl2)
+# names(smpls)
 
 #make subsets of the smpls dataframe based on Welltype
 ed_smplsNPC <- subset(smpls, WellType == "NPC", select = c("spec.repl.rund.DLno.koerselno","CtdRn"))
@@ -841,7 +838,7 @@ spl3$latspc <- dkspecs_to_latspecs$Species_Latin[match(spl3$specs,dkspecs_to_lat
 spl3$abbr.nm <- dkspecs_to_latspecs$abbr.nm[match(spl3$specs,dkspecs_to_latspecs$Species_DK)]
 #match the harbour w the DL_sampl no 
 spl3$rg.wtsmplloc <- harbours$rg.wtsmplloc[match(spl3$DLsamplno,harbours$DL_No)]
-names(spl3)
+#names(spl3)
 #match the dec_lat and dec_lon w the DL_sampl no 
 spl3$dec_lat_region <- harbours$dec_lat_region[match(spl3$DLsamplno,harbours$DL_No)]
 spl3$dec_lon_region <- harbours$dec_lon_region[match(spl3$DLsamplno,harbours$DL_No)]
@@ -931,13 +928,13 @@ for (spec.lat in latspecnm){
   #subset based on variable values, subset by species name
   sbs.spl3 <- spl3[ which(spl3$latspc==spec.lat), ]
   #count using the plyr-package - see: https://www.miskatonic.org/2012/09/24/counting-and-aggregating-r/
-  sbs.tot_smpl <- count(sbs.spl3, c("DLsamplno","dec_lon", "dec_lat"))
+  sbs.tot_smpl <- plyr::count(sbs.spl3, c("DLsamplno","dec_lon", "dec_lat"))
   #subset based on variable values - see: https://stackoverflow.com/questions/4935479/how-to-combine-multiple-conditions-to-subset-a-data-frame-using-or
   # subset by when NTC is equal to NoCt and NPC is below ct.cut.off, and or NTC is equal to zero
   sbs.spl3.ntc_npc_approv <- sbs.spl3[ which(sbs.spl3$NTC.CtdRn=='NoCt' & sbs.spl3$NPC.CtdRn<=ct.cutoff
   ), ]
   #count using the plyr-package
-  sbs.approvK_smpl <- count(sbs.spl3.ntc_npc_approv, c("DLsamplno"))
+  sbs.approvK_smpl <- plyr::count(sbs.spl3.ntc_npc_approv, c("DLsamplno"))
   #subset based on variable values
   # subset among the NPC and NTC approved replicate sets
   #subset by when repl1 is below ct.cut.off and/or  when repl2 is below ct.cut.off
@@ -946,13 +943,13 @@ for (spec.lat in latspecnm){
                                                     & !sbs.spl3.ntc_npc_approv$unkn1.CtdRn==0
                                                     & !sbs.spl3.ntc_npc_approv$unkn2.CtdRn==0), ]
   #count using the plyr-package
-  sbs.1or2pos.smpl <- count(sbs.spl3.1or2pf, c("DLsamplno"))
+  sbs.1or2pos.smpl <- plyr::count(sbs.spl3.1or2pf, c("DLsamplno"))
   # subset among the NPC and NTC approved replicate sets with either 1 or 2 positive replicates
   #subset by when both repl1 is below ct.cut.off and when repl2 is below ct.cut.off
   sbs.spl3.2pf <- sbs.spl3.1or2pf[ which(sbs.spl3.1or2pf$unkn1.CtdRn<=ct.cutoff 
                                          & sbs.spl3.1or2pf$unkn2.CtdRn<=ct.cutoff), ]
   #count using the plyr-package
-  sbs.2pos.smpl <- count(sbs.spl3.2pf, c("DLsamplno"))
+  sbs.2pos.smpl <- plyr::count(sbs.spl3.2pf, c("DLsamplno"))
   #Rename the frequency column
   sbs.tot_smpl$totsmpl <- sbs.tot_smpl$freq
   
@@ -981,7 +978,8 @@ for (spec.lat in latspecnm){
   #see this website for more about jitter on scatter plot
   #https://thomasleeper.com/Rcourse/Tutorials/jitter.html
   sbs.tot_smpl$dec_lat.j <- jitter(sbs.tot_smpl$dec_lat, 40.4)
-  
+  # replace NAs with zero
+  sbs.tot_smpl$approvK[is.na(sbs.tot_smpl$approvK)] <- 0
   #add column that sums up dis-approved control replicates
   sbs.tot_smpl$nonapprovK <- sbs.tot_smpl$totsmpl-sbs.tot_smpl$approvK
   #if subtraction returns a negative, then zero
@@ -1015,9 +1013,12 @@ for (spec.lat in latspecnm){
     # set to save plot as pdf file with dimensions 8.26 to 2.9
     # 8.26 inches and 2.9 inhes equals 210 mm and 74.25 mm
     # and 210 mm and 74.25 mm matches 1/4 of a A4 page
-    pdf(c(paste("plot_pies_edna_gymnasieundervisning.singl_pts_",spec.lat,"_wct",ct.cutoff,".pdf",  sep = ""))
-        ,width=(1.6*8.2677),height=(1.6*2.9232*2))
-    
+    # pdf(c(paste("plot_pies_edna_gymnasieundervisning.singl_pts_",spec.lat,"_wct",ct.cutoff,".pdf",  sep = ""))
+    #     ,width=(1.6*8.2677),height=(1.6*2.9232*2))
+    # 
+    png(c(paste("plot_pies_edna_gymnasieundervisning.singl_pts_",spec.lat,"_wct",ct.cutoff,".png",
+                sep = "")))
+        #,width=(1.6*8.2677),height=(1.6*2.9232*2))
     
     #factors to multiply radius on each pie
     fct1 <- 1.000 
@@ -1062,7 +1063,8 @@ for (spec.lat in latspecnm){
            inset = 0.05)
     #XXXXX______ end plot w pie charts on map ________XXXX
     
-    # end the pdf-file to save as 
+    # end the pdf-file to save as
+    # end the png-file to save as
     dev.off()
     # end if not empty
   }
@@ -1074,7 +1076,7 @@ for (spec.lat in latspecnm){
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 #count using the plyr-package - see: https://www.miskatonic.org/2012/09/24/counting-and-aggregating-r/
-tot_smpl <- count(spl3, c("DLsamplno","dec_lon", "dec_lat","abbr.nm", "specs","latspc" ))#,
+tot_smpl <- plyr::count(spl3, c("DLsamplno","dec_lon", "dec_lat","abbr.nm", "specs","latspc" ))#,
                           # "NPC.CtdRn", "NTC.CtdRn", "unkn1.CtdRn",
                           # "unkn2.CtdRn", "unkn3.CtdRn", "unkn4.CtdRn"))
 
@@ -1084,7 +1086,7 @@ spl3.ntc_npc_approv <- spl3[ which(spl3$NTC.CtdRn=='NoCt' &
                         spl3$NPC.CtdRn<=ct.cutoff
 ), ]
 #count using the plyr-package
-approvK_smpl <- count(spl3.ntc_npc_approv, c("DLsamplno","abbr.nm"))
+approvK_smpl <- plyr::count(spl3.ntc_npc_approv, c("DLsamplno","abbr.nm"))
 
 
 #subset based on variable values
@@ -1097,13 +1099,13 @@ spl3.1or2pf <- spl3.ntc_npc_approv[ which(spl3.ntc_npc_approv$unkn1.CtdRn<=ct.cu
 
 
 #count using the plyr-package
-r1orr2pos.smpl <- count(spl3.1or2pf, c("DLsamplno", "abbr.nm"))
+r1orr2pos.smpl <- plyr::count(spl3.1or2pf, c("DLsamplno", "abbr.nm"))
 # subset among the NPC and NTC approved replicate sets with either 1 or 2 positive replicates
 #subset by when both repl1 is below ct.cut.off and when repl2 is below ct.cut.off
 spl3.2pf <- spl3.1or2pf[ which(spl3.1or2pf$unkn1.CtdRn<=ct.cutoff 
                                & spl3.1or2pf$unkn2.CtdRn<=ct.cutoff), ]
 #count using the plyr-package
-r2pos.smpl <- count(spl3.2pf, c("DLsamplno", "abbr.nm"))
+r2pos.smpl <- plyr::count(spl3.2pf, c("DLsamplno", "abbr.nm"))
 
 #Rename the frequency column
 tot_smpl$totsmpl <- tot_smpl$freq
@@ -1218,7 +1220,7 @@ amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019017" & amph
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019050" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
 
 #amph_smpl02_df %>% dplyr::group_by(eval01)
-
+library(dplyr)
 #use dplyr to group by name, and count per evaluation
 tibl_as02 <- amph_smpl03_df %>% dplyr::group_by(abbr.nm) %>% dplyr::count(eval01)
 #make the tibble a data frame
@@ -1241,7 +1243,7 @@ df_as05$nrepl.pos <- rowSums(df_as05[,4:5])
 
 #remove the columns no longer needed
 df_as05[ , c('n.repl1or2', 'n.repl2pos')] <- list(NULL)
-df_as05
+#df_as05
 #sum up for each column
 clsu <- colSums(df_as05[,2:4])
 # bind this as a row below
@@ -1265,7 +1267,8 @@ df_as05 <- df_as05[,c(1,2,6,3,7,4,8,5)]
 #df_as05%>%dplyr::group_by(abbr.nm)%>%dplyr::mutate(Percentage=paste0(round(n.nonapprovK/sum(totalcnt)*100,2),"%"))
 # finde number of rows
 nrd5 <- nrow(df_as05)
-
+# copy the data frame
+df_as06 <- df_as05
 #change column names
 colnames(df_as05) <- c("Species",
 "sets that are failed tests, Non-approved analyses",
@@ -1281,6 +1284,125 @@ colnames(df_as05) <- c("Species",
 #getwd()
 #write out the table
 write.csv(df_as05,file="Table02_out09_lst_spc_detect_v01.csv")
+
+# Make a diagram from the proportions of failed and succesful 
+# define the columns to keep
+ckeep<- c("abbr.nm","n.nonapprovK","n.truezerodetect","nrepl.pos")
+df_as06 <- df_as06[ckeep]
+#_______________________________________________________________________________
+
+#_______________________________________________________________________________
+df_as06$abbr.nm2 <- NULL
+df_as06$totcnt <- NULL
+#load the tidyr package
+library(tidyr)
+# use gather in tidyr package to reshape from wide to long
+df_as07 <- tidyr::gather(df_as06, key = "testres", value = "countresl",2:4)
+# change the NAs to total category
+df_as07$abbr.nm[is.na(df_as07$abbr.nm)] <- "Total"
+# exclude total count
+df_as07 <- df_as07[!df_as07$abbr.nm=="Total",]
+#replace categories
+df_as07$testres <- gsub("n.nonapprovK","failed tests",df_as07$testres)
+df_as07$testres <- gsub("n.truezerodetect","no eDNA detected",df_as07$testres)
+df_as07$testres <- gsub("nrepl.pos","eDNA detected",df_as07$testres)
+# replace in names
+df_as07$abbr.nm <- gsub("_"," ",df_as07$abbr.nm)
+l_abbr.nm <- unique(df_as07$abbr.nm)
+df_as07$abbr.nm <- factor(df_as07$abbr.nm, levels=c(l_abbr.nm))
+
+# use dplyr to get the percentage
+tibl_as07 <- df_as07 %>%
+  dplyr::count(countresl,abbr.nm,testres) %>%       
+  dplyr::group_by(abbr.nm) %>%
+  dplyr::mutate(pct= prop.table(countresl) * 100)
+
+
+df_as06$totcnt <- rowSums(df_as06[,-1])
+tibl_as07$abbr.nm2 <- gsub(" ","_",tibl_as07$abbr.nm)
+tibl_as07$abbr.nm2 <- as.character(tibl_as07$abbr.nm2)
+tibl_as07$totcnt <- df_as06$totcnt[match(tibl_as07$abbr.nm2,df_as06$abbr.nm)]
+#View(tibl_as07)
+#load the ggplot2 package
+library(ggplot2)
+# make a plot
+plt06 <- ggplot(tibl_as07, aes(fill=testres, y=countresl, x=abbr.nm)) + 
+  geom_bar(position='stack', stat='identity', color="black")
+# change  the fill colour  of the bars
+#plt06 <- plt06 + scale_fill_manual(values=c("gray", "black", "white"))
+#plt06 <- plt06 + scale_fill_manual(values=c("gray83", "gray48", "white"))
+plt06 <- plt06 + scale_fill_manual(values=c("springgreen3","yellow",  "white"))
+#plt06 <- plt06 + theme(axis.text.x = element_text(angle = 90, hjust = 1, face = "italic"))
+plt06 <- plt06 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
+plt06 <- plt06 + theme(axis.text.x = element_text(angle = 0, size=14))
+# reverse the order of categories on the discrete scale
+# https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+# reverse the categories
+plt06 <- plt06 + scale_x_discrete(limits=rev)
+#change axis labels
+plt06 <- plt06 + xlab("species") + ylab("number of test sets")
+# add labels on bars
+plt06 <- plt06 +  geom_col(position = position_stack(), color = "black") +
+  geom_text(aes(label =
+                  #paste0(signif(pct, digits = 2),"%")), size=6, color="black",
+                  paste0(round(pct, digits = 0),"%")), size=6, color="black",
+            position = position_stack(vjust = .5))
+
+plt06 <- plt06 + geom_text(data=tibl_as07, aes(x = abbr.nm, y = -3.95, 
+                                               label = paste0("n=",totcnt)), size=4,vjust=0, angle = 0)
+plt06 <- plt06 + coord_flip()
+#getting separate legends
+plt06 <- plt06 + labs(fill='test sets with')
+# see the plot
+#plt06
+
+#getwd()
+bSaveFigures <- T
+figname02A <- paste0("Fig02_01_barchart_failed_tests.png")
+if(bSaveFigures==T){
+  ggsave(plt06,file=figname02A,
+         width=2*210,height=0.5*297,
+         units="mm",dpi=300)
+}
+#order the species names the other way around
+df_as08 <- df_as07[order(df_as07$abbr.nm, decreasing = F),]
+#https://stackoverflow.com/questions/14933242/how-to-label-percentage-values-inside-stacked-bar-plot-using-r-base
+library(ggplot2)
+plt07 <- ggplot(df_as08, aes(x=abbr.nm, y=countresl)) +
+  geom_point(aes(shape= testres, 
+                 fill=testres),size=3.0) + 
+  # reverse the order of categories on the discrete scale
+  # https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+  scale_x_discrete(limits=rev) +
+  # tranpose the diagram
+  coord_flip() +
+  
+  labs(x="Species",y="number of test sets\n") #+
+#ylim(0,100) +
+#geom_hline(yintercept=50, linetype=2)
+#getting separate legends
+plt07 <- plt07 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
+#plt07 <- plt07 + scale_fill_manual(values=c("black","white","gray"))
+plt07 <- plt07 + scale_fill_manual(values=c("springgreen4","yellow","white"))
+plt07 <- plt07 + scale_shape_manual(values=c(21,22,23))
+plt07 <- plt07 + labs(color='test sets with')
+plt07 <- plt07 + labs(fill='test sets with')
+plt07 <- plt07 + labs(shape='test sets with')
+#plt07
+
+
+
+#getwd()
+bSaveFigures <- T
+figname02A <- paste0("Fig02_02_plot_failed_tests.png")
+if(bSaveFigures==T){
+  ggsave(plt07,file=figname02A,
+         width=2*210,height=0.5*297,
+         units="mm",dpi=300)
+}
+
+
+#_______________________________________________________________________________
 #install packages needed
 # if(!require(colorRamp)){
 #   install.packages("colorRamp")
@@ -1471,7 +1593,7 @@ amph_smpl05_df <- amph_smpl04_df[amph_smpl04_df$repl1or2>0, ]
 tot_smpl04_df <- tot_smpl03_df[tot_smpl03_df$repl1or2>0, ]
 
 
-tot_smpl04_df[tot_smpl04_df$abbr.nm=="Buf.cal",]
+#tot_smpl04_df[tot_smpl04_df$abbr.nm=="Buf.cal",]
 #amph_smpl05_df
 #amph_smpl03_df <- subset(amph_smpl03_df, eval01=="repl2pos")
 #make the column with numbers for symbols a factor column
@@ -1848,7 +1970,7 @@ p <-  p01t +
 figname02 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 figname05 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
 figname05A <- paste0("Fig01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
-
+figname05A <- paste0("Fig01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 if(bSaveFigures==T){
   ggsave(p,file=figname02,width=210,height=297,
          units="mm",dpi=300)
@@ -2160,8 +2282,9 @@ p <-  p01b +
   plot_annotation(caption=fnm04) #& theme(legend.position = "bottom")
 #p
 #make filename to save plot to
-figname03 <- paste0(fnm04,"_w_Ct_cutoff_",ct.cutoff,".png")
 figname04 <- paste0(fnm05,"_w_Ct_cutoff_",ct.cutoff,".pdf")
+figname04 <- paste0(fnm05,"_w_Ct_cutoff_",ct.cutoff,".png")
+figname03 <- paste0(fnm05,"_w_Ct_cutoff_",ct.cutoff,".png")
 
 
 if(bSaveFigures==T){
@@ -2195,7 +2318,7 @@ scales::show_col(safe_colorblind_palette)
 cl2 <- colorRampPalette(c(scbpl))( nspo) 
 #cl2 <- scbpl
 cl05 <- cl2
-length(cl2)
+#length(cl2)
 #_______________________________________________________________________________
 # Make plot on map with facet wrap - start
 #_______________________________________________________________________________
@@ -2354,6 +2477,7 @@ p05t
 
 #define file name to save plot to
 figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
+figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=figname06A,width=210,height=297,
@@ -2526,6 +2650,7 @@ spcNm <- unique(df_Pf01$specs)
 bSaveFigures=T
 #define file name to save plot to
 figname06A <- paste0("Fig03_06_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,".pdf")
+figname06A <- paste0("Fig03_06_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,".png")
 # save plot
 if(bSaveFigures==T){
   ggsave(p04t,file=figname06A,width=210,height=297,
@@ -2543,3 +2668,117 @@ DLsmpl_Rd_off <- unique(df_Rd01$DLsamplno)
 # DL2019005 -  check for Pelobates fuscus - fetched
 # DL2019017 -  check for Rana dalmatina - check in qPCR0938 -not possible to find again
 # DL2019050 -  check for Rana dalmatina
+#_______________________________________________________________________________
+# match to get sampling date
+amph_smpl03_df$sampling_date  <- hc$sampling_date[match(amph_smpl03_df$DLsamplno,hc$DL_No)]
+#head(amph_smpl03_df,12)
+# make the sample dates a list
+lst_smpl.dt <- amph_smpl03_df$sampling_date  
+lst_smpl.dt[is.na(lst_smpl.dt)] <- c("00-00-0000")
+# # split to get a list of vectors
+lst_smpl.dt <- strsplit(lst_smpl.dt,"-")
+#get sample day, month and year
+smpDt.1 <- sapply(lst_smpl.dt, "[[", 1)
+smpDt.2 <- sapply(lst_smpl.dt, "[[", 2)
+smpDt.3 <- sapply(lst_smpl.dt, "[[", 3)
+# copy the data frame
+df_as09 <- amph_smpl03_df
+# add back sampling year , month and day
+df_as09$sampling_date.day  <- as.numeric(smpDt.1)
+df_as09$sampling_date.mnt  <- as.numeric(smpDt.2)
+df_as09$sampling_date.yer  <- as.numeric(smpDt.3)
+# only retain samples where the sampling year is above 2000
+df_as09 <- df_as09[df_as09$sampling_date.yer>2000,]
+# paste together sample day, month and year
+dt <- paste0(df_as09$sampling_date.day,"/",df_as09$sampling_date.mnt,"/",df_as09$sampling_date.yer)
+# combine in a data frame with DL Sample numbers
+df_dt <- as.data.frame(cbind(df_as09$DLsamplno,dt))
+# change the column names
+colnames(df_dt) <- c("DLsmplno","Date")
+# use one of the examples here
+#https://stackoverflow.com/questions/19564930/how-do-i-convert-date-to-number-of-days-in-r
+# note that this use of functions returns the day number for each year
+# the other suggestions on this website offers solutions to count across multiple years
+# but the aim is here to know at what day in the year (across several years) the sample
+# was collected
+df_dt <- transform(df_dt, NumDays=as.numeric(strftime(as.Date(Date, format='%d/%m/%Y'), '%j'))-1)
+# match back to the main data frame  
+df_as09$NumDays <- df_dt$NumDays[match(df_as09$DLsamplno,df_dt$DLsmplno)]
+df_as09$sampling_date2 <- df_dt$Date[match(df_as09$DLsamplno,df_dt$DLsmplno)]
+
+#_______________________________________________________________________________
+# make plot along day numbers for eDNA detections
+#_______________________________________________________________________________
+library(ggplot2)
+
+#copy column with evaluations
+df_as09$eval03  <- df_as09$eval01
+# replace in the copied column if grepl is a match
+df_as09$eval03[grepl("eDNA detected in",df_as09$eval01)] <- "eDNA detected"
+# make a scattered box plot for species
+plt09 <- ggplot(df_as09, aes(x=latspc, y=NumDays)) +
+  geom_point(aes(fill=eval03), size=5, shape=21, colour="grey20",
+             position=position_jitter(width=0.2, height=0.1)) +
+  
+  geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
+  labs(title="A")
+# reverse the order of categories on the discrete scale
+# https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+# reverse the categories
+plt09 <- plt09 + scale_x_discrete(limits=rev)
+# set the fill color manually
+plt09 <- plt09 + scale_fill_manual(values=alpha(c("springgreen3","yellow",  "white"),0.7))
+# make the species names along the axis italic
+plt09 <- plt09 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
+plt09 <- plt09+ theme(axis.text.x = element_text(angle = 0, size=14))
+#change axis labels
+plt09 <- plt09 + xlab("species") + ylab("day of the year")
+#getting separate legends
+plt09 <- plt09 + labs(fill='test sets with')
+
+plt09 <- plt09 + coord_flip()
+#plt09
+figname09A <- paste0("Fig04_06_",fnm02,"_boxplot_sampling_time_.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt09,file=figname09A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
+library(ggplot2)
+
+#match to get area covered by water body collected
+df_as09$Areal_m2 <- hc$Areal_m2[match(df_as09$DLsamplno,hc$DL_No)]
+# make the area value numeric
+df_as09$Areal_m2 <- as.numeric(df_as09$Areal_m2)
+# exclude sampling that do not have an area for the water body collected
+df_as10 <- df_as09[!is.na(df_as09$Areal_m2),]
+# take the log10 to the areas
+df_as10$l10.Areal_m2 <- log10(df_as10$Areal_m2)
+# make a scattered box plot for species
+plt10 <- ggplot(df_as10, aes(x=latspc, y=Areal_m2)) +
+  geom_point(aes(fill=eval03), size=5, shape=21, colour="grey20",
+             position=position_jitter(width=0.2, height=0.1)) +
+  
+  geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
+  labs(title="B")
+# reverse the order of categories on the discrete scale
+# https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+# reverse the categories
+plt10 <- plt10 + scale_x_discrete(limits=rev)
+# set the fill color manually
+plt10 <- plt10 + scale_fill_manual(values=alpha(c("springgreen3","yellow",  "white"),0.7))
+# make the species names along the axis italic
+plt10 <- plt10 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
+plt10 <- plt10 + theme(axis.text.x = element_text(angle = 0, size=14))
+
+
+plt10 <- plt10 + scale_y_log10(breaks = trans_breaks("log10", function(y) 10^y),
+                               labels = trans_format("log10", math_format(10^.x)))
+#labels = trans_format("log10"))
+#change axis labels
+plt10 <- plt10 + xlab("species") + ylab("area of water body sampled (m2)")
+#getting separate legends
+plt10 <- plt10 + labs(fill='test sets with')
+
+plt10 <- plt10 + coord_flip()
+plt10
