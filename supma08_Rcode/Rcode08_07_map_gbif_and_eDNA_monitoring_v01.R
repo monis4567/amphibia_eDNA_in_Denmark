@@ -13,14 +13,14 @@ rm(list=ls())
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
 #wd00 <- rpath
 setwd (wd00)
-getwd()
+#getwd()
 #define an output directory
 wd09 <- "/supma09_plots_from_R_analysis"
 #paste together path
 wd00_wd09 <- paste(wd00,wd09,sep="")
 #https://www.r-bloggers.com/2014/03/accessing-inaturalist-data/
 #https://www.eleanor-jackson.com/post/searching-for-spring/
-    options(stringsAsFactors = F)
+options(stringsAsFactors = F)
 #get spocc package
 if(!require(spocc)){
   install.packages("spocc")
@@ -36,13 +36,10 @@ library("httr")
 library("jsonlite")
 library("dplyr") 
 # to avoid : https://stackoverflow.com/questions/30248583/error-could-not-find-function
-
 #define an input  files
 infl1 = "out08_06b_gbif_records_amphibia_Denmark.csv"
 #infl1 = "out08_03b_inaturalist_records_amphibia_Denmark_1200lines.csv"
 infl2 = "out08_01b_DL_records_amphibia_Denmark.csv"
-
-
 wd_ext02 <- "input_files_01_downloaded_from_web"
 wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
 wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
@@ -54,11 +51,8 @@ df_iN01 <- read.table(pthinf01,sep=";",stringsAsFactors = F, header=F, fill=T)
 df_DL01 <- read.csv(pthinf02,sep=",",stringsAsFactors = F, header=T)
 #change columns names
 colnames(df_iN01) <- df_iN01[1,]
-#head(df_iN01,5)
 #remove first row
 df_iN01 <- df_iN01[-1,]
-# head(df_iN01,6)
-# unique(df_iN01$species)
 #limit to when quality_grade is research
 #df_iN01 <- df_iN01[df_iN01$quality_grade=="research",]
 #make positions numeric
@@ -83,6 +77,16 @@ df_iN01$eval04[df_iN01$datasetName=="iNaturalist research-grade observations"] <
 df_iN01$taxon.name <- df_iN01$species
 # assign one column to a new column - to retain this new column later on
 df_DL01$taxon.name <- df_DL01$latspc2
+#substitute to set all species of 'Pelophylax' to be 'Pelophylax sp'
+df_DL01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_DL01$taxon.name)
+df_DL01$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_DL01$taxon.name)
+
+df_iN01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_iN01$taxon.name)
+df_iN01$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_iN01$taxon.name)
+df_iN01$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_iN01$taxon.name)
+df_iN01$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_iN01$taxon.name)
+# unique(df_DL01$taxon.name)
+# unique(df_iN01$taxon.name)
 #define columns to keep
 keep <- c(  "dec_lat",
             "dec_lon",
@@ -95,7 +99,7 @@ df_DL02 <- df_DL01[keep]
 # bind the two data frames together by appending as rows
 df_iNDL02 <- rbind(df_DL02,df_iN02)
 #change species names
-df_iNDL02$taxon.name <- gsub("Pelophylax kl.","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
+df_iNDL02$taxon.name <- gsub("Pelophylax kl\\.","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
 df_iNDL02$taxon.name <- gsub("Pelophylax esculentus","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
 df_iNDL02$taxon.name <- gsub("esculenta esculenta","esculenta",df_iNDL02$taxon.name)
 df_iNDL02$taxon.name <- gsub("kl. esculenta esculenta"," kl. esculenta",df_iNDL02$taxon.name)
@@ -129,19 +133,13 @@ df_iNDL02$monit.cat[df_iNDL02$eval04=="gbif"] <- "gbif"
 #install packages needed
 if(!require(maps)){
   install.packages("maps")
-  library(maps)
 }
 
 if(!require(ggplot2)){
   install.packages("ggplot2")
-  library(ggplot2)
 }
-
-
 library(ggplot2)
 library(maps)
-
-
 # # #https://www.r-spatial.org/r/2018/10/25/ggplot2-sf-2.html
 # To get rgdal and googleway to work,
 #first run these in a terminal:
@@ -209,13 +207,10 @@ library("rnaturalearthhires")
 # # Get a map, use a high number for 'scale' for a coarse resolution
 # use a low number for scale for a high resolution
 # if the map 'world' does not exist, then download it
-
 world <- ne_countries(scale = 10, returnclass = "sf")
 #_______________________________________________________________________________
 # start plot with iNaturalist and eDNA monitoring in the same plot
 #_______________________________________________________________________________
-
-
 # get number of unique species names in column
 nspo <- length(unique(df_iNDL02$taxon.name))
 #get unique species names
@@ -264,8 +259,8 @@ cl05 <- cl2
 #cl <- cl2
 #cl05 <- cl
 # set a value for jittering the points in the plots
-jitlvl <- 0.07
-jitlvl <- 0.10
+jitlvl <- 0.007
+#jitlvl <- 0.10
 # make a copy of the data frame
 df_iNDL03 <- df_iNDL02
 df_iNDL03$pchs <- as.factor(df_iNDL03$pchs)
@@ -392,24 +387,22 @@ df_iNDL04 <- df_iNDL04
 # df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Ichthyosaurus alpestris","iNat_Res",3,"iNat_Res","F)   Ichthyosaurus alpestris","F","Ichthyosaurus alpestris.iNat_Res" )
 # df_iNDL04 <- rbind(df_iNDL04,nrta)
-
-
-
 misstxnm <- c("Bombina bombina.gbif",
               "Bufo calamita.gbif",
               "Ichthyosaurus alpestris.gbif")
 txnm2<- unique(c(unique(df_iNDL04$txnmc), misstxnm))
+
 df_iNDL04$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
 
 df_iNDL04$pchs <- as.factor(df_iNDL04$pchs)
 #unique(df_iNDL04$pchs)
-unique(df_iNDL04$taxon.name)
+#unique(df_iNDL04$taxon.name)
 #df_iNDL04$dec_lat
 nspo2 <- length(unique(df_iNDL04$txnmc))
 cl2 <- colorRampPalette(c(scbpl))( nspo2) 
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
-length(cl06)
+#length(cl06)
 # #make plot
 # p05 <- ggplot(data = world) +
 #   geom_sf(color = "black", fill = "azure3") +
@@ -520,9 +513,6 @@ df_iNDL04 <- df_iNDL04
 # df_iNDL04 <- rbind(df_iNDL04,nrta)
 # nrta <- c(1,1,"Ichthyosaurus alpestris","iNat_Res",3,"iNat_Res","F)   Ichthyosaurus alpestris","F","Ichthyosaurus alpestris.iNat_Res" )
 # df_iNDL04 <- rbind(df_iNDL04,nrta)
-
-
-
 misstxnm <- c("Bombina bombina.gbif",
               "Bufo calamita.gbif",
               "Ichthyosaurus alpestris.gbif")
@@ -610,6 +600,7 @@ cl06 <- cl2
 df_iNDL04 <- df_iNDL03
 #assign taxon name plus monitoring category
 df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
+#unique(df_iNDL04$txnmc)[grepl("Peloph",unique(df_iNDL04$txnmc))]
 #
 misstxnm <- c("Bombina bombina.iNat_Res",
               "Bufo calamita.iNat_Res",
@@ -625,7 +616,7 @@ cl2 <- colorRampPalette(c(scbpl))( nspo2)
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
 length(cl06)
-cl06 <- c("red","white","blue", "green")
+cl06 <- c("springgreen3","white","steelblue1", "mediumpurple3")
 nspo2 <- length(unique(df_iNDL04$eval04))
 #unique(df_iNDL04$lettx)
 # order the dataframe by a column
@@ -647,8 +638,13 @@ ordcat1 <- unique(df_iNDL04$ordcat)
 # 
 # 
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
-# 
+# unique(df_iNDL04$taxon.name)
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
+df_iNDL04$eval04 <- gsub("eDNA_present","eDNA detected",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("eDNA_zero","eDNA not detected",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("iNat_res","iNaturalist",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("gbif","GBIF",df_iNDL04$eval04)
+
 #make plot
 p05 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3", lwd=0.4) +
@@ -737,7 +733,7 @@ bSaveFigures <- T
 #substitute in file name
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
-fgnm <- paste0("Fig04_v04_",infl1,".pdf")
+fgnm <- paste0("FigS34_v04_",infl1,".png")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
 # save plot
@@ -745,48 +741,34 @@ if(bSaveFigures==T){
   ggsave(p05t,file=pfnm,
          width=210,height=297, # as portrait
          #width=297,height=210, # as landscape
-         units="mm",dpi=600)
+         units="mm",dpi=300)
 }
-
-#________________________
 #_______________________________________________________________________________
 # end plot with iNaturalist and eDNA monitoring in plots side by side
 #_______________________________________________________________________________
-
-#
-
-#unique(df_iNDL04$eval03)
 #get second element among unique elements in column
 spspnm <- unique(df_iNDL04$taxon.name)[2]
 df5 <- df_iNDL04[!df_iNDL04$eval03=="eDNA_zero",]
 df5 <- df5[df5$taxon.name==spspnm, ]
 df5.ep <- df5[df5$eval03=="eDNA_present",]
 df5.iN <- df5[df5$eval03=="gbif",]
-nrow(df5.iN)
-nrow(df5.ep)
-
+# nrow(df5.iN)
+# nrow(df5.ep)
 #df5.ep
 #https://stackoverflow.com/questions/31668163/geographic-geospatial-distance-between-2-lists-of-lat-lon-points-coordinates
 
 # https://stackoverflow.com/questions/45784094/geosphere-dplyr-create-matrix-of-distance-between-coordinates
 # https://geocompr.robinlovelace.net/spatial-operations.html
 # https://stackoverflow.com/questions/31668163/geographic-geospatial-distance-between-2-lists-of-lat-lon-points-coordinates
-
-
-#
-
-#unique(df_iNDL04$eval03)
 #get second element among unique elements in column
 spspnm <- unique(df_iNDL04$taxon.name)[2]
 df5 <- df_iNDL04[!df_iNDL04$eval03=="eDNA_zero",]
 df5 <- df5[df5$taxon.name==spspnm, ]
 df5.ep <- df5[df5$eval03=="eDNA_present",]
 df5.iN <- df5[df5$eval03=="gbif",]
-nrow(df5.iN)
-nrow(df5.ep)
-# 
+# nrow(df5.iN)
+# nrow(df5.ep)
 # #https://stackoverflow.com/questions/31668163/geographic-geospatial-distance-between-2-lists-of-lat-lon-points-coordinates
-# 
 # list1 <- data.frame(longitude = c(80.15998, 72.89125, 77.65032, 77.60599, 
 #                                   72.88120, 76.65460, 72.88232, 77.49186, 
 #                                   72.82228, 72.88871), 

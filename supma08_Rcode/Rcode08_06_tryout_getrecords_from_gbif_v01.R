@@ -20,9 +20,7 @@ library(dismo)
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
 #wd00 <- rpath
 setwd (wd00)
-getwd()
-
-
+#getwd()
 wd_ext02 <- "input_files_01_downloaded_from_web"
 wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
 wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")

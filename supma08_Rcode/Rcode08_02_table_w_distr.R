@@ -96,7 +96,7 @@ colnames(df_ar02 ) <- c("area","abbr")
 #exclude any rows with NA
 df_ar03 <- na.omit(df_ar02)
 #reorder columns by column name
-df_ar03[ , c("abbr", "area")] 
+df_ar03 <- df_ar03[ , c("abbr", "area")] 
 #paste parenteses around abbreviation in column
 df_ar03$abbr <- paste("(",df_ar03$abbr,")",sep="")
 #make the area name a character
@@ -127,7 +127,7 @@ df_lsp02 <- df_lsp02[order(df_lsp02$spcNm),]
 # collapse vectors into onw text string
 ls7 <- paste(ls4,ls6,collapse=". ")
 # make a table caption, using the list of abbreviations for locations
-table_capt01 <- paste("Table S1. Geographic occurence of the amphibian species monitored. Area of known occurence is adopted from the study by Spreybock et al. (2010). The species listed occurs in the areas as indicated by geographic abbreviations. Abbreviations for areas and countries: ",
+table_capt01 <- paste("Table S1. Geographic occurence of the amphibian species monitored. Area of known occurence  and taxonomy is adopted from the study by Spreybock et al. (2010). The species listed occurs in the areas as indicated by geographic abbreviations. Abbreviations for areas and countries: ",
                       ls6,".")
 #ls7
 ##______________________________________________________________________________
@@ -136,17 +136,17 @@ df_lsp03 <- df_lsp02
 ncld03 <- ncol(df_lsp03)
 # rename the columns in the data frame
 colnames(df_lsp03) <- c("Genus specis","Area of occurence")
-# start preparing the flextable
-ft <- flextable::flextable(df_lsp03)
-ft <- flextable::autofit(ft)
-ft <- flextable::padding(ft, padding = 0.4)
-# add a header row: https://ardata-fr.github.io/flextable-book/layout.html
-ft <- add_header_row(
-  x = ft, values = c(table_capt01),
-  # set the column width of this header row to equal the number of columns
-  # counted in the data frame
-  colwidths = c(ncld03))
-ft1 <- ft
+# # start preparing the flextable
+# ft <- flextable::flextable(df_lsp03)
+# ft <- flextable::autofit(ft)
+# ft <- flextable::padding(ft, padding = 0.4)
+# # add a header row: https://ardata-fr.github.io/flextable-book/layout.html
+# ft <- add_header_row(
+#   x = ft, values = c(table_capt01),
+#   # set the column width of this header row to equal the number of columns
+#   # counted in the data frame
+#   colwidths = c(ncld03))
+# ft1 <- ft
 wd00_outfl_tbl01 <-paste0(wd00,"/supma09_plots_from_R_analysis",
                                 "/Table_S01_v01_geographic_area_of_occurence_for_amphibians.docx")
 

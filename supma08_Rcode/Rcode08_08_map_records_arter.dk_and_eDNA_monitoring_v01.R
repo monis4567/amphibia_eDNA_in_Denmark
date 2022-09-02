@@ -35,12 +35,11 @@ library("dplyr")
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
 #wd00 <- rpath
 setwd (wd00)
-getwd()
+#getwd()
 #define an output directory
 wd09 <- "/supma09_plots_from_R_analysis"
 #paste together path
 wd00_wd09 <- paste(wd00,wd09,sep="")
-
 wd_ext02 <- "input_files_01_downloaded_from_web"
 wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
 wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
@@ -54,6 +53,7 @@ wd00_wd03 <- paste(wd00,wd03,sep="")
 infls <- list.files(wd00_wd03)
 # subset to only include the files from 'arter.dk' 
 infls <- infls[grepl("fund_arter.dk_",infls)]
+
 #define empty list
 lstg <- list()
 # set a running number
@@ -105,6 +105,19 @@ df_DL01$eval04 <- df_DL01$eval03
 
 # assign one column to a new column - to retain this new column later on
 df_DL01$taxon.name <- df_DL01$latspc2
+
+#substitute to set all species of 'Pelophylax' to be 'Pelophylax sp'
+df_DL01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_DL01$taxon.name)
+df_DL01$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_DL01$taxon.name)
+df_DL01$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_DL01$taxon.name)
+df_DL01$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_DL01$taxon.name)
+
+
+df_af04$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_af04$taxon.name)
+df_af04$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_af04$taxon.name)
+df_af04$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_af04$taxon.name)
+df_af04$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_af04$taxon.name)
+unique(df_af04$taxon.name)
 #define columns to keep
 keep <- c(  "dec_lat",
             "dec_lon",
@@ -147,11 +160,9 @@ df_iNDL02$monit.cat[df_iNDL02$eval04=="eDNA_present"] <- "eDNA_monit"
 #install packages needed
 if(!require(maps)){
   install.packages("maps")
-  library(maps)
 }
 if(!require(ggplot2)){
   install.packages("ggplot2")
-  library(ggplot2)
 }
 library(ggplot2)
 library(maps)
@@ -167,56 +178,53 @@ library(maps)
 # $ sudo apt install libudunits2-dev
 if(!require(cowplot)){
   install.packages("cowplot")
-  library(cowplot)
 }
-
+library(cowplot)
 if(!require(googleway)){
   install.packages("googleway")
-  library(googleway)
-}
+  }
+library(googleway)
 if(!require(ggrepel)){
   install.packages("ggrepel")
-  library(ggrepel)
 }
+library(ggrepel)
 if(!require(ggspatial)){
   install.packages("ggspatial")
-  library(ggspatial)
 }
+library(ggspatial)
 # if(!require(libwgeom)){
 #   install.packages("libwgeom")
 #   library(libwgeom)
 # }
 if(!require(sf)){
   install.packages("sf")
-  library(sf)
 }
-
+library(sf)
 if(!require(rnaturalearth)){
   install.packages("rnaturalearth")
-  library(rnaturalearth)
 }
+library(rnaturalearth)
 if(!require(rnaturalearthdata)){
   install.packages("rnaturalearthdata")
-  library(rnaturalearthdata)
 }
+library(rnaturalearthdata)
 #install rgeos
 if(!require(rgeos)){
   install.packages("rgeos")
-  library(rgeos)
 }
+library(rgeos)
 #get 'rnaturalearthhires' installed
 if(!require(rnaturalearthhires)){
   #install.packages("rnaturalearthhires")
   install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
-  library(rnaturalearthhires)
 }
+library(rnaturalearthhires)
 # # 
 library("ggplot2")
 theme_set(theme_bw())
 library("sf")
 
 #install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
-# # 
 library("rnaturalearth")
 library("rnaturalearthdata")
 library("rnaturalearthhires")
@@ -247,6 +255,8 @@ cbbPalette <- c("#000000", "#E69F00", "#56B4E9",
                 "#CC79A7")
 
 cl <- cbbPalette
+#make a colr ramp function over a set of colors
+colfunc <- colorRampPalette(cl)
 # #variables for legend - not used
 cl <- c(colfunc(length(unique(df_iNDL02$taxon.name))))
 # Information on colour blind colours
@@ -271,15 +281,14 @@ cl05 <- cl2
 #cl <- cl2
 #cl05 <- cl
 # set a value for jittering the points in the plots
-jitlvl <- 0.07
-jitlvl <- 0.10
+jitlvl <- 0.007
+#jitlvl <- 0.10
 # make a copy of the data frame
 df_iNDL03 <- df_iNDL02
 df_iNDL03$pchs <- as.factor(df_iNDL03$pchs)
-
-
 #copy data frame
 df_iNDL04 <- df_iNDL03
+
 #assign taxon name plus monitoring category
 df_iNDL04$txnmc <- paste0(df_iNDL04$taxon.name,".",df_iNDL04$monit.cat)
 #
@@ -288,7 +297,6 @@ misstxnm <- c("Bombina bombina.iNat_Res",
               "Ichthyosaurus alpestris.iNat_Res")
 txnm2<- c(unique(df_iNDL04$txnmc), misstxnm)
 df_iNDL04$txnmc2 <- factor(df_iNDL04$txnmc,levels=txnm2)
-
 df_iNDL04$pchs <- as.factor(df_iNDL04$pchs)
 #unique(df_iNDL04$pchs)
 #df_iNDL04$dec_lat
@@ -296,19 +304,22 @@ nspo2 <- length(unique(df_iNDL04$txnmc2))
 cl2 <- colorRampPalette(c(scbpl))( nspo2) 
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
-length(cl06)
-cl06 <- c("red","white","purple3", "green")
+#length(cl06)
+cl06 <- c("springgreen3","white", "mediumpurple3","khaki3")
 nspo2 <- length(unique(df_iNDL04$eval04))
 #unique(df_iNDL04$lettx)
 # order the dataframe by a column
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$lettx),]
 # make a datra frame to sort monitoring categories
 # 3,4,2,1
-df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval04), c(1,3,2,4)))
+#df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval04), c(2,1,3,4)))
+df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval04), c(2,3,1,4)))
 # change column names
 colnames(df_mcat) <- c("eval04","ordcat")
 # match back to main data frame
 df_iNDL04$ordcat <- df_mcat$ordcat[match(df_iNDL04$eval04,df_mcat$eval04)]
+# make the order number category numeric
+df_iNDL04$ordcat <- as.numeric(df_iNDL04$ordcat)
 #unique(df_iNDL04$lettx)
 #unique(df_iNDL04$lettx)
 ordcat1 <- unique(df_iNDL04$ordcat)
@@ -321,7 +332,12 @@ ordcat1 <- unique(df_iNDL04$ordcat)
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
 # 
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
-
+# substitute in record name
+df_iNDL04$eval04 <- gsub("fund_arter.dk","www.arter.dk",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("eDNA_present","eDNA detected",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("eDNA_zero","eDNA not detected",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("iNat_res","iNaturalist",df_iNDL04$eval04)
+#unique(df_iNDL04$eval04)
 # substitute in Danish records from 'arter.dk', so it changes from
 # 'fund' to 'rec' for the Danish records
 #df_iNDL04$eval04 <- gsub("fund_","rec_",df_iNDL04$eval04)
@@ -407,14 +423,12 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 p05t <- p05t + theme(strip.background = element_blank())
 # see the plot
 #p05t
-
 # define whether figures are to be saved or not
 bSaveFigures <- T
 #substitute in file name
-infl1 <- gsub(".csv","",infl1)
 infl1 <- "fund_arter.dk" 
 #define file name to save plot to
-fgnm <- paste0("Fig05_v04_",infl1,".pdf")
+fgnm <- paste0("Fig03_v04_",infl1,".png")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
 # save plot
@@ -422,9 +436,155 @@ if(bSaveFigures==T){
   ggsave(p05t,file=pfnm,
          width=210,height=297, # as portrait
          #width=297,height=210, # as landscape
-         units="mm",dpi=600)
+         units="mm",dpi=300)
 }
+#_______________________________________________________________________________
+# end plot with individual maps per species, showing eDNA plus iNaturalist plus 
+# www.arter.dk
+#_______________________________________________________________________________
 
-#________________________
+#_______________________________________________________________________________
+# start plot with individual maps per species, showing eDNA  plus 
+# www.arter.dk
+#_______________________________________________________________________________
+
+cl06 <- c("springgreen3","white","khaki3")
+nspo2 <- length(unique(df_iNDL04$eval04))
+#unique(df_iNDL04$lettx)
+# order the dataframe by a column
+df_iNDL04 <- df_iNDL04[order(df_iNDL04$lettx),]
+
+
+
+# make a datra frame to sort monitoring categories
+# 3,4,2,1
+df_mcat <- as.data.frame(cbind(unique(df_iNDL04$eval04), c(2,3,1,4)))
+# change column names
+colnames(df_mcat) <- c("eval04","ordcat")
+# match back to main data frame
+df_iNDL04$ordcat <- df_mcat$ordcat[match(df_iNDL04$eval04,df_mcat$eval04)]
+#unique(df_iNDL04$lettx)
+#unique(df_iNDL04$lettx)
+ordcat1 <- unique(df_iNDL04$ordcat)
+# df_iNDL04 <- df_iNDL04 %>% dplyr::mutate(across(ordcat, factor , c(ordcat1)))
+# df_iNDL04$ordcat <- as.factor(df_iNDL04$ordcat)
+# df_iNDL04$eval03 <- as.factor(df_iNDL04$eval03)
+# df_iNDL04 <- df_iNDL04 %>% dplyr::arrange(taxon.name) %>% dplyr::arrange(ordcat)
+# 
+# 
+df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
+# 
+df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
+
+# limit to exlude iNaturalis research findings
+df_iNDL05 <- df_iNDL04[df_iNDL04$eval04!="iNaturalist",]
+#unique(df_iNDL05$eval04)
+# substitute in Danish records from 'arter.dk', so it changes from
+# 'fund' to 'rec' for the Danish records
+#df_iNDL04$eval04 <- gsub("fund_","rec_",df_iNDL04$eval04)
+#make plot
+p05 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3", lwd=0.4) +
+  #https://ggplot2.tidyverse.org/reference/position_jitter.html
+  #https://stackoverflow.com/questions/15706281/controlling-the-order-of-points-in-ggplot2
+  # use 'geom_jitter' instead of 'geom_point' 
+  geom_jitter(data = df_iNDL05  %>%
+                dplyr::mutate(dplyr::across(ordcat, factor , c(ordcat1))),
+              #dplyr::arrange(taxon.name) %>% dplyr::arrange(ordcat),
+              
+              aes(x = dec_lon, y = dec_lat,
+                  shape=eval04,
+                  color=eval04,
+                  fill=eval04,
+                  size=eval04),
+              width = jitlvl, #0.07, jitter width 
+              height = jitlvl) + #, #0.07, # jitter height
+  #size = 2.0) +
+  
+  scale_size_manual(values=c(2.8,1.2,1.6)) +
+  #manually set the pch shape of the points
+  scale_shape_manual(values=c(21,3,22)) +
+  #set the color of the points
+  
+  
+  #here it is black, and repeated the number of times
+  #matching the number of species listed
+  scale_color_manual(values=alpha(
+    c(rep("black",nspo2-1)),
+    c(1.0 , 1.0 ,0.2) 
+  )) +
+  #set the color of the points
+  #use alpha to scale the intensity of the color
+  scale_fill_manual(values=alpha(
+    c(cl06),
+    c(0.8, 1.0,0.4)
+  ))+
+  #
+  #df_iNDL04$lettx
+  #Arrange in facets
+  ggplot2::facet_wrap( ~ taxon.name,
+                       drop=FALSE,
+                       ncol = 3,
+                       labeller = label_bquote(cols = italic(.(as.character(taxon.name))))  )+
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#see the plot
+#p05
+
+#change axis labels
+p05t <- p05 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p05t <- p05t + labs(color='monitoring')
+p05t <- p05t + labs(fill='monitoring')
+p05t <- p05t + labs(shape='monitoring')
+p05t <- p05t + labs(size='monitoring')
+
+#get the number of species
+#ncat <- length(unique(df_iNDL03$taxon.name))
+ncat <- length(unique(df_iNDL05$eval03))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", ncat)
+#filltxc[10] <- "red"
+#filltxc = rep("white", noofspcsnms)
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+#p05t <- p05t + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+
+#adjust tick marks on axis
+p05t <- p05t + scale_y_continuous(breaks=seq(54.5,58,1))
+p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+# p05t <- p05t + theme(strip.background =element_rect(fill=c("black")))
+# p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
+#p05t <- p05t + theme(strip.text = element_blank())
+p05t <- p05t + theme(strip.background = element_blank())
+# see the plot
+#p05t
+# define whether figures are to be saved or not
+bSaveFigures <- T
+#substitute in file name
+infl1 <- "fund_arter.dk" 
+#define file name to save plot to
+fgnm <- paste0("Fig03_v05_",infl1,".png")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         width=210,height=297, # as portrait
+         #width=297,height=210, # as landscape
+         units="mm",dpi=300)
+}
 #_____________________________
+
+
+#_______________________________________________________________________________
+# end plot with individual maps per species, showing eDNA  plus 
+# www.arter.dk
+#_______________________________________________________________________________
+
 

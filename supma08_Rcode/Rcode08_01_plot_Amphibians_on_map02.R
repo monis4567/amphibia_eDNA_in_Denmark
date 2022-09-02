@@ -450,8 +450,9 @@ if(!require(mapplots)){
 }
 library(mapplots)
 
-#remove everything in the working environment, without a warning!!
-rm(list=ls())
+library(lubridate)
+library(tidyverse)
+library(scales)
 
 # set working directory
 #wd00 <- "/home/hal9000/MS_amphibia_eDNA"
@@ -469,7 +470,6 @@ wd00_wd09 <- paste(wd00,wd09,sep="")
 unlink(wd00_wd09, recursive=TRUE)
 #Create a directory to put resulting output files in
 dir.create(wd00_wd09)
-
 #define an input directory
 wd07 <- "/supma07_qpcr_merged_csvs"
 #paste together path
@@ -485,7 +485,7 @@ wd00_wd03_inpf01 <- paste(wd00_wd03,"/DL_dk_specs_to_latspecs06.csv",sep="")
 dkspecs_to_latspecs <-as.data.frame(read.csv(wd00_wd03_inpf01,
                                              header = TRUE, sep = ",", quote = "\"",
                                              dec = ".", fill = TRUE, comment.char = "", stringsAsFactors = FALSE))
-names(dkspecs_to_latspecs)
+#names(dkspecs_to_latspecs)
 #read excel with harbours and positions
 #harbours <-as.data.frame(read_excel("DL_harbour_and_pos_water_samples.xls"))
 #paste path and file together
@@ -504,10 +504,13 @@ harbours <-as.data.frame(read.csv(wd00_wd03_inpf02,
 #password: 'swknudsen1234',
 
 
-#paste path and file together
+#paste path and file together for 'DNA og Liv' samples analysed
 wd00_wd03_inpf03 <- paste(wd00_wd03,"/DNAogLiv_Proever_14-3-2022.xls",sep="")
+#paste path and file together for table with aquatic periods for the amphibians
+wd00_wd03_inpf04 <- paste(wd00_wd03,"/aquatic_periods_for_DK_amphibians_v01.xls",sep="")
 # read in the excel file
 ha <- as.data.frame(read_excel(wd00_wd03_inpf03))
+df_aqp <- as.data.frame(read_excel(wd00_wd03_inpf04))
 #change column names
 colnames(ha) <- ha[1,]
 hb <- (ha[-1,])
@@ -553,8 +556,6 @@ lokal11 <- gsub('Ø','oe',lokal10)
 lokal12 <- gsub('-','',lokal11)
 lokal13 <- gsub('////','',lokal12)
 Area_wt_coll_loc <- lokal13
-
-
 #Make a dataframe from the selected vectors
 hc <- t(data.frame(
   DL_No,
@@ -590,11 +591,9 @@ loc2.df01 <- t(data.frame(
 loc2.df01 <- as.data.frame(t(loc2.df01))
 #match harbours
 hc$Harbour2 <- loc2.df01$Harbour2[match(hc$Area_wt_coll_loc, loc2.df01$wtsmplloc2)]
-
 #see the unmatched locations
 hc2 <- hc[ which(is.na(hc$Harbour2)), ]
 hc4 <- as.data.frame(unique(hc2[,"Area_wt_coll_loc"]))
-
 #change working directory
 setwd(wd00_wd09)
 #write it to a csv
@@ -626,7 +625,6 @@ setwd(wd00)
 #see the matched locations
 hc3 <- hc[ which(!is.na(hc$Harbour2)), ]
 #unique(hc3[,"Area_wt_coll_loc"])
-
 #make another dataframe to use for unmatched regions
 Harbour3 <- c("Aarhus_havn", "Gedser_havn", "Koebenhavn_havn", "Koege_havn", "Helsingoer_havn", "Aalborg_havn", "Frederikshavn_havn", "Hirtshals_havn", "Nyborg", "NykoebingF", "Bornholm", "Gentofte", "Roskilde", "Middelfart", "Hobro", "Bogense", "Aalborg", "Aarhus", "Billund", "Ballerup", "Espergaerde", "Hellerup", "Hilleroed", "Hundested", "Koebenhavn", "Frederiksvaerk", "Hvidesande", "Lyngby", "Koege", "Helsingoer", "Naestved", "Djursland", "Herning", "Soeen_bag_Folkeparken", "Vadehavet", "Esbjerg", "Aeroe_S_for_Fyn", "Frederikssund", "Vejle", "Vordingborg", "Ringsted", "NV_Sjaelland", "Svendborg", "Assens", "Slagelse", "Birkeroed", "Hirtshals")
 rg.wtsmplloc <- c("Oe_Jylland", "Moen_Loll_Falst", "Sjaelland", "Sjaelland", "Sjaelland", "N_Jylland", "N_Jylland", "N_Jylland", "Fyn", "Moen_Loll_Falst", "Bornholm", "Sjaelland", "Sjaelland", "Fyn", "N_Jylland", "Fyn", "N_Jylland", "Oe_Jylland", "Midt_Jylland", "Sjaelland", "Sjaelland", "Sjaelland", "Sjaelland", "Sjaelland", "Sjaelland", "Sjaelland", "V_Jylland", "Sjaelland", "Sjaelland", "Sjaelland", "Sjaelland", "Oe_Jylland", "Midt_Jylland", "Sjaelland", "V_Jylland", "V_Jylland", "Fyn", "Sjaelland", "Oe_Jylland", "Sjaelland", "Sjaelland", "Sjaelland", "Fyn", "Fyn", "Sjaelland", "Sjaelland", "N_Jylland")
@@ -636,10 +634,8 @@ unmtch.harb06 <- t(data.frame(
   rg.wtsmplloc
 ))
 unmtch.harb06 <- as.data.frame(t(unmtch.harb06))
-
 #add an empty column with just NAs to fil with evaluations
 hc[,"reg01"] <- NA
-
 #match regions back to dataframe
 hc$reg01 <- unmtch.harb06$rg.wtsmplloc[match(hc$Harbour2,unmtch.harb06$Harbour3)]
 #View(hc)
@@ -704,7 +700,6 @@ reg.df01 <- t(data.frame(
   rg.wtsmplloc
 ))
 reg.df01 <- as.data.frame(t(reg.df01))
-
 #make a new coumn based on a previous column
 hc$rg.wtsmplloc <- hc$reg01
 #match lat-lon positions for larger regions back on to data frame
@@ -726,7 +721,6 @@ ls.abbr.spcnm <-  paste(
 )
 #add back on to latin name dataframe
 dkspecs_to_latspecs$abbr.nm <- ls.abbr.spcnm
-
 # set working directory
 #setwd ("/Users/steenknudsen/Documents/Documents/Post doc KU/DNA_og_liv_post_doc_KU_2017_2018/out01a_merged_csv_files_from_mxpro/")
 setwd (wd00_wd07)
@@ -738,7 +732,6 @@ setwd (wd00_wd07)
 #         dec = ".", fill = TRUE, comment.char = "", stringsAsFactors = FALSE)
 smpls <- read.csv("outfile07_merged_csv_files_from_mxpro.csv", header = TRUE, sep = ";", quote = "\"",
                   dec = ".", fill = TRUE, comment.char = "", stringsAsFactors = FALSE)
-
 #https://stackoverflow.com/questions/8854046/duplicate-row-names-are-not-allowed-error
 #I was missing a column header- I added A column with the header 'txt' 
 #smpls <- read.table("outfile02_merged_csv_files_from_mxpro.csv", header = TRUE, sep = ";", quote = "\"",
@@ -757,19 +750,14 @@ smpls <- read.csv("outfile07_merged_csv_files_from_mxpro.csv", header = TRUE, se
 smpls$koerselno <- sub("^$", "koerselno1", smpls$koerselno)
 #paste a new column based on variables separated by point
 smpls$spec.repl.rund.DLno.koerselno <- paste(smpls$specs,smpls$replno,smpls$qpcrrundate,smpls$DLsamplno,smpls$koerselno,  sep=".")
-
-
-
 # set working directory
 setwd (wd00)
 #getwd()
-
 #paste together directory paths
 wd00_wd09 <- paste(wd00,wd09, sep="")
 # set working directory
 setwd (wd00_wd09)
 #getwd()
-
 # filter for unique combination of columns from a dataframe
 spl1 <- unique(smpls[,c('specs','replno','qpcrrundate','DLsamplno','koerselno','spec.repl.rund.DLno.koerselno')])
 #make a dataframe with gymn names
@@ -778,11 +766,9 @@ spl1_gymnnm <- unique(smpls[,c('qpcrrundate','DLsamplno','gymnasiumnm1')])
 #although not necessary for the subsequent matching operation, but it makes it easier to check
 #that all replicates are matched up correctly
 spl2 <- spl1[ order(spl1$specs, spl1$qpcrrundate, spl1$replno, spl1$koerselno), ]
-
 #see the column names
 # names(spl2)
 # names(smpls)
-
 #make subsets of the smpls dataframe based on Welltype
 ed_smplsNPC <- subset(smpls, WellType == "NPC", select = c("spec.repl.rund.DLno.koerselno","CtdRn"))
 ed_smplsNTC <- subset(smpls, WellType == "NTC", select = c("spec.repl.rund.DLno.koerselno","CtdRn"))
@@ -802,7 +788,6 @@ ed_smplsunk1s <- subset(ed_smplsunk, Welltype.no == "Unknown1", select = c("spec
 ed_smplsunk2s <- subset(ed_smplsunk, Welltype.no == "Unknown2", select = c("spec.repl.rund.DLno.koerselno","WellType", "CtdRn","Welltype.no"))
 ed_smplsunk3s <- subset(ed_smplsunk, Welltype.no == "Unknown3", select = c("spec.repl.rund.DLno.koerselno","WellType", "CtdRn","Welltype.no"))
 ed_smplsunk4s <- subset(ed_smplsunk, Welltype.no == "Unknown4", select = c("spec.repl.rund.DLno.koerselno","WellType", "CtdRn","Welltype.no"))
-
 #match the spec.repl.rund.DLno in the subsetted dataframes
 spl2$NPC.CtdRn <- ed_smplsNPC$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsNPC$spec.repl.rund.DLno.koerselno)]
 spl2$NTC.CtdRn <- ed_smplsNTC$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsNTC$spec.repl.rund.DLno.koerselno)]
@@ -810,18 +795,14 @@ spl2$unkn1.CtdRn <- ed_smplsunk1s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno
 spl2$unkn2.CtdRn <- ed_smplsunk2s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsunk2s$spec.repl.rund.DLno.koerselno)]
 spl2$unkn3.CtdRn <- ed_smplsunk3s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsunk3s$spec.repl.rund.DLno.koerselno)]
 spl2$unkn4.CtdRn <- ed_smplsunk4s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsunk4s$spec.repl.rund.DLno.koerselno)]
-
 spl2[is.na(spl2)] <- 0
-
 #exlude the rows where "NPC.CtdRn" column has NAs
 #spl3 <- spl2[complete.cases(spl2[,"NPC.CtdRn"]),]
-
-
 spl3 <- spl2
+
 write.csv(spl3, file = "spl3.csv")
 spl3[is.na(spl3)] <- 0
 ########
-
 #transform to vectors
 spl3$NPC.CtdRn <- as.numeric(as.character(spl3$NPC.CtdRn))
 spl3$NTC.CtdRn <- as.numeric(as.character(spl3$NTC.CtdRn))
@@ -829,13 +810,17 @@ spl3$unkn1.CtdRn <- as.numeric(as.character(spl3$unkn1.CtdRn))
 spl3$unkn2.CtdRn <- as.numeric(as.character(spl3$unkn2.CtdRn))
 spl3$unkn3.CtdRn <- as.numeric(as.character(spl3$unkn3.CtdRn))
 spl3$unkn4.CtdRn <- as.numeric(as.character(spl3$unkn4.CtdRn))
-
 spl3[is.na(spl3)] <- "NoCt"
 
+# substitute all records of "LatterFroe" with "GroenFroe" 
+# as only  "GroenFroe"  occurs in Denmark
+spl3$specs <- gsub("LatterFroe" , "GroenFroe" ,spl3$specs)
 #match the latin species name w the Danish common name 
 spl3$latspc <- dkspecs_to_latspecs$Species_Latin[match(spl3$specs,dkspecs_to_latspecs$Species_DK)]
+
 #match the abbreviated latin name w the Danish name
 spl3$abbr.nm <- dkspecs_to_latspecs$abbr.nm[match(spl3$specs,dkspecs_to_latspecs$Species_DK)]
+
 #match the harbour w the DL_sampl no 
 spl3$rg.wtsmplloc <- harbours$rg.wtsmplloc[match(spl3$DLsamplno,harbours$DL_No)]
 #names(spl3)
@@ -852,8 +837,6 @@ spl3$tot_vol_elute <- harbours$tot_vol_elute[match(spl3$DLsamplno,harbours$DL_No
 spl3$dec_lat <- harbours$dec_lat[match(spl3$DLsamplno,harbours$DL_No)]
 spl3$dec_lon <- harbours$dec_lon[match(spl3$DLsamplno,harbours$DL_No)]
 spl3$gymnasiumnm1 <- spl1_gymnnm$gymnasiumnm1[match(spl3$DLsamplno,spl1_gymnnm$DLsamplno)]
-
-
 #identify unique species names in the spl3 dataframe
 latspecnm <- unique(spl3$latspc)
 
@@ -863,6 +846,7 @@ list_of_amphians <- c("Ichthyosaurus_alpestris",
   "Bombina_bombina",
   "Rana_lessonae",
   "Pelophylax_ridibundus",
+  "Pelophylax_esculentus",
   "Lissotriton_vulgaris",
   "Pelobates_fuscus",
   "Hyla_arborea",
@@ -952,29 +936,22 @@ for (spec.lat in latspecnm){
   sbs.2pos.smpl <- plyr::count(sbs.spl3.2pf, c("DLsamplno"))
   #Rename the frequency column
   sbs.tot_smpl$totsmpl <- sbs.tot_smpl$freq
-  
   # Remove the redundant variable from the data frame, put the resulting data frame back in to the original object
   drops <- c("freq")
   sbs.tot_smpl <- sbs.tot_smpl[ , !(names(sbs.tot_smpl) %in% drops)]
-  
   #match the harbour name between the data frame w all samples and the data frame w approved controls
   sbs.tot_smpl$approvK <- sbs.approvK_smpl$freq[match(sbs.tot_smpl$DLsamplno,sbs.approvK_smpl$DLsamplno)]
   sbs.tot_smpl$repl1or2 <- sbs.1or2pos.smpl$freq[match(sbs.tot_smpl$DLsamplno,sbs.1or2pos.smpl$DLsamplno)]
   sbs.tot_smpl$repl2pos <- sbs.2pos.smpl$freq[match(sbs.tot_smpl$DLsamplno,sbs.2pos.smpl$DLsamplno)]
-  
   sbs.tot_smpl$gymnasiumnm1 <- spl3$gymnasiumnm1[match(sbs.tot_smpl$DLsamplno,spl3$DLsamplno)]
-  
   #Replace NA with 0
   sbs.tot_smpl[is.na(sbs.tot_smpl)] <- 0
-  
   sbs.tot_smpl$totsmpl <- as.numeric(as.character(sbs.tot_smpl$totsmpl))
   sbs.tot_smpl$approvK <- as.numeric(as.character(sbs.tot_smpl$approvK))
   sbs.tot_smpl$repl2pos <- as.numeric(as.character(sbs.tot_smpl$repl2pos))
   sbs.tot_smpl$repl1or2 <- as.numeric(as.character(sbs.tot_smpl$repl1or2))
-  
   sbs.tot_smpl$dec_lon <- as.numeric(as.character(sbs.tot_smpl$dec_lon))
   sbs.tot_smpl$dec_lat <- as.numeric(as.character(sbs.tot_smpl$dec_lat))
-  
   #see this website for more about jitter on scatter plot
   #https://thomasleeper.com/Rcourse/Tutorials/jitter.html
   sbs.tot_smpl$dec_lat.j <- jitter(sbs.tot_smpl$dec_lat, 40.4)
@@ -984,12 +961,10 @@ for (spec.lat in latspecnm){
   sbs.tot_smpl$nonapprovK <- sbs.tot_smpl$totsmpl-sbs.tot_smpl$approvK
   #if subtraction returns a negative, then zero
   sbs.tot_smpl$nonapprovK <- ifelse(sbs.tot_smpl$nonapprovK < 0, 0, sbs.tot_smpl$nonapprovK)
-  
   #add column that sums up true negative replicates 
   #- i.e. the replicates with absence of eDNA in filtered water samples, 
   #when posK is pos and negK is neg
   sbs.tot_smpl$truezerodetect <- sbs.tot_smpl$approvK-sbs.tot_smpl$repl1or2
-  
   #add column that sums up true single replicate detections from filtered water samples
   #- i.e. the replicates with only one detection of eDNA in filtered water samples,
   #when posK is pos and negK is neg
@@ -1007,7 +982,6 @@ for (spec.lat in latspecnm){
     sbs.tot_smpl$eval02[   sbs.tot_smpl$nonapprovK >= 1] <- "red" #0  
     sbs.tot_smpl$eval02[   sbs.tot_smpl$repl1or2 >= 1] <- "green" #0  
     sbs.tot_smpl$eval02[   sbs.tot_smpl$repl2pos >= 1] <- "darkgreen" #0
-    
     #XXXXX______begin plot w pie charts on map ________XXXX
     #______________________________________________________________________________________
     # set to save plot as pdf file with dimensions 8.26 to 2.9
@@ -1023,25 +997,21 @@ for (spec.lat in latspecnm){
     #factors to multiply radius on each pie
     fct1 <- 1.000 
     fct2 <- 0.08
-    
     #plot map #http://www.milanor.net/blog/maps-in-r-plotting-data-points-on-a-map/
     library(rworldmap)
     newmap <- getMap(resolution = "high")
     plot(newmap, xlim = c(8, 16), ylim = c(54, 58), 
     #      # use 'asp' to change the aspect ratio: https://statisticsglobe.com/asp-r-plot
          asp=1.6)
-    
     #plot land on map
-    map('worldHires', add=TRUE, fill=TRUE, 
+    maps::map('worldHires', add=TRUE, fill=TRUE, 
         xlim = c(8, 16), ylim = c(54, 58), 
         #col="#11263D",
         col="grey",
         bg=transp_col,
         las=1)
-    
     #add points to map, color by variable
     points(sbs.tot_smpl$dec_lon, sbs.tot_smpl$dec_lat.j, pch=21, bg = c(alpha(c(sbs.tot_smpl$eval02),0.6)), cex = 1.8)
-    
     #add text labels to points  
     text(sbs.tot_smpl$dec_lon, 
          sbs.tot_smpl$dec_lat.j, 
@@ -1173,9 +1143,7 @@ tot_smpl$eval02[   tot_smpl$repl2pos >= 1] <- "darkgreen" #0
 tot_smpl$eval02[   tot_smpl$nonapprovK >= 1] <- "red" #0  
 
 #subset data frame to match only approved K
-#tot_smpl02_df<- subset(tot_smpl, nonapprovK==0)
 tot_smpl02_df <- tot_smpl
-
 #subset to only include amphibian species
 amph_smpl02_df <- subset(tot_smpl02_df, 
                          abbr.nm=="Bom.bom" |
@@ -1187,6 +1155,7 @@ amph_smpl02_df <- subset(tot_smpl02_df,
                            abbr.nm=="Lis.vul" |
                            abbr.nm=="Pel.fus" |
                            abbr.nm=="Pel.rid" |
+                           abbr.nm=="Pel.esc" |
                            abbr.nm=="Ran.arv" |
                            abbr.nm=="Ran.dal" |
                            abbr.nm=="Ran.les" |
@@ -1221,14 +1190,18 @@ amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019050" & amph
 
 #amph_smpl02_df %>% dplyr::group_by(eval01)
 library(dplyr)
+# substitute the  "Pel.esc" name with 
+amph_smpl03_df$abbr.nm <- gsub("Pel.esc","Pel.sp",amph_smpl03_df$abbr.nm)
+amph_smpl03_df$abbr.nm <- gsub("Ran.les","Pel.sp",amph_smpl03_df$abbr.nm)
+unique(amph_smpl03_df$abbr.nm)
 #use dplyr to group by name, and count per evaluation
 tibl_as02 <- amph_smpl03_df %>% dplyr::group_by(abbr.nm) %>% dplyr::count(eval01)
 #make the tibble a data frame
 df_as03 <- as.data.frame(tibl_as02)
 # rearrange from long to wide
 df_as04 <- reshape(df_as03, direction = "wide",
-        idvar = "abbr.nm",
-        timevar = "eval01")
+                   idvar = "abbr.nm",
+                   timevar = "eval01")
 #replace NAs with zero
 df_as04[is.na(df_as04)] <- 0
 #df_as04$abbr.nm
@@ -1237,7 +1210,6 @@ df_as05 <- df_as04 %>% dplyr::mutate_if(is.character,as.numeric)
 df_as05$abbr.nm <- df_as04$abbr.nm
 #replace abbreviated species name with full latin species names
 df_as05$abbr.nm <- dkspecs_to_latspecs$Species_Latin[match(df_as05$abbr.nm,dkspecs_to_latspecs$abbr.nm)]
-
 #sum two columns with positive detections
 df_as05$nrepl.pos <- rowSums(df_as05[,4:5])
 
@@ -1271,20 +1243,20 @@ nrd5 <- nrow(df_as05)
 df_as06 <- df_as05
 #change column names
 colnames(df_as05) <- c("Species",
-"sets that are failed tests, Non-approved analyses",
-"sets that are failed tests, percentage",
-"Approved analyses sets, no eDNA detected",
-"Approved analyses sets, no eDNA detected, percentage",
-"Approved analyses sets, eDNA detected",
-"Approved analyses sets, eDNA detected, percentage",
-"Total number of attemped sets")
+                       "sets that are failed tests, Non-approved analyses",
+                       "sets that are failed tests, percentage",
+                       "Approved analyses sets, no eDNA detected",
+                       "Approved analyses sets, no eDNA detected, percentage",
+                       "Approved analyses sets, eDNA detected",
+                       "Approved analyses sets, eDNA detected, percentage",
+                       "Total number of attemped sets")
 
 # amph_smpl02_df %>% dplyr::group_by(abbr.nm) %>% 
 #   dplyr::count(approvK)
 #getwd()
 #write out the table
 write.csv(df_as05,file="Table02_out09_lst_spc_detect_v01.csv")
-
+#View(df_as05)
 # Make a diagram from the proportions of failed and succesful 
 # define the columns to keep
 ckeep<- c("abbr.nm","n.nonapprovK","n.truezerodetect","nrepl.pos")
@@ -1325,8 +1297,11 @@ tibl_as07$totcnt <- df_as06$totcnt[match(tibl_as07$abbr.nm2,df_as06$abbr.nm)]
 #View(tibl_as07)
 #load the ggplot2 package
 library(ggplot2)
+
+tibl_as07$abbr.nm2 <- tibl_as07$abbr.nm
+#unique(tibl_as07$abbr.nm2)
 # make a plot
-plt06 <- ggplot(tibl_as07, aes(fill=testres, y=countresl, x=abbr.nm)) + 
+plt06 <- ggplot(tibl_as07, aes(fill=testres, y=countresl, x=abbr.nm2)) + 
   geom_bar(position='stack', stat='identity', color="black")
 # change  the fill colour  of the bars
 #plt06 <- plt06 + scale_fill_manual(values=c("gray", "black", "white"))
@@ -1340,7 +1315,9 @@ plt06 <- plt06 + theme(axis.text.x = element_text(angle = 0, size=14))
 # reverse the categories
 plt06 <- plt06 + scale_x_discrete(limits=rev)
 #change axis labels
-plt06 <- plt06 + xlab("species") + ylab("number of test sets")
+plt06 <- plt06 + #xlab("species") +
+  xlab("") +
+  ylab("number of test sets")
 # add labels on bars
 plt06 <- plt06 +  geom_col(position = position_stack(), color = "black") +
   geom_text(aes(label =
@@ -1348,17 +1325,15 @@ plt06 <- plt06 +  geom_col(position = position_stack(), color = "black") +
                   paste0(round(pct, digits = 0),"%")), size=6, color="black",
             position = position_stack(vjust = .5))
 
-plt06 <- plt06 + geom_text(data=tibl_as07, aes(x = abbr.nm, y = -3.95, 
+plt06 <- plt06 + geom_text(data=tibl_as07, aes(x = abbr.nm2, y = -3.95, 
                                                label = paste0("n=",totcnt)), size=4,vjust=0, angle = 0)
 plt06 <- plt06 + coord_flip()
 #getting separate legends
 plt06 <- plt06 + labs(fill='test sets with')
 # see the plot
-#plt06
-
-#getwd()
+plt06
 bSaveFigures <- T
-figname02A <- paste0("Fig02_01_barchart_failed_tests.png")
+figname02A <- paste0("Fig02_v03_barchart_failed_tests.png")
 if(bSaveFigures==T){
   ggsave(plt06,file=figname02A,
          width=2*210,height=0.5*297,
@@ -1366,9 +1341,18 @@ if(bSaveFigures==T){
 }
 #order the species names the other way around
 df_as08 <- df_as07[order(df_as07$abbr.nm, decreasing = F),]
+
+# substitute the "Pelophylax ridibundus" name
+df_as08$abbr.nm2 <- df_as08$abbr.nm
+df_as08$abbr.nm2 <- gsub("Pelophylax ridibundus","Pelophylax kl esculentus",df_as08$abbr.nm2)
+df_as08$abbr.nm2 <- gsub("Pelophylax kl esculentus","Pelophylax sp",df_as08$abbr.nm2)
+df_as08$abbr.nm2 <- gsub("Pelophylax esculentus","Pelophylax sp",df_as08$abbr.nm2)
+df_as08$abbr.nm2 <- gsub("Rana lessonae","Pelophylax sp",df_as08$abbr.nm2)
+
+#unique(df_as08$abbr.nm2)
 #https://stackoverflow.com/questions/14933242/how-to-label-percentage-values-inside-stacked-bar-plot-using-r-base
 library(ggplot2)
-plt07 <- ggplot(df_as08, aes(x=abbr.nm, y=countresl)) +
+plt07 <- ggplot(df_as08, aes(x=abbr.nm2, y=countresl)) +
   geom_point(aes(shape= testres, 
                  fill=testres),size=3.0) + 
   # reverse the order of categories on the discrete scale
@@ -1377,7 +1361,7 @@ plt07 <- ggplot(df_as08, aes(x=abbr.nm, y=countresl)) +
   # tranpose the diagram
   coord_flip() +
   
-  labs(x="Species",y="number of test sets\n") #+
+  labs(x="",y="number of test sets\n") #+
 #ylim(0,100) +
 #geom_hline(yintercept=50, linetype=2)
 #getting separate legends
@@ -1389,12 +1373,9 @@ plt07 <- plt07 + labs(color='test sets with')
 plt07 <- plt07 + labs(fill='test sets with')
 plt07 <- plt07 + labs(shape='test sets with')
 #plt07
-
-
-
 #getwd()
 bSaveFigures <- T
-figname02A <- paste0("Fig02_02_plot_failed_tests.png")
+figname02A <- paste0("Fig02_v02_plot_failed_tests.png")
 if(bSaveFigures==T){
   ggsave(plt07,file=figname02A,
          width=2*210,height=0.5*297,
@@ -1603,6 +1584,7 @@ amph_smpl05_df$pchsymb <- as.factor(amph_smpl05_df$pchsymb)
 jitlvl <- 0.07
 jitlvl <- 0.18
 jitlvl <- 0.10
+jitlvl <- 0.05
 #change color scheme:
 # https://stackoverflow.com/questions/53750310/how-to-change-default-color-scheme-in-ggplot2
 #https://data-se.netlify.app/2018/12/12/changing-the-default-color-scheme-in-ggplot2/
@@ -1739,16 +1721,20 @@ p01 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p01
-
+#p01
 #replace underscores with a space
 amph_smpl05_df$latspc <- gsub("_"," ",amph_smpl05_df$latspc)
 #
 #unique(amph_smpl05_df$latspc)
 #unique(gsub("Rana lessonae","Pelophylax kl. esculenta",amph_smpl05_df$latspc))
 amph_smpl05_df$latspc2 <- gsub("Rana lessonae","Pelophylax kl. esculenta",amph_smpl05_df$latspc)
+amph_smpl05_df$latspc2<- gsub("Pelophylax ridibundus","Pelophylax kl esculentus",amph_smpl05_df$latspc2)
+amph_smpl05_df$latspc2<- gsub("esculenta","esculentus",amph_smpl05_df$latspc2)
+amph_smpl05_df$latspc2 <- gsub("Pelophylax esculentus","Pelophylax kl. esculentus",amph_smpl05_df$latspc2)
+amph_smpl05_df$latspc2 <- gsub("Pelophylax kl\\. esculentus","Pelophylax sp",amph_smpl05_df$latspc2)
 
 ulsp <- unique(amph_smpl05_df$latspc2)[order(unique(amph_smpl05_df$latspc2))]
+
 nspo2<- length(ulsp)
 letsp <- LETTERS[1:nspo2]
 df_Lsp <- as.data.frame(cbind(letsp,ulsp))
@@ -1758,6 +1744,7 @@ amph_smpl05_df$llatspc3 <- df_Lsp$letsp[match(amph_smpl05_df$latspc2,df_Lsp$ulsp
 #identify the rows in the data frame with Bufo calamita
 #amph_smpl05_df[with(amph_smpl05_df, latspc2 %in% "Bufo calamita"),]
 
+# subsitute the "Pelophylax ridibundus" name
 #DL2019065
 #plot with long species names
 p01 <- ggplot(data = world) +
@@ -1803,6 +1790,7 @@ amph_smpl03_df$eval01 <- gsub("nonapprovK","failed test",amph_smpl03_df$eval01)
 amph_smpl03_df$eval01 <- gsub("truezerodetect","no eDNA detected",amph_smpl03_df$eval01)
 amph_smpl03_df$eval01 <- gsub("repl1or2","eDNA detected in 1 of 2",amph_smpl03_df$eval01)
 amph_smpl03_df$eval01 <- gsub("repl2pos","eDNA detected in 2 of 2",amph_smpl03_df$eval01)
+
 
 #make a new set of colours for points
 cl02 <- c("springgreen1","springgreen4","white")
@@ -1908,6 +1896,7 @@ p01t <- p01t + labs(fill='species')
 p01t <- p01t + labs(shape='species')
 #get the number of species
 noofspcsnms <- length(unique(amph_smpl05_df$latspc))
+#unique(amph_smpl05_df$latspc)
 # https://github.com/tidyverse/ggplot2/issues/3492
 #repeat 'black' a specified number of times
 filltxc = rep("black", noofspcsnms)
@@ -1923,6 +1912,7 @@ p01t <- p01t + theme(legend.text = element_text(colour=filltxc, size = 10, face 
 p02t <- p02 + labs(title = "B")#,
 #change axis labels
 p02t <- p02t + xlab("longitude") + ylab("latitude")
+
 #change the header for the legend on the side, 
 #this must be done for both 'fill', 'color' and 'shape', to avoid 
 #getting separate legends
@@ -1969,16 +1959,11 @@ p <-  p01t +
 #make filename to save plot to
 figname02 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 figname05 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
-figname05A <- paste0("Fig01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
-figname05A <- paste0("Fig01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
+figname05A <- paste0("Fig01_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
+figname05A <- paste0("Fig01_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 if(bSaveFigures==T){
   ggsave(p,file=figname02,width=210,height=297,
          units="mm",dpi=300)
-}
-
-if(bSaveFigures==T){
-  ggsave(p,file=figname05,width=210,height=297,
-         units="mm",dpi=600)
 }
 
 if(bSaveFigures==T){
@@ -1986,9 +1971,62 @@ if(bSaveFigures==T){
          units="mm",dpi=600)
 }
 
+p03t1 <- p03 + labs(title = "")#,
+p03t1 <- p03t1 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p03t1 <- p03t1 + labs(color='evaluation incl. failed tests')
+p03t1 <- p03t1 + labs(fill='evaluation incl. failed tests')
+p03t1 <- p03t1 + labs(shape='evaluation incl. failed tests')
+
+
+
+figname05A <- paste0("Fig01_v02",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
+if(bSaveFigures==T){
+  ggsave(p03t1,file=figname05A,width=210,height=297,
+         units="mm",dpi=600)
+}
+
+
+p01t1 <- p01 + labs(title = "A")#,
+p01t1 <- p01t1 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p01t1 <- p01t1 + labs(color='species')
+p01t1 <- p01t1 + labs(fill='species')
+p01t1 <- p01t1 + labs(shape='species')
+p02t1 <- p02 + labs(title = "B")#,
+p02t1 <- p02t1 + xlab("longitude") + ylab("latitude")
+p01t1 <- p01t1 + theme(legend.text = element_text(colour=filltxc, size = 10, face = "italic"))
+
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p02t1 <- p02t1 + labs(color='evaluation excl. failed tests')
+p02t1 <- p02t1 + labs(fill='evaluation excl. failed tests')
+p02t1 <- p02t1 + labs(shape='evaluation excl. failed tests')
+
+pS31 <-   p01t1 +
+          p02t1 +
+          plot_layout(nrow=2,byrow=T) + #xlab(xlabel) +
+          plot_layout(guides = "collect") +
+          plot_annotation(caption=fnm02) #& theme(legend.position = "bottom")
+
+figname05A <- paste0("FigS31_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
+if(bSaveFigures==T){
+  ggsave(pS31,file=figname05A,width=210,height=297,
+         units="mm",dpi=600)
+}
+
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot on map -end
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# Grep for species names and substitute with "Pelophylax_sp" in the species names grepped
+tot_smpl04_df$latspc[grepl("lessonae",tot_smpl04_df$latspc)] <- "Pelophylax_sp"
+tot_smpl04_df$latspc[grepl("Pelophylax_esculentus",tot_smpl04_df$latspc)]  <- "Pelophylax_sp"
+tot_smpl04_df$latspc[grepl("ridibundus",tot_smpl04_df$latspc)] <- "Pelophylax_sp"
 
 #
 p01 <- ggplot(data = world) +
@@ -2013,7 +2051,7 @@ p01 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0),
                     expand = FALSE)
 # see the plot
-p01
+#p01
 
 
 #head(amph_smpl05_df)
@@ -2061,6 +2099,11 @@ p01 <- ggplot(data = world) +
 #see the plot
 p01
 
+# Grep for species names and substitute with "Pelophylax_sp" in the species names grepped
+tot_smpl03_df$latspc[grepl("lessonae",tot_smpl03_df$latspc)] <- "Pelophylax_sp"
+tot_smpl03_df$latspc[grepl("Pelophylax_esculentus",tot_smpl03_df$latspc)]  <- "Pelophylax_sp"
+tot_smpl03_df$latspc[grepl("ridibundus",tot_smpl03_df$latspc)] <- "Pelophylax_sp"
+
 tot_smpl03_df <- tot_smpl[tot_smpl$nonapprovK==0, ]
 #define input file
 inpf03 <- "DL_dk_specs_to_latspecs06.csv"
@@ -2072,11 +2115,7 @@ df_dk_to_latnms01 <- read.table(inpf04,sep = ",")
 colnames(df_dk_to_latnms01)  <- c("DK_comm_nm","Lat_spc_mn")
 #match between data frames
 tot_smpl03_df$latspc <- df_dk_to_latnms01$Lat_spc_mn[match(tot_smpl03_df$specs,df_dk_to_latnms01$DK_comm_nm)]
-#tot_smpl03_df$aq_hab <- df_dk_to_latnms01$aq_hab[match(tot_smpl03_df$specs,df_dk_to_latnms01$DK_comm_nm)]
-#subest to only include marine species
-#tot_smpl03_df <- tot_smpl03_df[(tot_smpl03_df$aq_hab=="marine"),]
 #make a colour function
-cl
 clt <- cl2
 clt <- c(colfunc(length(unique(tot_smpl03_df$latspc))))
 #count the number of species
@@ -2090,6 +2129,7 @@ tot_smpl04_df <- tot_smpl04_df[!is.na(tot_smpl04_df$latspc),]
 #https://statisticsglobe.com/create-legend-in-ggplot2-plot-in-r
 #replace in latin species names
 tot_smpl04_df$latspc2 <- gsub("_"," ",tot_smpl04_df$latspc)
+
 #plot with long species names
 p01 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3") +
@@ -2171,7 +2211,7 @@ p02 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p02
+#p02
 
 #  try a new plot
 
@@ -2217,8 +2257,7 @@ p03 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p03
-
+#p03
 # Add titles
 # see this example: https://www.datanovia.com/en/blog/ggplot-title-subtitle-and-caption/
 # p01t <- p01 + labs(title = "Amphibians detected by eDNA",
@@ -2233,14 +2272,10 @@ p02t <- p02 + labs(title = "B")#,
 # p03t <- p03 + labs(title = "eDNA samples attempted",
 #                    subtitle = "both unapprov controls and approv contrl")#,
 p03t <- p03 + labs(title = "C")#,
-
-
-
 #see the plot
 # p01t
 # p02t
 # p03t
-
 # ------------- plot Combined figure -------------
 library(patchwork)
 # set a variable to TRUE to determine whether to save figures
@@ -2348,19 +2383,16 @@ p04 <- ggplot(data = world) +
     c(cl05),
     c(0.7)
   ))+
-  
   #Arrange in facets
   ggplot2::facet_wrap( ~ latspc2, 
                        ncol = 3,
                        labeller = label_bquote(col = italic(.(latspc2)))) +
-  
   #define limits of the plot
   ggplot2::coord_sf(xlim = c(8, 15.4),
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p04
-#
+#p04
 #change axis labels
 p04t <- p04 + xlab("longitude") + ylab("latitude")
 #change the header for the legend on the side, 
@@ -2369,7 +2401,6 @@ p04t <- p04 + xlab("longitude") + ylab("latitude")
 p04t <- p04t + labs(color='species')
 p04t <- p04t + labs(fill='species')
 p04t <- p04t + labs(shape='species')
-
 #get the number of species
 noofspcsnms <- length(unique(amph_smpl05_df$latspc))
 # https://github.com/tidyverse/ggplot2/issues/3492
@@ -2385,8 +2416,7 @@ p04t <- p04t + scale_x_continuous(breaks=seq(8,16,2))
 p04t <- p04t + theme(strip.background =element_rect(fill=c("black")))
 p04t <- p04t + theme(strip.text = element_text(colour = 'white'))
 # see the plot
-p04t
-
+#p04t
 # #define file name to save plot to
 # figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,".pdf")
 # # save plot
@@ -2430,7 +2460,6 @@ p05 <- ggplot(data = world) +
     c(cl05),
     c(0.7)
   ))+
-  
   #Arrange in facets
   #ggplot2::facet_wrap( ~ latspc2,
   ggplot2::facet_wrap(. ~ llatspc3 + latspc2,
@@ -2443,8 +2472,7 @@ p05 <- ggplot(data = world) +
                     ylim = c(54.4, 58.0), 
                     expand = FALSE)
 #see the plot
-p05
-#
+#p05
 #change axis labels
 p05t <- p05 + xlab("longitude") + ylab("latitude")
 #change the header for the legend on the side, 
@@ -2473,16 +2501,23 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
 # see the plot
-p05t
-
+#p05t
 #define file name to save plot to
-figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
-figname06A <- paste0("Fig02_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
+figname06A <- paste0("Fig02_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
+figname06A <- paste0("Fig02_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=figname06A,width=210,height=297,
          units="mm",dpi=600)
 }
+
+figname06A <- paste0("FigS32_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=figname06A,width=210,height=297,
+         units="mm",dpi=600)
+}
+
 
 #
 #_______________________________________________________________________________
@@ -2511,7 +2546,6 @@ df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019065" & df_as03$latspc=="Bufo_cal
 df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019005" & df_as03$latspc=="Pelobates_fuscus"),]
 df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019017" & df_as03$latspc=="Rana_dalmatina"),]
 df_as03 <-  df_as03[!(df_as03$DLsamplno=="DL2019050" & df_as03$latspc=="Rana_dalmatina"),]
-
 #subset to exclude all NonApproved controls
 df_as04 <- df_as03[df_as03$nonapprovK==0, ]
 #copy the data frame
@@ -2533,6 +2567,7 @@ df_as05$latspc <- gsub("_"," ",df_as05$latspc)
 #unique(df_as05$latspc)
 #unique(gsub("Rana lessonae","Pelophylax kl. esculenta",df_as05$latspc))
 df_as05$latspc2 <- gsub("Rana lessonae","Pelophylax kl. esculenta",df_as05$latspc)
+df_as05$latspc2 <- gsub("Pelophylax kl\\. esculenta","Pelophylax sp",df_as05$latspc)
 
 ulsp <- unique(df_as05$latspc2)[order(unique(df_as05$latspc2))]
 nspo2<- length(ulsp)
@@ -2560,8 +2595,6 @@ write.table(df_as06, file=pthoutf01, sep=",",
             row.names = F, # do not use row names
             col.names = T, #  use columns names
             quote = F) # do not use quotes
-
-
 #_______________________________________________________________________________
 # Make separate plot for Pelobates fuscus
 #_______________________________________________________________________________
@@ -2649,8 +2682,8 @@ df_Pf01$DLsamplno[df_Pf01$gymnasiumnm1=="HelsingoerGym"]
 spcNm <- unique(df_Pf01$specs)
 bSaveFigures=T
 #define file name to save plot to
-figname06A <- paste0("Fig03_06_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,".pdf")
-figname06A <- paste0("Fig03_06_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,".png")
+figname06A <- paste0("FigS35_v01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,"_smplHelsingoerGym.pdf")
+figname06A <- paste0("FigS35_v01_",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_",spcNm,"_smplHelsingoerGym.png")
 # save plot
 if(bSaveFigures==T){
   ggsave(p04t,file=figname06A,width=210,height=297,
@@ -2715,36 +2748,151 @@ library(ggplot2)
 df_as09$eval03  <- df_as09$eval01
 # replace in the copied column if grepl is a match
 df_as09$eval03[grepl("eDNA detected in",df_as09$eval01)] <- "eDNA detected"
-# make a scattered box plot for species
-plt09 <- ggplot(df_as09, aes(x=latspc, y=NumDays)) +
-  geom_point(aes(fill=eval03), size=5, shape=21, colour="grey20",
-             position=position_jitter(width=0.2, height=0.1)) +
-  
-  geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
-  labs(title="A")
-# reverse the order of categories on the discrete scale
-# https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
-# reverse the categories
-plt09 <- plt09 + scale_x_discrete(limits=rev)
-# set the fill color manually
-plt09 <- plt09 + scale_fill_manual(values=alpha(c("springgreen3","yellow",  "white"),0.7))
-# make the species names along the axis italic
-plt09 <- plt09 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
-plt09 <- plt09+ theme(axis.text.x = element_text(angle = 0, size=14))
-#change axis labels
-plt09 <- plt09 + xlab("species") + ylab("day of the year")
-#getting separate legends
-plt09 <- plt09 + labs(fill='test sets with')
+# make a data frame for first days in the month, to use for vertical lines in
+# the plots
+refdates <- c("2022-05-01","2022-06-01","2022-07-01","2022-08-01","2022-09-01")
+refdates <- as.Date(refdates)
 
-plt09 <- plt09 + coord_flip()
+df_as09$latspc <- gsub("Pelophylax_esculentus","Pelophylax_sp",df_as09$latspc)
+df_as09$latspc <- gsub("Rana_lessonae","Pelophylax_sp",df_as09$latspc)
+
+
+df_labels <- data.frame(date=refdates)  %>%
+  mutate(dayno=lubridate::yday(date),
+         datelabel=format(date, format = "%d-%b")) %>%
+  mutate(x0=0.52) 
+#Substitute in latin species name
+df_as09$latspc2 <- gsub("_"," ",df_as09$latspc)
+# copy the column with day number
+df_as09$dayno <- df_as09$NumDays
+# make a ggplot
+plt09 <- ggplot(df_as09, aes(x=latspc2, y=dayno)) +
+  # use points with fill based on evaluation, and jitter their position
+  geom_point(aes(fill=eval03), size=3, shape=21,
+             position=position_jitter(width=0.2, height=0.1)) +
+  # set the colors to fill the points manually
+  scale_fill_manual(values=alpha(c("springgreen3","yellow",  "white"),0.7)) +
+  # add box plot for each category
+  geom_boxplot(outlier.colour=NA, fill=NA)  +
+  # make the species names along the axis italic
+  theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12)) +
+  theme(axis.text.x = element_text(angle = 0, size=11)) +
+  #change axis labels
+  xlab("") + 
+  #xlab("species") + 
+  ylab("day number of the year") +
+  #getting separate legends
+  labs(fill='test sets with') +
+  # reverse the order of categories on the discrete scale
+  # https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+  # reverse the categories
+  scale_x_discrete(limits=rev) +
+  coord_flip() +
+  # add lines for dates
+  geom_hline(data=df_labels,
+             aes(yintercept=dayno),
+             colour="blue",linetype=2) + 
+  # add labels for dates
+  geom_text(data=df_labels,
+            aes(x=x0+0.2,y=dayno+2,label=datelabel),
+            hjust=0,vjust=1, size=3)
+# see the plot
 #plt09
-figname09A <- paste0("Fig04_06_",fnm02,"_boxplot_sampling_time_.png")
+figname09A <- paste0("Fig04_01_",fnm02,"_boxplot_sampling_time_.png")
 # save plot
 if(bSaveFigures==T){
   ggsave(plt09,file=figname09A,width=210,height=297*0.5,
          units="mm",dpi=300)
 }
 library(ggplot2)
+# exclude to only comprise non-failed tests, and place in a new data frame
+df_as10 <- df_as09[df_as09$eval03!="failed test",]
+# substitute in Pelophylax name
+df_as10$latspc2 <- gsub("Pelophylax esculentus","Pelophylax sp",df_as10$latspc2)
+df_as10$latspc2 <- gsub("Rana lessonae","Pelophylax sp",df_as10$latspc2)
+
+# make a ggplot
+plt09 <- ggplot(df_as10, aes(x=latspc2, y=dayno)) +
+  # use points with fill based on evaluation, and jitter their position
+  geom_point(aes(fill=eval03), size=3, shape=21,
+             position=position_jitter(width=0.2, height=0.1)) +
+  # set the colors to fill the points manually
+  scale_fill_manual(values=alpha(c("springgreen3",  "white"),0.7)) +
+  # add box plot for each category
+  geom_boxplot(outlier.colour=NA, fill=NA)  +
+  # make the species names along the axis italic
+  theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12)) +
+  theme(axis.text.x = element_text(angle = 0, size=11)) +
+  #change axis labels
+  xlab("") + 
+  #xlab("species") + 
+  ylab("day number of the year") +
+  #getting separate legends
+  labs(fill='test sets with') +
+  # reverse the order of categories on the discrete scale
+  # https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+  # reverse the categories
+  scale_x_discrete(limits=rev) +
+  coord_flip() +
+  # add lines for dates
+  geom_hline(data=df_labels,
+             aes(yintercept=dayno),
+             colour="blue",linetype=2) + 
+  # add labels for dates
+  geom_text(data=df_labels,
+            aes(x=x0+0.2,y=dayno+2,label=datelabel),
+            hjust=0,vjust=1, size=3)
+#plt09
+# pasTe together a file name
+figname09A <- paste0("Fig04_02_",fnm02,"_boxplot_sampling_time_.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt09,file=figname09A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
+library(ggplot2)
+#subset data frame to only include matches with "eDNA detected"
+df_as10 <- df_as09[df_as09$eval03=="eDNA detected",]
+# make a ggplot
+plt09 <- ggplot(df_as10, aes(x=latspc2, y=dayno)) +
+  # use points with fill based on evaluation, and jitter their position
+  geom_point(aes(fill=eval03), size=3, shape=21,
+             position=position_jitter(width=0.2, height=0.1)) +
+  # set the colors to fill the points manually
+  scale_fill_manual(values=alpha(c("springgreen3"),0.7)) +
+  # add box plot for each category
+  geom_boxplot(outlier.colour=NA, fill=NA)  +
+  # make the species names along the axis italic
+  theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12)) +
+  theme(axis.text.x = element_text(angle = 0, size=11)) +
+  #change axis labels
+  xlab("") + 
+  #xlab("species") + 
+  ylab("day number of the year") +
+  #getting separate legends
+  labs(fill='test sets with') +
+  # reverse the order of categories on the discrete scale
+  # https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+  # reverse the categories
+  scale_x_discrete(limits=rev) +
+  coord_flip() +
+  # add lines for dates
+  geom_hline(data=df_labels,
+             aes(yintercept=dayno),
+             colour="blue",linetype=2) + 
+  # add labels for dates
+  geom_text(data=df_labels,
+            aes(x=x0+0.2,y=dayno+2,label=datelabel),
+            hjust=0,vjust=1, size=3)
+# see the plot
+#plt09
+# paste together to get a file name to use for saving the file
+figname09A <- paste0("Fig04_03_",fnm02,"_boxplot_sampling_time_.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt09,file=figname09A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
 
 #match to get area covered by water body collected
 df_as09$Areal_m2 <- hc$Areal_m2[match(df_as09$DLsamplno,hc$DL_No)]
@@ -2754,9 +2902,11 @@ df_as09$Areal_m2 <- as.numeric(df_as09$Areal_m2)
 df_as10 <- df_as09[!is.na(df_as09$Areal_m2),]
 # take the log10 to the areas
 df_as10$l10.Areal_m2 <- log10(df_as10$Areal_m2)
+# replace the underscore to have space in between genus and species name
+df_as10$latspc2 <-  gsub("_"," ",df_as10$latspc)
 # make a scattered box plot for species
-plt10 <- ggplot(df_as10, aes(x=latspc, y=Areal_m2)) +
-  geom_point(aes(fill=eval03), size=5, shape=21, colour="grey20",
+plt10 <- ggplot(df_as10, aes(x=latspc2, y=Areal_m2)) +
+  geom_point(aes(fill=eval03), size=4, shape=21, colour="grey20",
              position=position_jitter(width=0.2, height=0.1)) +
   
   geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
@@ -2770,15 +2920,403 @@ plt10 <- plt10 + scale_fill_manual(values=alpha(c("springgreen3","yellow",  "whi
 # make the species names along the axis italic
 plt10 <- plt10 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
 plt10 <- plt10 + theme(axis.text.x = element_text(angle = 0, size=14))
-
-
 plt10 <- plt10 + scale_y_log10(breaks = trans_breaks("log10", function(y) 10^y),
                                labels = trans_format("log10", math_format(10^.x)))
 #labels = trans_format("log10"))
 #change axis labels
-plt10 <- plt10 + xlab("species") + ylab("area of water body sampled (m2)")
+plt10 <- plt10 + 
+  #xlab("species") + 
+  xlab("") + 
+  #https://community.rstudio.com/t/use-bquote-in-ggplot2-for-subscript-text/40882
+  ylab(bquote(area ~ of ~ water ~ body ~ sampled ~ ( m^2))) 
 #getting separate legends
 plt10 <- plt10 + labs(fill='test sets with')
-
 plt10 <- plt10 + coord_flip()
-plt10
+#plt10
+figname10A <- paste0("Fig05_01_",fnm02,"_boxplot_lake_area_size.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt10,file=figname10A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
+library(ggplot2)
+# exclude the failed tests
+df_as12 <- df_as10[df_as10$eval03!="failed test",]
+# make a scattered box plot for species
+plt12 <- ggplot(df_as12, aes(x=latspc2, y=Areal_m2)) +
+  geom_point(aes(fill=eval03), size=4, shape=21, colour="grey20",
+             position=position_jitter(width=0.2, height=0.1)) +
+  
+  geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
+  labs(title="B")
+# reverse the order of categories on the discrete scale
+# https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+# reverse the categories
+plt12 <- plt12 + scale_x_discrete(limits=rev)
+# set the fill color manually
+plt12 <- plt12 + scale_fill_manual(values=alpha(c("springgreen3","white"),0.7))
+# make the species names along the axis italic
+plt12 <- plt12 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
+plt12 <- plt12 + theme(axis.text.x = element_text(angle = 0, size=14))
+
+
+plt12 <- plt12 + scale_y_log10(breaks = trans_breaks("log10", function(y) 10^y),
+                               labels = trans_format("log10", math_format(10^.x)))
+#labels = trans_format("log10"))
+#change axis labels
+plt12 <- plt12 +  #xlab("species") + 
+  xlab("") + 
+  #https://community.rstudio.com/t/use-bquote-in-ggplot2-for-subscript-text/40882
+  ylab(bquote(area ~ of ~ water ~ body ~ sampled ~ ( m^2))) 
+#getting separate legends
+plt12 <- plt12 + labs(fill='test sets with')
+plt12 <- plt12 + coord_flip()
+#plt12
+figname10A <- paste0("Fig05_02_",fnm02,"_boxplot_lake_area_size.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt12,file=figname10A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
+library(ggplot2)
+# exclude the failed tests
+df_as12 <- df_as09[df_as09$eval03=="eDNA detected",]
+# make a scattered box plot for species
+plt12 <- ggplot(df_as12, aes(x=latspc2, y=Areal_m2)) +
+  geom_point(aes(fill=eval03), size=4, shape=21, colour="grey20",
+             position=position_jitter(width=0.2, height=0.1)) +
+  
+  geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
+  #labs(title="B")
+  labs(title="")
+# reverse the order of categories on the discrete scale
+# https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+# reverse the categories
+plt12 <- plt12 + scale_x_discrete(limits=rev)
+# set the fill color manually
+plt12 <- plt12 + scale_fill_manual(values=alpha(c("springgreen3"),0.7))
+# make the species names along the axis italic
+plt12 <- plt12 + theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12))
+plt12 <- plt12 + theme(axis.text.x = element_text(angle = 0, size=14))
+plt12 <- plt12 + scale_y_log10(breaks = trans_breaks("log10", function(y) 10^y),
+                               labels = trans_format("log10", math_format(10^.x)))
+#labels = trans_format("log10"))
+#change axis labels
+plt12 <- plt12 +  #xlab("species") +
+  xlab("") +
+  #ylab("area of water body sampled (m2)")
+  #https://community.rstudio.com/t/use-bquote-in-ggplot2-for-subscript-text/40882
+  ylab(bquote(area ~ of ~ water ~ body ~ sampled ~ ( m^2))) 
+#getting separate legends
+plt12 <- plt12 + labs(fill='test sets with')
+plt12 <- plt12 + coord_flip()
+#plt12
+figname10A <- paste0("Fig05_03_",fnm02,"_boxplot_lake_area_size.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt12,file=figname10A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
+#_______________________________________________________________________________
+
+
+
+library(lubridate)
+library(tidyverse)
+library(scales)
+
+#paste path and file together for table with aquatic periods for the amphibians
+wd00_wd03_inpf04 <- paste(wd00_wd03,"/aquatic_periods_for_DK_amphibians_v01.xls",sep="")
+# read in the excel file
+df_aqp <- as.data.frame(read_excel(wd00_wd03_inpf04))
+# Proceed by transforming this data frame in order to 
+# get day number of the year for adult period start (aps) and end (ape)
+# and for juvenile period start (jps) and end (jpe)
+df_aqp$aps.dn <- lubridate::yday( as.Date(df_aqp$adultperiodstart,tryFormats=c("%d-%m-%y")))
+df_aqp$ape.dn <- lubridate::yday( as.Date(df_aqp$adultperiodend,tryFormats=c("%d-%m-%y")))
+df_aqp$jps.dn <- lubridate::yday( as.Date(df_aqp$juvenileperiodstart,tryFormats=c("%d-%m-%y")))
+df_aqp$jpe.dn <- lubridate::yday( as.Date(df_aqp$juvenileperiodend,tryFormats=c("%d-%m-%y")))
+# get the mean dayNumber per period by using the adult period start day no and the
+# adult period end day no 
+df_aqp$ap.m.dn <- rowMeans(df_aqp[,c('aps.dn', 'ape.dn')], na.rm=TRUE)
+# get the mean dayNumber per period by using the juvenile period start day no and the
+# juvenile period end day no 
+df_aqp$jp.m.dn <- rowMeans(df_aqp[,c('jps.dn', 'jpe.dn')], na.rm=TRUE)
+# also get the standard deviation around the meand day numbers
+df_aqp$ap.sd.dn <- df_aqp$ap.m.dn-df_aqp$aps.dn
+df_aqp$jp.sd.dn <- df_aqp$jp.m.dn-df_aqp$jps.dn
+# use tidyr to rearrange from wide to long
+df_aqp2 <- df_aqp %>% 
+  pivot_longer(
+    cols = starts_with(c("jp.","ap.")), 
+    names_to = "periodName", 
+    values_to = "dayNumb",
+    values_drop_na = TRUE
+  )
+# define columns to keep
+colkeep <- c("latspc","periodName","dayNumb")
+# only keep specified columns
+df_aqp2 <- df_aqp2[colkeep]
+# exclude match with species
+df_aqp2 <- df_aqp2[!grepl("lessonae",df_aqp2$latspc),]
+df_aqp2 <- df_aqp2[!grepl("ridibundus",df_aqp2$latspc),]
+df_aqp2 <- df_aqp2[!grepl("esculent",df_aqp2$latspc),]
+
+# get the second element, which denotes the 'sd' or the 'mean'
+df_aqp2$perEval <- gsub("^(.*)\\.(.*)\\.(.*)","\\2",df_aqp2$periodName)
+# subsitute to get the first element - which is the abbreviation for the mating
+# hactching period
+df_aqp2$periodName <- gsub("^(.*)\\.(.*)\\.(.*)","\\1",df_aqp2$periodName)
+# make the tibble wide
+df_aqp3 <- df_aqp2 %>% 
+  pivot_wider(names_from = perEval, values_from = dayNumb)
+# substitute to get long period name categories
+df_aqp3$periodName <- gsub("jp","juvenile aquatic",df_aqp3$periodName)
+df_aqp3$periodName <- gsub("ap","adult aquatic",df_aqp3$periodName)
+# a sequence of all day nos used to make tile data
+daynos_norm <- data.frame(dayno=seq(floor(min(df_aqp$aps.dn,na.rm=T)),
+                                    ceiling(max(df_aqp$jpe.dn,na.rm=T)),1))
+# cutoff nvalues below a threshold
+cutoff = 0.2
+# cartesian join of daynos and the group / period combinations
+# for each group (species) and aquatic period we will create a normally distributed 
+# variable and calculate the probability distribution function at each day in the dayno sequence
+df_tile3 <- df_aqp3 %>% 
+  merge(daynos_norm,all=T) %>%
+  mutate(n=dnorm(dayno,m,sd)/dnorm(m,m,sd)) %>%
+  mutate(n=n^2) %>% # denne kvadratfunktion tydeliggør de høje værdier - prøv uden for at se hvad jeg mener
+  filter(n>=cutoff) 
+#replace column name to make the 'group' name match with the 'df' data frame
+colnames(df_tile3)[1] <- c("latspc2")
+# substitute in name
+df_tile3$latspc2 <- gsub("_"," ",df_tile3$latspc2)
+# subset data frame
+df_as11 <- df_as09[df_as09$eval03=="eDNA detected",]
+df_as11 <- df_as09[!df_as09$eval03=="failed test",]
+#unique(df_as11$eval03)
+# -------- make data for date labels  ------- 
+
+refdates <- c("2022-03-01","2022-05-01","2022-07-01","2022-09-01","2022-10-01")
+refdates <- as_date(refdates)
+
+df_labels <- data.frame(date=refdates)  %>%
+  mutate(dayno=yday(date),
+         datelabel=format(date, format = "%d-%b")) %>%
+  mutate(x0=0.52) 
+
+# -------- plot  1 ------- 
+
+# different colours for each period
+pal_period <- c("#fcb900", "#827717") 
+# set day interval for geom_tile
+dayinterval = 1 
+# replace the matches with 'lessonae'
+df_as11$latspc2[grepl("lessonae",df_as11$latspc2)] <- "Pelophylax sp"
+#unique(df_as11$latspc2)
+# Get evaluation categories
+eval03.1 <- df_as11$eval03
+# make it a factor
+eval03.1 <- as.factor(eval03.1) 
+# get unique categories
+eval03.cat <- unique(eval03.1)
+# set colors for categories of eDNA evaluations
+colsfeval <- c("white","springgreen3")
+#bind together as columns in a data frame
+df_colsfeval<- cbind.data.frame(eval03.cat,colsfeval)
+# use this data frame to look up the colors for the eDNA evaluations
+eval03.col<- df_colsfeval$colsfeval[match(eval03.1,df_colsfeval$eval03.cat)]
+# get unique period names
+perNm2 <- as.factor(unique(df_tile3$periodName))
+# start the ggplot
+plt13 <- ggplot(df_as11, aes(x=latspc2, y=dayno)) +
+  # alpha indicates the tiled values from normal distributions
+  # add the faded color tiles underneath for the periods
+  geom_tile(data=df_tile3,aes(width=0.85,height=dayinterval,fill=periodName,alpha=n), 
+            position=position_nudge(x=-0.05), show.legend=F) +
+  # add points, fill them by the factor defined above
+  geom_point(data=df_as11,aes(fill=eval03),position=position_jitter(width=0.2, height=0.1),
+             #size=3, shape=21,fill=NA,colour="#000000",alpha=0.9) +
+             size=5, shape=21,colour="#000000",alpha=0.6) +
+  # add boxplot
+  #geom_boxplot(outlier.colour=NA, fill=NA, width=0.65)  +
+  
+  scale_alpha_continuous(range=c(0,0.9)) +
+  # set the color range manually -  comprised from two vectors
+  # one vector for the periods and one for the points
+  scale_fill_manual("test sets with", 
+                    breaks = c(as.character( c(perNm2,eval03.cat))),
+                    values=c(pal_period,colsfeval)) +
+  # transpose the coordinate system -i.e. make the x-axis the y-axis
+  coord_flip() +
+  # use 'theme_classic()' to get a plain white nbackground on the plot
+  # notice that using 'theme_classic()' nullifies setting 'fac'face = "italic"'
+  # under 'theme' -  which is why it is placed here above 'theme'
+  theme_classic() +
+  # make the species names along the axis italic
+  theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12)) +
+  theme(axis.text.x = element_text(angle = 0, size=12)) +
+  # reverse the order of categories on the discrete scale
+  # https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+  # reverse the categories
+  scale_x_discrete(limits=rev) +
+  scale_y_continuous(limits=c(60,280)) +
+  #change axis labels
+  xlab("") + 
+  #xlab("species") + 
+  ylab("day number of the year") +
+  #getting separate legends
+  labs(fill='test sets with') +
+  labs(shape='period names') +
+  # labs(color='test sets with') +
+  # add stipled vertical line for dates 
+  geom_hline(data=df_labels,
+             aes(yintercept=dayno),
+             colour="#795548",linetype=2) + 
+  # add labels for dates
+  geom_text(data=df_labels,
+            aes(x=x0+0.2,y=dayno+2,label=datelabel),
+            hjust=0,vjust=1, size=4)
+#see the plot
+plt13
+#
+
+figname13A <- paste0("Fig04_04_",fnm02,"_time_period_aquatic.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt13,file=figname13A,width=210*1.6,height=297*0.8,
+         units="mm",dpi=300)
+}
+#_______________________________________________________________________________
+# make another plot but only including 'eDNA detected'
+#_______________________________________________________________________________
+
+# subset data frame
+df_as11 <- df_as09[df_as09$eval03=="eDNA detected",]
+#df_as11 <- df_as09[!df_as09$eval03=="failed test",]
+# replace the matches with 'lessonae'
+df_as11$latspc2[grepl("lessonae",df_as11$latspc2)] <- "Pelophylax sp"
+
+#unique(df_as11$eval03)
+# -------- make data for date labels  ------- 
+
+refdates <- c("2022-03-01","2022-05-01","2022-07-01","2022-09-01","2022-10-01")
+refdates <- as_date(refdates)
+
+df_labels <- data.frame(date=refdates)  %>%
+  mutate(dayno=yday(date),
+         datelabel=format(date, format = "%d-%b")) %>%
+  mutate(x0=0.52) 
+
+# -------- plot  1 ------- 
+
+# different colours for each period
+pal_period <- c("#fcb900", "#827717") 
+# set day interval for geom_tile
+dayinterval = 1 
+
+# Get evaluation categories
+eval03.1 <- df_as11$eval03
+# make it a factor
+eval03.1 <- as.factor(eval03.1) 
+# get unique categories
+eval03.cat <- unique(eval03.1)
+# set colors for categories of eDNA evaluations
+colsfeval <- c("white","springgreen3")
+colsfeval <- c("springgreen3")
+#bind together as columns in a data frame
+df_colsfeval<- cbind.data.frame(eval03.cat,colsfeval)
+# use this data frame to look up the colors for the eDNA evaluations
+eval03.col<- df_colsfeval$colsfeval[match(eval03.1,df_colsfeval$eval03.cat)]
+# get unique period names
+perNm2 <- as.factor(unique(df_tile3$periodName))
+# start the ggplot
+plt13 <- ggplot(df_as11, aes(x=latspc2, y=dayno)) +
+  # alpha indicates the tiled values from normal distributions
+  # add the faded color tiles underneath for the periods
+  geom_tile(data=df_tile3,aes(width=0.85,height=dayinterval,fill=periodName,alpha=n), 
+            position=position_nudge(x=-0.05), show.legend=F) +
+  # add points, fill them by the factor defined above
+  geom_point(data=df_as11,aes(fill=eval03),position=position_jitter(width=0.2, height=0.1),
+             #size=3, shape=21,fill=NA,colour="#000000",alpha=0.9) +
+             size=5, shape=21,colour="#000000",alpha=0.6) +
+  # add boxplot
+  geom_boxplot(outlier.colour=NA, fill=NA, width=0.65)  +
+  
+  scale_alpha_continuous(range=c(0,0.9)) +
+  # set the color range manually -  comprised from two vectors
+  # one vector for the periods and one for the points
+  scale_fill_manual("test sets with", 
+                    breaks = c(as.character( c(perNm2,eval03.cat))),
+                    values=c(pal_period,colsfeval)) +
+  # transpose the coordinate system -i.e. make the x-axis the y-axis
+  coord_flip() +
+  # use 'theme_classic()' to get a plain white nbackground on the plot
+  # notice that using 'theme_classic()' nullifies setting 'fac'face = "italic"'
+  # under 'theme' -  which is why it is placed here above 'theme'
+  theme_classic() +
+  # make the species names along the axis italic
+  theme(axis.text.y = element_text(angle = 0, hjust = 1, face = "italic", size=12)) +
+  theme(axis.text.x = element_text(angle = 0, size=12)) +
+  # reverse the order of categories on the discrete scale
+  # https://stackoverflow.com/questions/28391850/reverse-order-of-discrete-y-axis-in-ggplot2
+  # reverse the categories
+  scale_x_discrete(limits=rev) +
+  scale_y_continuous(limits=c(60,280)) +
+  #change axis labels
+  xlab("") + 
+  #xlab("species") + 
+  ylab("day number of the year") +
+  #getting separate legends
+  labs(fill='test sets with') +
+  labs(shape='period names') +
+  # labs(color='test sets with') +
+  # add stipled vertical line for dates 
+  geom_hline(data=df_labels,
+             aes(yintercept=dayno),
+             colour="#795548",linetype=2) + 
+  # add labels for dates
+  geom_text(data=df_labels,
+            aes(x=x0+0.2,y=dayno+2,label=datelabel),
+            hjust=0,vjust=1, size=4)
+#see the plot
+plt13
+#
+
+figname13A <- paste0("Fig04_05_",fnm02,"_time_period_aquatic.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt13,file=figname13A,width=210*1.6,height=297*0.8,
+         units="mm",dpi=300)
+}
+#_______________________________________________________________________________
+# start is the lake area sampled normally distributed ?
+#_______________________________________________________________________________
+# log transform area of the water bodies sampled
+l10_lA <- log10(df_as11$Areal_m2)
+hist(l10_lA)
+# get inspiration here: http://www.sthda.com/english/wiki/normality-test-in-r
+library(ggpubr)
+ggqqplot(l10_lA)
+shapiro.test(l10_lA)
+SWt_lake <- shapiro.test(l10_lA)
+ifelse(SWt_lake$p.value  > 0.05,"we can assume the normality","do not assume the normality")
+
+#From the output, the p-value > 0.05 implying that the distribution of 
+#the data are not significantly different from normal distribution. 
+#In other words, we can assume the normality.
+#_______________________________________________________________________________
+# end is the lake area sampled normally distributed ?
+#_______________________________________________________________________________
+
+#_______________________________________________________________________________
+# start is the day number sampled normally distributed ?
+#_______________________________________________________________________________
+
+hist(df_as11$dayno)
+ggqqplot(df_as11$dayno)
+SWt_day <- shapiro.test(df_as11$dayno)
+ifelse(SWt_day$p.value  > 0.05,"we can assume the normality","do not assume the normality")
+# 
+#_______________________________________________________________________________
+# end is the day number sampled normally distributed ?
+#_______________________________________________________________________________

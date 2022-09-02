@@ -1,18 +1,17 @@
-#install.packages("ecospat")
+#!/usr/bin/env Rscript
+# -*- coding: utf-8 -*-
 
+#install.packages("ecospat")
 library(ecospat)
 # https://cran.r-project.org/web/packages/ecospat/vignettes/vignette_ecospat_package.pdf
 # https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ecog.02671
-data(ecospat.testData)
-names(ecospat.testData)
-
-#head(ecospat.testData,12)
-head(ecospat.testNiche.inv,12)
-head(ecospat.testNiche.nat,12)
-
-data(ecospat.testNiche.inv)
-names(ecospat.testNiche.inv)
-
+# data(ecospat.testData)
+# names(ecospat.testData)
+# #head(ecospat.testData,12)
+# head(ecospat.testNiche.inv,12)
+# head(ecospat.testNiche.nat,12)
+# data(ecospat.testNiche.inv)
+# names(ecospat.testNiche.inv)
 #install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
 # # 
 library("rnaturalearth")
@@ -59,7 +58,7 @@ p01 <- ggplot(data = world) +
 p01
 
 
-head(df_Eco.nat,6)
+# head(df_Eco.nat,6)
 #_______________________________________________________________________________
 df_Eco.inv <- ecospat.testNiche.inv
 
