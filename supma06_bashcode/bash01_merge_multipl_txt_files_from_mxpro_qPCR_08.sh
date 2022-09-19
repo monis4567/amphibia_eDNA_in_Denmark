@@ -222,6 +222,8 @@ do
 
 	LC_ALL=C sed -E 's/Threshold.*\(dR\)/;ThresholddRn;/g' | \
 	LC_ALL=C sed -E 's/ThresholddRn.*/ThresholddRn;CtdRn/' | \
+	LC_ALL=C sed -E 's/eDNAViuf/eDNA;CtdRn/' | \
+	LC_ALL=C sed -E 's/eDNARoellum/eDNA;CtdRn/' | \
 
 	#see how to remove tabs here: https://stackoverflow.com/questions/5398395/how-can-i-insert-a-tab-character-with-sed-on-os-x?noredirect=1&lq=1
 	LC_ALL=C sed -E $'s/\t/;/g' | \

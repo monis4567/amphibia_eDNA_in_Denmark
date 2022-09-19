@@ -1,0 +1,97 @@
+Well	Well Name	Well Type	Threshold (dRn)	Ct (dRn)	
+A1	01_Aborre_PosK	NPC	0.1000	31.70	
+B1	01_Aborre_NegK	NTC	0.1000	No Ct	
+C1	01_Aborre_eDNA	Unknown	0.1000	38.48	
+D1	01_Aborre_eDNA	Unknown	0.1000	37.74	
+A2	02_Aborre_PosK	NPC	0.1000	30.95	
+B2	02_Aborre_NegK	NTC	0.1000	No Ct	
+C2	02_Aborre_eDNA	Unknown	0.1000	38.68	
+D2	02_Aborre_eDNA	Unknown	0.1000	38.00	
+A3	03_Skalle_PosK	NPC	0.1000	23.69	
+B3	03_Skalle_NegK	NTC	0.1000	No Ct	
+C3	03_Skalle_eDNA	Unknown	0.1000	36.01	
+D3	03_Skalle_eDNA	Unknown	0.1000	41.65	
+A4	04_Skalle_PosK	NPC	0.1000	23.37	
+B4	04_Skalle_NegK	NTC	0.1000	No Ct	
+C4	04_Skalle_eDNA	Unknown	0.1000	38.81	
+D4	04_Skalle_eDNA	Unknown	0.1000	37.49	
+A5	05_Gedde_PosK	NPC	0.1000	No Ct	
+B5	05_Gedde_NegK	NTC	0.1000	No Ct	
+C5	05_Gedde_eDNA	Unknown	0.1000	No Ct	
+D5	05_Gedde_eDNA	Unknown	0.1000	No Ct	
+A6	06_Gedde_PosK	NPC	0.1000	22.96	
+B6	06_Gedde_NegK	NTC	0.1000	No Ct	
+C6	06_Gedde_eDNA	Unknown	0.1000	No Ct	
+D6	06_Gedde_eDNA	Unknown	0.1000	No Ct	
+A7	07_Karpe_PosK	NPC	0.1000	24.70	
+B7	07_Karpe_NegK	NTC	0.1000	No Ct	
+C7	07_Karpe_eDNA	Unknown	0.1000	No Ct	
+D7	07_Karpe_eDNA	Unknown	0.1000	No Ct	
+A8	08_Karpe_PosK	NPC	0.1000	24.36	
+B8	08_Karpe_NegK	NTC	0.1000	No Ct	
+C8	08_Karpe_eDNA	Unknown	0.1000	38.76	
+D8	08_Karpe_eDNA	Unknown	0.1000	44.02	
+A9	09_Soelvkarusse_PosK	NPC	0.1000	38.07	
+B9	09_Soelvkarusse_NegK	NTC	0.1000	No Ct	
+C9	09_Soelvkarusse_eDNA	Unknown	0.1000	No Ct	
+D9	09_Soelvkarusse_eDNA	Unknown	0.1000	No Ct	
+A10	10_Soelvkarusse_PosK	NPC	0.1000	36.42	
+B10	10_Soelvkarusse_NegK	NTC	0.1000	No Ct	
+C10	10_Soelvkarusse_eDNA	Unknown	0.1000	No Ct	
+D10	10_Soelvkarusse_eDNA	Unknown	0.1000	No Ct	
+A11	11_EuropaeiskAal_PosK	NPC	0.1000	No Ct	
+B11	11_EuropaeiskAal_NegK	NTC	0.1000	No Ct	
+C11	11_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+D11	11_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+A12	12_EuropaeiskAal_PosK	NPC	0.1000	No Ct	
+B12	12_EuropaeiskAal_NegK	NTC	0.1000	No Ct	
+C12	12_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+D12	12_EuropaeiskAal_eDNA	Unknown	0.1000	No Ct	
+H1	13_Flodkrebs_PosK	NPC	0.1000	No Ct	
+G1	13_Flodkrebs_NegK	NTC	0.1000	No Ct	
+E1	13_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+F1	13_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+H2	14_Flodkrebs_PosK	NPC	0.1000	37.48	
+G2	14_Flodkrebs_NegK	NTC	0.1000	No Ct	
+E2	14_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+F2	14_Flodkrebs_eDNA	Unknown	0.1000	No Ct	
+H3	15_Signalkrebs_PosK	NPC	0.1000	No Ct	
+G3	15_Signalkrebs_NegK	NTC	0.1000	No Ct	
+E3	15_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+F3	15_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+H4	16_Signalkrebs_PosK	NPC	0.1000	29.52	
+G4	16_Signalkrebs_NegK	NTC	0.1000	No Ct	
+E4	16_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+F4	16_Signalkrebs_eDNA	Unknown	0.1000	No Ct	
+H5	17_GaliziskSumpkrebs_PosK	NPC	0.1000	31.32	
+G5	17_GaliziskSumpkrebs_NegK	NTC	0.1000	No Ct	
+E5	17_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+F5	17_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+H6	18_GaliziskSumpkrebs_PosK	NPC	0.1000	30.80	
+G6	18_GaliziskSumpkrebs_NegK	NTC	0.1000	No Ct	
+E6	18_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+F6	18_GaliziskSumpkrebs_eDNA	Unknown	0.1000	No Ct	
+H7	19_KinesiskUldhaandskrabbe_PosK	NPC	0.1000	36.02	
+G7	19_KinesiskUldhaandskrabbe_NegK	NTC	0.1000	No Ct	
+E7	19_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+F7	19_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+H8	20_KinesiskUldhaandskrabbe_PosK	NPC	0.1000	35.74	
+G8	20_KinesiskUldhaandskrabbe_NegK	NTC	0.1000	No Ct	
+E8	20_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+F8	20_KinesiskUldhaandskrabbe_eDNA	Unknown	0.1000	No Ct	
+H9	21_BredVandkalv_PosK	NPC	0.1000	25.45	
+G9	21_BredVandkalv_NegK	NTC	0.1000	No Ct	
+E9	21_BredVandkalv_eDNA	Unknown	0.1000	No Ct	
+F9	21_BredVandkalv_eDNA	Unknown	0.1000	No Ct	
+H10	22_BredVandkalv_PosK	NPC	0.1000	24.00	
+G10	22_BredVandkalv_NegK	NTC	0.1000	No Ct	
+E10	22_BredVandkalv_eDNA	Unknown	0.1000	No Ct	
+F10	22_BredVandkalv_eDNA	Unknown	0.1000	No Ct	
+H11	23_Odder_PosK	NPC	0.1000	No Ct	
+G11	23_Odder_NegK	NTC	0.1000	No Ct	
+E11	23_Odder_eDNA	Unknown	0.1000	No Ct	
+F11	23_Odder_eDNA	Unknown	0.1000	No Ct	
+H12	24_Odder_PosK	NPC	0.1000	No Ct	
+G12	24_Odder_NegK	NTC	0.1000	No Ct	
+E12	24_Odder_eDNA	Unknown	0.1000	No Ct	
+F12	24_Odder_eDNA	Unknown	0.1000	No Ct	

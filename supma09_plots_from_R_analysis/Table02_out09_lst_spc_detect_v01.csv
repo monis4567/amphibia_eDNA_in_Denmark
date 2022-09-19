@@ -1,15 +1,15 @@
 "","Species","sets that are failed tests, Non-approved analyses","sets that are failed tests, percentage","Approved analyses sets, no eDNA detected","Approved analyses sets, no eDNA detected, percentage","Approved analyses sets, eDNA detected","Approved analyses sets, eDNA detected, percentage","Total number of attemped sets"
-"1","Bombina_bombina",50,"46%",58,"54%",0,"0%",108
-"3","Bufo_bufo",50,"57%",17,"19%",21,"24%",88
-"7","Bufo_calamita",40,"36%",70,"64%",0,"0%",110
-"9","Bufo_viridis",47,"42%",65,"58%",1,"1%",113
-"12","Hyla_arborea",38,"33%",76,"66%",1,"1%",115
-"15","Ichthyosaurus_alpestris",57,"63%",33,"37%",0,"0%",90
-"17","Lissotriton_vulgaris",64,"48%",35,"26%",35,"26%",134
-"21","Pelobates_fuscus",49,"42%",62,"53%",7,"6%",118
-"25","Pelophylax_sp",127,"70%",52,"29%",3,"2%",182
-"29","Rana_arvalis",70,"59%",36,"30%",13,"11%",119
-"33","Rana_dalmatina",39,"33%",77,"65%",2,"2%",118
-"36","Rana_temporaria",61,"67%",21,"23%",9,"10%",91
-"39","Triturus_cristatus",49,"37%",74,"55%",11,"8%",134
-"14",NA,741,"49%",676,"44%",103,"7%",1520
+"1","Bombina_bombina",76,"45%",94,"55%",0,"0%",170
+"3","Bufo_bufo",73,"45%",46,"29%",42,"26%",161
+"7","Bufo_calamita",42,"24%",133,"76%",1,"1%",176
+"10","Bufo_viridis",43,"24%",133,"76%",0,"0%",176
+"12","Hyla_arborea",43,"23%",142,"77%",0,"0%",185
+"14","Ichthyosaurus_alpestris",72,"47%",81,"53%",0,"0%",153
+"16","Lissotriton_vulgaris",70,"30%",89,"38%",74,"32%",233
+"20","Pelobates_fuscus",54,"29%",125,"67%",8,"4%",187
+"24","Pelophylax_sp",165,"54%",134,"44%",6,"2%",305
+"28","Rana_arvalis",98,"46%",92,"43%",22,"10%",212
+"32","Rana_dalmatina",44,"21%",165,"78%",2,"1%",211
+"35","Rana_temporaria",70,"48%",52,"35%",25,"17%",147
+"39","Triturus_cristatus",62,"26%",157,"67%",16,"7%",235
+"141","Total count",912,"36%",1443,"57%",196,"8%",2551

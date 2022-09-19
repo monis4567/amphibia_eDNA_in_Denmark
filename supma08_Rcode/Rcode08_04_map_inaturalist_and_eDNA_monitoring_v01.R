@@ -68,17 +68,25 @@ df_iN01$scientific_name3 <- df_iN01$scientific_name2
 # "Pelophylax sp"
 df_iN01$scientific_name3 <- gsub("Pelophylax ridibundus","Pelophylax sp",df_iN01$scientific_name3)
 df_iN01$scientific_name3 <- gsub("Pelophylax kurtmuelleri","Pelophylax sp",df_iN01$scientific_name3)
+df_iN01$scientific_name3 <- gsub("vulgaris vulgaris","vulgaris",df_iN01$scientific_name3)
+df_iN01$scientific_name3 <- gsub("Pelophylax esculentus","Pelophylax sp",df_iN01$scientific_name3)
 df_iN01$taxon.name <- gsub("Pelophylax klesculenta","Pelophylax sp",df_iN01$taxon.name)
 df_iN01$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_iN01$taxon.name)
+df_iN01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_iN01$taxon.name)
+df_iN01$taxon.name <- gsub("vulgaris vulgaris","vulgaris",df_iN01$taxon.name)
 #unique(df_iN01$scientific_name3)
 #make positions numeric
 df_DL01$dec_lat <- as.numeric(df_DL01$dec_lat)
 df_DL01$dec_lon <- as.numeric(df_DL01$dec_lon)
 # add a column for evaluation categories
+#unique(df_DL01$eval04)
 df_DL01$eval03 <- NA
-df_DL01$eval03[df_DL01$eval01=="truezerodetect"] <- "eDNA_zero"
-df_DL01$eval03[df_DL01$eval01=="repl2pos"] <- "eDNA_present"
-df_DL01$eval03[df_DL01$eval01=="repl1or2"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval05=="truezerodetect"] <- "eDNA_zero"
+df_DL01$eval03[df_DL01$eval05=="repl2p"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval05=="repl1p"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval05=="nonapprovK"] <- "failed_test"
+# exclude failed tests
+df_DL01 <- df_DL01[!df_DL01$eval03=="failed_test",]
 # add a column for the iNaturalist research records
 df_iN01$eval03 <- "iNat_Res"
 # assign one column to a new column - to retain this new column later on
@@ -90,11 +98,11 @@ keep <- c("dec_lat",
             "eval03")
 #limit data frames to only keep these columns
 df_iN02 <- df_iN01[keep]
-unique(df_iN02$taxon.name)
+#unique(df_iN02$taxon.name)
+df_DL01$taxon.name <- gsub("_"," ",df_DL01$latspc)
 df_DL02 <- df_DL01[keep]
 # bind the two data frames together by appending as rows
 df_iNDL02 <- rbind(df_DL02,df_iN02)
-#unique(df_iNDL02$taxon.name)
 #change species names
 df_iNDL02$taxon.name <- gsub("Pelophylax klesculenta","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
 #df_iNDL02$taxon.name <- gsub("Pelophylax kl.","Pelophylax kl. esculenta",df_iNDL02$taxon.name)
@@ -119,6 +127,8 @@ df_iNDL02$pchs[df_iNDL02$eval03=="iNat_Res"] <- 22
 
 # add a column for evaluation categories
 df_iNDL02$monit.cat <- NA
+#unique(df_iNDL02$eval03)
+#unique(df_iNDL02$eval03)
 df_iNDL02$monit.cat[df_iNDL02$eval03=="eDNA_zero"] <- "eDNA_monit"
 df_iNDL02$monit.cat[df_iNDL02$eval03=="eDNA_present"] <- "eDNA_monit"
 df_iNDL02$monit.cat[df_iNDL02$eval03=="iNat_Res"] <- "iNat_Res"
@@ -570,7 +580,7 @@ df_iNDL04$pchs <- as.factor(df_iNDL04$pchs)
 nspo2 <- length(unique(df_iNDL04$txnmc2))
 cl2 <- colorRampPalette(c(scbpl))( nspo2) 
 cl06 <- cl2
-cl06 <- c("springgreen3","white","mediumpurple2")
+cl06 <- c("springgreen3","mediumpurple2","white")
 nspo2 <- length(unique(df_iNDL04$eval03))
 # order the dataframe by a column
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$lettx),]
@@ -592,10 +602,9 @@ df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
 df_iNDL05 <- df_iNDL04
 # sustitute in categories to end up with more readable categories in the plot
 df_iNDL05$eval03 <- gsub("eDNA_present","eDNA detected",df_iNDL05$eval03)
-df_iNDL05$eval03 <- gsub("eDNA_zero","eDNA not detected",df_iNDL05$eval03)
+df_iNDL05$eval03 <- gsub("eDNA_zero","no eDNA",df_iNDL05$eval03)
 df_iNDL05$eval03 <- gsub("iNat_Res","iNaturalist",df_iNDL05$eval03)
 df_iNDL05$eval03 <- gsub("gbif","GBIF",df_iNDL05$eval03)
-#unique(df_iNDL05$eval03)
 #make plot
 p05 <- ggplot(data = world) +
   geom_sf(color = "black", fill = "azure3", lwd=0.4) +
@@ -617,7 +626,7 @@ p05 <- ggplot(data = world) +
   
   scale_size_manual(values=c(2.8,1.2,1.6)) +
   #manually set the pch shape of the points
-  scale_shape_manual(values=c(21,3,22)) +
+  scale_shape_manual(values=c(21,22,3)) +
   #set the color of the points
   
   
@@ -625,7 +634,7 @@ p05 <- ggplot(data = world) +
   #matching the number of species listed
   scale_color_manual(values=alpha(
     c(rep("black",nspo2)),
-    c(1.0 , 1.0 , 0.2) 
+    c(1.0) 
   )) +
   #set the color of the points
   #use alpha to scale the intensity of the color

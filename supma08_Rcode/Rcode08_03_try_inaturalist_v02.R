@@ -33,7 +33,7 @@ options(stringsAsFactors = F)
 if(!require(spocc)){
   install.packages("spocc")
   library(spocc)
-  }  
+}  
 #get rinat package
 if(!require(rinat)){
   remotes::install_github("ropensci/rinat")
@@ -83,13 +83,13 @@ set_swlng= 7
 boundslim <- c(set_swlat, set_swlng, set_nelat, set_nelng)
 ## Search for "Bufo bufo" using the boundslimits defined above
 amphib01 <- get_inat_obs(taxon_name = "Bufo bufo",
-                        quality = "research",
-                        bounds = boundslim,
-                        maxresults = 500)
+                         quality = "research",
+                         bounds = boundslim,
+                         maxresults = 500)
 # make the ggplot
 plt_amp01 <- ggplot(data = amphib01, aes(x = longitude,
-                           y = latitude,
-                           colour = scientific_name)) +
+                                         y = latitude,
+                                         colour = scientific_name)) +
   geom_polygon(data = map_data("world"),
                aes(x = long, y = lat, group = group),
                fill = "grey95",
@@ -126,20 +126,20 @@ i <- 1
 #iterate over taxon names in list 
 for (tx in lst_amphb)
 {
-#  print(tx)}
+  #  print(tx)}
   print(tx)
-## Search for the amphibian species using the boundslimits defined above
-df_g01obs <- get_inat_obs(#taxon_name = "Bufo bufo",
-                          taxon_name = tx,
-                         quality = "research",
-                         bounds = boundslim,
-                         maxresults = 500)
-# append the data frame to the list of data frames
-# store it as the i'th element 
-lst_tx_gobs[[i]] <- df_g01obs
-# increase the count of i by one
-i <- i+1
-# end iteration over amphibian species in the list
+  ## Search for the amphibian species using the boundslimits defined above
+  df_g01obs <- get_inat_obs(#taxon_name = "Bufo bufo",
+    taxon_name = tx,
+    quality = "research",
+    bounds = boundslim,
+    maxresults = 500)
+  # append the data frame to the list of data frames
+  # store it as the i'th element 
+  lst_tx_gobs[[i]] <- df_g01obs
+  # increase the count of i by one
+  i <- i+1
+  # end iteration over amphibian species in the list
 }
 # bind the rows in the list of data frames, to get one data frame 
 df_g03bs <- bind_rows(lst_tx_gobs, .id = "spc_no")
@@ -663,7 +663,7 @@ p03 <-
   #here it is black, and repeated the number of times
   #matching the number of species listed
   scale_color_manual(values=c(rep("black",
-          length(unique(df_g02obs$taxon.name))))) +
+                                  length(unique(df_g02obs$taxon.name))))) +
   #set the color of the points
   #use alpha to scale the intensity of the color
   scale_fill_manual(values=alpha(
@@ -767,7 +767,7 @@ keep <- c("dec_lat",
           "scientific_name",
           "scientific_name2"
           #"project_ids_without_curator_id"
-          )
+)
 
 # unique(df_g04obs$scientific_name)
 # unique(df_g04obs$scientific_name2)

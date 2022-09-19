@@ -62,10 +62,15 @@ df_iN01$dec_lon <- as.numeric(df_iN01$lon)
 df_DL01$dec_lat <- as.numeric(df_DL01$dec_lat)
 df_DL01$dec_lon <- as.numeric(df_DL01$dec_lon)
 # add a column for evaluation categories
+df_DL01$eval01 <- df_DL01$eval05
+
 df_DL01$eval03 <- NA
 df_DL01$eval03[df_DL01$eval01=="truezerodetect"] <- "eDNA_zero"
-df_DL01$eval03[df_DL01$eval01=="repl2pos"] <- "eDNA_present"
-df_DL01$eval03[df_DL01$eval01=="repl1or2"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval01=="repl2p"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval01=="repl1p"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval01=="nonapprovK"] <- "failed_test"
+#exclude failed tests
+df_DL01 <- df_DL01[!df_DL01$eval03=="failed_test",]
 df_DL01$eval04 <- df_DL01$eval03
 # add a column for the iNaturalist research records
 df_iN01$eval03 <- "gbif"
@@ -76,7 +81,7 @@ df_iN01$eval04[df_iN01$datasetName=="iNaturalist research-grade observations"] <
 #copy species name column
 df_iN01$taxon.name <- df_iN01$species
 # assign one column to a new column - to retain this new column later on
-df_DL01$taxon.name <- df_DL01$latspc2
+df_DL01$taxon.name <- gsub("_ "," ",df_DL01$latspc)
 #substitute to set all species of 'Pelophylax' to be 'Pelophylax sp'
 df_DL01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_DL01$taxon.name)
 df_DL01$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_DL01$taxon.name)
@@ -87,6 +92,8 @@ df_iN01$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_iN01$taxon
 df_iN01$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_iN01$taxon.name)
 # unique(df_DL01$taxon.name)
 # unique(df_iN01$taxon.name)
+df_iN01$taxon.name <- df_iN01$species
+df_DL01$taxon.name <- gsub("_"," ",df_DL01$latspc)
 #define columns to keep
 keep <- c(  "dec_lat",
             "dec_lon",
@@ -106,7 +113,10 @@ df_iNDL02$taxon.name <- gsub("kl. esculenta esculenta"," kl. esculenta",df_iNDL0
 df_iNDL02$taxon.name <- gsub("Bufotes viridis","Bufo viridis",df_iNDL02$taxon.name)
 df_iNDL02$taxon.name <- gsub("Epidalea calamita","Bufo calamita",df_iNDL02$taxon.name)
 df_iNDL02$taxon.name <- gsub("Ichthyosaurus alpestris","Ichthyosaura alpestris",df_iNDL02$taxon.name)
-
+df_iNDL02$taxon.name <- gsub("Pelophylax kl\\. esculenta","Pelophylax sp",df_iNDL02$taxon.name)
+df_iNDL02$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_iNDL02$taxon.name)
+df_iNDL02$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_iNDL02$taxon.name)
+df_iNDL02$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_iNDL02$taxon.name)
 #unique(df_iNDL02$taxon.name)
 
 # add a column for evaluation categories
@@ -616,7 +626,7 @@ cl2 <- colorRampPalette(c(scbpl))( nspo2)
 #cl2 <- colorRampPalette(c(scbpl))( nspo) 
 cl06 <- cl2
 length(cl06)
-cl06 <- c("springgreen3","white","steelblue1", "mediumpurple3")
+cl06 <- c("springgreen3","steelblue1", "mediumpurple3","white")
 nspo2 <- length(unique(df_iNDL04$eval04))
 #unique(df_iNDL04$lettx)
 # order the dataframe by a column
@@ -641,7 +651,7 @@ df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
 # unique(df_iNDL04$taxon.name)
 df_iNDL04 <- df_iNDL04[order(df_iNDL04$taxon.name, df_iNDL04$ordcat), ]
 df_iNDL04$eval04 <- gsub("eDNA_present","eDNA detected",df_iNDL04$eval04)
-df_iNDL04$eval04 <- gsub("eDNA_zero","eDNA not detected",df_iNDL04$eval04)
+df_iNDL04$eval04 <- gsub("eDNA_zero","no eDNA",df_iNDL04$eval04)
 df_iNDL04$eval04 <- gsub("iNat_res","iNaturalist",df_iNDL04$eval04)
 df_iNDL04$eval04 <- gsub("gbif","GBIF",df_iNDL04$eval04)
 
@@ -664,23 +674,21 @@ p05 <- ggplot(data = world) +
               height = jitlvl) + #, #0.07, # jitter height
   #size = 2.0) +
   
-  scale_size_manual(values=c(2.8,1.2,1.6,1.6)) +
+  scale_size_manual(values=c(2.8,1.6,1.6,1.2)) +
   #manually set the pch shape of the points
-  scale_shape_manual(values=c(21,3,22,22)) +
+  scale_shape_manual(values=c(21,22,22,3)) +
   #set the color of the points
-  
-  
   #here it is black, and repeated the number of times
   #matching the number of species listed
   scale_color_manual(values=alpha(
     c(rep("black",nspo2)),
-    c(1.0 , 1.0 , 0.2,0.2) 
+    c(1.0,0.2,0.2,1.0) 
   )) +
   #set the color of the points
   #use alpha to scale the intensity of the color
   scale_fill_manual(values=alpha(
     c(cl06),
-    c(0.8, 1.0, 0.4,0.4)
+    c(0.8,0.4,0.4,1.0)
   ))+
   #
   #df_iNDL04$lettx

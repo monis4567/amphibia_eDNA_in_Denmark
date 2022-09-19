@@ -92,6 +92,8 @@ infl2 = "out08_01b_DL_records_amphibia_Denmark.csv"
 pthinf02 <- paste0(wd00_wd09,"/",infl2)
 # read in csv files prepared from two previous 
 df_DL01 <- read.csv(pthinf02,sep=",",stringsAsFactors = F, header=T)
+# copy the evaluation column
+df_DL01$eval01 <- df_DL01$eval05
 #change columns names
 #make positions numeric
 df_DL01$dec_lat <- as.numeric(df_DL01$dec_lat)
@@ -99,12 +101,15 @@ df_DL01$dec_lon <- as.numeric(df_DL01$dec_lon)
 # add a column for evaluation categories
 df_DL01$eval03 <- NA
 df_DL01$eval03[df_DL01$eval01=="truezerodetect"] <- "eDNA_zero"
-df_DL01$eval03[df_DL01$eval01=="repl2pos"] <- "eDNA_present"
-df_DL01$eval03[df_DL01$eval01=="repl1or2"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval01=="repl2p"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval01=="repl1p"] <- "eDNA_present"
+df_DL01$eval03[df_DL01$eval01=="nonapprovK"] <- "failed_test"
+# subset to exclude "failed_test"
+df_DL01 <- df_DL01[!df_DL01$eval03=="failed_test",] 
 df_DL01$eval04 <- df_DL01$eval03
-
 # assign one column to a new column - to retain this new column later on
-df_DL01$taxon.name <- df_DL01$latspc2
+# substitute underscores to 
+df_DL01$taxon.name <- gsub("_"," ",df_DL01$latspc)
 
 #substitute to set all species of 'Pelophylax' to be 'Pelophylax sp'
 df_DL01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_DL01$taxon.name)
@@ -117,7 +122,7 @@ df_af04$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_af04$taxon
 df_af04$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_af04$taxon.name)
 df_af04$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_af04$taxon.name)
 df_af04$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_af04$taxon.name)
-unique(df_af04$taxon.name)
+#unique(df_af04$taxon.name)
 #define columns to keep
 keep <- c(  "dec_lat",
             "dec_lon",
@@ -581,6 +586,7 @@ if(bSaveFigures==T){
 }
 #_____________________________
 
+df_iNDL05.Bc <- df_iNDL05[grepl("Bufo calamita",df_iNDL05$taxon.name),]
 
 #_______________________________________________________________________________
 # end plot with individual maps per species, showing eDNA  plus 

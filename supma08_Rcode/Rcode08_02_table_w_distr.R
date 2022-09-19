@@ -58,12 +58,12 @@ ls_ar01 <- list()
 for (i in seq(1:nrdi))
 {
   #print(i)}
-#split string in each element by comma
-ls_ars2 <- strsplit(as.character(df_di01$V2[i]),", ")
-# get area
-#ls_ar01[i] <- list(gsub("^.*\\) (.*)$","\\1",ls_ars2[[1]]))
-# get abbreviation for area, sort it, and make it a list
-ls_ar01[i] <- list(sort(gsub("^\\((.*)\\) (.*)$","\\1",ls_ars2[[1]])))
+  #split string in each element by comma
+  ls_ars2 <- strsplit(as.character(df_di01$V2[i]),", ")
+  # get area
+  #ls_ar01[i] <- list(gsub("^.*\\) (.*)$","\\1",ls_ars2[[1]]))
+  # get abbreviation for area, sort it, and make it a list
+  ls_ar01[i] <- list(sort(gsub("^\\((.*)\\) (.*)$","\\1",ls_ars2[[1]])))
 }
 #
 df_d02 <- as.data.frame(cbind(as.character(df_di01$V1), 
@@ -84,13 +84,13 @@ for (i in seq(1:nrow(df_d02))){
   ls_a02[i] <- gsub(":,",":",ls_arpsp)
 }
 #unlist the list
-  ls3 <- unlist(ls_a02)
-  # to be able to paste the entire list together to one string
-  ls4 <- paste(ls3,collapse="; ")
+ls3 <- unlist(ls_a02)
+# to be able to paste the entire list together to one string
+ls4 <- paste(ls3,collapse="; ")
 #get a list of unique elements in the list, and sort it
 lst_ar.abb <- sort(unique(unlist(ls_ar01)))
 df_ar02 <- as.data.frame(cbind(as.character(df_ar01$Area[match(lst_ar.abb,df_ar01$Abbr)]),
-      as.character(df_ar01$Abbr[match(lst_ar.abb,df_ar01$Abbr)])))
+                               as.character(df_ar01$Abbr[match(lst_ar.abb,df_ar01$Abbr)])))
 colnames(df_ar02 ) <- c("area","abbr")
 #
 #exclude any rows with NA
@@ -148,7 +148,7 @@ colnames(df_lsp03) <- c("Genus specis","Area of occurence")
 #   colwidths = c(ncld03))
 # ft1 <- ft
 wd00_outfl_tbl01 <-paste0(wd00,"/supma09_plots_from_R_analysis",
-                                "/Table_S01_v01_geographic_area_of_occurence_for_amphibians.docx")
+                          "/Table_S01_v01_geographic_area_of_occurence_for_amphibians.docx")
 
 # print(ft, preview = "docx")
 # print(ft, preview = "html")

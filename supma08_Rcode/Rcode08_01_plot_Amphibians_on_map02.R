@@ -44,7 +44,7 @@
 
 # N:\SCI-SNM-Citizen_Science\DNA&liv projektdokumenter\DNA & LIV\Data\qPCR resultater\MxPro_tekstfiler
 
-#copy to your own computer
+# copy to your own computer
 # use the unix code named:
 # bashpart02_merge_multipl_csv_files_from_mxpro_qPCR_eDNA_padder03.sh
 # on the MxPro files
@@ -738,13 +738,6 @@ smpls <- read.csv("outfile07_merged_csv_files_from_mxpro.csv", header = TRUE, se
 #                  dec = ".", fill = TRUE, comment.char = "", stringsAsFactors = FALSE)
 #smpls <- read.csv("outfile02_merged_csv_files_from_mxpro.csv", header = TRUE,
 #                  sep = ";", row.names=NULL)
-
-#z <- colnames(smpls)
-
-#z[1]
-
-#length (colnames(smpls))
-#head (smpls)
 #replace blank fields with 'koerselno1'
 #see how to on this website : https://stackoverflow.com/questions/21243588/replace-blank-cells-with-character
 smpls$koerselno <- sub("^$", "koerselno1", smpls$koerselno)
@@ -779,7 +772,7 @@ ed_smplsunk <- subset(smpls, WellType == "Unknown", select = c("spec.repl.rund.D
 #add a column for counting
 ed_smplsunk$count <- 1
 #count the numbers as described in this question:
-ed_smplsunk <- ddply(ed_smplsunk, .(spec.repl.rund.DLno.koerselno), transform, count=cumsum(count))
+ed_smplsunk <- plyr::ddply(ed_smplsunk, .(spec.repl.rund.DLno.koerselno), transform, count=cumsum(count))
 # paste the counted number onto the welltype
 ed_smplsunk$Welltype.no <- paste(ed_smplsunk$WellType,ed_smplsunk$count, sep="")
 #subset by this new pasted number, and get individual data frames per unknown replicate
@@ -796,6 +789,8 @@ spl2$unkn2.CtdRn <- ed_smplsunk2s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno
 spl2$unkn3.CtdRn <- ed_smplsunk3s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsunk3s$spec.repl.rund.DLno.koerselno)]
 spl2$unkn4.CtdRn <- ed_smplsunk4s$CtdRn[match(spl2$spec.repl.rund.DLno.koerselno,ed_smplsunk4s$spec.repl.rund.DLno.koerselno)]
 spl2[is.na(spl2)] <- 0
+#spl2[spl2$specs=="KlokkeFroe",]
+
 #exlude the rows where "NPC.CtdRn" column has NAs
 #spl3 <- spl2[complete.cases(spl2[,"NPC.CtdRn"]),]
 spl3 <- spl2
@@ -858,49 +853,28 @@ list_of_amphians <- c("Ichthyosaurus_alpestris",
 
 latspecnm <- list_of_amphians
 #set cut-off value for qPCR reactions
-ct.cutoff=41
+ct.cutoff=42
+#ct.cutoff=41
 #ct.cutoff=50
 #ct.cutoff=37
+# remove records that have NA for longitude and for latitude
+spl3 <- spl3[!is.na(spl3$dec_lat),]
+spl3 <- spl3[!is.na(spl3$dec_lon),]
+spl3.kl.fr <- spl3[spl3$specs=="KlokkeFroe",]
+
+#nrow(spl3.kl.fr)
 
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot single capture locations - start
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-#orig_latspecnm <- latspecnm
-
-#latspecnm<- orig_latspecnm
 #remove NAs from vector
 latspecnm <- latspecnm[!is.na(latspecnm)]
-#latspecnm <- latspecnm[1]
-#latspecnm <- "Gadus_morhua"
-#latspecnm <- "Anguilla_anguilla"
-#latspecnm <- "Scomber_scombrus"
-#latspecnm <- "Clupea_harengus"
-#latspecnm <- "Eriocheir_sinensis"
-#latspecnm <- "Eriocheir_sinensis"
-#latspecnm <- "Mya_arenaria"
 #latspecnm <- "Bufo_bufo"
-#latspecnm <- "Ichthyosaurus_alpestris"
 
 #delete selected species from list that holds no data
 # latspecnm2 <- latspecnm[!latspecnm %in% "Perca_fluviatilis"]
 # latspecnm2 <- latspecnm2[!latspecnm2 %in% "Homarus_americanus"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Anguilla_anguilla"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Paralithodes_camtschaticus"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Eriocheir_sinensis"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Scomber_scombrus"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Rhithropanopeus_harrisii"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Oncorhynchus_gorbuscha"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Pleuronectes_platessa"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Mya_arenaria"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Clupea_harengus"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Platichthys_flesus"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Crassostrea_gigas"]
-# latspecnm2 <- latspecnm2[!latspecnm2 %in% "Gadus_morhua"]
 # 
-# latspecnm <- latspecnm2
-
-#latspecnm <- "Clupea_harengus"
-
 # loop over all species names in the unique list of species, and make plots. 
 #Notice that the curly bracket ends after the pdf file is closed
 for (spec.lat in latspecnm){
@@ -1044,21 +1018,22 @@ for (spec.lat in latspecnm){
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot single capture locations - end
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
+spl3.Ha <- spl3[grepl("Hyla",spl3$latspc),]
+#nrow(spl3.Ha)
 #count using the plyr-package - see: https://www.miskatonic.org/2012/09/24/counting-and-aggregating-r/
 tot_smpl <- plyr::count(spl3, c("DLsamplno","dec_lon", "dec_lat","abbr.nm", "specs","latspc" ))#,
                           # "NPC.CtdRn", "NTC.CtdRn", "unkn1.CtdRn",
                           # "unkn2.CtdRn", "unkn3.CtdRn", "unkn4.CtdRn"))
 
+tot_smpl.Ha <- tot_smpl[grepl("Hyla",tot_smpl$latspc),]
+#nrow(tot_smpl.Ha)
+sum(tot_smpl.Ha$freq)
 #subset based on variable values - see: https://stackoverflow.com/questions/4935479/how-to-combine-multiple-conditions-to-subset-a-data-frame-using-or
 # subset by when NTC is equal to NoCt and NPC is below ct.cut.off, and or NTC is equal to zero
 spl3.ntc_npc_approv <- spl3[ which(spl3$NTC.CtdRn=='NoCt' & 
-                        spl3$NPC.CtdRn<=ct.cutoff
-), ]
+                        spl3$NPC.CtdRn<=ct.cutoff), ]
 #count using the plyr-package
 approvK_smpl <- plyr::count(spl3.ntc_npc_approv, c("DLsamplno","abbr.nm"))
-
-
 #subset based on variable values
 # subset among the NPC and NTC approved replicate sets
 #subset by when repl1 is below ct.cut.off and/or  when repl2 is below ct.cut.off
@@ -1066,8 +1041,6 @@ spl3.1or2pf <- spl3.ntc_npc_approv[ which(spl3.ntc_npc_approv$unkn1.CtdRn<=ct.cu
                                           | spl3.ntc_npc_approv$unkn2.CtdRn<=ct.cutoff
                                           & !spl3.ntc_npc_approv$unkn1.CtdRn==0
                                           & !spl3.ntc_npc_approv$unkn2.CtdRn==0), ]
-
-
 #count using the plyr-package
 r1orr2pos.smpl <- plyr::count(spl3.1or2pf, c("DLsamplno", "abbr.nm"))
 # subset among the NPC and NTC approved replicate sets with either 1 or 2 positive replicates
@@ -1079,7 +1052,6 @@ r2pos.smpl <- plyr::count(spl3.2pf, c("DLsamplno", "abbr.nm"))
 
 #Rename the frequency column
 tot_smpl$totsmpl <- tot_smpl$freq
-
 # Remove the redundant variable from the data frame, 
 #put the resulting data frame back in to the original object
 drops <- c("freq")
@@ -1090,13 +1062,11 @@ approvK_smpl$DLsamplno.abbrnm <- paste(approvK_smpl$DLsamplno,approvK_smpl$abbr.
 r1orr2pos.smpl$DLsamplno.abbrnm <- paste(r1orr2pos.smpl$DLsamplno,r1orr2pos.smpl$abbr.nm,sep=".")
 r2pos.smpl$DLsamplno.abbrnm <- paste(r2pos.smpl$DLsamplno,r2pos.smpl$abbr.nm,sep=".")
 spl3$DLsamplno.abbrnm <- paste(spl3$DLsamplno,spl3$abbr.nm,sep=".")
-#head(approvK_smpl,4)
 #match the DL_smpl_name and abbr.nm between the data frame 
 #w all samples and the data frame w approved controls
 tot_smpl$approvK <- approvK_smpl$freq[match(tot_smpl$DLsamplno.abbrnm,approvK_smpl$DLsamplno.abbrnm)]
 tot_smpl$repl1or2 <- r1orr2pos.smpl$freq[match(tot_smpl$DLsamplno.abbrnm,r1orr2pos.smpl$DLsamplno.abbrnm)]
 tot_smpl$repl2pos <- r2pos.smpl$freq[match(tot_smpl$DLsamplno.abbrnm,r2pos.smpl$DLsamplno.abbrnm)]
-
 tot_smpl$gymnasiumnm1 <- spl3$gymnasiumnm1[match(tot_smpl$DLsamplno.abbrnm,spl3$DLsamplno.abbrnm)]
 #Replace NA with 0
 tot_smpl[is.na(tot_smpl)] <- 0
@@ -1141,9 +1111,10 @@ tot_smpl$eval02[   tot_smpl$nonapprovK >= 1] <- "red" #0
 tot_smpl$eval02[   tot_smpl$repl1or2 >= 1] <- "green" #0  
 tot_smpl$eval02[   tot_smpl$repl2pos >= 1] <- "darkgreen" #0
 tot_smpl$eval02[   tot_smpl$nonapprovK >= 1] <- "red" #0  
-
 #subset data frame to match only approved K
 tot_smpl02_df <- tot_smpl
+abrNm <- unique(tot_smpl02_df$abbr.nm)
+abrNm <- abrNm[order(abrNm)]
 #subset to only include amphibian species
 amph_smpl02_df <- subset(tot_smpl02_df, 
                          abbr.nm=="Bom.bom" |
@@ -1153,9 +1124,9 @@ amph_smpl02_df <- subset(tot_smpl02_df,
                            abbr.nm=="Hyl.arb" |
                            abbr.nm=="Ich.alp" |
                            abbr.nm=="Lis.vul" |
+                           abbr.nm=="Pel.esc" |
                            abbr.nm=="Pel.fus" |
                            abbr.nm=="Pel.rid" |
-                           abbr.nm=="Pel.esc" |
                            abbr.nm=="Ran.arv" |
                            abbr.nm=="Ran.dal" |
                            abbr.nm=="Ran.les" |
@@ -1163,6 +1134,10 @@ amph_smpl02_df <- subset(tot_smpl02_df,
                            abbr.nm=="Tri.cri")
 
 
+amph_smpl02_df.Ha <- amph_smpl02_df[grepl("Hyla",amph_smpl02_df$latspc),]
+# nrow(amph_smpl02_df.Ha)
+# head(amph_smpl02_df.Ha,12)
+# sum(amph_smpl02_df.Ha$totsmpl)
 #length(unique(amph_smpl02_df$DLsamplno))
 #unique(smpls$specs)
 #unique(spl3$specs)
@@ -1188,14 +1163,22 @@ amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019005" & amph
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019017" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
 amph_smpl03_df <-  amph_smpl03_df[!(amph_smpl03_df$DLsamplno=="DL2019050" & amph_smpl03_df$latspc=="Rana_dalmatina"),]
 
+amph_smpl03_df.Ha <-  amph_smpl03_df[grepl("Hyla",amph_smpl03_df$latspc),]
+# nrow(amph_smpl03_df.Ha)
+# head(amph_smpl03_df.Ha,12)
+# sum(amph_smpl03_df.Ha$totsmpl)
 #amph_smpl02_df %>% dplyr::group_by(eval01)
 library(dplyr)
 # substitute the  "Pel.esc" name with 
 amph_smpl03_df$abbr.nm <- gsub("Pel.esc","Pel.sp",amph_smpl03_df$abbr.nm)
 amph_smpl03_df$abbr.nm <- gsub("Ran.les","Pel.sp",amph_smpl03_df$abbr.nm)
-unique(amph_smpl03_df$abbr.nm)
+
 #use dplyr to group by name, and count per evaluation
 tibl_as02 <- amph_smpl03_df %>% dplyr::group_by(abbr.nm) %>% dplyr::count(eval01)
+tibl_as02.Ha <- tibl_as02[grepl("Hyl",tibl_as02$abbr.nm),]
+
+#sum(tibl_as02.Ha$n)
+spl3
 #make the tibble a data frame
 df_as03 <- as.data.frame(tibl_as02)
 # rearrange from long to wide
