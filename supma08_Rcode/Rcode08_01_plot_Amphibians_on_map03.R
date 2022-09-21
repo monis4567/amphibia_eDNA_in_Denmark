@@ -1078,7 +1078,7 @@ plt06 <- plt06 + coord_flip()
 #getting separate legends
 plt06 <- plt06 + labs(fill='test sets with')
 # see the plot
-plt06
+plt06 <- plt06 + plot_annotation(caption="Fig02_v03") #& theme(legend.position = "bottom") 
 bSaveFigures <- T
 figname02A <- paste0("Fig02_v03_barchart_failed_tests.png")
 if(bSaveFigures==T){
@@ -1120,6 +1120,7 @@ plt07 <- plt07 + labs(color='test sets with')
 plt07 <- plt07 + labs(fill='test sets with')
 plt07 <- plt07 + labs(shape='test sets with')
 #plt07
+plt07  <- plt07 + plot_annotation(caption="Fig02_v02") #& theme(legend.position = "bottom") 
 #getwd()
 bSaveFigures <- T
 figname02A <- paste0("Fig02_v02_plot_failed_tests.png")
@@ -1670,7 +1671,7 @@ p <-  p01t +
   
   plot_layout(nrow=3,byrow=T) + #xlab(xlabel) +
   plot_layout(guides = "collect") +
-  plot_annotation(caption=fnm02) #& theme(legend.position = "bottom")
+  plot_annotation(caption="Fig01_v01_2022may") #& theme(legend.position = "bottom")
 #p
 #make filename to save plot to
 figname02 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
@@ -1696,6 +1697,7 @@ p03t1 <- p03t1 + labs(color='evaluation incl. failed tests')
 p03t1 <- p03t1 + labs(fill='evaluation incl. failed tests')
 p03t1 <- p03t1 + labs(shape='evaluation incl. failed tests')
 
+p03t1 <-   p03t1 + plot_annotation(caption="Fig01_v02_2022sep") #& theme(legend.position = "bottom")
 
 
 figname05A <- paste0("Fig01_v02",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
@@ -1728,7 +1730,7 @@ pS31 <-   p01t1 +
           p02t1 +
           plot_layout(nrow=2,byrow=T) + #xlab(xlabel) +
           plot_layout(guides = "collect") +
-          plot_annotation(caption=fnm02) #& theme(legend.position = "bottom")
+          plot_annotation(caption="FigS31_v01") #& theme(legend.position = "bottom")
 
 figname05A <- paste0("FigS31_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 if(bSaveFigures==T){
@@ -2221,17 +2223,22 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
+# add label to plot
+p05t <- p05t + plot_annotation(caption="FigS32_v01_2022sep") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 #define file name to save plot to
 figname06A <- paste0("Fig02_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
 figname06A <- paste0("Fig02_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
+# set bSaveFigures to FALSE
+bSaveFigures=F
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=figname06A,width=210,height=297,
          units="mm",dpi=600)
 }
-
+# set bSaveFigures to TRUE
+bSaveFigures=T
 figname06A <- paste0("FigS32_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
 # save plot
 if(bSaveFigures==T){
@@ -2525,6 +2532,8 @@ plt09 <- ggplot(df_as03.1, aes(x=latspc2, y=dayno)) +
 # see the plot
 #plt09
 figname09A <- paste0("Fig04_01_",fnm02,"_boxplot_sampling_time_.png")
+
+plt09 <- plt09 + plot_annotation(caption="Fig04_v01") #& theme(legend.position = "bottom") 
 # save plot
 if(bSaveFigures==T){
   ggsave(plt09,file=figname09A,width=210,height=297*0.5,
@@ -2571,6 +2580,7 @@ plt09 <- ggplot(df_as10, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=3)
 #plt09
+plt09 <- plt09 + plot_annotation(caption="Fig04_v02") #& theme(legend.position = "bottom") 
 # pasTe together a file name
 figname09A <- paste0("Fig04_02_",fnm02,"_boxplot_sampling_time_.png")
 # save plot
@@ -2617,7 +2627,8 @@ plt09 <- ggplot(df_as10, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=3)
 # see the plot
-#plt09
+plt09 <- plt09 + plot_annotation(caption="Fig04_v03") #& theme(legend.position = "bottom") 
+
 # paste together to get a file name to use for saving the file
 figname09A <- paste0("Fig04_03_",fnm02,"_boxplot_sampling_time_.png")
 # save plot
@@ -2670,6 +2681,8 @@ plt10 <- plt10 +
 #getting separate legends
 plt10 <- plt10 + labs(fill='test sets with')
 plt10 <- plt10 + coord_flip()
+
+plt10 <- plt10 + plot_annotation(caption="Fig05_v01") #& theme(legend.position = "bottom") 
 #plt10
 figname10A <- paste0("Fig05_01_",fnm02,"_boxplot_lake_area_size.png")
 # save plot
@@ -2709,6 +2722,7 @@ plt12 <- plt12 +  #xlab("species") +
 #getting separate legends
 plt12 <- plt12 + labs(fill='test sets with')
 plt12 <- plt12 + coord_flip()
+plt12 <- plt12 + plot_annotation(caption="Fig05_v02") #& theme(legend.position = "bottom") 
 #plt12
 figname10A <- paste0("Fig05_02_",fnm02,"_boxplot_lake_area_size.png")
 # save plot
@@ -2758,6 +2772,7 @@ plt12 <- plt12 +  #xlab("species") +
 #getting separate legends
 plt12 <- plt12 + labs(fill='test sets with')
 plt12 <- plt12 + coord_flip()
+plt12 <- plt12 + plot_annotation(caption="Fig05_v03") #& theme(legend.position = "bottom") 
 #plt12
 figname10A <- paste0("Fig05_03_",fnm02,"_boxplot_lake_area_size.png")
 # save plot
@@ -2926,7 +2941,7 @@ plt13 <- ggplot(df_as11, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=4)
 #see the plot
-plt13
+plt13 <- plt13 + plot_annotation(caption="Fig04_v04") #& theme(legend.position = "bottom") 
 #
 
 figname13A <- paste0("Fig04_04_",fnm02,"_time_period_aquatic.png")
@@ -3026,7 +3041,8 @@ plt13 <- ggplot(df_as11, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=4)
 #see the plot
-plt13
+plt13 <- plt13 + plot_annotation(caption="Fig04_v05") #& theme(legend.position = "bottom") 
+
 #
 
 figname13A <- paste0("Fig04_05_",fnm02,"_time_period_aquatic.png")
@@ -3094,3 +3110,9 @@ ifelse(SWt_day$p.value  > 0.05,"we can assume the normality","do not assume the 
 df_as03.1.Bufcal <- df_as03.1[(df_as03.1$latspc2=="Bufo calamita"),]
 #unique(df_as03.1.Bufcal$eval05)
 df_as03.1.Bufcal[(df_as03.1.Bufcal$eval05=="eDNA detected"),]
+
+#count DL samples
+no_of_smpls_total <- length(unique(df_as03.1$DLsamplno))
+smpls_from_before_2019 <- unique(df_as03.1$DLsamplno)[as.numeric(gsub("DL([0-9]{4}).*","\\1",unique(df_as03.1$DLsamplno)))<=2019]
+no_of_smpls_before_and_incl_2019 <- length(smpls_from_before_2019)
+additional_smpls_after_2019 <- no_of_smpls_total - no_of_smpls_before_and_incl_2019

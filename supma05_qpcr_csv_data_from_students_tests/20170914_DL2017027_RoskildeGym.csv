@@ -2,7 +2,7 @@ Well;WellName;WellType;;ThresholddRn;CtdRn
 A1;01_Aborre_PosK;NPC;0.1000;28.94;
 A2;02_Aborre_PosK;NPC;0.1000;29.15;
 A3;03_Brasen_PosK;NPC;0.1000;24.03;
-A4;04_EuropaeiskAal_eDNA;NPC;0.1000;NoCt;
+A4;04_EuropaeiskAal_PosK;NPC;0.1000;NoCt;
 A5;05_EuropaeiskAal_PosK;NPC;0.1000;29.84;
 A6;06_Gedde_PosK;NPC;0.1000;24.92;
 A7;07_Gedde_PosK;NPC;0.1000;24.59;
@@ -26,7 +26,7 @@ B12;12_Skalle_NegK;NTC;0.1000;NoCt;
 C1;01_Aborre_eDNA;Unknown;0.1000;36.69;
 C2;02_Aborre_eDNA;Unknown;0.1000;37.00;
 C3;03_Brasen_eDNA;Unknown;0.1000;30.31;
-C4;04_EuropaeiskAal_PosK;Unknown;0.1000;28.80;
+C4;04_EuropaeiskAal_eDNA;Unknown;0.1000;28.80;
 C5;05_EuropaeiskAal_eDNA;Unknown;0.1000;NoCt;
 C6;06_Gedde_eDNA;Unknown;0.1000;40.23;
 C7;07_Gedde_eDNA;Unknown;0.1000;37.26;

@@ -39,7 +39,7 @@ D1;28_StorVandsalamander_PosK;NPC;0.1000;34.21;
 D2;28_StorVandsalamander_NegK;NTC;0.1000;NoCt;
 D3;28_StorVandsalamander_eDNA;Unknown;0.1000;NoCt;
 D5;29_StorVandsalamander_NegK;NPC;0.1000;35.47;
-D6;29_StorVandsalamander_eDNA;NTC;0.1000;NoCt;
+D6;29_StorVandsalamander_NegK;NTC;0.1000;NoCt;
 D7;29_StorVandsalamander_eDNA;Unknown;0.1000;NoCt;
 E1;13_Flodkrebs_PosK;NPC;0.1000;30.27;
 E2;14_Signalkrebs_PosK;NPC;0.1000;NoCt;

@@ -733,6 +733,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
+p05t <- p05t + plot_annotation(caption="FigS34_v04") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 

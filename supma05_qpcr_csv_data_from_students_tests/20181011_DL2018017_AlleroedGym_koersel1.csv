@@ -1,8 +1,8 @@
 Well;WellName;WellType;;ThresholddRn;CtdRn
-D1;01_LoegFroe_eDNA;NPC;0.1000;36.29;
-C1;01_LoegFroe_eDNA;NTC;0.1000;NoCt;
-A1;01_LoegFroe_PosK;Unknown;0.1000;NoCt;
-B1;01_LoegFroe_NegK;Unknown;0.1000;NoCt;
+D1;01_LoegFroe_PosK;NPC;0.1000;36.29;
+C1;01_LoegFroe_NegK;NTC;0.1000;NoCt;
+A1;01_LoegFroe_eDNA;Unknown;0.1000;NoCt;
+B1;01_LoegFroe_eDNA;Unknown;0.1000;NoCt;
 A2;02_StorVandsalamander_PosK;NPC;0.1000;48.79;
 B2;02_StorVandsalamander_NegK;NTC;0.1000;NoCt;
 C2;02_StorVandsalamander_eDNA;Unknown;0.1000;NoCt;
