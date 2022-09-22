@@ -40,6 +40,7 @@ library("tidyverse")
 library("httr")
 library("jsonlite")
 library("dplyr") 
+library("patchwork") 
 # to avoid : https://stackoverflow.com/questions/30248583/error-could-not-find-function
 #define an input  files
 infl1 = "out08_03b_inaturalist_records_amphibia_Denmark.csv"
@@ -346,7 +347,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
 
-p05t <- p05t + plot_annotation(caption="FigS33_v01") #& theme(legend.position = "bottom") 
+p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v01") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 
@@ -464,7 +465,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 p05t <- p05t + theme(strip.background = element_blank())
 # see the plot
 #p05t
-p05t <- p05t + plot_annotation(caption="FigS33_v02") #& theme(legend.position = "bottom") 
+p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v02") #& theme(legend.position = "bottom") 
 #substitute in file name
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
@@ -550,7 +551,7 @@ p05t <- p05 +
     shape = guide_legend("species")
   )
 
-p05t <- p05 + plot_annotation(caption="FigS33_v03") #& theme(legend.position = "bottom") 
+p05t <- p05 + patchwork::plot_annotation(caption="FigS33_v03") #& theme(legend.position = "bottom") 
 #substitute in file name
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
@@ -690,7 +691,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 p05t <- p05t + theme(strip.background = element_blank())
 
 
-p05t <- p05t + plot_annotation(caption="FigS33_v04") #& theme(legend.position = "bottom") 
+p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v04") #& theme(legend.position = "bottom") 
   # see the plot
 #p05t
 #substitute in file name

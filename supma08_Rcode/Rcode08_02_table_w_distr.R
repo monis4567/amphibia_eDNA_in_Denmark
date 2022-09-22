@@ -36,6 +36,7 @@ if(!require("remotes")){
   install.packages("remotes", dependencies = TRUE, INSTALL_opts = '--no-lock')
 }
 library("remotes")
+library("patchwork")
 #wd00 <- "/Users/steenknudsen/Documents/Documents/MS_amphibian_eDNA_assays"
 wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark"
 setwd(wd00)

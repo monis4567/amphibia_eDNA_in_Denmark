@@ -35,6 +35,7 @@ library("tidyverse")
 library("httr")
 library("jsonlite")
 library("dplyr") 
+library("patchwork") 
 # to avoid : https://stackoverflow.com/questions/30248583/error-could-not-find-function
 #define an input  files
 infl1 = "out08_06b_gbif_records_amphibia_Denmark.csv"
@@ -733,7 +734,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
-p05t <- p05t + plot_annotation(caption="FigS34_v04") #& theme(legend.position = "bottom") 
+p05t <- p05t + patchwork::plot_annotation(caption="FigS34_v04") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 
