@@ -50,12 +50,38 @@ if(!require(scales)){
 }
 library(scales)
 
+if(!require(nloptr)){
+  install.packages("nloptr")
+}
+
+if(!require(car)){
+  install.packages("car", dependencies = TRUE)
+}
+
+if(!require(rstatix)){
+  install.packages("rstatix", repos = "https://cloud.r-project.org",dependencies = TRUE)
+}
+
+if(!require(lme4)){
+  install.packages("lme4")
+}
+
+if(!require(ggpubr)){
+  install.packages("ggpubr")
+}
+
+
 #install.packages("fields")
 if(!require(fields)){
-  install.packages("fields")
-  library(fields)
+  #install.packages("fields")
+  install.packages("fields", repos = "https://cloud.r-project.org",dependencies = TRUE)
 }
 library(fields)
+
+if(!require(patchwork)){
+  install.packages("patchwork", repos = "https://cloud.r-project.org",dependencies = TRUE)
+}
+
 library("patchwork")
 ## install the package 'marmap', which will allow you to plot bathymetric maps
 # to get marmap running you need 'netcdf'
@@ -64,7 +90,6 @@ library("patchwork")
 #install.packages("marmap")
 if(!require(marmap)){
   install.packages("marmap")
-  library(marmap)
 }
 library(marmap)
 
@@ -73,7 +98,6 @@ library(marmap)
 #install.packages("TeachingDemos")
 if(!require(TeachingDemos)){
   install.packages("TeachingDemos")
-  library(TeachingDemos)
 }
 library(TeachingDemos)
 
@@ -81,22 +105,19 @@ library(TeachingDemos)
 #install.packages("rworldmap")
 if(!require(rworldmap)){
   install.packages("rworldmap")
-  library(rworldmap)
 }
-require (rworldmap)
+library(rworldmap)
 
 #install.packages("rworldxtra")
 if(!require(rworldxtra)){
   install.packages("rworldxtra")
-  library(rworldxtra)
 }
-require(rworldxtra)
+library(rworldxtra)
 
 #get package to read excel files
 #install.packages("readxl")
 if(!require(readxl)){
   install.packages("readxl")
-  library(readxl)
 }
 library(readxl)
 
@@ -105,7 +126,6 @@ library(readxl)
 #install.packages("plyr")
 if(!require(plyr)){
   install.packages("plyr")
-  library(plyr)
 }
 library(plyr)
 
@@ -113,7 +133,6 @@ library(plyr)
 #install.packages("mapdata")
 if(!require(mapdata)){
   install.packages("mapdata")
-  library(mapdata)
 }
 library(mapdata)
 
@@ -121,7 +140,6 @@ library(mapdata)
 #install.packages("maps")
 if(!require(maps)){
   install.packages("maps")
-  library(maps)
 }
 library(maps)
 # #get package for shapefiles see this website: http://www.molecularecologist.com/2012/09/making-maps-with-r/
@@ -132,12 +150,21 @@ library(maps)
 #install.packages("mapplots")
 if(!require(mapplots)){
   install.packages("mapplots")
-  library(mapplots)
 }
 library(mapplots)
 
+if(!require(lubridate)){
+  install.packages("lubridate")
+}
 library(lubridate)
+
+if(!require(tidyverse)){
+  install.packages("tidyverse")
+}
 library(tidyverse)
+if(!require(scales)){
+  install.packages("scales")
+}
 library(scales)
 
 # set working directory
@@ -1078,7 +1105,7 @@ plt06 <- plt06 + coord_flip()
 #getting separate legends
 plt06 <- plt06 + labs(fill='test sets with')
 # see the plot
-plt06 <- plt06 + patchwork::plot_annotation(caption="Fig02_v03") #& theme(legend.position = "bottom") 
+#plt06 <- plt06 + patchwork::plot_annotation(caption="Fig02_v03") #& theme(legend.position = "bottom") 
 bSaveFigures <- T
 figname02A <- paste0("Fig02_v03_barchart_failed_tests.png")
 if(bSaveFigures==T){
@@ -1086,6 +1113,13 @@ if(bSaveFigures==T){
          width=2*210,height=0.5*297,
          units="mm",dpi=300)
 }
+figname02A <- paste0("Fig02_v03_barchart_failed_tests.pdf")
+
+# if(bSaveFigures==T){
+#   ggsave(plt06,file=figname02A,
+#          width=2*210,height=0.5*297,
+#          units="mm",dpi=400)
+# }
 #order the species names the other way around
 df_as08 <- df_as07[order(df_as07$abbr.nm, decreasing = F),]
 
@@ -1120,7 +1154,7 @@ plt07 <- plt07 + labs(color='test sets with')
 plt07 <- plt07 + labs(fill='test sets with')
 plt07 <- plt07 + labs(shape='test sets with')
 #plt07
-plt07  <- plt07 + patchwork::plot_annotation(caption="Fig02_v02") #& theme(legend.position = "bottom") 
+#plt07  <- plt07 + patchwork::plot_annotation(caption="Fig02_v02") #& theme(legend.position = "bottom") 
 #getwd()
 bSaveFigures <- T
 figname02A <- paste0("Fig02_v02_plot_failed_tests.png")
@@ -1601,7 +1635,6 @@ p03
 # see this example: https://www.datanovia.com/en/blog/ggplot-title-subtitle-and-caption/
 # p01t <- p01 + labs(title = "Amphibians detected by eDNA",
 #               subtitle = "approv controls and 1 or 2 pos repl")#,
-#caption = "Data source: ToothGrowth")
 p01t <- p01 + labs(title = "A")#,
 #change axis labels
 p01t <- p01t + xlab("longitude") + ylab("latitude")
@@ -1670,8 +1703,8 @@ p <-  p01t +
   p03t +
   
   plot_layout(nrow=3,byrow=T) + #xlab(xlabel) +
-  plot_layout(guides = "collect") +
-  patchwork::plot_annotation(caption="Fig01_v01_2022may") #& theme(legend.position = "bottom")
+  plot_layout(guides = "collect")
+  #patchwork::plot_annotation(caption="Fig01_v01_2022may") #& theme(legend.position = "bottom")
 #p
 #make filename to save plot to
 figname02 <- paste0(fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
@@ -1697,7 +1730,7 @@ p03t1 <- p03t1 + labs(color='evaluation incl. failed tests')
 p03t1 <- p03t1 + labs(fill='evaluation incl. failed tests')
 p03t1 <- p03t1 + labs(shape='evaluation incl. failed tests')
 
-p03t1 <-   p03t1 + patchwork::plot_annotation(caption="Fig01_v02_2022sep") #& theme(legend.position = "bottom")
+#p03t1 <-   p03t1 + patchwork::plot_annotation(caption="Fig01_v02_2022sep") #& theme(legend.position = "bottom")
 
 
 figname05A <- paste0("Fig01_v02",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
@@ -1729,18 +1762,290 @@ p02t1 <- p02t1 + labs(shape='evaluation excl. failed tests')
 pS31 <-   p01t1 +
           p02t1 +
           plot_layout(nrow=2,byrow=T) + #xlab(xlabel) +
-          plot_layout(guides = "collect") +
-          patchwork::plot_annotation(caption="FigS31_v01") #& theme(legend.position = "bottom")
+          plot_layout(guides = "collect")
+          #patchwork::plot_annotation(caption="FigS31_v01") #& theme(legend.position = "bottom")
 
 figname05A <- paste0("FigS31_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,".png")
 if(bSaveFigures==T){
-  ggsave(pS31,file=figname05A,width=210,height=297,
+  ggsave(pS31,file=figname05A,width=210,height=297*0.8,
          units="mm",dpi=600)
 }
 
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # Plot on map -end
 #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# plot with geom_ggdensity - start
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#do not subset the data frame
+# i.e. instead include nonapproved controls 
+# and approved controls
+amph_smpl03_df <- amph_smpl02_df
+amph_smpl03_df$eval01 <- amph_smpl02_df$eval05
+#make a new set of colours for points
+cl03 <- c("limegreen","#000066","yellow","white")
+cl03.2 <- c("limegreen","#000066","#bcb800","grey47")
+# plot all sampled sites where both controls 
+# perform as expected - i.e. the true zero detect, and the 
+# 1 pos repl, and 2 pos repl , but also plot the 
+# failed attempts - i.e. the attempts where students failed 
+# to get a positive for the positive control, and or failed
+# to get a negative for the negative control
+#replace categories
+amph_smpl03_df$eval01 <- gsub("nonapprovK","failed test",amph_smpl03_df$eval01)
+amph_smpl03_df$eval01 <- gsub("truezerodetect","no eDNA detected",amph_smpl03_df$eval01)
+amph_smpl03_df$eval01 <- gsub("repl1p","eDNA detected in 1 of 2",amph_smpl03_df$eval01)
+amph_smpl03_df$eval01 <- gsub("repl2p","eDNA detected in 2 of 2",amph_smpl03_df$eval01)
+# make an empty column to assign numbers for categories to
+amph_smpl03_df$eval03 <- NA
+amph_smpl03_df$eval03[grep("^eDNA",amph_smpl03_df$eval01)] <- 3
+amph_smpl03_df$eval03[grep("^no eDNA",amph_smpl03_df$eval01)] <- 2
+amph_smpl03_df$eval03[grep("^failed",amph_smpl03_df$eval01)] <- 1
+# order rows using column values in dplyr
+df_as13 <-  dplyr::arrange(amph_smpl03_df, eval03, eval01)
+
+
+c.t.keep <- c("dec_lat","dec_lon","eval01")
+df_as13.1 <- df_as13[c.t.keep]
+
+
+# define columns to keep
+col.to.keep <- c("dec_lat","dec_lon")
+# # only keep specific columns
+smpl.loc <- df_as13.1[col.to.keep]
+# # only keep unique rows
+df_smpl.loc <- smpl.loc %>% dplyr::distinct(dec_lat,dec_lon)
+
+#make jitter value
+jitlvl <- 0.14
+p03 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  #https://ggplot2.tidyverse.org/reference/position_jitter.html
+  # use 'geom_jitter' instead of 'geom_point' 
+  geom_jitter(data = df_as13.1, 
+              aes(x = dec_lon, y = dec_lat,
+                  fill=eval01,
+                  color=eval01,
+                  shape=eval01),
+              width = jitlvl, #0.07, jitter width 
+              height = jitlvl, #0.07, # jitter height
+              size = 2.2) +
+  #manually set the pch shape of the points
+  scale_shape_manual(values=c(rep(21,length(unique(df_as13$eval01))))) +
+  #set the color of the points
+  #here it is black, and repeated the number of times
+  #matching the number of species listed
+  #scale_color_manual(values=c(rep("black",length(unique(df_as13$eval01))))) +
+  scale_color_manual(values=alpha(c(cl03.2),0.7)) +
+  
+      #set the color of the points
+  #use alpha to scale the intensity of the color
+  scale_fill_manual(values=alpha(
+    c(cl03),
+    c(0.3)
+  ))+
+  # add points for sample locations
+  geom_point(data=df_smpl.loc,aes(x=dec_lon,y=dec_lat),
+             shape=3,colour=alpha("#000000",0.5),size=1.6) +
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#see the plot
+#p03
+p03t <- p03 + labs(title = "")#,
+#change axis labels
+p03t <- p03t + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p03t <- p03t + labs(color='evaluation incl. failed tests')
+p03t <- p03t + labs(fill='evaluation incl. failed tests')
+p03t <- p03t + labs(shape='evaluation incl. failed tests')
+#getwd()
+# remove the legend
+p03t <- p03t + theme(legend.position = "none")
+
+fig15 <- paste0("FigS32_03.png")
+if(bSaveFigures==T){
+  ggsave(p03t,file=fig15,width=210,height=297*0.55,
+         units="mm",dpi=300)
+}
+
+#______________________-
+# Try out 'ggpointdensity'
+#https://datavizpyr.com/ggpointdensity-plot-a-ggplot-extension-combining-scatter-plot-with-density-plot/
+library(ggplot2)
+library(dplyr)
+library(viridis)
+theme_set(theme_bw())
+if(!require(ggpointdensity)){
+  install.packages("ggpointdensity", repos='http://cran.us.r-project.org')
+}
+library(ggpointdensity)
+
+if(!require(ggnewscale)){
+  #devtools::install_github("eliocamp/ggnewscale@dev")
+  install.packages("ggnewscale", repos='http://cran.us.r-project.org')
+}
+library(ggnewscale)
+
+#make data frame
+df <-  tibble(x = rnorm(5000, mean=0,sd = 1),
+              y = rnorm(5000, mean=5,sd = 10))
+pz <- df %>% 
+  ggplot( mapping = aes(x = x, y = y)) +
+  geom_point()
+pz <- df %>% 
+  ggplot( mapping = aes(x = x, y = y)) +
+  geom_point(alpha=0.3)
+pz <- ggplot(data = df, mapping = aes(x = x, y = y)) +
+  geom_pointdensity() 
+pz <- ggplot(data = df, mapping = aes(x = x, y = y)) +
+  geom_pointdensity() +
+  scale_color_viridis()
+#see plot
+#pz 
+
+# dummy up data
+dat1<-data.frame(log2=rnorm(50), p.value= runif(50))
+dat2<-data.frame(log2=rnorm(50), p.value= runif(50))
+
+# geom_point with two scales
+p <- ggplot() +
+  geom_point(data=dat1, aes(x=p.value, y=log2, color=p.value), shape=21, size=3) +
+  scale_color_gradient(low="red", high="gray50") +
+  geom_point(data= dat2, aes(x=p.value, y=log2, shape=shp, fill=p.value), shape=21, size=2) +
+  scale_fill_gradient(low="gray90", high="blue")
+#p
+#_________________________________________________________
+
+c.t.keep <- c("dec_lat","dec_lon","eval01")
+df_as13.1 <- df_as13[c.t.keep]
+# define columns to keep
+col.to.keep <- c("dec_lat","dec_lon")
+
+# add jitter to lat lon 
+df_as14 <- df_as13.1 %>% group_by(dec_lat) %>% mutate(dec_lat.j2 = jitter(dec_lat, amount=.08))
+df_as14 <- df_as14 %>% group_by(dec_lon) %>% mutate(dec_lon.j2 = jitter(dec_lon, amount=.08))
+df_as14$dec_lat.j2 <- as.numeric(df_as14$dec_lat.j2)
+df_as14$dec_lon.j2 <- as.numeric(df_as14$dec_lon.j2)
+# number unique elements
+el01 <- unique(df_as14$eval01)[1] # "failed test" 
+el02 <- unique(df_as14$eval01)[2] # "no eDNA detected"
+el03 <- unique(df_as14$eval01)[3] # "eDNA detected in 1 of 2"
+el04 <- unique(df_as14$eval01)[4] # "eDNA detected in 2 of 2"
+#subset data frame on match with element
+df_as14.e1 <- df_as14[df_as14$eval01==el01,]
+df_as14.e2 <- df_as14[df_as14$eval01==el02,]
+df_as14.e3 <- df_as14[df_as14$eval01==el03,]
+df_as14.e4 <- df_as14[df_as14$eval01==el04,]
+# # only keep specific columns
+smpl.loc <- df_as14[col.to.keep]
+# # only keep unique rows
+df_smpl.loc <- dplyr::distinct(smpl.loc)
+df_smpl.loc <- df_as14 %>% dplyr::select(dec_lat,dec_lon,dec_lat.j2,dec_lon.j2) %>% 
+  dplyr::distinct(dec_lat,dec_lon)
+# create table with duplicate positions for each species so that it 
+# appears in each facet:
+#df_posns_species <- merge(df_smpl.loc,df_spec,all=T)
+
+p03 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  geom_pointdensity(data = df_as14.e1,
+                    mapping = aes(x = dec_lon.j2,
+                                  y = dec_lat.j2), 
+                    alpha =0.7 , size=3)+
+  #
+  scale_colour_gradientn(colours = c("#ffffcc","#ff9900")) +
+  
+  labs(color='failed tests') +
+  #geoms below will use another color scale
+  new_scale_color() +
+  # plot points together 
+  geom_pointdensity(data = df_as14.e2,
+                    mapping = aes(x = dec_lon.j2,
+                                  y = dec_lat.j2), 
+                    alpha =0.1,size=3) +
+  scale_colour_gradientn(colours = c("#ffccff","#660066")) +
+  # adjust below to use another label for color scale
+  labs(color='eDNA not \ndetected') +
+  #scale_color_gradient(colors=alpha(c("lightblue", "blue"), 0.5)) +
+  geom_point(data=df_smpl.loc,aes(x=dec_lon,y=dec_lat),
+             shape=3,colour=alpha("#000000",0.7),size=1.6) +
+  #theme(legend.position = 'bottom') +
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#change axis labels
+p03 <- p03 + xlab("longitude") + ylab("latitude")
+p03 <- p03 + labs(title = "A")#,
+
+#_
+
+p04 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  geom_pointdensity(data = df_as14.e3,
+                    mapping = aes(x = dec_lon.j2,
+                                  y = dec_lat.j2), alpha =0.5 ,
+                    size=3)+
+  #
+  scale_colour_gradientn(colours = c("lightgreen","darkslategrey")) +
+  
+  labs(color='eDNA detected\n in 1 of 2') +
+  #geoms below will use another color scale
+  new_scale_color() +
+  # plot points together 
+  geom_pointdensity(data = df_as14.e4,
+                    mapping = aes(x = dec_lon.j2,
+                                  y = dec_lat.j2), alpha =0.5, size=3) +
+  scale_colour_gradientn(colours = c("#99ccff","navy")) +
+  # adjust below to use another label for color scale
+  labs(color='eDNA detected\n in 2 of 2') +
+  #scale_color_gradient(colors=alpha(c("lightblue", "blue"), 0.5)) +
+  geom_point(data=df_smpl.loc,aes(x=dec_lon,y=dec_lat),
+             shape=3,colour=alpha("#000000",0.7),size=1.6) +
+  
+  #theme(legend.position = 'bottom') +
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#change axis labels
+p04 <- p04 + xlab("longitude") + ylab("latitude")
+p04 <- p04 + labs(title = "B")#,
+# combine legends
+# https://stackoverflow.com/questions/52060601/ggplot-multiple-legends-arrangement
+# https://stackoverflow.com/questions/25100038/ggplot2-center-legend-below-plot-instead-of-panel-area
+# Save another version of it without the legend and use cowplot's get_legend() to save the legend:
+p3.nol <- p03 + theme(legend.position = "none")
+le3 <- cowplot::get_legend(p03)
+p4.nol <- p04 + theme(legend.position = "none")
+le4 <- cowplot::get_legend(p04)
+# combine
+p3.p4 <- cowplot::plot_grid(p3.nol, le3, p4.nol,
+                            
+                            le4, 
+                            ncol=2, rel_widths = c(4, 1))
+
+# see collected plots  
+p3.p4  
+#
+bSaveFigures <- T
+#
+fig16 <- paste0("FigS32_v04",fnm02,"_w_Ct_cutoff.png")
+if(bSaveFigures==T){
+  ggsave(p3.p4   ,file=fig16,width=210,height=297,
+         units="mm",dpi=300)
+}
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+# plot with geom_ggdensity - end
+#::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 
 amph_smpl03_df <- amph_smpl02_df
 amph_smpl03_df$eval01 <- amph_smpl03_df$eval05
@@ -1984,7 +2289,6 @@ p03 <- p03 + labs(shape='evaluation excl failed tests')
 # see this example: https://www.datanovia.com/en/blog/ggplot-title-subtitle-and-caption/
 # p01t <- p01 + labs(title = "Amphibians detected by eDNA",
 #               subtitle = "approv controls and 1 or 2 pos repl")#,
-#caption = "Data source: ToothGrowth")
 p01t <- p01 + labs(title = "A")#,
 # Add titles
 # p02t <- p02 + labs(title = "eDNA samples attempted",
@@ -2014,8 +2318,8 @@ p <-  p01t +
   p03t +
   
   plot_layout(nrow=3,byrow=T) + #xlab(xlabel) +
-  plot_layout(guides = "collect") +
-  patchwork::plot_annotation(caption=fnm03) #& theme(legend.position = "bottom")
+  plot_layout(guides = "collect")
+  #patchwork::plot_annotation(caption=fnm03) #& theme(legend.position = "bottom")
 #p
 #make filename to save plot to
 figname02 <- paste0(fnm03,"_w_Ct_cutoff_",ct.cutoff,".png")
@@ -2036,8 +2340,8 @@ p <-  p01b +
   #
   
   plot_layout(nrow=3,byrow=T) + #xlab(xlabel) +
-  plot_layout(guides = "collect") +
-  patchwork::plot_annotation(caption=fnm04) #& theme(legend.position = "bottom")
+  plot_layout(guides = "collect")
+  #patchwork::plot_annotation(caption=fnm04) #& theme(legend.position = "bottom")
 #p
 #make filename to save plot to
 figname04 <- paste0(fnm05,"_w_Ct_cutoff_",ct.cutoff,".pdf")
@@ -2224,7 +2528,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
 # add label to plot
-p05t <- p05t + patchwork::plot_annotation(caption="FigS32_v01_2022sep") #& theme(legend.position = "bottom") 
+#p05t <- p05t + patchwork::plot_annotation(caption="FigS32_v01_2022sep") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 #define file name to save plot to
@@ -2234,7 +2538,7 @@ figname06A <- paste0("Fig02_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
 bSaveFigures=F
 # save plot
 if(bSaveFigures==T){
-  ggsave(p05t,file=figname06A,width=210,height=297,
+  ggsave(p05t,file=figname06A,width=210,height=0.6*297,
          units="mm",dpi=600)
 }
 # set bSaveFigures to TRUE
@@ -2242,15 +2546,120 @@ bSaveFigures=T
 figname06A <- paste0("FigS32_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
 # save plot
 if(bSaveFigures==T){
-  ggsave(p05t,file=figname06A,width=210,height=297,
+  ggsave(p05t,file=figname06A,width=210,height=297*0.55,
          units="mm",dpi=600)
 }
+# # save to pdf
+# figname06A <- paste0("FigS32_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
+# # save plot
+# if(bSaveFigures==T){
+#   ggsave(p05t,file=figname06A,width=210,height=297,
+#          units="mm",dpi=600)
+# }
 
 
 #
 #_______________________________________________________________________________
 # Make plot on map with facet wrap - end
 #_______________________________________________________________________________
+
+#_______________________________________________________________________________
+# Make plot on map with facet wrap - start
+#_______________________________________________________________________________
+
+# copy data frame
+df_as08 <- amph_smpl05_df
+# define columns to keep
+col.to.keep <- c("dec_lat","dec_lon")
+# # only keep specific columns
+smpl.loc <- df_as08[col.to.keep]
+# # only keep unique rows
+df_smpl.loc <- dplyr::distinct(smpl.loc)
+df_spec <- df_as08 %>% dplyr::distinct(latspc2)
+# create table with duplicate positions for each species so that it 
+# appears in each facet:
+df_posns_species <- merge(df_smpl.loc,df_spec,all=T)
+nspc <- nrow(df_spec)
+colour_list <- c("black","blue")
+fill_list <- c("orange","cyan")
+fill_list <- c(cl05)
+shape_list <- c(rep(21,nspc),23)
+colour_list <- c(rep("black",nspc))
+
+#plot with long species names
+p05 <- ggplot(data = world) +
+  geom_sf(color = "black", fill = "azure3") +
+  geom_jitter(data = df_as08, 
+              aes(x = dec_lon, y = dec_lat,
+                  shape=latspc2,
+                  color=latspc2,
+                  fill=latspc2),
+              size=3,width = 0.15, height = 0.15) +
+  scale_shape_manual(values=shape_list) +
+  scale_colour_manual(values=colour_list) +
+  scale_fill_manual(values=alpha(fill_list,0.6)) +
+  geom_point(data=df_posns_species,aes(x=dec_lon,y=dec_lat),
+             shape=3,colour=alpha("#000000",0.5),size=1.4) +
+  ggplot2::facet_wrap(. ~ latspc2,
+                      ncol = 3,
+                      labeller = label_bquote(cols = italic(.(latspc2))) ) +
+  #labeller = label_bquote(col = italic(.(latspc2))) ) +
+  #define limits of the plot
+  ggplot2::coord_sf(xlim = c(8, 15.4),
+                    ylim = c(54.4, 58.0), 
+                    expand = FALSE)
+#change axis labels
+p05t <- p05 + xlab("longitude") + ylab("latitude")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+p05t <- p05t + labs(color='species')
+p05t <- p05t + labs(fill='species')
+p05t <- p05t + labs(shape='species')
+
+# And try removing the legend -  comment out to include a legend
+p05t <- p05t + theme(legend.position = "none")
+#get the number of species
+noofspcsnms <- length(unique(df_as08$latspc))
+# https://github.com/tidyverse/ggplot2/issues/3492
+#repeat 'black' a specified number of times
+filltxc = rep("black", noofspcsnms)
+#filltxc[10] <- "red"
+#filltxc = rep("white", noofspcsnms)
+# Label appearance ##http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/
+p05t <- p05t + theme(legend.text = element_text(colour=filltxc, 
+                                                size = 10, face = "italic"))
+#adjust tick marks on axis
+p05t <- p05t + scale_y_continuous(breaks=seq(54.5,58,1))
+p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
+#alter stripes above facet plots
+p05t <- p05t + theme(strip.background = element_blank())
+# add label to plot
+#p05t <- p05t + patchwork::plot_annotation(caption="FigS32_v01_2022sep") #& theme(legend.position = "bottom") 
+getwd()
+# set bSaveFigures to TRUE
+bSaveFigures=T
+fig14 <- paste0("Fig01_v04",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=fig14,
+         width=210,height=297*0.71,
+         units="mm",dpi=600)
+}
+# # save to pdf
+# figname06A <- paste0("FigS32_v01",fnm02,"_w_Ct_cutoff_",ct.cutoff,"_02.pdf")
+# # save plot
+# if(bSaveFigures==T){
+#   ggsave(p05t,file=figname06A,width=210,height=297,
+#          units="mm",dpi=600)
+# }
+
+
+#
+#_______________________________________________________________________________
+# Make plot on map with facet wrap - end
+#_______________________________________________________________________________
+
 
 
 
@@ -2529,11 +2938,20 @@ plt09 <- ggplot(df_as03.1, aes(x=latspc2, y=dayno)) +
   geom_text(data=df_labels,
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=3)
-# see the plot
+# move legend to be on top
+plt09 <- plt09 + theme(legend.position = "top")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+plt09 <- plt09 + labs(color='')
+plt09 <- plt09 + labs(fill='')
+plt09 <- plt09 + labs(shape='')
+plt09 <- plt09 + labs(size='')
+
 #plt09
 figname09A <- paste0("Fig04_01_",fnm02,"_boxplot_sampling_time_.png")
 
-plt09 <- plt09 + patchwork::plot_annotation(caption="Fig04_v01") #& theme(legend.position = "bottom") 
+#plt09 <- plt09 + patchwork::plot_annotation(caption="Fig04_v01") #& theme(legend.position = "bottom") 
 # save plot
 if(bSaveFigures==T){
   ggsave(plt09,file=figname09A,width=210,height=297*0.5,
@@ -2580,7 +2998,17 @@ plt09 <- ggplot(df_as10, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=3)
 #plt09
-plt09 <- plt09 + patchwork::plot_annotation(caption="Fig04_v02") #& theme(legend.position = "bottom") 
+# move legend to be on top
+plt09 <- plt09 + theme(legend.position = "top")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+plt09 <- plt09 + labs(color='')
+plt09 <- plt09 + labs(fill='')
+plt09 <- plt09 + labs(shape='')
+plt09 <- plt09 + labs(size='')
+
+#plt09 <- plt09 + patchwork::plot_annotation(caption="Fig04_v02") #& theme(legend.position = "bottom") 
 # pasTe together a file name
 figname09A <- paste0("Fig04_02_",fnm02,"_boxplot_sampling_time_.png")
 # save plot
@@ -2627,7 +3055,16 @@ plt09 <- ggplot(df_as10, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=3)
 # see the plot
-plt09 <- plt09 + patchwork::plot_annotation(caption="Fig04_v03") #& theme(legend.position = "bottom") 
+#plt09 <- plt09 + patchwork::plot_annotation(caption="Fig04_v03") #& theme(legend.position = "bottom") 
+# move legend to be on top
+plt09 <- plt09 + theme(legend.position = "top")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+plt09 <- plt09 + labs(color='')
+plt09 <- plt09 + labs(fill='')
+plt09 <- plt09 + labs(shape='')
+plt09 <- plt09 + labs(size='')
 
 # paste together to get a file name to use for saving the file
 figname09A <- paste0("Fig04_03_",fnm02,"_boxplot_sampling_time_.png")
@@ -2682,7 +3119,7 @@ plt10 <- plt10 +
 plt10 <- plt10 + labs(fill='test sets with')
 plt10 <- plt10 + coord_flip()
 
-plt10 <- plt10 + patchwork::plot_annotation(caption="Fig05_v01") #& theme(legend.position = "bottom") 
+#plt10 <- plt10 + patchwork::plot_annotation(caption="Fig05_v01") #& theme(legend.position = "bottom") 
 #plt10
 figname10A <- paste0("Fig05_01_",fnm02,"_boxplot_lake_area_size.png")
 # save plot
@@ -2722,7 +3159,7 @@ plt12 <- plt12 +  #xlab("species") +
 #getting separate legends
 plt12 <- plt12 + labs(fill='test sets with')
 plt12 <- plt12 + coord_flip()
-plt12 <- plt12 + patchwork::plot_annotation(caption="Fig05_v02") #& theme(legend.position = "bottom") 
+#plt12 <- plt12 + patchwork::plot_annotation(caption="Fig05_v02") #& theme(legend.position = "bottom") 
 #plt12
 figname10A <- paste0("Fig05_02_",fnm02,"_boxplot_lake_area_size.png")
 # save plot
@@ -2741,13 +3178,15 @@ df_as03.1$Areal_m2[is.na(df_as03.1$Areal_m2)] <- 0
 df_as12 <- df_as03.1[df_as03.1$Areal_m2!=0,]
 # replace Pelophylax esculentus with  'Pelophylax sp' 
 df_as12$latspc2 <- gsub("Pelophylax esculentus","Pelophylax sp",df_as12$latspc2)
+# replace Rana lessonae with  'Pelophylax sp' 
+df_as12$latspc2  <- gsub("Rana lessonae","Pelophylax sp",df_as12$latspc2)
 # exclude the failed tests
 df_as12 <- df_as12[df_as12$eval05=="eDNA detected",]
 # make a scattered box plot for species
 plt12 <- ggplot(df_as12, aes(x=latspc2, y=Areal_m2)) +
   geom_point(aes(fill=eval05), size=4, shape=21, colour="grey20",
              position=position_jitter(width=0.2, height=0.1)) +
-  
+  theme_classic() +
   geom_boxplot(outlier.colour=NA, fill=NA, colour="grey20") +
   #labs(title="B")
   labs(title="")
@@ -2772,9 +3211,18 @@ plt12 <- plt12 +  #xlab("species") +
 #getting separate legends
 plt12 <- plt12 + labs(fill='test sets with')
 plt12 <- plt12 + coord_flip()
-plt12 <- plt12 + patchwork::plot_annotation(caption="Fig05_v03") #& theme(legend.position = "bottom") 
-#plt12
+# remove the legend
+plt12 <- plt12 + theme(legend.position = "none")
+# use line below to add caption in the corner of the plot
+#plt12 <- plt12 + patchwork::plot_annotation(caption="Fig05_v03") #& theme(legend.position = "bottom") 
+
 figname10A <- paste0("Fig05_03_",fnm02,"_boxplot_lake_area_size.png")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt12,file=figname10A,width=210,height=297*0.5,
+         units="mm",dpi=300)
+}
+figname10A <- paste0("Fig05_03_",fnm02,"_boxplot_lake_area_size.pdf")
 # save plot
 if(bSaveFigures==T){
   ggsave(plt12,file=figname10A,width=210,height=297*0.5,
@@ -2941,14 +3389,30 @@ plt13 <- ggplot(df_as11, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=4)
 #see the plot
-plt13 <- plt13 + patchwork::plot_annotation(caption="Fig04_v04") #& theme(legend.position = "bottom") 
+#plt13 <- plt13 + patchwork::plot_annotation(caption="Fig04_v04") #& theme(legend.position = "bottom") 
 #
+
+# move legend to be on top
+plt13 <- plt13 + theme(legend.position = "top")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+plt13 <- plt13 + labs(color='')
+plt13 <- plt13 + labs(fill='')
+plt13 <- plt13 + labs(shape='')
+plt13 <- plt13 + labs(size='')
 
 figname13A <- paste0("Fig04_04_",fnm02,"_time_period_aquatic.png")
 # save plot
 if(bSaveFigures==T){
   ggsave(plt13,file=figname13A,width=210*1.6,height=297*0.8,
          units="mm",dpi=300)
+}
+figname13A <- paste0("Fig04_04_",fnm02,"_time_period_aquatic.pdf")
+# save plot
+if(bSaveFigures==T){
+  ggsave(plt13,file=figname13A,width=1.6*210,height=297*0.8,
+         units="mm",dpi=400)
 }
 #_______________________________________________________________________________
 # make another plot but only including 'eDNA detected'
@@ -3041,9 +3505,19 @@ plt13 <- ggplot(df_as11, aes(x=latspc2, y=dayno)) +
             aes(x=x0+0.2,y=dayno+2,label=datelabel),
             hjust=0,vjust=1, size=4)
 #see the plot
-plt13 <- plt13 + patchwork::plot_annotation(caption="Fig04_v05") #& theme(legend.position = "bottom") 
+#plt13 <- plt13 + patchwork::plot_annotation(caption="Fig04_v05") #& theme(legend.position = "bottom") 
 
-#
+
+# move legend to be on top
+plt13 <- plt13 + theme(legend.position = "top")
+#change the header for the legend on the side, 
+#this must be done for both 'fill', 'color' and 'shape', to avoid 
+#getting separate legends
+plt13 <- plt13 + labs(color='')
+plt13 <- plt13 + labs(fill='')
+plt13 <- plt13 + labs(shape='')
+plt13 <- plt13 + labs(size='')
+
 
 figname13A <- paste0("Fig04_05_",fnm02,"_time_period_aquatic.png")
 # save plot
@@ -3116,3 +3590,16 @@ no_of_smpls_total <- length(unique(df_as03.1$DLsamplno))
 smpls_from_before_2019 <- unique(df_as03.1$DLsamplno)[as.numeric(gsub("DL([0-9]{4}).*","\\1",unique(df_as03.1$DLsamplno)))<=2019]
 no_of_smpls_before_and_incl_2019 <- length(smpls_from_before_2019)
 additional_smpls_after_2019 <- no_of_smpls_total - no_of_smpls_before_and_incl_2019
+# get unique list 
+lst.DL.smplnos <- unique(df_as03.1$DLsamplno)
+# sample from list
+#https://stackoverflow.com/questions/9390965/select-random-element-in-a-list-of-r
+# use set.seed to be able to replicate the random sampling of samples
+set.seed(123)
+# a <- c(1,2,3,4,5,6)
+# sample(a, 4, replace=F)
+# sample 24 random samples
+get24_smpls<- sample(lst.DL.smplnos, 24, replace=F)
+
+
+#getwd()

@@ -346,8 +346,8 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
-
-p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v01") #& theme(legend.position = "bottom") 
+p05t <- p05t + theme(legend.position = "top")
+#p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v01") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 
@@ -355,6 +355,19 @@ p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v01") #& theme(legend.
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
 fgnm <- paste0("FigS33_v01_",infl1,".png")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# define whether figures are to be saved or not
+bSaveFigures <- F
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         #width=210,height=297, # as portrait
+         width=297*0.9,height=210, # as landscape
+         units="mm",dpi=300)
+}
+#define file name to save plot to
+fgnm <- paste0("FigS33_v01_",infl1,".pdf")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
 # define whether figures are to be saved or not
@@ -481,6 +494,19 @@ if(bSaveFigures==T){
          width=297,height=210, # as landscape
          units="mm",dpi=300)
 }
+#define file name to save plot to
+fgnm <- paste0("FigS33_v02_",infl1,".pdf")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# define whether figures are to be saved or not
+bSaveFigures <- F
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         #width=210,height=297, # as portrait
+         width=297,height=210, # as landscape
+         units="mm",dpi=300)
+}
 #_______________________________________________________________________________
 
 #copy data frame
@@ -556,6 +582,19 @@ p05t <- p05 + patchwork::plot_annotation(caption="FigS33_v03") #& theme(legend.p
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
 fgnm <- paste0("FigS33_v03_",infl1,".png")
+#paste the path and the file name together
+pfnm <- paste0(wd00_wd09,"/",fgnm)
+# define whether figures are to be saved or not
+bSaveFigures <- F
+# save plot
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm,
+         #width=210,height=297, # as portrait
+         width=297,height=210, # as landscape
+         units="mm",dpi=300)
+}
+#define file name to save plot to
+fgnm <- paste0("FigS33_v03_",infl1,".pdf")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
 # define whether figures are to be saved or not
@@ -689,9 +728,10 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
+# place legend on top
+p05t <- p05t + theme(legend.position = "top")
 
-
-p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v04") #& theme(legend.position = "bottom") 
+#p05t <- p05t + patchwork::plot_annotation(caption="FigS33_v04") #& theme(legend.position = "bottom") 
   # see the plot
 #p05t
 #substitute in file name
@@ -705,10 +745,23 @@ bSaveFigures <- T
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=pfnm,
-         width=210,height=297, # as portrait
+         width=210*0.9,height=297, # as portrait
          #width=297,height=210, # as landscape
          units="mm",dpi=300)
 }
+# #define file name to save plot to
+# fgnm <- paste0("FigS33_v04_",infl1,".pdf")
+# #paste the path and the file name together
+# pfnm <- paste0(wd00_wd09,"/",fgnm)
+# # define whether figures are to be saved or not
+# bSaveFigures <- T
+# # # save plot
+# if(bSaveFigures==T){
+#   ggsave(p05t,file=pfnm,
+#          width=210,height=297, # as portrait
+#          #width=297,height=210, # as landscape
+#          units="mm",dpi=300)
+# }
 #_______________________________________________________________________________
 # end plot with iNaturalist and eDNA monitoring in plots side by side
 #_______________________________________________________________________________

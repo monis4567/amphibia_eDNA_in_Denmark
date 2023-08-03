@@ -74,6 +74,8 @@ for (f in infls)
 }
 #bind the rows in each list in to one data frame
 datbl_af03 <- data.table::rbindlist(lstg, fill=T)
+#datbl_af03.Isa <- datbl_af03[grepl("saura",datbl_af03$`Taxon latinsk navn`)]
+#View(datbl_af03.Isa)
 #make it a data fram
 df_af03 <- as.data.frame(datbl_af03)
 # make a list of columns to keep 
@@ -84,9 +86,12 @@ df_af04$dec_lat <- df_af04$Lat
 df_af04$dec_lon <- df_af04$Long
 df_af04$taxon.name <- df_af04$`Taxon latinsk navn`
 df_af04$eval03 <- "fund_arter.dk"
+df_af04.Ich.s <- df_af04[grepl("Icht",df_af04$taxon.name),]
+#unique(df_af04.Ich.s$Systemoprindelse)
 df_af04$eval03[df_af04$Systemoprindelse=="iNaturalist Research-grade Observations"] <- "iNat_res"
 
 df_af04$eval04 <- df_af04$eval03
+#unique(df_af04$taxon.name)
 #infl1 = "out08_03b_inaturalist_records_amphibia_Denmark_1200lines.csv"
 infl2 = "out08_01b_DL_records_amphibia_Denmark.csv"
 # paste together path and input flie
@@ -117,12 +122,15 @@ df_DL01$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_DL01$taxon
 df_DL01$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_DL01$taxon.name)
 df_DL01$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_DL01$taxon.name)
 df_DL01$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_DL01$taxon.name)
-
+df_DL01$taxon.name <- gsub("Ichthyosaurus","Ichthyosaura",df_DL01$taxon.name)
+#unique(df_DL01$taxon.name)
 
 df_af04$taxon.name <- gsub("Pelophylax esculentus","Pelophylax sp",df_af04$taxon.name)
 df_af04$taxon.name <- gsub("Rana lessonae","Pelophylax sp",df_af04$taxon.name)
 df_af04$taxon.name <- gsub("Pelophylax ridibundus","Pelophylax sp",df_af04$taxon.name)
 df_af04$taxon.name <- gsub("Pelophylax lessonae","Pelophylax sp",df_af04$taxon.name)
+df_af04$taxon.name <- gsub("Ichthyosaurus","Ichthyosaura",df_af04$taxon.name)
+unique(df_af04$taxon.name)
 #unique(df_af04$taxon.name)
 #define columns to keep
 keep <- c(  "dec_lat",
@@ -344,6 +352,22 @@ df_iNDL04$eval04 <- gsub("eDNA_present","eDNA detected",df_iNDL04$eval04)
 df_iNDL04$eval04 <- gsub("eDNA_zero","eDNA not detected",df_iNDL04$eval04)
 df_iNDL04$eval04 <- gsub("iNat_res","iNaturalist",df_iNDL04$eval04)
 #unique(df_iNDL04$eval04)
+df_iNDL04_Icht.sa <- df_iNDL04[grepl("Icht",df_iNDL04$taxon.name),]
+
+# df_iNDL04$dec_lat[grepl("Icht",df_iNDL04$taxon.name)] <- df_iNDL04$dec_lat[grepl("Icht",df_iNDL04$taxon.name)]*110872.1
+#   
+# df_iNDL04$dec_lon[grepl("Icht",df_iNDL04$taxon.name)] <- df_iNDL04$dec_lon[grepl("Icht",df_iNDL04$taxon.name)]*2.11
+
+#unique(df_iNDL04_Icht.sa$eval04)
+#View(df_iNDL04_Icht.sa)
+#df_iNDL04_Icht.sa[grepl("www",df_iNDL04_Icht.sa$eval04),]
+#df_iNDL04_Bomb.bo <- df_iNDL04[grepl("Bomb",df_iNDL04$taxon.name),]
+#df_iNDL04_Bomb.bo[grepl("www",df_iNDL04_Bomb.bo$eval04),]
+#unique(df_iNDL04_Bomb.bo$eval04)
+#View(df_iNDL04_Icht.sa)
+df_iNDL04_Bufo.bu <- df_iNDL04[grepl(" bufo",df_iNDL04$taxon.name),]
+#unique(df_iNDL04_Bufo.bu$eval04)
+#View(df_iNDL04_Bufo.bu)
 # substitute in Danish records from 'arter.dk', so it changes from
 # 'fund' to 'rec' for the Danish records
 #df_iNDL04$eval04 <- gsub("fund_","rec_",df_iNDL04$eval04)
@@ -370,8 +394,6 @@ p05 <- ggplot(data = world) +
   #manually set the pch shape of the points
   scale_shape_manual(values=c(21,3,22,22)) +
   #set the color of the points
-  
-  
   #here it is black, and repeated the number of times
   #matching the number of species listed
   scale_color_manual(values=alpha(
@@ -402,7 +424,7 @@ p05 <- ggplot(data = world) +
 p05t <- p05 + xlab("longitude") + ylab("latitude")
 #change the header for the legend on the side, 
 #this must be done for both 'fill', 'color' and 'shape', to avoid 
-#getting separate legends
+# #getting separate legends
 p05t <- p05t + labs(color='monitoring')
 p05t <- p05t + labs(fill='monitoring')
 p05t <- p05t + labs(shape='monitoring')
@@ -428,6 +450,7 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
 p05t <- p05t + patchwork::plot_annotation(caption="Fig03_v04") #& theme(legend.position = "bottom") 
+p05t <- p05t + theme(legend.position = "top")
 # see the plot
 #p05t
 # define whether figures are to be saved or not
@@ -436,8 +459,10 @@ bSaveFigures <- T
 infl1 <- "fund_arter.dk" 
 #define file name to save plot to
 fgnm <- paste0("Fig03_v04_",infl1,".png")
+fgnm2 <- paste0("Fig03_v04_",infl1,".pdf")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
+pfnm2 <- paste0(wd00_wd09,"/",fgnm2)
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=pfnm,
@@ -445,6 +470,13 @@ if(bSaveFigures==T){
          #width=297,height=210, # as landscape
          units="mm",dpi=300)
 }
+
+# if(bSaveFigures==T){
+#   ggsave(p05t,file=pfnm2,
+#          width=210,height=297, # as portrait
+#          #width=297,height=210, # as landscape
+#          units="mm",dpi=300)
+# }
 #_______________________________________________________________________________
 # end plot with individual maps per species, showing eDNA plus iNaturalist plus 
 # www.arter.dk
@@ -569,7 +601,8 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
-p05t <- p05t + patchwork::plot_annotation(caption="Fig03_v05") #& theme(legend.position = "bottom") 
+p05t <- p05t + theme(legend.position = "top")
+#p05t <- p05t + patchwork::plot_annotation(caption="Fig03_v05") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 # define whether figures are to be saved or not
@@ -578,11 +611,19 @@ bSaveFigures <- T
 infl1 <- "fund_arter.dk" 
 #define file name to save plot to
 fgnm <- paste0("Fig03_v05_",infl1,".png")
+fgnm2 <- paste0("Fig03_v05_",infl1,".png")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
+pfnm2 <- paste0(wd00_wd09,"/",fgnm2)
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=pfnm,
+         width=210,height=297*0.9, # as portrait
+         #width=297,height=210, # as landscape
+         units="mm",dpi=300)
+}
+if(bSaveFigures==T){
+  ggsave(p05t,file=pfnm2,
          width=210,height=297, # as portrait
          #width=297,height=210, # as landscape
          units="mm",dpi=300)

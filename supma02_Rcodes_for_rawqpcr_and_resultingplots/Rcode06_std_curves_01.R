@@ -100,6 +100,7 @@ library(plyr)
 
 # set working directory
 wd00 <- "/Users/steenknudsen/Documents/Documents/MS_amphibian_eDNA_assays/MS_suppm_amphibia_eDNA/"
+wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark/"
 #define input file directory
 wd01 <- "supma01_inp_raw_qcpr_csv/inp04_std_crvs"
 #paste directories together
@@ -684,6 +685,8 @@ getwd()
 vars = 10
 #get number of txt report files
 no.oftxt.rep.files <- length(txt.rep.files)
+
+#txt.rep.files[grepl("Bomb",txt.rep.files)]
 #assign to a different variable
 iter <- no.oftxt.rep.files
 #prepare an empty matrix w enough rows
@@ -821,6 +824,7 @@ for(i in 1:iter){
 #make the matrix a data frame
 df_spc_LOD.cq01 <- as.data.frame(mtrx_spc_LOD.cq01)
 
+#View(df_spc_LOD.cq01)
 #df_spc_LOD.cq01
 #change the column names
 colnames(df_spc_LOD.cq01) <- c("spcnm","highestCqLOD","intsCqLODline","lod","loq","efficiency","amplFact","intc2","slope","qpcrno")
@@ -849,10 +853,42 @@ df_L2 <- df_L2[!df_L2$spcnm == "Lissotriton_vulgaris" | !df_L2$qpcrno == "646", 
 # round the amplification factor
 df_L2$amplFact <- round(as.numeric(as.character(df_L2$amplFact)),3)
 df_L2$intc2 <- round(as.numeric(as.character(df_L2$intc2)),3)
+# define the input directory fot extra tables
+wd03.1 <- "supma03_inp_files_for_R"
+# paste together paths for ditrectories
+wd00_wd03.1 <- paste0(wd00,wd03.1)
+#input file with excel table with Latin species names and English common names
+inf03 <- "table_w_eng_common_names_and_Latin_spc_names.xlsx"
+# paste file and path together
+wd00_wd03.1.inf03 <-paste0(wd00_wd03.1,"/",inf03)
+# read in table with common names 
+df_cmNm3 <- readxl::read_xlsx(wd00_wd03.1.inf03)
+# substitute to remove underscore
+df_L2$spcnm1 <- gsub("_"," ",df_L2$spcnm)
+# match between data frames to get common name
+df_L2$cmNm <- df_cmNm3$`Common name`[match(df_L2$spcnm1, df_cmNm3$species)]
+# remove column with Latin name with underscore
+df_L2$spcnm <- NULL
+#ncol(df_L2)
+# reorder the columns in the data frame
+df_L2 <- df_L2[,c(10,11,c(1:8))]
+# make vector with new column names
+nw.cNm <- c("species",
+"Common name",
+"Highest Cq at LOD",
+"Inters Cq at LOD line",
+"LOD (copies / uL)",
+"LOQ (copies / uL)",
+"Efficiency  (%)",
+"Ampl Factor",
+"Inters1",
+"slope")
+# replace column names
+colnames(df_L2) <- nw.cNm
 # see the table
 tableHTML(df_L2)
 #make a file name and a path
-outfl3 <- paste(wd03,"/highest_Cq_at_LOD_table02.csv",sep="")
+outfl3 <- paste(wd03,"/Table03_highest_Cq_at_LOD.csv",sep="")
 #write to a csv file
 write.csv(df_L2,outfl3, row.names = FALSE)
 

@@ -734,7 +734,8 @@ p05t <- p05t + scale_x_continuous(breaks=seq(8,16,2))
 # p05t <- p05t + theme(strip.text = element_text(colour = 'white'))
 #p05t <- p05t + theme(strip.text = element_blank())
 p05t <- p05t + theme(strip.background = element_blank())
-p05t <- p05t + patchwork::plot_annotation(caption="FigS34_v04") #& theme(legend.position = "bottom") 
+p05t <- p05t + theme(legend.position = "top")
+#p05t <- p05t + patchwork::plot_annotation(caption="FigS34_v04") #& theme(legend.position = "bottom") 
 # see the plot
 #p05t
 
@@ -744,15 +745,23 @@ bSaveFigures <- T
 infl1 <- gsub(".csv","",infl1)
 #define file name to save plot to
 fgnm <- paste0("FigS34_v04_",infl1,".png")
+fgnm2 <- paste0("FigS34_v04_",infl1,".pdf")
 #paste the path and the file name together
 pfnm <- paste0(wd00_wd09,"/",fgnm)
+pfnm2 <- paste0(wd00_wd09,"/",fgnm2)
 # save plot
 if(bSaveFigures==T){
   ggsave(p05t,file=pfnm,
-         width=210,height=297, # as portrait
+         width=210*0.9,height=297, # as portrait
          #width=297,height=210, # as landscape
          units="mm",dpi=300)
 }
+# if(bSaveFigures==T){
+#   ggsave(p05t,file=pfnm2,
+#          width=210,height=297, # as portrait
+#          #width=297,height=210, # as landscape
+#          units="mm",dpi=300)
+# }
 #_______________________________________________________________________________
 # end plot with iNaturalist and eDNA monitoring in plots side by side
 #_______________________________________________________________________________

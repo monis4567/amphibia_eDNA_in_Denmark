@@ -1,0 +1,37 @@
+Analysis started: Sun May  7 21:59:09 2023
+
+
+WARNING: 5 data points excluded without a valid starting quantity (SQ)!
+Here is a sample of the data being excluded:
+
+"Well"	"Well.Name"	"Well.Type"	"Replicate"	"Threshold..dRn."	"Ct..dRn."	"Quantity..copies."	"RSq..dRn."	"Slope..dRn."	"X"	"Cq"	"SQ"	"Target"
+"E4"	"13_Ichalp_1E01_3uL_F04R04P04  Qty or ID"	"Standard"	13	0.0597	"No Ct"	"No Ct"	0.893	-4.458	NA	NA	NA	"Standard"
+"E6"	"13_Ichalp_1E01_3uL_F04R04P04  Qty or ID"	"Standard"	13	0.0597	"No Ct"	"No Ct"	0.893	-4.458	NA	NA	NA	"Standard"
+"F4"	"14_Ichalp_1E00_3uL_F04R04P04  Qty or ID"	"Standard"	14	0.0597	"No Ct"	"No Ct"	0.893	-4.458	NA	NA	NA	"Standard"
+"F5"	"14_Ichalp_1E00_3uL_F04R04P04  Qty or ID"	"Standard"	14	0.0597	"No Ct"	"No Ct"	0.893	-4.458	NA	NA	NA	"Standard"
+"F6"	"14_Ichalp_1E00_3uL_F04R04P04  Qty or ID"	"Standard"	14	0.0597	"No Ct"	"No Ct"	0.893	-4.458	NA	NA	NA	"Standard"
+
+
+Potential outliers have been detected. Please review the data exported as
+Potential-Outliers.csv, and determine if any data points need to be excluded
+or adjusted due to false positives or poorly normalized baselines.
+
+
+These standards not included in Standard standard curve regression for copy estimate calculations, because they detected below 50%: NA
+
+
+Data Summary:
+"Standards"	"Target"	"Reps"	"Detects"	"Cq.mean"	"Cq.sd"	"Copy.CV"	"Cq.CV"	"Rate"
+3e+05	"Standard"	3	3	23.31	0.33778691508109	0.188297175961694	0.237381814460591	1
+30000	"Standard"	3	3	26.4733333333333	0.323934149686835	0.180165160454787	0.227393993787063	1
+3000	"Standard"	3	3	29.57	0.379868398264451	0.191582827780564	0.267935003532419	1
+300	"Standard"	3	3	36.6933333333333	4.09280262574844	0.908160649893003	55.9177769588541	1
+30	"Standard"	1	1	41.02	NA	NA	NA	1
+
+
+For Standard, the lowest standard with 95% or greater detection is: 30 copies/reaction.
+
+WARNING: LoD cannot be determined for Standard, because it is lower than the lowest standard you tested.
+Report as <30 copies/reaction, or retest with lower concentrations.
+
+

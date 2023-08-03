@@ -1,0 +1,21 @@
+"","Species","sets that are failed tests, Non-approved analyses","sets that are failed tests, percentage","Approved analyses sets, no eDNA detected","Approved analyses sets, no eDNA detected, percentage","Approved analyses sets, eDNA detected","Approved analyses sets, eDNA detected, percentage","Total number of attemped sets"
+"1","Abramis_brama",12,"48%",7,"28%",6,"24%",25
+"5","Acipenser_baerii",40,"39%",62,"61%",0,"0%",102
+"7","Anguilla_anguilla",68,"57%",30,"25%",21,"18%",119
+"11","Carassius_auratus",100,"62%",59,"37%",1,"1%",160
+"14","Carassius_carassius",59,"28%",97,"46%",56,"26%",212
+"18","Clupea_harengus",19,"22%",33,"38%",34,"40%",86
+"22","Cobitis_taenia",4,"67%",2,"33%",0,"0%",6
+"24","Cyprinus_carpio",56,"92%",1,"2%",4,"7%",61
+"27","Esox_lucius",25,"28%",27,"30%",38,"42%",90
+"31","Gadus_morhua",33,"20%",98,"59%",35,"21%",166
+"35","Gasterosteus_aculeatus",22,"49%",22,"49%",1,"2%",45
+"38","Misgurnus_fossilis",1,"100%",0,"0%",0,"0%",1
+"39","Neogobius_melanostomus",32,"27%",71,"60%",16,"13%",119
+"43","Oncorhynchus_gorbuscha",52,"30%",116,"67%",4,"2%",172
+"47","Perca_fluviatilis",45,"26%",76,"43%",54,"31%",175
+"51","Platichthys_flesus",33,"20%",78,"48%",52,"32%",163
+"55","Rutilus_rutilus",85,"35%",73,"30%",88,"36%",246
+"59","Scomber_scombrus",25,"25%",62,"61%",15,"15%",102
+"63","Thunnus_thynnus",32,"64%",10,"20%",8,"16%",50
+"20","Total count",743,"35%",924,"44%",433,"21%",2100

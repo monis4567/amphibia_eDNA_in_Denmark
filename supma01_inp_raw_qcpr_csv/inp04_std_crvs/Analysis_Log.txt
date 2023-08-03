@@ -1,0 +1,23 @@
+WARNING: 192 data points excluded without a valid starting quantity (SQ)!
+Here is a sample of the data being excluded:
+
+"Well"	"Fluor"	"Sample"	"Cq"	"SQ"	"Target"
+"A01 "	"FAM "	"NTC "	NA	NA	"SVC"
+"A02 "	"FAM "	"NTC "	NA	NA	"SVC"
+"A03 "	"FAM "	"NTC "	NA	NA	"SVC"
+"A04 "	"FAM "	"NTC "	NA	NA	"SVC"
+"A05 "	"FAM "	"NTC "	NA	NA	"SVC"
+"A06 "	"FAM "	"NTC "	NA	NA	"SVC"
+
+
+Potential outliers have been detected. Please review the data exported as
+Potential-Outliers.csv, and determine if any data points need to be excluded
+or adjusted due to false positives or poorly normalized baselines.
+
+
+These standards not included in SVC standard curve regression for copy estimate calculations, because they detected below 50%: NA, 1
+
+
+These standards not included in BHC standard curve regression for copy estimate calculations, because they detected below 50%: NA, 1
+
+

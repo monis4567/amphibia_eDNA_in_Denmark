@@ -27,7 +27,8 @@ rm(list=ls())
 ########################################################################################
 # set working directory
 #wd00 <- "/Users/steenknudsen/Documents/Documents/MS_amphibian_eDNA_assays/MS_suppm_amphibia_eDNA"
-wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/MS_suppm_amphibia_eDNA"
+wd00 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays/amphibia_eDNA_in_Denmark/"
+
 setwd (wd00)
 getwd()
 wdin01.1 <- "supma01_inp_raw_qcpr_csv"
@@ -177,13 +178,13 @@ spl_df01 <- split(list.xls.inp01,rep(1:nos.xls.fls,each=3))
 mxpro_ampl.plot.files <- as.data.frame(spl_df01[2])
 #mxpro_ampl.plot.files <- as.data.frame(spl_df01[3])
 #add a column with numbers for plot - here it is from 1 to 4
-mxpro_ampl.plot.files$no.f.plot <- seq(1:nos.xls.fls)
-#change the column names
-colnames(mxpro_ampl.plot.files)[1] <- c("filenm1")
-colnames(mxpro_ampl.plot.files)[2] <- c("nos.ls")
-#put one column from this dataframe in to a list, to be used to loop over
-files <- mxpro_ampl.plot.files$filenm1
-files <- as.vector(files)
+# mxpro_ampl.plot.files$no.f.plot <- seq(1:nos.xls.fls)
+# #change the column names
+# colnames(mxpro_ampl.plot.files)[1] <- c("filenm1")
+# colnames(mxpro_ampl.plot.files)[2] <- c("nos.ls")
+# #put one column from this dataframe in to a list, to be used to loop over
+# files <- mxpro_ampl.plot.files$filenm1
+# files <- as.vector(files)
 #define xls file
 mxpro_ampl.plot.filename <- "ampl_plot_qpcr842_Lisvul_01_20210413.xls"
 files <- "ampl_plot_qpcr842_Lisvul_01_20210413.xls"
@@ -246,12 +247,14 @@ well.prim.df <- cbind(well.no.df,prim.df)
 lstfi01<- list.files(paste("./",wdin01.1,"/",wdin01.2,sep=""))
 incsvfl <- lstfi01[grepl(".csv",lstfi01)]
 incsvfl2 <- incsvfl[grepl("888",incsvfl)]
+incsvfl2 <- lstfi01[grepl("888",lstfi01)]
 pthinfcsv  <- paste("./",wdin01.1,"/",wdin01.2,"/",incsvfl2,sep="")
 #read csv file with smpl locations and positions
 df_wllnmrepl <-as.data.frame(read.csv(pthinfcsv,
                                       header = TRUE, sep = "\t", quote = "\"",
                                       dec = ".", fill = TRUE, comment.char = "",
                                       stringsAsFactors = FALSE))
+df_wllnmrepl <- readxl::read_excel(pthinfcsv)
 #match replacement well names
 well.prim.df$well.nm2 <- df_wllnmrepl$Well.Name[match(well.prim.df$well.nm,df_wllnmrepl$Well)]
 
@@ -352,20 +355,20 @@ df02$wllnm2 <- df_wllnmrepl$Well.Name[match(df02$wll,df_wllnmrepl$Well)]
 wllnm2spl <- data.frame(do.call('rbind', strsplit(as.character(df02$wllnm2),'_',fixed=TRUE)))
 unique(wllnm2spl$X1)
 df02$wllnm3 <-  wllnm2spl$X1
-df02$wllnm3 <- gsub("T.vulgaris","Trivul",df02$wllnm3)
-df02$wllnm3 <- gsub("T.alpestris","Ichalp",df02$wllnm3)
-df02$wllnm3 <- gsub("T.cristatus","Tricri",df02$wllnm3)
-df02$wllnm3 <- gsub("T.cristatus","Tricri",df02$wllnm3)
-df02$wllnm3 <- gsub("I.alpestris.stubbaek","Ichalp",df02$wllnm3)
+#df02$wllnm3 <- gsub("T.vulgaris","Trivul",df02$wllnm3)
+#df02$wllnm3 <- gsub("T.alpestris","Ichalp",df02$wllnm3)
+#df02$wllnm3 <- gsub("T.cristatus","Tricri",df02$wllnm3)
+#df02$wllnm3 <- gsub("T.cristatus","Tricri",df02$wllnm3)
+#df02$wllnm3 <- gsub("I.alpestris.stubbaek","Ichalp",df02$wllnm3)
 
 
 unique(df02$wllnm3)
-df03 <- df02[(!df02$wllnm3=="Trivul"),]
-df03 <- df03[(!df03$wllnm3=="Ichalp"),]
-df03 <- df03[(!df03$wllnm3=="Hylarb"),]
-df03 <- df03[(!df03$wllnm3=="NK"),]
-df03 <- df03[(!df03$wllnm3=="B.bufo"),]
-
+# df03 <- df02[(!df02$wllnm3=="Trivul"),]
+# df03 <- df03[(!df03$wllnm3=="Ichalp"),]
+# df03 <- df03[(!df03$wllnm3=="Hylarb"),]
+# df03 <- df03[(!df03$wllnm3=="NK"),]
+# df03 <- df03[(!df03$wllnm3=="B.bufo"),]
+df03 <- df02
 #head(df03,6)
 df03$well.type.spc.abbr <- paste(df03$well.type,df03$spc.abbr, sep = ".")
 #get the part of the textstring in front of the space
@@ -435,7 +438,7 @@ plot02 <- ggplot(df04, aes(x = Cycles,
   ggtitle(mxpro_ampl.plot.filename)
 
 
-#plot02
+plot02
 plot.nm4 <- paste(wdout02.2,"/",plot.nm4, sep="")
 #print the plot in a pdf
 pdf(c(paste(plot.nm4,".pdf",  sep = ""))
