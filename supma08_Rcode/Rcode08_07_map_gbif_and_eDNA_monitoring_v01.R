@@ -710,10 +710,10 @@ p05t <- p05 + xlab("longitude") + ylab("latitude")
 #change the header for the legend on the side, 
 #this must be done for both 'fill', 'color' and 'shape', to avoid 
 #getting separate legends
-p05t <- p05t + labs(color='monitoring')
-p05t <- p05t + labs(fill='monitoring')
-p05t <- p05t + labs(shape='monitoring')
-p05t <- p05t + labs(size='monitoring')
+p05t <- p05t + labs(color='')
+p05t <- p05t + labs(fill='')
+p05t <- p05t + labs(shape='')
+p05t <- p05t + labs(size='')
 
 #get the number of species
 #ncat <- length(unique(df_iNDL03$taxon.name))
