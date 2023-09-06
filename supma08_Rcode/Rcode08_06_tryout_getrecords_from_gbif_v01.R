@@ -63,14 +63,17 @@ aml <- rbind(bfl,
 nrow(aml)
 # define extent of area to get gbif records from
 exta <- extent(c(5, 17, 52, 60))
-
+#define columns to keep
 kee <- c(#"acceptedScientificName",          
   "datasetName",
   "lat",                            
   "lon",
   "scientificName",
   "species") #,
-
+# define columns with citation information
+ctk2 <- c("datasetKey","gbifID")
+# add to vector with column names to keep
+kee<- c(kee,ctk2)
 #define list of species
 lsp <- aml$Species_Latin
 #correct the species name
@@ -78,6 +81,8 @@ lsp <- aml$Species_Latin
 lsp <- c(lsp,"Pelophylax_ridibundus")
 lsp <- c(lsp,"Ichthyosaura_alpestris")
 lsp <- c(lsp,"Pelophylax_esculentus")
+# try using only the 2nd element in the vector for doing the iteration
+#lsp <- lsp[2]
 #define empty list
 lstg <- list()
 # set a running number
@@ -91,35 +96,75 @@ for (e in lsp)
   species <- sub('.*\\_', '',e)
   #get gbif records
   g <- gbif(genus, species, geo=TRUE, ext = exta, end=3000)
+  #View(g)
+  #colnames(g)
   if (!"datasetName" %in% colnames(g))
      {g$datasetName <- NA}
   g <- g[kee]
   lstg[[i]] <- g
   i <- i+1
 }
-
 #prg <- gbif("Pelophylax", "ridibundus", geo=TRUE, ext = exta, end=30000)
 #iag <- gbif("Ichthyosaura", "alpestris", geo=TRUE, ext = exta, end=30000)
 #bind the rows in each list in to one data frame
 df_g03 <- data.table::rbindlist(lstg, fill=T)
+#df_g03$datasetName
 #unique(df_g03$scientificName)
 #unique(df_g03$species)
+#View(df_g03)
+dtsKey <- unique(df_g03$datasetKey)
+dtsGBID <- unique(df_g03$gbifID)
+library(rgbif) 
+#derived_dataset(dtsGBID) 
+#?derived_dataset_prep(dtsGBID) 
+
 df_g03$species[grepl("Pelophylax esculentus",df_g03$scientificName)] <- "Pelophylax esculentus"
 #unique(df_g03$datasetName)
 #define column names to keep
 #subset data frame
 df_g03 <- as.data.frame(df_g03)
-df_g03 <- df_g03[kee]
+# also get the full data frame 
+# df_g03.raw <- df_g03
+# colnames(df_g03.raw)
+# unique(df_g03.raw$datasetName)
+ df_g03 <- df_g03[kee]
 #define output flie name
 outfl1 = "out08_06b_gbif_records_amphibia_Denmark.csv"
 # paste together path and input flie
-pthoutf01 <- paste0(wd_ext01_02,"/",outfl1)
+pthoutf01 <- paste0(wd00_wd03,"/",outfl1)
 # use tab as separator
 write.table(df_g03, file=pthoutf01, sep=";",
             row.names = F, quote = F) # do not use row names
+# get column with heysets
+datasetKey.g03 <- df_g03$datasetKey
+# USe external input file with logon details
+# path to file with personal logon
+lgl <- "/home/hal9000/Documents/Documents/Dokumenter SWK/logon_gbif.txt"
+# read the file as a text file
+lgl <- readr::read_delim(lgl, delim = "\t")
+# make it a data frame
+lgl <- as.data.frame(lgl)
+# only grep the row that has username and password
+Username_gbif <- lgl[grepl("Username",lgl[,1]),]
+Password_gbif <- lgl[grepl("Password",lgl[,1]),]
+# substitute in these rows
+Username_gbif <- gsub("Username: ","",Username_gbif)
+Password_gbif <- gsub("Password: ","",Password_gbif)
 
-#get gbif records
-#g <- gbif('Bufo', 'bufo', geo=TRUE, ext = exta, end=6000)
+# use dplyr to count
+library(dplyr)
+# count up records
+dd_meta <- df_g03 %>% dplyr::count(datasetKey) 
+# use rgbif to get DOI records
+my_dd<-rgbif::derived_dataset(
+  citation_data<-dd_meta,
+  title<-"din titel",
+  description = "din beskrivelse",
+  source_url = pthoutf01,
+  user=Username_gbif,
+  pwd=Password_gbif
+  )
+#Herefter kan du finde din DOI i my_dd$doi
 
 # # # 
 # library("rnaturalearth")

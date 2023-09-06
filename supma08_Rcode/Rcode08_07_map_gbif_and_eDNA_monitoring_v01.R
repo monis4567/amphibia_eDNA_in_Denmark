@@ -42,10 +42,14 @@ infl1 = "out08_06b_gbif_records_amphibia_Denmark.csv"
 #infl1 = "out08_03b_inaturalist_records_amphibia_Denmark_1200lines.csv"
 infl2 = "out08_01b_DL_records_amphibia_Denmark.csv"
 wd_ext02 <- "input_files_01_downloaded_from_web"
+#define an input directory
+wd03 <- "/supma03_inp_files_for_R"
+#paste together path
+wd00_wd03 <- paste(wd00,wd03,sep="")
 wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
 wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
 # paste together path and input flie
-pthinf01 <- paste0(wd_ext01_02,"/",infl1)
+pthinf01 <- paste0(wd00_wd03,"/",infl1)
 pthinf02 <- paste0(wd00_wd09,"/",infl2)
 # read in csv files prepared from two previous 
 df_iN01 <- read.table(pthinf01,sep=";",stringsAsFactors = F, header=F, fill=T)
