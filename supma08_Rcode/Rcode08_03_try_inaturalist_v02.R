@@ -19,9 +19,9 @@ getwd()
 wd09 <- "/supma09_plots_from_R_analysis"
 #paste together path
 wd00_wd09 <- paste(wd00,wd09,sep="")
-wd_ext02 <- "input_files_01_downloaded_from_web"
+wd_ext02 <- "supma03_inp_files_for_R"
 wd_ext01 <- "/home/hal9000/Documents/Documents/MS_amphibian_eDNA_assays"
-wd_ext01_02 <- paste(wd_ext01,"/",wd_ext02,sep="")
+wd_ext01_02 <- paste(wd00,"/",wd_ext02,sep="")
 #Delete any previous versions of the output directory
 #unlink(wd_ext01_02, recursive=TRUE)
 #Create a directory to put resulting output files in

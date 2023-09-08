@@ -150,7 +150,8 @@ Password_gbif <- lgl[grepl("Password",lgl[,1]),]
 # substitute in these rows
 Username_gbif <- gsub("Username: ","",Username_gbif)
 Password_gbif <- gsub("Password: ","",Password_gbif)
-
+# define path for github csv file
+gthb_pth_for_csv <- "https://github.com/monis4567/amphibia_eDNA_in_Denmark/blob/main/supma03_inp_files_for_R/out08_06b_gbif_records_amphibia_Denmark.csv"
 # use dplyr to count
 library(dplyr)
 # count up records
@@ -158,12 +159,14 @@ dd_meta <- df_g03 %>% dplyr::count(datasetKey)
 # use rgbif to get DOI records
 my_dd<-rgbif::derived_dataset(
   citation_data<-dd_meta,
-  title<-"din titel",
-  description = "din beskrivelse",
-  source_url = pthoutf01,
+  title<-"Data from gbif for : Detection of environmental DNA from amphibians in Northern Europe applied in citizen science",
+  description = "A csv file with occurence data for amphibians in Denmark used in the study:  Knudsen, S. W., Hesselsøe, M., Rytter, M., Lillemark, M. R., Tøttrup, A. P., Rahbek, C., Sheard, J. K., Thomsen, P. F., Agersnap, S., Mortensen, P. B., & Møller, P. R. (2023). Detection of environmental DNA from amphibians in Northern Europe applied in citizen science. Environmental DNA, 00, 1–20. https://doi.org/10.1002/edn3.462 ",
+  source_url = gthb_pth_for_csv,
   user=Username_gbif,
   pwd=Password_gbif
   )
+# 
+my_dd
 #Herefter kan du finde din DOI i my_dd$doi
 
 # # # 
